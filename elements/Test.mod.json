@@ -1,0 +1,11 @@
+{
+  "_fv": 57,
+  "_type": "tab",
+  "definition": {
+    "name": "Test",
+    "icon": {
+      "value": "Blocks.GILDED_BLACKSTONE"
+    },
+    "showSearch": false
+  }
+}
