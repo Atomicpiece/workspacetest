@@ -17,6 +17,8 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.workspacetest.entity.DestroyerEntity;
+
 import java.util.List;
 import java.util.Comparator;
 
@@ -67,6 +69,18 @@ public class RoboticAssemblerUpdateTickProcedure {
 				return -1;
 			}
 		}.getValue(world, BlockPos.containing(x, y, z), "Life") <= 0) {
+			if (world instanceof Level _level && !_level.isClientSide())
+				_level.explode(null, x, y, z, 5, Level.ExplosionInteraction.NONE);
+			{
+				final Vec3 _center = new Vec3(x, y, z);
+				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(10 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+				for (Entity entityiterator : _entfound) {
+					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.ARROW)), 50);
+				}
+			}
+			world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
+		}
+		if (!world.getEntitiesOfClass(DestroyerEntity.class, AABB.ofSize(new Vec3(x, y, z), 2, 2, 2), e -> true).isEmpty()) {
 			if (world instanceof Level _level && !_level.isClientSide())
 				_level.explode(null, x, y, z, 5, Level.ExplosionInteraction.NONE);
 			{
