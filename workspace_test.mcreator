@@ -158,8 +158,8 @@
       "registry_name": "igniter",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/IgniterItem.java",
-          "src/main/resources/assets/workspace_test/models/item/igniter.json"
+          "src/main/resources/assets/workspace_test/models/item/igniter.json",
+          "src/main/java/net/mcreator/workspacetest/item/IgniterItem.java"
         ]
       },
       "path": "~/Defence"
@@ -277,8 +277,8 @@
       "registry_name": "percentage_checker",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/percentage_checker.json",
-          "src/main/java/net/mcreator/workspacetest/item/PercentageCheckerItem.java"
+          "src/main/java/net/mcreator/workspacetest/item/PercentageCheckerItem.java",
+          "src/main/resources/assets/workspace_test/models/item/percentage_checker.json"
         ]
       },
       "path": "~/Defence"
@@ -464,8 +464,8 @@
       "registry_name": "minesgui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/world/inventory/MinesguiMenu.java",
-          "src/main/java/net/mcreator/workspacetest/client/gui/MinesguiScreen.java"
+          "src/main/java/net/mcreator/workspacetest/client/gui/MinesguiScreen.java",
+          "src/main/java/net/mcreator/workspacetest/world/inventory/MinesguiMenu.java"
         ]
       },
       "path": "~/assembly machines"
@@ -479,10 +479,10 @@
       "registry_name": "destroyer",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/client/renderer/DestroyerRenderer.java",
-          "src/main/java/net/mcreator/workspacetest/entity/model/DestroyerModel.java",
           "src/main/java/net/mcreator/workspacetest/entity/DestroyerEntity.java",
-          "src/main/resources/assets/workspace_test/models/item/destroyer_spawn_egg.json"
+          "src/main/java/net/mcreator/workspacetest/entity/model/DestroyerModel.java",
+          "src/main/resources/assets/workspace_test/models/item/destroyer_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/DestroyerRenderer.java"
         ]
       },
       "path": "~/Defence"
@@ -498,8 +498,8 @@
         "files": [
           "src/main/java/net/mcreator/workspacetest/entity/TankEntity.java",
           "src/main/java/net/mcreator/workspacetest/client/renderer/TankRenderer.java",
-          "src/main/resources/assets/workspace_test/models/item/tank_spawn_egg.json",
-          "src/main/java/net/mcreator/workspacetest/entity/model/TankModel.java"
+          "src/main/java/net/mcreator/workspacetest/entity/model/TankModel.java",
+          "src/main/resources/assets/workspace_test/models/item/tank_spawn_egg.json"
         ]
       },
       "path": "~/Defence"
