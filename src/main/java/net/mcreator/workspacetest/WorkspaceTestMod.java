@@ -29,6 +29,12 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.workspacetest.init.WorkspaceTestModTabs;
+import net.mcreator.workspacetest.init.WorkspaceTestModItems;
+import net.mcreator.workspacetest.init.WorkspaceTestModEntities;
+import net.mcreator.workspacetest.init.WorkspaceTestModBlocks;
+import net.mcreator.workspacetest.init.WorkspaceTestModBlockEntities;
+
 import java.util.function.Supplier;
 import java.util.function.Function;
 import java.util.function.BiConsumer;
@@ -46,6 +52,13 @@ public class WorkspaceTestMod {
 	public WorkspaceTestMod() {
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
+		WorkspaceTestModBlocks.REGISTRY.register(bus);
+		WorkspaceTestModBlockEntities.REGISTRY.register(bus);
+		WorkspaceTestModItems.REGISTRY.register(bus);
+		WorkspaceTestModEntities.REGISTRY.register(bus);
+
+		WorkspaceTestModTabs.REGISTRY.register(bus);
 
 	}
 

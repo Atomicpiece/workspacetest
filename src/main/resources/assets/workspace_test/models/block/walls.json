@@ -1,0 +1,9 @@
+{
+  "parent": "workspace_test:custom/wall",
+  "textures": {
+    "all": "workspace_test:block/wall",
+    "particle": "workspace_test:block/wall",
+    "0": "workspace_test:block/wall"
+  },
+  "render_type": "cutout"
+}

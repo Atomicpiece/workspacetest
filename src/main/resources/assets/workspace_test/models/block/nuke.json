@@ -1,0 +1,9 @@
+{
+  "parent": "workspace_test:custom/nuke",
+  "textures": {
+    "all": "workspace_test:block/nuke",
+    "particle": "workspace_test:block/nuke",
+    "0": "workspace_test:block/nuke"
+  },
+  "render_type": "cutout"
+}

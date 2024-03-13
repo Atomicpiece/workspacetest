@@ -1,7 +1,4 @@
 {
   "item_group.workspace_test.test": "Test",
-  "item_group.workspace_test.resources": "Resources",
-  "item_group.workspace_test.machines": "Machines",
-  "item_group.workspace_test.finanbuild": "Financial buildings",
   "item_group.workspace_test.defence": "Defence"
 }

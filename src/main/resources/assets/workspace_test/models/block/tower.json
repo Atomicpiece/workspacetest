@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "workspace_test:block/updown",
+    "up": "workspace_test:block/updown",
+    "north": "workspace_test:block/tower",
+    "east": "workspace_test:block/tower",
+    "south": "workspace_test:block/tower",
+    "west": "workspace_test:block/tower",
+    "particle": "workspace_test:block/tower"
+  },
+  "render_type": "cutout"
+}
