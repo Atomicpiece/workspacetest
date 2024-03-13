@@ -1,9 +1,9 @@
 {
-  "block.workspace_test.nuke": "Nuke",
   "entity.workspace_test.microbot": "Microbot",
+  "block.workspace_test.nuke": "Nuke",
   "block.workspace_test.robotic_assembler": "Robotic Assembler",
-  "item.workspace_test.igniter": "Igniter",
   "item.workspace_test.microbot_spawn_egg": "Microbot Spawn Egg",
+  "item.workspace_test.igniter": "Igniter",
   "item_group.workspace_test.machines": "Machines",
   "block.workspace_test.landmine": "Landmine",
   "item_group.workspace_test.defence": "Defence",
