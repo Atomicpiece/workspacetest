@@ -15,7 +15,6 @@ import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.workspacetest.item.PercentageCheckerItem;
 import net.mcreator.workspacetest.item.IgniterItem;
-import net.mcreator.workspacetest.block.display.MinesDisplayItem;
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
 public class WorkspaceTestModItems {

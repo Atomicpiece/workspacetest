@@ -14,7 +14,6 @@ import net.mcreator.workspacetest.block.WallsBlock;
 import net.mcreator.workspacetest.block.TowerBlock;
 import net.mcreator.workspacetest.block.RoboticAssemblerBlock;
 import net.mcreator.workspacetest.block.NukeBlock;
-import net.mcreator.workspacetest.block.MinesBlock;
 import net.mcreator.workspacetest.block.LandmineBlock;
 import net.mcreator.workspacetest.WorkspaceTestMod;
 

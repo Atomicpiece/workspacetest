@@ -7,7 +7,6 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.workspacetest.init.WorkspaceTestModBlockEntities;
-import net.mcreator.workspacetest.block.renderer.MinesTileRenderer;
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
 @Mod.EventBusSubscriber(modid = WorkspaceTestMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
