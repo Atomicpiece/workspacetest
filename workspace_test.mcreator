@@ -490,27 +490,6 @@
       "path": "~/Defence"
     },
     {
-      "name": "Tb",
-      "type": "procedure",
-      "sortid": 22,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "tb",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/TbProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Defence"
-    },
-    {
       "name": "Mb",
       "type": "procedure",
       "sortid": 23,
@@ -532,6 +511,21 @@
       "path": "~/Defence"
     },
     {
+      "name": "Bombs",
+      "type": "item",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bombs",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/BombsItem.java",
+          "src/main/resources/assets/workspace_test/models/item/bombs.json"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
       "name": "BotMenu",
       "type": "gui",
       "sortid": 24,
@@ -547,19 +541,57 @@
       "path": "~/Defence"
     },
     {
-      "name": "Bombs",
-      "type": "item",
-      "sortid": 25,
+      "name": "Tb",
+      "type": "procedure",
+      "sortid": 22,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "bombs",
+      "registry_name": "tb",
       "metadata": {
+        "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/BombsItem.java",
-          "src/main/resources/assets/workspace_test/models/item/bombs.json"
+          "src/main/java/net/mcreator/workspacetest/procedures/TbProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
         ]
       },
       "path": "~/Defence"
+    },
+    {
+      "name": "Minese",
+      "type": "block",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minese",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/minese.json",
+          "src/main/resources/assets/workspace_test/models/block/minese.json",
+          "src/main/java/net/mcreator/workspacetest/block/MineseBlock.java",
+          "src/main/resources/assets/workspace_test/blockstates/minese.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Minesgui",
+      "type": "gui",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minesgui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/gui/MinesguiScreen.java",
+          "src/main/java/net/mcreator/workspacetest/world/inventory/MinesguiMenu.java"
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [],
@@ -568,7 +600,6 @@
     "en_us": {
       "block.workspace_test.nuke": "Nuke",
       "entity.workspace_test.microbot": "Microbot",
-      "item.workspace_test.bombs": "Bombs",
       "block.workspace_test.robotic_assembler": "Robotic Assembler",
       "item.workspace_test.tank_spawn_egg": "Tank Spawn Egg",
       "item.workspace_test.igniter": "Igniter",
@@ -594,6 +625,10 @@
     "children": [
       {
         "name": "Defence",
+        "children": []
+      },
+      {
+        "name": "martin mod",
         "children": []
       },
       {
