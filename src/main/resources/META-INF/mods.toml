@@ -19,4 +19,10 @@ authors="tomas, MCreator"
 
 
 
+[[dependencies.workspace_test]]
+    modId="geckolib"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
