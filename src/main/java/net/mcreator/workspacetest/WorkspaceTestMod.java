@@ -30,6 +30,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.workspacetest.init.WorkspaceTestModTabs;
+import net.mcreator.workspacetest.init.WorkspaceTestModMenus;
 import net.mcreator.workspacetest.init.WorkspaceTestModItems;
 import net.mcreator.workspacetest.init.WorkspaceTestModEntities;
 import net.mcreator.workspacetest.init.WorkspaceTestModBlocks;
@@ -60,6 +61,7 @@ public class WorkspaceTestMod {
 
 		WorkspaceTestModTabs.REGISTRY.register(bus);
 
+		WorkspaceTestModMenus.REGISTRY.register(bus);
 	}
 
 	private static final String PROTOCOL_VERSION = "1";

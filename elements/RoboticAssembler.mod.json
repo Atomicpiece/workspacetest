@@ -103,9 +103,9 @@
     "breakHarvestLevel": 1,
     "isBonemealable": false,
     "hasInventory": true,
-    "guiBoundTo": "<NONE>",
-    "openGUIOnRightClick": false,
-    "inventorySize": 9,
+    "guiBoundTo": "BotMenu",
+    "openGUIOnRightClick": true,
+    "inventorySize": 2,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
@@ -123,6 +123,9 @@
       "name": "WallsBlockAdded"
     },
     "onTickUpdate": {
+      "name": "RoboticAssemblerUpdateTick"
+    },
+    "onRedstoneOn": {
       "name": "RoboticAssemblerUpdateTick"
     },
     "generateFeature": false,

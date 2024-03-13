@@ -488,14 +488,87 @@
         ]
       },
       "path": "~/Defence"
+    },
+    {
+      "name": "Tb",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tb",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/TbProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Mb",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mb",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MbProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "BotMenu",
+      "type": "gui",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bot_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/world/inventory/BotMenuMenu.java",
+          "src/main/java/net/mcreator/workspacetest/client/gui/BotMenuScreen.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Bombs",
+      "type": "item",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bombs",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/BombsItem.java",
+          "src/main/resources/assets/workspace_test/models/item/bombs.json"
+        ]
+      },
+      "path": "~/Defence"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "entity.workspace_test.microbot": "Microbot",
       "block.workspace_test.nuke": "Nuke",
+      "entity.workspace_test.microbot": "Microbot",
+      "item.workspace_test.bombs": "Bombs",
       "block.workspace_test.robotic_assembler": "Robotic Assembler",
       "item.workspace_test.tank_spawn_egg": "Tank Spawn Egg",
       "item.workspace_test.igniter": "Igniter",

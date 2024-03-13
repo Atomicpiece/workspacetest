@@ -1,5 +1,7 @@
 package net.mcreator.workspacetest.procedures;
 
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
+
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.block.state.BlockState;
@@ -7,7 +9,9 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
@@ -17,8 +21,11 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.workspacetest.init.WorkspaceTestModItems;
+import net.mcreator.workspacetest.init.WorkspaceTestModEntities;
 import net.mcreator.workspacetest.entity.DestroyerEntity;
 
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
 import java.util.Comparator;
 
@@ -91,6 +98,39 @@ public class RoboticAssemblerUpdateTickProcedure {
 				}
 			}
 			world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
+		}
+		if (WorkspaceTestModItems.MICROBOT_SPAWN_EGG.get() == (new Object() {
+			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+				BlockEntity _ent = world.getBlockEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+				return _retval.get();
+			}
+		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem()) {
+			if (world instanceof ServerLevel _level) {
+				Entity entityToSpawn = WorkspaceTestModEntities.MICROBOT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+				if (entityToSpawn != null) {
+					entityToSpawn.setDeltaMovement(0, 0, 0);
+				}
+			}
+			world.addParticle(ParticleTypes.SMOKE, x, y, z, 0, 1, 0);
+		} else if (WorkspaceTestModItems.TINYBOT_SPAWN_EGG.get() == (new Object() {
+			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+				BlockEntity _ent = world.getBlockEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+				return _retval.get();
+			}
+		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem()) {
+			if (world instanceof ServerLevel _level) {
+				Entity entityToSpawn = WorkspaceTestModEntities.TINYBOT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+				if (entityToSpawn != null) {
+					entityToSpawn.setDeltaMovement(0, 0, 0);
+				}
+			}
+			world.addParticle(ParticleTypes.SMOKE, x, y, z, 0, 1, 0);
 		}
 	}
 }
