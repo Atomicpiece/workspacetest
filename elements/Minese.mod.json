@@ -42,7 +42,7 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:Test"
+      "value": "CUSTOM:Resources"
     },
     "destroyTool": "Not specified",
     "customDrop": {
