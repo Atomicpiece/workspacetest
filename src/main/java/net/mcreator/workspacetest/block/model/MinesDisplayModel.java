@@ -1,11 +1,5 @@
 package net.mcreator.workspacetest.block.model;
 
-import software.bernie.geckolib.model.GeoModel;
-
-import net.minecraft.resources.ResourceLocation;
-
-import net.mcreator.workspacetest.block.display.MinesDisplayItem;
-
 public class MinesDisplayModel extends GeoModel<MinesDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(MinesDisplayItem animatable) {

@@ -1,58 +1,18 @@
 
 package net.mcreator.workspacetest.block;
 
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.level.storage.loot.LootParams;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.RenderShape;
-import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.BaseEntityBlock;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.MenuProvider;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.Containers;
-import net.minecraft.util.RandomSource;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.core.BlockPos;
-import net.minecraft.client.Minecraft;
-
-import net.mcreator.workspacetest.world.inventory.MinesguiMenu;
-import net.mcreator.workspacetest.init.WorkspaceTestModBlockEntities;
-import net.mcreator.workspacetest.block.entity.MinesTileEntity;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+import net.minecraft.world.level.material.Material;
 
 import javax.annotation.Nullable;
-
-import java.util.List;
-import java.util.Collections;
-
-import io.netty.buffer.Unpooled;
 
 public class MinesBlock extends BaseEntityBlock implements EntityBlock {
 	public static final IntegerProperty ANIMATION = IntegerProperty.create("animation", 0, (int) 1);
 
 	public MinesBlock() {
 		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(1f, 10f));
+
 	}
 
 	@Override
@@ -93,6 +53,7 @@ public class MinesBlock extends BaseEntityBlock implements EntityBlock {
 
 	@Override
 	public List<ItemStack> getDrops(BlockState state, LootParams.Builder builder) {
+
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
@@ -134,6 +95,7 @@ public class MinesBlock extends BaseEntityBlock implements EntityBlock {
 				}
 			}, pos);
 		}
+
 		return InteractionResult.SUCCESS;
 	}
 
@@ -158,7 +120,9 @@ public class MinesBlock extends BaseEntityBlock implements EntityBlock {
 				Containers.dropContents(world, pos, be);
 				world.updateNeighbourForOutputSignal(pos, this);
 			}
+
 			super.onRemove(state, world, pos, newState, isMoving);
 		}
 	}
+
 }

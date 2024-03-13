@@ -28,6 +28,8 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModBlocks.ROBOTIC_ASSEMBLER.get().asItem());
 				tabData.accept(WorkspaceTestModItems.IGNITER.get());
 				tabData.accept(WorkspaceTestModItems.PERCENTAGE_CHECKER.get());
+				tabData.accept(WorkspaceTestModItems.TANK_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.DESTROYER_SPAWN_EGG.get());
 			})
 
 					.build());
