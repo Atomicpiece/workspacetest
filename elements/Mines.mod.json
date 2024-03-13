@@ -1,6 +1,6 @@
 {
   "_fv": 57,
-  "_type": "animatedblock",
+  "_type": "block",
   "definition": {
     "texture": "minestext",
     "textureTop": "",
@@ -8,7 +8,8 @@
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 0,
+    "renderType": 2,
+    "customModelName": "mine_-_converted:default",
     "rotationMode": 0,
     "enablePitch": false,
     "emissiveRendering": false,
@@ -17,7 +18,7 @@
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
-    "hasTransparency": false,
+    "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "SOLID",
     "disableOffset": false,
@@ -32,7 +33,7 @@
         "subtract": false
       }
     ],
-    "name": "Mine",
+    "name": "Mines",
     "specialInformation": {
       "fixedValue": []
     },
@@ -76,7 +77,6 @@
     "slipperiness": 0.6,
     "speedFactor": 1.0,
     "jumpFactor": 1.0,
-    "animationCount": 1,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "isCustomSoundType": false,
@@ -101,23 +101,18 @@
     "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 1,
-    "spawnParticles": true,
-    "particleToSpawn": {
-      "value": "ASH"
-    },
-    "particleSpawningShape": "Spread",
-    "particleSpawningRadious": 0.5,
-    "particleAmount": 4,
+    "isBonemealable": false,
     "hasInventory": true,
     "guiBoundTo": "Minesgui",
-    "openGUIOnRightClick": true,
+    "openGUIOnRightClick": false,
     "inventorySize": 1,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": false,
-    "generateFeature": false,
     "inventoryOutSlotIDs": [],
-    "inventoryInSlotIDs": [],
+    "inventoryInSlotIDs": [
+      0
+    ],
     "hasEnergyStorage": false,
     "energyInitial": 0,
     "energyCapacity": 400000,
@@ -126,14 +121,17 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
-    "blocksToReplace": [],
+    "blocksToReplace": [
+      {
+        "value": "TAG:stone_ore_replaceables"
+      }
+    ],
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,
-    "maxGenerateHeight": 64,
-    "normal": "mine.geo.json",
-    "displaySettings": "minese.animation.json"
+    "maxGenerateHeight": 64
   }
 }

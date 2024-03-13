@@ -1,6 +1,0 @@
-{
-  "parent": "workspace_test:displaysettings/minese.animation",
-  "textures": {
-    "particle": "workspace_test:block/minestext"
-  }
-}
