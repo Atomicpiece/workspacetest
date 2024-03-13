@@ -33,7 +33,7 @@
         "subtract": false
       }
     ],
-    "name": "Mines",
+    "name": "Minese",
     "specialInformation": {
       "fixedValue": []
     },
@@ -42,7 +42,7 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:Resources"
+      "value": "CUSTOM:Test"
     },
     "destroyTool": "Not specified",
     "customDrop": {
@@ -102,17 +102,15 @@
     "unbreakable": false,
     "breakHarvestLevel": 1,
     "isBonemealable": false,
-    "hasInventory": true,
-    "guiBoundTo": "Minesgui",
+    "hasInventory": false,
+    "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
-    "inventorySize": 1,
+    "inventorySize": 9,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
-    "inventoryComparatorPower": false,
+    "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [],
-    "inventoryInSlotIDs": [
-      0
-    ],
+    "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,
     "energyInitial": 0,
     "energyCapacity": 400000,

@@ -1,5 +1,5 @@
 {
-  "parent": "workspace_test:block/mines",
+  "parent": "workspace_test:block/minese",
   "display": {
     "thirdperson": {
       "rotation": [
