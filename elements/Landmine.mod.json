@@ -137,6 +137,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onEntityCollides": {
+      "name": "LandmineEntityCollidesInTheBlock"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

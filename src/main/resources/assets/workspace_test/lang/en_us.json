@@ -12,6 +12,7 @@
   "item_group.workspace_test.test": "Test",
   "item.workspace_test.tinybot_spawn_egg": "Tinybot Spawn Egg",
   "item_group.workspace_test.resources": "Resources",
+  "item.workspace_test.percentage_checker": "Percentage Checker",
   "block.workspace_test.tower": "Tower",
   "item_group.workspace_test.finanbuild": "Financial buildings"
 }

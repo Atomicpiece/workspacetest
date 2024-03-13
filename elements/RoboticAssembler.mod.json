@@ -9,7 +9,7 @@
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "assembler:default",
+    "customModelName": "assemblerbot:default",
     "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,
@@ -24,111 +24,12 @@
     "disableOffset": false,
     "boundingBoxes": [
       {
-        "mx": 1.0,
+        "mx": 0.0,
         "my": 0.0,
-        "mz": 1.0,
-        "Mx": 15.0,
-        "My": 1.0,
-        "Mz": 15.0,
-        "subtract": false
-      },
-      {
-        "mx": 4.0,
-        "my": 0.0,
-        "mz": 4.0,
-        "Mx": 12.0,
-        "My": 2.0,
-        "Mz": 12.0,
-        "subtract": false
-      },
-      {
-        "mx": 7.0,
-        "my": -6.0,
         "mz": 0.0,
-        "Mx": 9.0,
-        "My": -4.0,
-        "Mz": 8.0,
-        "subtract": false
-      },
-      {
-        "mx": 7.0,
-        "my": 5.0,
-        "mz": 5.0,
-        "Mx": 9.0,
-        "My": 7.0,
-        "Mz": 11.0,
-        "subtract": false
-      },
-      {
-        "mx": 7.0,
-        "my": -4.0,
-        "mz": 0.0,
-        "Mx": 9.0,
-        "My": 2.0,
-        "Mz": 2.0,
-        "subtract": false
-      },
-      {
-        "mx": 7.0,
-        "my": -1.0,
-        "mz": 11.0,
-        "Mx": 9.0,
-        "My": 7.0,
-        "Mz": 13.0,
-        "subtract": false
-      },
-      {
-        "mx": 7.0,
-        "my": 8.0,
-        "mz": 7.0,
-        "Mx": 9.0,
+        "Mx": 16.0,
         "My": 16.0,
-        "Mz": 9.0,
-        "subtract": false
-      },
-      {
-        "mx": -4.0,
-        "my": 5.0,
-        "mz": 7.0,
-        "Mx": -2.0,
-        "My": 11.0,
-        "Mz": 9.0,
-        "subtract": false
-      },
-      {
-        "mx": 2.0,
-        "my": -3.0,
-        "mz": 7.0,
-        "Mx": 4.0,
-        "My": 5.0,
-        "Mz": 9.0,
-        "subtract": false
-      },
-      {
-        "mx": 13.0,
-        "my": -6.0,
-        "mz": 7.0,
-        "Mx": 15.0,
-        "My": 0.0,
-        "Mz": 9.0,
-        "subtract": false
-      },
-      {
-        "mx": 6.899,
-        "my": 8.899,
-        "mz": 3.899,
-        "Mx": 9.101,
-        "My": 11.101,
-        "Mz": 12.101,
-        "subtract": false
-      },
-      {
-        "mx": 3.9,
-        "my": 8.9,
-        "mz": 6.9,
-        "Mx": 12.1,
-        "My": 11.1,
-        "Mz": 9.1,
+        "Mz": 16.0,
         "subtract": false
       }
     ],
@@ -138,7 +39,7 @@
     },
     "hardness": 1.0,
     "resistance": 10.0,
-    "hasGravity": true,
+    "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
       "value": "CUSTOM:Defence"
@@ -157,7 +58,7 @@
     "material": {
       "value": "IRON"
     },
-    "tickRate": 1,
+    "tickRate": 20,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -218,6 +119,12 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onBlockAdded": {
+      "name": "WallsBlockAdded"
+    },
+    "onTickUpdate": {
+      "name": "RoboticAssemblerUpdateTick"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

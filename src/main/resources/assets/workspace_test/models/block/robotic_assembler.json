@@ -1,5 +1,5 @@
 {
-  "parent": "workspace_test:custom/assembler",
+  "parent": "workspace_test:custom/assemblerbot",
   "textures": {
     "all": "workspace_test:block/assembler",
     "particle": "workspace_test:block/assembler",

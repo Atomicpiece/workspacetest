@@ -14,7 +14,6 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
@@ -25,16 +24,20 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.Containers;
+import net.minecraft.util.RandomSource;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.workspacetest.procedures.WallsBlockAddedProcedure;
+import net.mcreator.workspacetest.procedures.RoboticAssemblerUpdateTickProcedure;
 import net.mcreator.workspacetest.block.entity.RoboticAssemblerBlockEntity;
 
 import java.util.List;
 import java.util.Collections;
 
-public class RoboticAssemblerBlock extends FallingBlock implements EntityBlock {
+public class RoboticAssemblerBlock extends Block implements EntityBlock {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public RoboticAssemblerBlock() {
@@ -63,20 +66,6 @@ public class RoboticAssemblerBlock extends FallingBlock implements EntityBlock {
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return switch (state.getValue(FACING)) {
-			default -> Shapes.or(box(1, 0, 1, 15, 1, 15), box(4, 0, 4, 12, 2, 12), box(7, -6, 8, 9, -4, 16), box(7, 5, 5, 9, 7, 11), box(7, -4, 14, 9, 2, 16), box(7, -1, 3, 9, 7, 5), box(7, 8, 7, 9, 16, 9), box(18, 5, 7, 20, 11, 9),
-					box(12, -3, 7, 14, 5, 9), box(1, -6, 7, 3, 0, 9), box(6.899, 8.899, 3.899, 9.101, 11.101, 12.101), box(3.9, 8.9, 6.9, 12.1, 11.1, 9.1));
-			case NORTH -> Shapes.or(box(1, 0, 1, 15, 1, 15), box(4, 0, 4, 12, 2, 12), box(7, -6, 0, 9, -4, 8), box(7, 5, 5, 9, 7, 11), box(7, -4, 0, 9, 2, 2), box(7, -1, 11, 9, 7, 13), box(7, 8, 7, 9, 16, 9), box(-4, 5, 7, -2, 11, 9),
-					box(2, -3, 7, 4, 5, 9), box(13, -6, 7, 15, 0, 9), box(6.899, 8.899, 3.899, 9.101, 11.101, 12.101), box(3.9, 8.9, 6.9, 12.1, 11.1, 9.1));
-			case EAST -> Shapes.or(box(1, 0, 1, 15, 1, 15), box(4, 0, 4, 12, 2, 12), box(8, -6, 7, 16, -4, 9), box(5, 5, 7, 11, 7, 9), box(14, -4, 7, 16, 2, 9), box(3, -1, 7, 5, 7, 9), box(7, 8, 7, 9, 16, 9), box(7, 5, -4, 9, 11, -2),
-					box(7, -3, 2, 9, 5, 4), box(7, -6, 13, 9, 0, 15), box(3.899, 8.899, 6.899, 12.101, 11.101, 9.101), box(6.9, 8.9, 3.9, 9.1, 11.1, 12.1));
-			case WEST -> Shapes.or(box(1, 0, 1, 15, 1, 15), box(4, 0, 4, 12, 2, 12), box(0, -6, 7, 8, -4, 9), box(5, 5, 7, 11, 7, 9), box(0, -4, 7, 2, 2, 9), box(11, -1, 7, 13, 7, 9), box(7, 8, 7, 9, 16, 9), box(7, 5, 18, 9, 11, 20),
-					box(7, -3, 12, 9, 5, 14), box(7, -6, 1, 9, 0, 3), box(3.899, 8.899, 6.899, 12.101, 11.101, 9.101), box(6.9, 8.9, 3.9, 9.1, 11.1, 12.1));
-		};
-	}
-
-	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		builder.add(FACING);
 	}
@@ -100,6 +89,23 @@ public class RoboticAssemblerBlock extends FallingBlock implements EntityBlock {
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
 		return Collections.singletonList(new ItemStack(this, 1));
+	}
+
+	@Override
+	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
+		super.onPlace(blockstate, world, pos, oldState, moving);
+		world.scheduleTick(pos, this, 20);
+		WallsBlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+	}
+
+	@Override
+	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
+		super.tick(blockstate, world, pos, random);
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+		RoboticAssemblerUpdateTickProcedure.execute(world, x, y, z);
+		world.scheduleTick(pos, this, 20);
 	}
 
 	@Override

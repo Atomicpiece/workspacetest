@@ -23,12 +23,14 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.Containers;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.workspacetest.procedures.LandmineEntityCollidesInTheBlockProcedure;
 import net.mcreator.workspacetest.block.entity.LandmineBlockEntity;
 
 import java.util.List;
@@ -96,6 +98,12 @@ public class LandmineBlock extends FallingBlock implements EntityBlock {
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
 		return Collections.singletonList(new ItemStack(this, 1));
+	}
+
+	@Override
+	public void entityInside(BlockState blockstate, Level world, BlockPos pos, Entity entity) {
+		super.entityInside(blockstate, world, pos, entity);
+		LandmineEntityCollidesInTheBlockProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 	}
 
 	@Override

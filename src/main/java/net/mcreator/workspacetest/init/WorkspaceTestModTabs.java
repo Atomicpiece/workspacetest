@@ -27,6 +27,7 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModBlocks.LANDMINE.get().asItem());
 				tabData.accept(WorkspaceTestModBlocks.ROBOTIC_ASSEMBLER.get().asItem());
 				tabData.accept(WorkspaceTestModItems.IGNITER.get());
+				tabData.accept(WorkspaceTestModItems.PERCENTAGE_CHECKER.get());
 			})
 
 					.build());

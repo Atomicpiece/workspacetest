@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.workspacetest.item.PercentageCheckerItem;
 import net.mcreator.workspacetest.item.IgniterItem;
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
@@ -26,6 +27,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> LANDMINE = block(WorkspaceTestModBlocks.LANDMINE);
 	public static final RegistryObject<Item> ROBOTIC_ASSEMBLER = block(WorkspaceTestModBlocks.ROBOTIC_ASSEMBLER);
 	public static final RegistryObject<Item> IGNITER = REGISTRY.register("igniter", () -> new IgniterItem());
+	public static final RegistryObject<Item> PERCENTAGE_CHECKER = REGISTRY.register("percentage_checker", () -> new PercentageCheckerItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

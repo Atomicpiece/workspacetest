@@ -199,17 +199,200 @@
         "files": []
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "WallsBlockAdded",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "walls_block_added",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/WallsBlockAddedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "PercentageCheckerRightclickedOnBlock",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "percentage_checker_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/PercentageCheckerRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "PercentageChecker",
+      "type": "item",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "percentage_checker",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/percentage_checker.json",
+          "src/main/java/net/mcreator/workspacetest/item/PercentageCheckerItem.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "LandmineEntityCollidesInTheBlock",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "landmine_entity_collides_in_the_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/LandmineEntityCollidesInTheBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "WallsUpdateTick",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "walls_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/WallsUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "RoboticAssemblerUpdateTick",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "robotic_assembler_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/RoboticAssemblerUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "block.workspace_test.nuke": "Nuke",
       "entity.workspace_test.microbot": "Microbot",
+      "block.workspace_test.nuke": "Nuke",
       "block.workspace_test.robotic_assembler": "Robotic Assembler",
-      "item.workspace_test.igniter": "Igniter",
       "item.workspace_test.microbot_spawn_egg": "Microbot Spawn Egg",
+      "item.workspace_test.igniter": "Igniter",
       "item_group.workspace_test.machines": "Machines",
       "block.workspace_test.landmine": "Landmine",
       "item_group.workspace_test.defence": "Defence",
@@ -218,6 +401,7 @@
       "item_group.workspace_test.test": "Test",
       "item.workspace_test.tinybot_spawn_egg": "Tinybot Spawn Egg",
       "item_group.workspace_test.resources": "Resources",
+      "item.workspace_test.percentage_checker": "Percentage Checker",
       "block.workspace_test.tower": "Tower",
       "item_group.workspace_test.finanbuild": "Financial buildings"
     }
