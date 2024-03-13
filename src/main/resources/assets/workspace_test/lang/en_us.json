@@ -1,4 +1,17 @@
 {
+  "block.workspace_test.nuke": "Nuke",
+  "entity.workspace_test.microbot": "Microbot",
+  "block.workspace_test.robotic_assembler": "Robotic Assembler",
+  "item.workspace_test.microbot_spawn_egg": "Microbot Spawn Egg",
+  "item.workspace_test.igniter": "Igniter",
+  "item_group.workspace_test.machines": "Machines",
+  "block.workspace_test.landmine": "Landmine",
+  "item_group.workspace_test.defence": "Defence",
+  "entity.workspace_test.tinybot": "Tinybot",
+  "block.workspace_test.walls": "Walls",
   "item_group.workspace_test.test": "Test",
-  "item_group.workspace_test.defence": "Defence"
+  "item.workspace_test.tinybot_spawn_egg": "Tinybot Spawn Egg",
+  "item_group.workspace_test.resources": "Resources",
+  "block.workspace_test.tower": "Tower",
+  "item_group.workspace_test.finanbuild": "Financial buildings"
 }
