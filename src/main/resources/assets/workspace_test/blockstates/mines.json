@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "workspace_test:custom/mines_particle"
+      "model": "workspace_test:block/mines"
     }
   }
 }

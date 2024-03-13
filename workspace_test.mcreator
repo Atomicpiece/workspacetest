@@ -32,11 +32,11 @@
       "registry_name": "microbot",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/entity/layer/MicrobotLayer.java",
           "src/main/resources/assets/workspace_test/models/item/microbot_spawn_egg.json",
-          "src/main/java/net/mcreator/workspacetest/entity/MicrobotEntity.java",
           "src/main/java/net/mcreator/workspacetest/entity/model/MicrobotModel.java",
-          "src/main/java/net/mcreator/workspacetest/client/renderer/MicrobotRenderer.java"
+          "src/main/java/net/mcreator/workspacetest/client/renderer/MicrobotRenderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/MicrobotEntity.java",
+          "src/main/java/net/mcreator/workspacetest/entity/layer/MicrobotLayer.java"
         ]
       },
       "path": "~/Defence"
@@ -50,10 +50,10 @@
       "registry_name": "tinybot",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/entity/layer/TinybotLayer.java",
           "src/main/java/net/mcreator/workspacetest/entity/model/TinybotModel.java",
-          "src/main/resources/assets/workspace_test/models/item/tinybot_spawn_egg.json",
           "src/main/java/net/mcreator/workspacetest/entity/TinybotEntity.java",
+          "src/main/java/net/mcreator/workspacetest/entity/layer/TinybotLayer.java",
+          "src/main/resources/assets/workspace_test/models/item/tinybot_spawn_egg.json",
           "src/main/java/net/mcreator/workspacetest/client/renderer/TinybotRenderer.java"
         ]
       },
@@ -68,11 +68,11 @@
       "registry_name": "nuke",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/block/NukeBlock.java",
-          "src/main/java/net/mcreator/workspacetest/block/entity/NukeBlockEntity.java",
           "src/main/resources/assets/workspace_test/blockstates/nuke.json",
           "src/main/resources/assets/workspace_test/models/block/nuke.json",
-          "src/main/resources/assets/workspace_test/models/item/nuke.json"
+          "src/main/java/net/mcreator/workspacetest/block/NukeBlock.java",
+          "src/main/resources/assets/workspace_test/models/item/nuke.json",
+          "src/main/java/net/mcreator/workspacetest/block/entity/NukeBlockEntity.java"
         ]
       },
       "path": "~/Defence"
@@ -87,10 +87,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/workspace_test/models/item/tower.json",
-          "src/main/java/net/mcreator/workspacetest/block/entity/TowerBlockEntity.java",
           "src/main/resources/assets/workspace_test/blockstates/tower.json",
           "src/main/java/net/mcreator/workspacetest/block/TowerBlock.java",
-          "src/main/resources/assets/workspace_test/models/block/tower.json"
+          "src/main/resources/assets/workspace_test/models/block/tower.json",
+          "src/main/java/net/mcreator/workspacetest/block/entity/TowerBlockEntity.java"
         ]
       },
       "path": "~/Defence"
@@ -104,11 +104,11 @@
       "registry_name": "walls",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/blockstates/walls.json",
+          "src/main/resources/assets/workspace_test/models/item/walls.json",
           "src/main/java/net/mcreator/workspacetest/block/entity/WallsBlockEntity.java",
           "src/main/java/net/mcreator/workspacetest/block/WallsBlock.java",
           "src/main/resources/assets/workspace_test/models/block/walls.json",
-          "src/main/resources/assets/workspace_test/models/item/walls.json"
+          "src/main/resources/assets/workspace_test/blockstates/walls.json"
         ]
       },
       "path": "~/Defence"
@@ -122,11 +122,11 @@
       "registry_name": "landmine",
       "metadata": {
         "files": [
+          "src/main/resources/assets/workspace_test/models/item/landmine.json",
           "src/main/resources/assets/workspace_test/blockstates/landmine.json",
           "src/main/java/net/mcreator/workspacetest/block/entity/LandmineBlockEntity.java",
-          "src/main/resources/assets/workspace_test/models/block/landmine.json",
           "src/main/java/net/mcreator/workspacetest/block/LandmineBlock.java",
-          "src/main/resources/assets/workspace_test/models/item/landmine.json"
+          "src/main/resources/assets/workspace_test/models/block/landmine.json"
         ]
       },
       "path": "~/Defence"
@@ -141,10 +141,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/workspace_test/models/block/robotic_assembler.json",
-          "src/main/resources/assets/workspace_test/blockstates/robotic_assembler.json",
+          "src/main/java/net/mcreator/workspacetest/block/entity/RoboticAssemblerBlockEntity.java",
           "src/main/resources/assets/workspace_test/models/item/robotic_assembler.json",
           "src/main/java/net/mcreator/workspacetest/block/RoboticAssemblerBlock.java",
-          "src/main/java/net/mcreator/workspacetest/block/entity/RoboticAssemblerBlockEntity.java"
+          "src/main/resources/assets/workspace_test/blockstates/robotic_assembler.json"
         ]
       },
       "path": "~/Defence"
@@ -471,29 +471,6 @@
       "path": "~/assembly machines"
     },
     {
-      "name": "Mines",
-      "type": "animatedblock",
-      "sortid": 20,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mines",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/block/entity/MinesTileEntity.java",
-          "src/main/resources/assets/workspace_test/models/item/mines.json",
-          "src/main/java/net/mcreator/workspacetest/block/model/MinesDisplayModel.java",
-          "src/main/java/net/mcreator/workspacetest/block/MinesBlock.java",
-          "src/main/java/net/mcreator/workspacetest/block/display/MinesDisplayItem.java",
-          "src/main/resources/assets/workspace_test/models/custom/mines_particle.json",
-          "src/main/java/net/mcreator/workspacetest/block/renderer/MinesTileRenderer.java",
-          "src/main/java/net/mcreator/workspacetest/block/model/MinesBlockModel.java",
-          "src/main/java/net/mcreator/workspacetest/block/renderer/MinesDisplayItemRenderer.java",
-          "src/main/resources/assets/workspace_test/blockstates/mines.json"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
       "name": "Destroyer",
       "type": "animatedentity",
       "sortid": 21,
@@ -526,26 +503,50 @@
         ]
       },
       "path": "~/Defence"
+    },
+    {
+      "name": "Mines",
+      "type": "block",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mines",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/mines.json",
+          "src/main/java/net/mcreator/workspacetest/block/MinesBlock.java",
+          "src/main/java/net/mcreator/workspacetest/block/entity/MinesBlockEntity.java",
+          "src/main/resources/assets/workspace_test/blockstates/mines.json",
+          "src/main/resources/assets/workspace_test/models/block/mines.json"
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "entity.workspace_test.microbot": "Microbot",
       "block.workspace_test.nuke": "Nuke",
+      "entity.workspace_test.microbot": "Microbot",
       "block.workspace_test.robotic_assembler": "Robotic Assembler",
-      "item.workspace_test.igniter": "Igniter",
+      "item.workspace_test.tank_spawn_egg": "Tank Spawn Egg",
       "item.workspace_test.microbot_spawn_egg": "Microbot Spawn Egg",
+      "item.workspace_test.igniter": "Igniter",
+      "entity.workspace_test.tank": "Tank",
       "item_group.workspace_test.machines": "Machines",
       "block.workspace_test.landmine": "Landmine",
       "item_group.workspace_test.defence": "Defence",
+      "gui.workspace_test.minesgui.label_mine": "Mine",
+      "block.workspace_test.mines": "Mines",
+      "item.workspace_test.destroyer_spawn_egg": "Destroyer Spawn Egg",
       "block.workspace_test.walls": "Walls",
       "entity.workspace_test.tinybot": "Tinybot",
       "item_group.workspace_test.test": "Test",
       "item.workspace_test.tinybot_spawn_egg": "Tinybot Spawn Egg",
       "item_group.workspace_test.resources": "Resources",
       "item.workspace_test.percentage_checker": "Percentage Checker",
+      "entity.workspace_test.destroyer": "Destroyer",
       "block.workspace_test.tower": "Tower",
       "item_group.workspace_test.finanbuild": "Financial buildings"
     }
