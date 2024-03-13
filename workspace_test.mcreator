@@ -382,6 +382,78 @@
         ]
       },
       "path": "~/Defence"
+    },
+    {
+      "name": "IgniterRightclicked",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "igniter_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/IgniterRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "NukeOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nuke_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/NukeOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
     }
   ],
   "variable_elements": [],
