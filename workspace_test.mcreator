@@ -9,6 +9,19 @@
       "metadata": {
         "files": []
       }
+    },
+    {
+      "name": "Defence",
+      "type": "tag",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "defence",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/tags/items/defence.json"
+        ]
+      },
+      "path": "~/Defence"
     }
   ],
   "variable_elements": [],
@@ -20,7 +33,12 @@
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Defence",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "workspace_test",
