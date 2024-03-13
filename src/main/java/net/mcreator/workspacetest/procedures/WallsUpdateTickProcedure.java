@@ -16,6 +16,8 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.workspacetest.entity.DestroyerEntity;
+
 import java.util.List;
 import java.util.Comparator;
 
@@ -62,6 +64,9 @@ public class WallsUpdateTickProcedure {
 					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.GENERIC)), 5);
 				}
 			}
+			world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
+		}
+		if (!world.getEntitiesOfClass(DestroyerEntity.class, AABB.ofSize(new Vec3(x, y, z), 3, 3, 3), e -> true).isEmpty()) {
 			world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 		}
 	}

@@ -10,7 +10,9 @@ import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.workspacetest.client.renderer.TinybotRenderer;
+import net.mcreator.workspacetest.client.renderer.TankRenderer;
 import net.mcreator.workspacetest.client.renderer.MicrobotRenderer;
+import net.mcreator.workspacetest.client.renderer.DestroyerRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class WorkspaceTestModEntityRenderers {
@@ -18,5 +20,7 @@ public class WorkspaceTestModEntityRenderers {
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(WorkspaceTestModEntities.MICROBOT.get(), MicrobotRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.TINYBOT.get(), TinybotRenderer::new);
+		event.registerEntityRenderer(WorkspaceTestModEntities.TANK.get(), TankRenderer::new);
+		event.registerEntityRenderer(WorkspaceTestModEntities.DESTROYER.get(), DestroyerRenderer::new);
 	}
 }
