@@ -1,0 +1,11 @@
+{
+  "_fv": 57,
+  "_type": "tab",
+  "definition": {
+    "name": "Machines",
+    "icon": {
+      "value": "Blocks.OBSERVER"
+    },
+    "showSearch": false
+  }
+}
