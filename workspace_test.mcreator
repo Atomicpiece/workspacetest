@@ -22,6 +22,42 @@
         "files": []
       },
       "path": "~/Defence"
+    },
+    {
+      "name": "Resources",
+      "type": "tab",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "resources",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Machines",
+      "type": "tab",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machines",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Finanbuild",
+      "type": "tab",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "finanbuild",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [],
@@ -29,6 +65,9 @@
   "language_map": {
     "en_us": {
       "item_group.workspace_test.test": "Test",
+      "item_group.workspace_test.resources": "Resources",
+      "item_group.workspace_test.machines": "Machines",
+      "item_group.workspace_test.finanbuild": "Financial buildings",
       "item_group.workspace_test.defence": "Defence"
     }
   },
