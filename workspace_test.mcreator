@@ -3,6 +3,7 @@
     {
       "name": "Test",
       "type": "tab",
+      "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "registry_name": "test",
@@ -12,14 +13,13 @@
     },
     {
       "name": "Defence",
-      "type": "tag",
+      "type": "tab",
+      "sortid": 1,
       "compiles": true,
       "locked_code": false,
       "registry_name": "defence",
       "metadata": {
-        "files": [
-          "src/main/resources/data/minecraft/tags/items/defence.json"
-        ]
+        "files": []
       },
       "path": "~/Defence"
     }
@@ -28,7 +28,8 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item_group.workspace_test.test": "Test"
+      "item_group.workspace_test.test": "Test",
+      "item_group.workspace_test.defence": "Defence"
     }
   },
   "foldersRoot": {

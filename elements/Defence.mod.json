@@ -1,15 +1,11 @@
 {
   "_fv": 57,
-  "_type": "tag",
+  "_type": "tab",
   "definition": {
-    "type": "Items",
-    "items": [],
-    "blocks": [],
-    "functions": [],
-    "entities": [],
-    "biomes": [],
-    "damageTypes": [],
-    "name": "defence",
-    "namespace": "minecraft"
+    "name": "Defence",
+    "icon": {
+      "value": "Items.BOW"
+    },
+    "showSearch": false
   }
 }
