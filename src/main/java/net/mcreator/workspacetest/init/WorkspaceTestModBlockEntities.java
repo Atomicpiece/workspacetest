@@ -25,7 +25,6 @@ public class WorkspaceTestModBlockEntities {
 	public static final RegistryObject<BlockEntityType<?>> WALLS = register("walls", WorkspaceTestModBlocks.WALLS, WallsBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> LANDMINE = register("landmine", WorkspaceTestModBlocks.LANDMINE, LandmineBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> ROBOTIC_ASSEMBLER = register("robotic_assembler", WorkspaceTestModBlocks.ROBOTIC_ASSEMBLER, RoboticAssemblerBlockEntity::new);
-	public static final RegistryObject<BlockEntityType<MinesTileEntity>> MINES = REGISTRY.register("mines", () -> BlockEntityType.Builder.of(MinesTileEntity::new, WorkspaceTestModBlocks.MINES.get()).build(null));
 
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));
