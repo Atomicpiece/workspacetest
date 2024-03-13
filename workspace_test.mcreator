@@ -22,14 +22,165 @@
         "files": []
       },
       "path": "~/Defence"
+    },
+    {
+      "name": "Microbot",
+      "type": "animatedentity",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "microbot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/layer/MicrobotLayer.java",
+          "src/main/resources/assets/workspace_test/models/item/microbot_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/entity/MicrobotEntity.java",
+          "src/main/java/net/mcreator/workspacetest/entity/model/MicrobotModel.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/MicrobotRenderer.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Tinybot",
+      "type": "animatedentity",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tinybot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/layer/TinybotLayer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/model/TinybotModel.java",
+          "src/main/resources/assets/workspace_test/models/item/tinybot_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/entity/TinybotEntity.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/TinybotRenderer.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Nuke",
+      "type": "block",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nuke",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/block/NukeBlock.java",
+          "src/main/java/net/mcreator/workspacetest/block/entity/NukeBlockEntity.java",
+          "src/main/resources/assets/workspace_test/blockstates/nuke.json",
+          "src/main/resources/assets/workspace_test/models/block/nuke.json",
+          "src/main/resources/assets/workspace_test/models/item/nuke.json"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Tower",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tower",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/tower.json",
+          "src/main/java/net/mcreator/workspacetest/block/entity/TowerBlockEntity.java",
+          "src/main/resources/assets/workspace_test/blockstates/tower.json",
+          "src/main/java/net/mcreator/workspacetest/block/TowerBlock.java",
+          "src/main/resources/assets/workspace_test/models/block/tower.json"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Walls",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "walls",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/blockstates/walls.json",
+          "src/main/java/net/mcreator/workspacetest/block/entity/WallsBlockEntity.java",
+          "src/main/java/net/mcreator/workspacetest/block/WallsBlock.java",
+          "src/main/resources/assets/workspace_test/models/block/walls.json",
+          "src/main/resources/assets/workspace_test/models/item/walls.json"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Landmine",
+      "type": "block",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "landmine",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/blockstates/landmine.json",
+          "src/main/java/net/mcreator/workspacetest/block/entity/LandmineBlockEntity.java",
+          "src/main/resources/assets/workspace_test/models/block/landmine.json",
+          "src/main/java/net/mcreator/workspacetest/block/LandmineBlock.java",
+          "src/main/resources/assets/workspace_test/models/item/landmine.json"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "RoboticAssembler",
+      "type": "block",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "robotic_assembler",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/block/robotic_assembler.json",
+          "src/main/resources/assets/workspace_test/blockstates/robotic_assembler.json",
+          "src/main/resources/assets/workspace_test/models/item/robotic_assembler.json",
+          "src/main/java/net/mcreator/workspacetest/block/RoboticAssemblerBlock.java",
+          "src/main/java/net/mcreator/workspacetest/block/entity/RoboticAssemblerBlockEntity.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Igniter",
+      "type": "item",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "igniter",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/IgniterItem.java",
+          "src/main/resources/assets/workspace_test/models/item/igniter.json"
+        ]
+      },
+      "path": "~/Defence"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "block.workspace_test.nuke": "Nuke",
+      "entity.workspace_test.microbot": "Microbot",
+      "block.workspace_test.robotic_assembler": "Robotic Assembler",
+      "item.workspace_test.microbot_spawn_egg": "Microbot Spawn Egg",
+      "item.workspace_test.igniter": "Igniter",
+      "block.workspace_test.landmine": "Landmine",
+      "item_group.workspace_test.defence": "Defence",
+      "entity.workspace_test.tinybot": "Tinybot",
+      "block.workspace_test.walls": "Walls",
       "item_group.workspace_test.test": "Test",
-      "item_group.workspace_test.defence": "Defence"
+      "item.workspace_test.tinybot_spawn_egg": "Tinybot Spawn Egg",
+      "block.workspace_test.tower": "Tower"
     }
   },
   "foldersRoot": {

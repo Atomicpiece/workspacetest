@@ -1,0 +1,9 @@
+{
+  "parent": "workspace_test:custom/assembler",
+  "textures": {
+    "all": "workspace_test:block/assembler",
+    "particle": "workspace_test:block/assembler",
+    "0": "workspace_test:block/assembler"
+  },
+  "render_type": "cutout"
+}

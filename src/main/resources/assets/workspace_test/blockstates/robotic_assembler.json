@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "workspace_test:block/robotic_assembler"
+    },
+    "facing=east": {
+      "model": "workspace_test:block/robotic_assembler",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "workspace_test:block/robotic_assembler",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "workspace_test:block/robotic_assembler",
+      "y": 270
+    }
+  }
+}

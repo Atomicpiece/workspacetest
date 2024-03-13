@@ -1,0 +1,9 @@
+{
+  "parent": "workspace_test:custom/landmine",
+  "textures": {
+    "all": "workspace_test:block/landmine",
+    "particle": "workspace_test:block/landmine",
+    "0": "workspace_test:block/landmine"
+  },
+  "render_type": "cutout"
+}
