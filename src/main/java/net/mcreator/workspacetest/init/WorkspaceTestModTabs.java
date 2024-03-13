@@ -31,4 +31,10 @@ public class WorkspaceTestModTabs {
 			})
 
 					.build());
+	public static final RegistryObject<CreativeModeTab> RESOURCES = REGISTRY.register("resources",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.resources")).icon(() -> new ItemStack(Items.RAW_IRON)).displayItems((parameters, tabData) -> {
+				tabData.accept(WorkspaceTestModBlocks.MINES.get().asItem());
+			})
+
+					.build());
 }
