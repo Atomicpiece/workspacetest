@@ -3,7 +3,7 @@ package net.mcreator.workspacetest.world.inventory;
 
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
-public class MinesguiMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
+public class BotMenuMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
 	public final static HashMap<String, Object> guistate = new HashMap<>();
 	public final Level world;
 	public final Player entity;
@@ -16,8 +16,8 @@ public class MinesguiMenu extends AbstractContainerMenu implements Supplier<Map<
 	private Entity boundEntity = null;
 	private BlockEntity boundBlockEntity = null;
 
-	public MinesguiMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(WorkspaceTestModMenus.MINESGUI.get(), id);
+	public BotMenuMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
+		super(WorkspaceTestModMenus.BOT_MENU.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level();
 		this.internal = new ItemStackHandler(1);
@@ -55,7 +55,7 @@ public class MinesguiMenu extends AbstractContainerMenu implements Supplier<Map<
 					});
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 74, 14) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 36, 39) {
 			private final int slot = 0;
 		}));
 		for (int si = 0; si < 3; ++si)
