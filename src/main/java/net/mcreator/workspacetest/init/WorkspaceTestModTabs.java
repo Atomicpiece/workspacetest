@@ -19,7 +19,6 @@ public class WorkspaceTestModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, WorkspaceTestMod.MODID);
 	public static final RegistryObject<CreativeModeTab> TEST = REGISTRY.register("test",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.test")).icon(() -> new ItemStack(Blocks.GILDED_BLACKSTONE)).displayItems((parameters, tabData) -> {
-				tabData.accept(WorkspaceTestModBlocks.MINESE.get().asItem());
 				tabData.accept(WorkspaceTestModItems.BOMBS.get());
 			})
 
