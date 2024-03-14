@@ -12,7 +12,7 @@ import java.util.List;
 
 public class BombsItem extends Item {
 	public BombsItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.EPIC));
 	}
 
 	@Override
