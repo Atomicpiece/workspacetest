@@ -562,38 +562,6 @@
       "path": "~/Defence"
     },
     {
-      "name": "Minese",
-      "type": "block",
-      "sortid": 22,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "minese",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/workspace_test/models/item/minese.json",
-          "src/main/resources/assets/workspace_test/models/block/minese.json",
-          "src/main/java/net/mcreator/workspacetest/block/MineseBlock.java",
-          "src/main/resources/assets/workspace_test/blockstates/minese.json"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
-      "name": "Minesgui",
-      "type": "gui",
-      "sortid": 21,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "minesgui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/client/gui/MinesguiScreen.java",
-          "src/main/java/net/mcreator/workspacetest/world/inventory/MinesguiMenu.java"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
       "name": "IronSwordProjectileHitsLivingEntity",
       "type": "procedure",
       "sortid": 35,
