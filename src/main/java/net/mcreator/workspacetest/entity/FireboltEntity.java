@@ -98,7 +98,7 @@ public class FireboltEntity extends AbstractArrow implements ItemSupplier {
 	}
 
 	public static FireboltEntity shoot(Level world, LivingEntity entity, RandomSource source) {
-		return shoot(world, entity, source, 1.5f, 5, 5);
+		return shoot(world, entity, source, 1.5f, 5, 0);
 	}
 
 	public static FireboltEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
@@ -108,6 +108,7 @@ public class FireboltEntity extends AbstractArrow implements ItemSupplier {
 		entityarrow.setCritArrow(true);
 		entityarrow.setBaseDamage(damage);
 		entityarrow.setKnockback(knockback);
+		entityarrow.setSecondsOnFire(100);
 		world.addFreshEntity(entityarrow);
 		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 		return entityarrow;
@@ -121,8 +122,9 @@ public class FireboltEntity extends AbstractArrow implements ItemSupplier {
 		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 1.5f * 2, 12.0F);
 		entityarrow.setSilent(true);
 		entityarrow.setBaseDamage(5);
-		entityarrow.setKnockback(5);
+		entityarrow.setKnockback(0);
 		entityarrow.setCritArrow(true);
+		entityarrow.setSecondsOnFire(100);
 		entity.level().addFreshEntity(entityarrow);
 		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
 		return entityarrow;

@@ -17,7 +17,7 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.animal.IronGolem;
+import net.minecraft.world.entity.animal.AbstractGolem;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
@@ -43,7 +43,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.workspacetest.init.WorkspaceTestModEntities;
 
-public class SpiderbotEntity extends IronGolem implements GeoEntity {
+public class SpiderbotEntity extends Monster implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(SpiderbotEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(SpiderbotEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(SpiderbotEntity.class, EntityDataSerializers.STRING);
@@ -88,7 +88,7 @@ public class SpiderbotEntity extends IronGolem implements GeoEntity {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Monster.class, false, false));
+		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, AbstractGolem.class, false, false));
 		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
@@ -149,12 +149,6 @@ public class SpiderbotEntity extends IronGolem implements GeoEntity {
 		return super.getDimensions(p_33597_).scale((float) 1);
 	}
 
-	@Override
-	public void aiStep() {
-		super.aiStep();
-		this.updateSwingTime();
-	}
-
 	public static void init() {
 	}
 
@@ -165,6 +159,7 @@ public class SpiderbotEntity extends IronGolem implements GeoEntity {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 6);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 100);
 		return builder;
 	}
 

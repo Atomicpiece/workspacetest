@@ -920,6 +920,109 @@
         ]
       },
       "path": "~/Defence"
+    },
+    {
+      "name": "FallingbombWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fallingbomb_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/FallingbombWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Fallingbomb",
+      "type": "projectile",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fallingbomb",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/FallingbombEntity.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/FallingbombRenderer.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "RoboticPhantom",
+      "type": "animatedentity",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "robotic_phantom",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/renderer/RoboticPhantomRenderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/model/RoboticPhantomModel.java",
+          "src/main/java/net/mcreator/workspacetest/entity/RoboticPhantomEntity.java",
+          "src/main/resources/assets/workspace_test/models/item/robotic_phantom_spawn_egg.json"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Bomb",
+      "type": "animatedentity",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bomb",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/model/BombModel.java",
+          "src/main/java/net/mcreator/workspacetest/entity/BombEntity.java",
+          "src/main/resources/assets/workspace_test/models/item/bomb_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/BombRenderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/layer/BombLayer.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Warplane",
+      "type": "animatedentity",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warplane",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/renderer/WarplaneRenderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/WarplaneEntity.java",
+          "src/main/java/net/mcreator/workspacetest/entity/model/WarplaneModel.java",
+          "src/main/resources/assets/workspace_test/models/item/warplane_spawn_egg.json"
+        ]
+      },
+      "path": "~/Defence"
     }
   ],
   "variable_elements": [],
@@ -927,14 +1030,17 @@
   "language_map": {
     "en_us": {
       "item.workspace_test.bombs": "Bombs",
+      "item.workspace_test.bomb_spawn_egg": "Bomb Spawn Egg",
       "item_group.workspace_test.machines": "Machines",
       "entity.workspace_test.levitation_robot": "Levitation Robot",
       "item_group.workspace_test.defence": "Defence",
+      "entity.workspace_test.robotic_phantom": "Robotic Phantom",
       "entity.workspace_test.tinybot": "Tinybot",
       "item.workspace_test.creeperbot_spawn_egg": "Creeperbot Spawn Egg",
       "entity.workspace_test.spiderbot": "Spiderbot",
       "item.workspace_test.firebelt": "Firebelt",
       "entity.workspace_test.drone": "Drone",
+      "item.workspace_test.robotic_phantom_spawn_egg": "Robotic Phantom Spawn Egg",
       "item.workspace_test.percentage_checker": "Percentage Checker",
       "entity.workspace_test.destroyer": "Destroyer",
       "block.workspace_test.nuke": "Nuke",
@@ -952,10 +1058,13 @@
       "block.workspace_test.walls": "Walls",
       "block.workspace_test.minese": "Minese",
       "item.workspace_test.levitation_robot_spawn_egg": "Levitation Robot Spawn Egg",
+      "item.workspace_test.warplane_spawn_egg": "Warplane Spawn Egg",
       "item_group.workspace_test.test": "Test",
       "entity.workspace_test.creeperbot": "Creeperbot",
       "item.workspace_test.tinybot_spawn_egg": "Tinybot Spawn Egg",
       "item_group.workspace_test.resources": "Resources",
+      "entity.workspace_test.bomb": "Bomb",
+      "entity.workspace_test.warplane": "Warplane",
       "block.workspace_test.tower": "Tower",
       "item_group.workspace_test.finanbuild": "Financial buildings",
       "item.workspace_test.drone_spawn_egg": "Drone Spawn Egg"

@@ -2,9 +2,9 @@
   "_fv": 57,
   "_type": "animatedentity",
   "definition": {
-    "mobName": "Spiderbot",
+    "mobName": "Robotic Phantom",
     "mobLabel": "",
-    "mobModelTexture": "spiderbot.png",
+    "mobModelTexture": "phantom.png",
     "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.0
@@ -19,11 +19,11 @@
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -26368,
+      "value": -6710887,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -16777216,
+      "value": -16763905,
       "falpha": 0.0
     },
     "creativeTab": {
@@ -52,22 +52,22 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "ARTHROPOD",
-    "attackStrength": 6,
+    "attackStrength": 5,
     "attackKnockback": 0.0,
     "knockbackResistance": 100.0,
-    "movementSpeed": 0.55,
+    "movementSpeed": 0.4,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 16,
     "health": 50,
     "xpAmount": 0,
     "waterMob": false,
-    "flyingMob": false,
+    "flyingMob": true,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "deathTime": 20,
-    "lerp": 1,
+    "lerp": 0,
     "disableCollisions": false,
     "ridable": false,
     "canControlForward": false,
@@ -89,41 +89,41 @@
       "value": ""
     },
     "livingSound": {
-      "value": "entity.spider.ambient"
+      "value": "entity.phantom.ambient"
     },
     "hurtSound": {
-      "value": "entity.itemframe.break"
+      "value": "entity.phantom.hurt"
     },
     "deathSound": {
-      "value": "entity.endereye.death"
+      "value": "entity.shulker.death"
     },
     "stepSound": {
-      "value": "entity.spider.step"
+      "value": "entity.phantom.flap"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityGolem</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
-    "model": "spiderbot.geo.json",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_fly\"><field name=\"radius\">16</field><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityGolem</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "model": "phantoms.geo.json",
     "groupName": "head",
     "animation1": "idle",
-    "animation2": "walk",
+    "animation2": "flight",
     "animation3": "",
     "animation4": "attack",
-    "animation5": "walk",
+    "animation5": "",
     "animation6": "",
     "animation7": "",
-    "animation8": "walk",
+    "animation8": "flight",
     "animation9": "",
-    "animation10": "",
+    "animation10": "flight",
     "enable2": true,
-    "enable3": true,
+    "enable3": false,
     "enable4": true,
-    "enable5": true,
+    "enable5": false,
     "enable6": false,
     "enable7": false,
     "enable8": true,
     "enable9": false,
-    "enable10": false,
+    "enable10": true,
     "breedable": false,
     "tameable": false,
     "disableDeathRotation": false,

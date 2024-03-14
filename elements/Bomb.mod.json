@@ -2,10 +2,10 @@
   "_fv": 57,
   "_type": "animatedentity",
   "definition": {
-    "mobName": "Spiderbot",
+    "mobName": "Bomb",
     "mobLabel": "",
-    "mobModelTexture": "spiderbot.png",
-    "mobModelGlowTexture": "",
+    "mobModelTexture": "bomb.png",
+    "mobModelGlowTexture": "bomb.png",
     "visualScale": {
       "fixedValue": 1.0
     },
@@ -14,8 +14,8 @@
     },
     "entityDataEntries": [],
     "modelWidth": 0.6,
-    "modelHeight": 1.8,
-    "modelShadowSize": 0.5,
+    "modelHeight": 0.6,
+    "modelShadowSize": 0.6,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
@@ -23,7 +23,7 @@
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -16777216,
+      "value": -256,
       "falpha": 0.0
     },
     "creativeTab": {
@@ -52,22 +52,22 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "ARTHROPOD",
-    "attackStrength": 6,
+    "attackStrength": 100,
     "attackKnockback": 0.0,
     "knockbackResistance": 100.0,
-    "movementSpeed": 0.55,
+    "movementSpeed": 0.5,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 16,
-    "health": 50,
+    "health": 1,
     "xpAmount": 0,
     "waterMob": false,
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "deathTime": 20,
-    "lerp": 1,
+    "deathTime": 3,
+    "lerp": 0,
     "disableCollisions": false,
     "ridable": false,
     "canControlForward": false,
@@ -89,44 +89,44 @@
       "value": ""
     },
     "livingSound": {
-      "value": "entity.spider.ambient"
+      "value": "entity.drowned.ambient"
     },
     "hurtSound": {
-      "value": "entity.itemframe.break"
+      "value": "entity.generic.explode"
     },
     "deathSound": {
-      "value": "entity.endereye.death"
+      "value": "entity.generic.explode"
     },
     "stepSound": {
-      "value": "entity.spider.step"
+      "value": "entity.creeper.primed"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityGolem</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
-    "model": "spiderbot.geo.json",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"avoid_entity\"><field name=\"entity\">EntityGolem</field><field name=\"radius\">6</field><field name=\"farspeed\">1</field><field name=\"nearspeed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"wander_avoid_water\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "model": "movingbomb.geo.json",
     "groupName": "head",
     "animation1": "idle",
     "animation2": "walk",
-    "animation3": "",
+    "animation3": "death",
     "animation4": "attack",
-    "animation5": "walk",
+    "animation5": "",
     "animation6": "",
     "animation7": "",
-    "animation8": "walk",
+    "animation8": "flight",
     "animation9": "",
-    "animation10": "",
+    "animation10": "anger",
     "enable2": true,
     "enable3": true,
     "enable4": true,
-    "enable5": true,
+    "enable5": false,
     "enable6": false,
     "enable7": false,
     "enable8": true,
     "enable9": false,
-    "enable10": false,
+    "enable10": true,
     "breedable": false,
     "tameable": false,
-    "disableDeathRotation": false,
+    "disableDeathRotation": true,
     "headMovement": true,
     "eyeHeight": false,
     "breedTriggerItems": [],

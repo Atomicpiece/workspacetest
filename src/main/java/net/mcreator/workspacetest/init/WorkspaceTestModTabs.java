@@ -42,6 +42,9 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.ION_SWORD.get());
 				tabData.accept(WorkspaceTestModItems.CREEPERBOT_SPAWN_EGG.get());
 				tabData.accept(WorkspaceTestModItems.SPIDERBOT_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.ROBOTIC_PHANTOM_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.BOMB_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.WARPLANE_SPAWN_EGG.get());
 			})
 
 					.build());

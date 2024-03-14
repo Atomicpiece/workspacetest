@@ -16,13 +16,13 @@ import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.animal.IronGolem;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.animal.AbstractGolem;
-import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
+import net.minecraft.world.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.Pose;
@@ -43,21 +43,21 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.workspacetest.init.WorkspaceTestModEntities;
 
-public class MicrobotEntity extends IronGolem implements GeoEntity {
-	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(MicrobotEntity.class, EntityDataSerializers.BOOLEAN);
-	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(MicrobotEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(MicrobotEntity.class, EntityDataSerializers.STRING);
+public class BombEntity extends Monster implements GeoEntity {
+	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(BombEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(BombEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(BombEntity.class, EntityDataSerializers.STRING);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
 
-	public MicrobotEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(WorkspaceTestModEntities.MICROBOT.get(), world);
+	public BombEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(WorkspaceTestModEntities.BOMB.get(), world);
 	}
 
-	public MicrobotEntity(EntityType<MicrobotEntity> type, Level world) {
+	public BombEntity(EntityType<BombEntity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
@@ -69,7 +69,7 @@ public class MicrobotEntity extends IronGolem implements GeoEntity {
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "endermite");
+		this.entityData.define(TEXTURE, "bomb");
 	}
 
 	public void setTexture(String texture) {
@@ -88,16 +88,16 @@ public class MicrobotEntity extends IronGolem implements GeoEntity {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, AbstractGolem.class, false, false));
+		this.goalSelector.addGoal(1, new AvoidEntityGoal<>(this, AbstractGolem.class, (float) 6, 1, 1.2));
 		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(3, new WaterAvoidingRandomStrollGoal(this, 0.8));
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(5, new FloatGoal(this));
 	}
 
 	@Override
 	public MobType getMobType() {
-		return MobType.UNDEFINED;
+		return MobType.ARTHROPOD;
 	}
 
 	@Override
@@ -107,22 +107,22 @@ public class MicrobotEntity extends IronGolem implements GeoEntity {
 
 	@Override
 	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.endermite.ambient"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.drowned.ambient"));
 	}
 
 	@Override
 	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.step")), 0.15f, 1);
+		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.creeper.primed")), 0.15f, 1);
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.endermite.hurt"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.iron_door.close"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode"));
 	}
 
 	@Override
@@ -149,21 +149,15 @@ public class MicrobotEntity extends IronGolem implements GeoEntity {
 		return super.getDimensions(p_33597_).scale((float) 1);
 	}
 
-	@Override
-	public void aiStep() {
-		super.aiStep();
-		this.updateSwingTime();
-	}
-
 	public static void init() {
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 50);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.5);
+		builder = builder.add(Attributes.MAX_HEALTH, 1);
 		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 5);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 100);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 100);
 		return builder;
@@ -171,10 +165,17 @@ public class MicrobotEntity extends IronGolem implements GeoEntity {
 
 	private PlayState movementPredicate(AnimationState event) {
 		if (this.animationprocedure.equals("empty")) {
-			if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F))
-
-			) {
+			if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F)) && this.onGround() && !this.isAggressive()) {
 				return event.setAndContinue(RawAnimation.begin().thenLoop("walk"));
+			}
+			if (this.isDeadOrDying()) {
+				return event.setAndContinue(RawAnimation.begin().thenPlay("death"));
+			}
+			if (!this.onGround()) {
+				return event.setAndContinue(RawAnimation.begin().thenLoop("flight"));
+			}
+			if (this.isAggressive() && event.isMoving()) {
+				return event.setAndContinue(RawAnimation.begin().thenLoop("anger"));
 			}
 			return event.setAndContinue(RawAnimation.begin().thenLoop("idle"));
 		}
@@ -215,8 +216,8 @@ public class MicrobotEntity extends IronGolem implements GeoEntity {
 	@Override
 	protected void tickDeath() {
 		++this.deathTime;
-		if (this.deathTime == 20) {
-			this.remove(MicrobotEntity.RemovalReason.KILLED);
+		if (this.deathTime == 3) {
+			this.remove(BombEntity.RemovalReason.KILLED);
 			this.dropExperience();
 		}
 	}
@@ -231,9 +232,9 @@ public class MicrobotEntity extends IronGolem implements GeoEntity {
 
 	@Override
 	public void registerControllers(AnimatableManager.ControllerRegistrar data) {
-		data.add(new AnimationController<>(this, "movement", 4, this::movementPredicate));
-		data.add(new AnimationController<>(this, "attacking", 4, this::attackingPredicate));
-		data.add(new AnimationController<>(this, "procedure", 4, this::procedurePredicate));
+		data.add(new AnimationController<>(this, "movement", 0, this::movementPredicate));
+		data.add(new AnimationController<>(this, "attacking", 0, this::attackingPredicate));
+		data.add(new AnimationController<>(this, "procedure", 0, this::procedurePredicate));
 	}
 
 	@Override

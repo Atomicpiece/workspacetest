@@ -16,16 +16,20 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.workspacetest.entity.WarplaneEntity;
 import net.mcreator.workspacetest.entity.TinybotEntity;
 import net.mcreator.workspacetest.entity.TankEntity;
 import net.mcreator.workspacetest.entity.SpiderbotEntity;
+import net.mcreator.workspacetest.entity.RoboticPhantomEntity;
 import net.mcreator.workspacetest.entity.MicrobotEntity;
 import net.mcreator.workspacetest.entity.LevitationRobotEntity;
 import net.mcreator.workspacetest.entity.IronSwordEntity;
 import net.mcreator.workspacetest.entity.FireboltEntity;
+import net.mcreator.workspacetest.entity.FallingbombEntity;
 import net.mcreator.workspacetest.entity.DroneEntity;
 import net.mcreator.workspacetest.entity.DestroyerEntity;
 import net.mcreator.workspacetest.entity.CreeperbotEntity;
+import net.mcreator.workspacetest.entity.BombEntity;
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -67,6 +71,20 @@ public class WorkspaceTestModEntities {
 			EntityType.Builder.<SpiderbotEntity>of(SpiderbotEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SpiderbotEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FallingbombEntity>> FALLINGBOMB = register("projectile_fallingbomb",
+			EntityType.Builder.<FallingbombEntity>of(FallingbombEntity::new, MobCategory.MISC).setCustomClientFactory(FallingbombEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<RoboticPhantomEntity>> ROBOTIC_PHANTOM = register("robotic_phantom",
+			EntityType.Builder.<RoboticPhantomEntity>of(RoboticPhantomEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RoboticPhantomEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BombEntity>> BOMB = register("bomb",
+			EntityType.Builder.<BombEntity>of(BombEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BombEntity::new)
+
+					.sized(0.6f, 0.6f));
+	public static final RegistryObject<EntityType<WarplaneEntity>> WARPLANE = register("warplane",
+			EntityType.Builder.<WarplaneEntity>of(WarplaneEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WarplaneEntity::new)
+
+					.sized(0.6f, 1f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -83,6 +101,9 @@ public class WorkspaceTestModEntities {
 			DroneEntity.init();
 			CreeperbotEntity.init();
 			SpiderbotEntity.init();
+			RoboticPhantomEntity.init();
+			BombEntity.init();
+			WarplaneEntity.init();
 		});
 	}
 
@@ -96,5 +117,8 @@ public class WorkspaceTestModEntities {
 		event.put(DRONE.get(), DroneEntity.createAttributes().build());
 		event.put(CREEPERBOT.get(), CreeperbotEntity.createAttributes().build());
 		event.put(SPIDERBOT.get(), SpiderbotEntity.createAttributes().build());
+		event.put(ROBOTIC_PHANTOM.get(), RoboticPhantomEntity.createAttributes().build());
+		event.put(BOMB.get(), BombEntity.createAttributes().build());
+		event.put(WARPLANE.get(), WarplaneEntity.createAttributes().build());
 	}
 }

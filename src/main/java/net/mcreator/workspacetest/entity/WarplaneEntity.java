@@ -19,10 +19,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
-import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RangedAttackGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
@@ -56,21 +54,21 @@ import javax.annotation.Nullable;
 
 import java.util.EnumSet;
 
-public class LevitationRobotEntity extends IronGolem implements RangedAttackMob, GeoEntity {
-	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(LevitationRobotEntity.class, EntityDataSerializers.BOOLEAN);
-	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(LevitationRobotEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(LevitationRobotEntity.class, EntityDataSerializers.STRING);
+public class WarplaneEntity extends Monster implements RangedAttackMob, GeoEntity {
+	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(WarplaneEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(WarplaneEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(WarplaneEntity.class, EntityDataSerializers.STRING);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
 
-	public LevitationRobotEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(WorkspaceTestModEntities.LEVITATION_ROBOT.get(), world);
+	public WarplaneEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(WorkspaceTestModEntities.WARPLANE.get(), world);
 	}
 
-	public LevitationRobotEntity(EntityType<LevitationRobotEntity> type, Level world) {
+	public WarplaneEntity(EntityType<WarplaneEntity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
@@ -83,7 +81,7 @@ public class LevitationRobotEntity extends IronGolem implements RangedAttackMob,
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "robotexture");
+		this.entityData.define(TEXTURE, "plane");
 	}
 
 	public void setTexture(String texture) {
@@ -107,14 +105,13 @@ public class LevitationRobotEntity extends IronGolem implements RangedAttackMob,
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Monster.class, false, false));
-		this.goalSelector.addGoal(2, new Goal() {
+		this.goalSelector.addGoal(1, new Goal() {
 			{
 				this.setFlags(EnumSet.of(Goal.Flag.MOVE));
 			}
 
 			public boolean canUse() {
-				if (LevitationRobotEntity.this.getTarget() != null && !LevitationRobotEntity.this.getMoveControl().hasWanted()) {
+				if (WarplaneEntity.this.getTarget() != null && !WarplaneEntity.this.getMoveControl().hasWanted()) {
 					return true;
 				} else {
 					return false;
@@ -123,35 +120,35 @@ public class LevitationRobotEntity extends IronGolem implements RangedAttackMob,
 
 			@Override
 			public boolean canContinueToUse() {
-				return LevitationRobotEntity.this.getMoveControl().hasWanted() && LevitationRobotEntity.this.getTarget() != null && LevitationRobotEntity.this.getTarget().isAlive();
+				return WarplaneEntity.this.getMoveControl().hasWanted() && WarplaneEntity.this.getTarget() != null && WarplaneEntity.this.getTarget().isAlive();
 			}
 
 			@Override
 			public void start() {
-				LivingEntity livingentity = LevitationRobotEntity.this.getTarget();
+				LivingEntity livingentity = WarplaneEntity.this.getTarget();
 				Vec3 vec3d = livingentity.getEyePosition(1);
-				LevitationRobotEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
+				WarplaneEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
 			}
 
 			@Override
 			public void tick() {
-				LivingEntity livingentity = LevitationRobotEntity.this.getTarget();
-				if (LevitationRobotEntity.this.getBoundingBox().intersects(livingentity.getBoundingBox())) {
-					LevitationRobotEntity.this.doHurtTarget(livingentity);
+				LivingEntity livingentity = WarplaneEntity.this.getTarget();
+				if (WarplaneEntity.this.getBoundingBox().intersects(livingentity.getBoundingBox())) {
+					WarplaneEntity.this.doHurtTarget(livingentity);
 				} else {
-					double d0 = LevitationRobotEntity.this.distanceToSqr(livingentity);
+					double d0 = WarplaneEntity.this.distanceToSqr(livingentity);
 					if (d0 < 16) {
 						Vec3 vec3d = livingentity.getEyePosition(1);
-						LevitationRobotEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
+						WarplaneEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
 					}
 				}
 			}
 		});
-		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(4, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(6, new FloatGoal(this));
-		this.goalSelector.addGoal(1, new LevitationRobotEntity.RangedAttackGoal(this, 1.25, 10, 20f) {
+		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
+		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(5, new FloatGoal(this));
+		this.goalSelector.addGoal(1, new WarplaneEntity.RangedAttackGoal(this, 1.25, 20, 10f) {
 			@Override
 			public boolean canContinueToUse() {
 				return this.canUse();
@@ -209,7 +206,7 @@ public class LevitationRobotEntity extends IronGolem implements RangedAttackMob,
 			this.target = null;
 			this.seeTime = 0;
 			this.attackTime = -1;
-			((LevitationRobotEntity) rangedAttackMob).entityData.set(SHOOT, false);
+			((WarplaneEntity) rangedAttackMob).entityData.set(SHOOT, false);
 		}
 
 		public boolean requiresUpdateEveryTick() {
@@ -232,10 +229,10 @@ public class LevitationRobotEntity extends IronGolem implements RangedAttackMob,
 			this.mob.getLookControl().setLookAt(this.target, 30.0F, 30.0F);
 			if (--this.attackTime == 0) {
 				if (!flag) {
-					((LevitationRobotEntity) rangedAttackMob).entityData.set(SHOOT, false);
+					((WarplaneEntity) rangedAttackMob).entityData.set(SHOOT, false);
 					return;
 				}
-				((LevitationRobotEntity) rangedAttackMob).entityData.set(SHOOT, true);
+				((WarplaneEntity) rangedAttackMob).entityData.set(SHOOT, true);
 				float f = (float) Math.sqrt(d0) / this.attackRadius;
 				float f1 = Mth.clamp(f, 0.1F, 1.0F);
 				this.rangedAttackMob.performRangedAttack(this.target, f1);
@@ -243,7 +240,7 @@ public class LevitationRobotEntity extends IronGolem implements RangedAttackMob,
 			} else if (this.attackTime < 0) {
 				this.attackTime = Mth.floor(Mth.lerp(Math.sqrt(d0) / (double) this.attackRadius, (double) this.attackIntervalMin, (double) this.attackIntervalMax));
 			} else
-				((LevitationRobotEntity) rangedAttackMob).entityData.set(SHOOT, false);
+				((WarplaneEntity) rangedAttackMob).entityData.set(SHOOT, false);
 		}
 	}
 
@@ -259,22 +256,22 @@ public class LevitationRobotEntity extends IronGolem implements RangedAttackMob,
 
 	@Override
 	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.polished_deepslate.fall"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.minecart.riding"));
 	}
 
 	@Override
 	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bamboo_wood.step")), 0.15f, 1);
+		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.elytra.flying")), 0.15f, 1);
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.blaze.hurt"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.iron_golem.repair"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.blaze.death"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.shield.block"));
 	}
 
 	@Override
@@ -308,7 +305,7 @@ public class LevitationRobotEntity extends IronGolem implements RangedAttackMob,
 
 	@Override
 	public void performRangedAttack(LivingEntity target, float flval) {
-		FireboltEntity.shoot(this, target);
+		FallingbombEntity.shoot(this, target);
 	}
 
 	@Override
@@ -320,10 +317,8 @@ public class LevitationRobotEntity extends IronGolem implements RangedAttackMob,
 		super.setNoGravity(true);
 	}
 
-	@Override
 	public void aiStep() {
 		super.aiStep();
-		this.updateSwingTime();
 		this.setNoGravity(true);
 	}
 
@@ -332,13 +327,13 @@ public class LevitationRobotEntity extends IronGolem implements RangedAttackMob,
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.35);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 50);
 		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 5);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 10);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 100);
-		builder = builder.add(Attributes.FLYING_SPEED, 0.35);
+		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
 		return builder;
 	}
 
@@ -346,9 +341,6 @@ public class LevitationRobotEntity extends IronGolem implements RangedAttackMob,
 		if (this.animationprocedure.equals("empty")) {
 			if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F)) && this.onGround()) {
 				return event.setAndContinue(RawAnimation.begin().thenLoop("walk"));
-			}
-			if (this.isDeadOrDying()) {
-				return event.setAndContinue(RawAnimation.begin().thenPlay("death"));
 			}
 			if (!this.onGround()) {
 				return event.setAndContinue(RawAnimation.begin().thenLoop("flight"));
@@ -392,8 +384,8 @@ public class LevitationRobotEntity extends IronGolem implements RangedAttackMob,
 	@Override
 	protected void tickDeath() {
 		++this.deathTime;
-		if (this.deathTime == 40) {
-			this.remove(LevitationRobotEntity.RemovalReason.KILLED);
+		if (this.deathTime == 20) {
+			this.remove(WarplaneEntity.RemovalReason.KILLED);
 			this.dropExperience();
 		}
 	}

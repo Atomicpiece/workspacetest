@@ -90,7 +90,7 @@ public class IronSwordEntity extends AbstractArrow implements ItemSupplier {
 	}
 
 	public static IronSwordEntity shoot(Level world, LivingEntity entity, RandomSource source) {
-		return shoot(world, entity, source, 1f, 5, 5);
+		return shoot(world, entity, source, 1f, 5, 2);
 	}
 
 	public static IronSwordEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
@@ -113,7 +113,7 @@ public class IronSwordEntity extends AbstractArrow implements ItemSupplier {
 		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 1f * 2, 12.0F);
 		entityarrow.setSilent(true);
 		entityarrow.setBaseDamage(5);
-		entityarrow.setKnockback(5);
+		entityarrow.setKnockback(2);
 		entityarrow.setCritArrow(true);
 		entity.level().addFreshEntity(entityarrow);
 		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.iron_xylophone")), SoundSource.PLAYERS, 1,
