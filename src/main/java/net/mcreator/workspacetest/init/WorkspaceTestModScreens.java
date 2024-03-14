@@ -11,7 +11,6 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.gui.screens.MenuScreens;
 
-import net.mcreator.workspacetest.client.gui.MineguiScreen;
 import net.mcreator.workspacetest.client.gui.BotMenuScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -20,7 +19,6 @@ public class WorkspaceTestModScreens {
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
 			MenuScreens.register(WorkspaceTestModMenus.BOT_MENU.get(), BotMenuScreen::new);
-			MenuScreens.register(WorkspaceTestModMenus.MINEGUI.get(), MineguiScreen::new);
 		});
 	}
 }
