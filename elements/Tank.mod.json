@@ -130,12 +130,12 @@
     "headMovement": true,
     "eyeHeight": false,
     "breedTriggerItems": [],
-    "ranged": false,
+    "ranged": true,
     "rangedAttackItem": {
-      "value": ""
+      "value": "Blocks.STONE_BUTTON"
     },
     "rangedItemType": "Default item",
-    "rangedAttackInterval": 20,
+    "rangedAttackInterval": 30,
     "rangedAttackRadius": 10.0,
     "height": 1.0,
     "spawnThisMob": false,

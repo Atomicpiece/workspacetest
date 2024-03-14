@@ -33,6 +33,7 @@ import net.mcreator.workspacetest.client.renderer.DestroyerRenderer;
 import net.mcreator.workspacetest.client.renderer.DefenderRenderer;
 import net.mcreator.workspacetest.client.renderer.CreeperbotRenderer;
 import net.mcreator.workspacetest.client.renderer.BombRenderer;
+import net.mcreator.workspacetest.client.renderer.BattleshipRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class WorkspaceTestModEntityRenderers {
@@ -41,6 +42,7 @@ public class WorkspaceTestModEntityRenderers {
 		event.registerEntityRenderer(WorkspaceTestModEntities.MICROBOT.get(), MicrobotRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.TINYBOT.get(), TinybotRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.TANK.get(), TankRenderer::new);
+		event.registerEntityRenderer(WorkspaceTestModEntities.TANK_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.DESTROYER.get(), DestroyerRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.FIREBOLT.get(), FireboltRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.LEVITATION_ROBOT.get(), LevitationRobotRenderer::new);
@@ -61,5 +63,6 @@ public class WorkspaceTestModEntityRenderers {
 		event.registerEntityRenderer(WorkspaceTestModEntities.DEFENDER.get(), DefenderRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.MAGICAL_BOLT.get(), MagicalBoltRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.REDSTONE_VOLT.get(), RedstoneVoltRenderer::new);
+		event.registerEntityRenderer(WorkspaceTestModEntities.BATTLESHIP.get(), BattleshipRenderer::new);
 	}
 }

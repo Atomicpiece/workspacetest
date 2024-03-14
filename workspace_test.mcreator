@@ -466,6 +466,7 @@
         "files": [
           "src/main/java/net/mcreator/workspacetest/entity/model/TankModel.java",
           "src/main/java/net/mcreator/workspacetest/entity/TankEntity.java",
+          "src/main/java/net/mcreator/workspacetest/entity/TankEntityProjectile.java",
           "src/main/resources/assets/workspace_test/models/item/tank_spawn_egg.json",
           "src/main/java/net/mcreator/workspacetest/client/renderer/TankRenderer.java"
         ]
@@ -966,10 +967,6 @@
           "src/main/java/net/mcreator/workspacetest/procedures/FallingbombWhileProjectileFlyingTickProcedure.java"
         ],
         "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
           {
             "name": "x",
             "type": "number"
@@ -1891,6 +1888,23 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "Battleship",
+      "type": "animatedentity",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battleship",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/BattleshipEntity.java",
+          "src/main/resources/assets/workspace_test/models/item/battleship_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/entity/model/BattleshipModel.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/BattleshipRenderer.java"
+        ]
+      },
+      "path": "~/Defence"
     }
   ],
   "variable_elements": [],
@@ -1901,11 +1915,12 @@
       "item.workspace_test.bomb_spawn_egg": "Bomb Spawn Egg",
       "item_group.workspace_test.machines": "Machines",
       "entity.workspace_test.robotic_phantom": "Robotic Phantom",
+      "item.workspace_test.battleship_spawn_egg": "Battleship Spawn Egg",
       "entity.workspace_test.spiderbot": "Spiderbot",
       "entity.workspace_test.drone": "Drone",
       "item.workspace_test.firebelt": "Firebelt",
-      "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
       "gui.workspace_test.minegui.label_coal": "coal",
+      "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
       "item.workspace_test.fire_circle_creator": "Fire Circle Creator",
       "item.workspace_test.great_chicken_spawn_egg": "Great Chicken Spawn Egg",
       "item.workspace_test.ion_sword": "Ion Sword",
@@ -1947,6 +1962,7 @@
       "item.workspace_test.frost_blaze_spawn_egg": "Frost Blaze Spawn Egg",
       "item.workspace_test.tank_spawn_egg": "Tank Spawn Egg",
       "item.workspace_test.spiderbot_spawn_egg": "Spiderbot Spawn Egg",
+      "entity.workspace_test.battleship": "Battleship",
       "item.workspace_test.microbot_spawn_egg": "Microbot Spawn Egg",
       "entity.workspace_test.tank": "Tank",
       "gui.workspace_test.minegui.button_start": "Start mining",

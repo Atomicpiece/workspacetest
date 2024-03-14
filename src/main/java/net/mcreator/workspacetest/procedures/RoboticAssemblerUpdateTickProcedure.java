@@ -23,6 +23,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.workspacetest.init.WorkspaceTestModItems;
 import net.mcreator.workspacetest.init.WorkspaceTestModEntities;
+import net.mcreator.workspacetest.entity.FallingbombEntity;
 import net.mcreator.workspacetest.entity.DestroyerEntity;
 
 import java.util.concurrent.atomic.AtomicReference;
@@ -37,7 +38,7 @@ public class RoboticAssemblerUpdateTickProcedure {
 			for (Entity entityiterator : _entfound) {
 				if (entityiterator instanceof Monster) {
 					if (entityiterator instanceof Mob _entity)
-						_entity.getNavigation().moveTo(x, y, z, 1);
+						_entity.getNavigation().moveTo(x, (y + 2), z, 1.1);
 				}
 			}
 		}
@@ -47,7 +48,7 @@ public class RoboticAssemblerUpdateTickProcedure {
 			for (Entity entityiterator : _entfound) {
 				if (entityiterator instanceof Monster) {
 					if (world instanceof ServerLevel _level)
-						_level.sendParticles(ParticleTypes.LAVA, x, y, z, 10, 0.1, 0.2, 0.1, 1);
+						_level.sendParticles(ParticleTypes.LAVA, (x + 0.5), y, (z + 0.5), 1, 0.1, 0.2, 0.1, 1);
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -60,11 +61,11 @@ public class RoboticAssemblerUpdateTickProcedure {
 										return blockEntity.getPersistentData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, BlockPos.containing(x, y, z), "Life")) - 1));
+							}.getValue(world, BlockPos.containing(x, y, z), "Life")) - 0.1));
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
-					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.ARROW)), 1);
+					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.ARROW)), (float) 0.1);
 				}
 			}
 		}
@@ -131,6 +132,30 @@ public class RoboticAssemblerUpdateTickProcedure {
 				}
 			}
 			world.addParticle(ParticleTypes.SMOKE, x, y, z, 0, 1, 0);
+		}
+		{
+			final Vec3 _center = new Vec3(x, y, z);
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+			for (Entity entityiterator : _entfound) {
+				if (entityiterator instanceof FallingbombEntity) {
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putDouble("Life", ((new Object() {
+								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+									BlockEntity blockEntity = world.getBlockEntity(pos);
+									if (blockEntity != null)
+										return blockEntity.getPersistentData().getDouble(tag);
+									return -1;
+								}
+							}.getValue(world, BlockPos.containing(x, y, z), "Life")) - 1));
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+				}
+			}
 		}
 	}
 }

@@ -55,11 +55,11 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> GOLDDE = block(WorkspaceTestModBlocks.GOLDDE);
 	public static final RegistryObject<Item> GREAT_CHICKEN_SPAWN_EGG = REGISTRY.register("great_chicken_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.GREAT_CHICKEN, -1, -65536, new Item.Properties()));
 	public static final RegistryObject<Item> FROST_BLAZE_SPAWN_EGG = REGISTRY.register("frost_blaze_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.FROST_BLAZE, -13369345, -1, new Item.Properties()));
-	public static final RegistryObject<Item> FURNACE_POWERED_GOLEM_SPAWN_EGG = REGISTRY.register("furnace_powered_golem_spawn_egg",
-			() -> new ForgeSpawnEggItem(WorkspaceTestModEntities.FURNACE_POWERED_GOLEM, -13421773, -39424, new Item.Properties()));
+	public static final RegistryObject<Item> FURNACE_POWERED_GOLEM_SPAWN_EGG = REGISTRY.register("furnace_powered_golem_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.FURNACE_POWERED_GOLEM, -6710887, -39424, new Item.Properties()));
 	public static final RegistryObject<Item> DEFENDER_SPAWN_EGG = REGISTRY.register("defender_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.DEFENDER, -10066330, -6710887, new Item.Properties()));
 	public static final RegistryObject<Item> REDSTRONE_BLASTER = REGISTRY.register("redstrone_blaster", () -> new RedstroneBlasterItem());
 	public static final RegistryObject<Item> WAND = REGISTRY.register("wand", () -> new WandItem());
+	public static final RegistryObject<Item> BATTLESHIP_SPAWN_EGG = REGISTRY.register("battleship_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.BATTLESHIP, -10066330, -65536, new Item.Properties()));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

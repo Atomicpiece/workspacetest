@@ -1,38 +1,29 @@
 {
   "_fv": 57,
-  "_type": "livingentity",
+  "_type": "animatedentity",
   "definition": {
-    "mobName": "Furnace Powered Golem",
+    "mobName": "Battleship",
     "mobLabel": "",
-    "mobModelName": "Modelfurnacegolem",
-    "mobModelTexture": "furnacegolemcomplete.png",
-    "transparentModelCondition": {
-      "fixedValue": false
-    },
-    "isShakingCondition": {
-      "fixedValue": false
-    },
-    "solidBoundingBox": {
-      "fixedValue": false
-    },
+    "mobModelTexture": "battleship.png",
+    "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.0
     },
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
-    "modelLayers": [],
-    "modelWidth": 1.0,
-    "modelHeight": 2.0,
+    "entityDataEntries": [],
+    "modelWidth": 0.6,
+    "modelHeight": 1.8,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -6710887,
+      "value": -10066330,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -39424,
+      "value": -65536,
       "falpha": 0.0
     },
     "creativeTab": {
@@ -60,28 +51,23 @@
       "value": ""
     },
     "mobBehaviourType": "Mob",
-    "mobCreatureType": "UNDEFINED",
-    "attackStrength": 3,
+    "mobCreatureType": "WATER",
+    "attackStrength": 10,
     "attackKnockback": 0.0,
     "knockbackResistance": 100.0,
-    "movementSpeed": 0.25,
-    "stepHeight": 0.6,
-    "armorBaseValue": 12.0,
+    "movementSpeed": 0.2,
+    "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 16,
-    "health": 150,
+    "health": 100,
     "xpAmount": 0,
     "waterMob": false,
-    "breatheUnderwater": {
-      "fixedValue": false
-    },
-    "pushedByFluids": {
-      "fixedValue": true
-    },
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "deathTime": 100,
+    "lerp": 0,
     "disableCollisions": false,
     "ridable": false,
     "canControlForward": false,
@@ -103,23 +89,46 @@
       "value": ""
     },
     "livingSound": {
-      "value": "block.furnace.fire_crackle"
+      "value": "block.water.ambient"
     },
     "hurtSound": {
-      "value": "entity.shulker.hurt"
+      "value": "block.iron_door.close"
     },
     "deathSound": {
-      "value": "block.stone.break"
+      "value": "entity.generic.explode"
     },
     "stepSound": {
-      "value": "block.blastfurnace.fire_crackle"
+      "value": "block.bubble_column.bubble_pop"
     },
-    "entityDataEntries": [],
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityGolem</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"try_and_find_water\"><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityGolem</field><field name=\"condition\">null,null</field><next><block type=\"swim\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "model": "battleship.geo.json",
+    "groupName": "head",
+    "animation1": "idle",
+    "animation2": "walk",
+    "animation3": "death",
+    "animation4": "attack",
+    "animation5": "walk",
+    "animation6": "",
+    "animation7": "",
+    "animation8": "idle",
+    "animation9": "",
+    "animation10": "walk",
+    "enable2": true,
+    "enable3": true,
+    "enable4": true,
+    "enable5": true,
+    "enable6": false,
+    "enable7": false,
+    "enable8": true,
+    "enable9": false,
+    "enable10": true,
     "breedable": false,
     "tameable": false,
+    "disableDeathRotation": true,
+    "headMovement": true,
+    "eyeHeight": false,
     "breedTriggerItems": [],
     "ranged": false,
     "rangedAttackItem": {
@@ -128,6 +137,7 @@
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
+    "height": 1.0,
     "spawnThisMob": false,
     "doesDespawnWhenIdle": false,
     "spawningProbability": 20,

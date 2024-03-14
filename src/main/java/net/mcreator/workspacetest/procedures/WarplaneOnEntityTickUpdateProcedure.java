@@ -14,8 +14,8 @@ public class WarplaneOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.ROBOTIC_ASSEMBLER.get()
-				|| (world.getBlockState(BlockPos.containing(x, y - 2, z))).getBlock() == WorkspaceTestModBlocks.ROBOTIC_ASSEMBLER.get()) {
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.ROBOTIC_ASSEMBLER.get() || (world.getBlockState(BlockPos.containing(x, y - 2, z))).getBlock() == WorkspaceTestModBlocks.ROBOTIC_ASSEMBLER.get()
+				|| (world.getBlockState(BlockPos.containing(x, y - 3, z))).getBlock() == WorkspaceTestModBlocks.ROBOTIC_ASSEMBLER.get()) {
 			if (entity.getPersistentData().getBoolean("bomb") == false) {
 				entity.getPersistentData().putBoolean("bomb", true);
 				if (world instanceof ServerLevel _level) {
@@ -24,7 +24,7 @@ public class WarplaneOnEntityTickUpdateProcedure {
 						entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 					}
 				}
-				WorkspaceTestMod.queueServerWork(20, () -> {
+				WorkspaceTestMod.queueServerWork(40, () -> {
 					entity.getPersistentData().putBoolean("bomb", false);
 				});
 			}

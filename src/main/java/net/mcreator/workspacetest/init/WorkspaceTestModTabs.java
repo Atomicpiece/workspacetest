@@ -55,6 +55,7 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.DEFENDER_SPAWN_EGG.get());
 				tabData.accept(WorkspaceTestModItems.REDSTRONE_BLASTER.get());
 				tabData.accept(WorkspaceTestModItems.WAND.get());
+				tabData.accept(WorkspaceTestModItems.BATTLESHIP_SPAWN_EGG.get());
 			})
 
 					.build());

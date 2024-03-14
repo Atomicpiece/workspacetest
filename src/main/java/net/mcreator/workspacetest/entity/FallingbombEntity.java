@@ -68,7 +68,7 @@ public class FallingbombEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	public void tick() {
 		super.tick();
-		FallingbombWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner());
+		FallingbombWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 		if (this.inGround)
 			this.discard();
 	}
