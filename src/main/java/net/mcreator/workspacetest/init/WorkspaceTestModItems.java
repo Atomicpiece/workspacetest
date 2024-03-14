@@ -30,7 +30,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> PERCENTAGE_CHECKER = REGISTRY.register("percentage_checker", () -> new PercentageCheckerItem());
 	public static final RegistryObject<Item> TANK_SPAWN_EGG = REGISTRY.register("tank_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.TANK, -16738048, -10066330, new Item.Properties()));
 	public static final RegistryObject<Item> DESTROYER_SPAWN_EGG = REGISTRY.register("destroyer_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.DESTROYER, -10066330, -16777216, new Item.Properties()));
-	public static final RegistryObject<Item> MINESE = block(WorkspaceTestModBlocks.MINESE);
+	public static final RegistryObject<Item> MEIN = block(WorkspaceTestModBlocks.MEIN);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
