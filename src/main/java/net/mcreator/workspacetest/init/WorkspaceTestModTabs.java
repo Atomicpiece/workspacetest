@@ -8,7 +8,6 @@ import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.network.chat.Component;
@@ -43,12 +42,6 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.ION_SWORD.get());
 				tabData.accept(WorkspaceTestModItems.CREEPERBOT_SPAWN_EGG.get());
 				tabData.accept(WorkspaceTestModItems.SPIDERBOT_SPAWN_EGG.get());
-			})
-
-					.build());
-	public static final RegistryObject<CreativeModeTab> RESOURCES = REGISTRY.register("resources",
-			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.resources")).icon(() -> new ItemStack(Items.RAW_IRON)).displayItems((parameters, tabData) -> {
-				tabData.accept(WorkspaceTestModBlocks.MINESE.get().asItem());
 			})
 
 					.build());

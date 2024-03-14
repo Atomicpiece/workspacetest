@@ -1,9 +1,0 @@
-{
-  "parent": "workspace_test:custom/mine_-_converted",
-  "textures": {
-    "all": "workspace_test:block/minestext",
-    "particle": "workspace_test:block/minestext",
-    "0": "workspace_test:block/minestext"
-  },
-  "render_type": "solid"
-}
