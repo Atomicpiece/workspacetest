@@ -4,7 +4,7 @@
   "definition": {
     "name": "Defence",
     "icon": {
-      "value": "Items.BOW"
+      "value": "CUSTOM:Bombs"
     },
     "showSearch": false
   }
