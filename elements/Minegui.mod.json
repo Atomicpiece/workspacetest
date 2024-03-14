@@ -141,6 +141,60 @@
           "x": 251,
           "y": 58
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_coal",
+          "text": {
+            "fixedValue": "coal"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Coalpro"
+          },
+          "x": 201,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_iron",
+          "text": {
+            "fixedValue": "iron"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Ironpro"
+          },
+          "x": 201,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_gold",
+          "text": {
+            "fixedValue": "gold"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Goldpro"
+          },
+          "x": 201,
+          "y": 53
+        }
       }
     ],
     "gridSettings": {

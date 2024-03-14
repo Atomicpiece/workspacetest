@@ -10,6 +10,9 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.workspacetest.world.inventory.MineguiMenu;
+import net.mcreator.workspacetest.procedures.IronproProcedure;
+import net.mcreator.workspacetest.procedures.GoldproProcedure;
+import net.mcreator.workspacetest.procedures.CoalproProcedure;
 
 import java.util.HashMap;
 
@@ -79,6 +82,12 @@ public class MineguiScreen extends AbstractContainerScreen<MineguiMenu> {
 		guiGraphics.drawString(this.font, Component.translatable("gui.workspace_test.minegui.label_mining_rate"), 23, 44, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.workspace_test.minegui.label_status"), 23, 30, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.workspace_test.minegui.label_output"), 125, 21, -12829636, false);
+		if (CoalproProcedure.execute(world, x, y, z))
+			guiGraphics.drawString(this.font, Component.translatable("gui.workspace_test.minegui.label_coal"), 75, 16, -12829636, false);
+		if (IronproProcedure.execute(world, x, y, z))
+			guiGraphics.drawString(this.font, Component.translatable("gui.workspace_test.minegui.label_iron"), 75, 16, -12829636, false);
+		if (GoldproProcedure.execute(world, x, y, z))
+			guiGraphics.drawString(this.font, Component.translatable("gui.workspace_test.minegui.label_gold"), 75, 16, -12829636, false);
 	}
 
 	@Override

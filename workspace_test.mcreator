@@ -1160,6 +1160,156 @@
         ]
       },
       "path": "~/Defence"
+    },
+    {
+      "name": "Coalde",
+      "type": "block",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coalde",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/coalde.json",
+          "src/main/java/net/mcreator/workspacetest/block/CoaldeBlock.java",
+          "src/main/resources/assets/workspace_test/blockstates/coalde.json",
+          "src/main/resources/assets/workspace_test/models/block/coalde.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Coalpro",
+      "type": "procedure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coalpro",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/CoalproProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Ironde",
+      "type": "block",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ironde",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/ironde.json",
+          "src/main/resources/assets/workspace_test/models/block/ironde.json",
+          "src/main/resources/assets/workspace_test/blockstates/ironde.json",
+          "src/main/java/net/mcreator/workspacetest/block/IrondeBlock.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Ironpro",
+      "type": "procedure",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ironpro",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/IronproProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Goldde",
+      "type": "block",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goldde",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/block/goldde.json",
+          "src/main/java/net/mcreator/workspacetest/block/GolddeBlock.java",
+          "src/main/resources/assets/workspace_test/models/item/goldde.json",
+          "src/main/resources/assets/workspace_test/blockstates/goldde.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Goldpro",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goldpro",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/GoldproProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [],
@@ -1169,47 +1319,53 @@
       "item.workspace_test.bombs": "Bombs",
       "item.workspace_test.bomb_spawn_egg": "Bomb Spawn Egg",
       "item_group.workspace_test.machines": "Machines",
-      "entity.workspace_test.levitation_robot": "Levitation Robot",
-      "item_group.workspace_test.defence": "Defence",
       "entity.workspace_test.robotic_phantom": "Robotic Phantom",
-      "entity.workspace_test.tinybot": "Tinybot",
-      "item.workspace_test.creeperbot_spawn_egg": "Creeperbot Spawn Egg",
-      "gui.workspace_test.minegui.label_output": "Output:",
       "entity.workspace_test.spiderbot": "Spiderbot",
       "item.workspace_test.firebelt": "Firebelt",
       "entity.workspace_test.drone": "Drone",
-      "gui.workspace_test.minegui.label_mine": "Mine",
       "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
+      "gui.workspace_test.minegui.label_coal": "coal",
+      "item.workspace_test.ion_sword": "Ion Sword",
+      "gui.workspace_test.minegui.label_resource": "Resource:",
+      "block.workspace_test.ccc": "mine",
+      "item.workspace_test.igniter": "Igniter",
+      "block.workspace_test.coalde": "Coal deposit",
+      "block.workspace_test.landmine": "Landmine",
+      "item.workspace_test.destroyer_spawn_egg": "Destroyer Spawn Egg",
+      "block.workspace_test.walls": "Walls",
+      "item.workspace_test.warplane_spawn_egg": "Warplane Spawn Egg",
+      "entity.workspace_test.creeperbot": "Creeperbot",
+      "item_group.workspace_test.resources": "Resources",
+      "entity.workspace_test.bomb": "Bomb",
+      "block.workspace_test.tower": "Tower",
+      "item_group.workspace_test.finanbuild": "Financial buildings",
+      "gui.workspace_test.minegui.label_gold": "gold",
+      "entity.workspace_test.levitation_robot": "Levitation Robot",
+      "item_group.workspace_test.defence": "Defence",
+      "entity.workspace_test.tinybot": "Tinybot",
+      "item.workspace_test.creeperbot_spawn_egg": "Creeperbot Spawn Egg",
+      "gui.workspace_test.minegui.label_output": "Output:",
+      "gui.workspace_test.minegui.label_mine": "Mine",
       "item.workspace_test.robotic_phantom_spawn_egg": "Robotic Phantom Spawn Egg",
       "item.workspace_test.percentage_checker": "Percentage Checker",
       "entity.workspace_test.destroyer": "Destroyer",
-      "block.workspace_test.nuke": "Nuke",
       "entity.workspace_test.microbot": "Microbot",
-      "item.workspace_test.ion_sword": "Ion Sword",
+      "block.workspace_test.nuke": "Nuke",
       "block.workspace_test.robotic_assembler": "Robotic Assembler",
-      "gui.workspace_test.minegui.label_resource": "Resource:",
       "item.workspace_test.tank_spawn_egg": "Tank Spawn Egg",
       "item.workspace_test.spiderbot_spawn_egg": "Spiderbot Spawn Egg",
-      "block.workspace_test.ccc": "mine",
-      "item.workspace_test.igniter": "Igniter",
       "item.workspace_test.microbot_spawn_egg": "Microbot Spawn Egg",
       "entity.workspace_test.tank": "Tank",
-      "block.workspace_test.landmine": "Landmine",
       "gui.workspace_test.minegui.button_start": "Start mining",
+      "block.workspace_test.ironde": "Iron deposit",
+      "gui.workspace_test.minegui.label_iron": "iron",
       "gui.workspace_test.minesgui.label_mine": "Mine",
-      "item.workspace_test.destroyer_spawn_egg": "Destroyer Spawn Egg",
-      "block.workspace_test.walls": "Walls",
+      "block.workspace_test.goldde": "Gold deposit",
       "block.workspace_test.minese": "Minese",
       "item.workspace_test.levitation_robot_spawn_egg": "Levitation Robot Spawn Egg",
-      "item.workspace_test.warplane_spawn_egg": "Warplane Spawn Egg",
       "item_group.workspace_test.test": "Test",
-      "entity.workspace_test.creeperbot": "Creeperbot",
       "item.workspace_test.tinybot_spawn_egg": "Tinybot Spawn Egg",
-      "item_group.workspace_test.resources": "Resources",
-      "entity.workspace_test.bomb": "Bomb",
       "entity.workspace_test.warplane": "Warplane",
-      "block.workspace_test.tower": "Tower",
-      "item_group.workspace_test.finanbuild": "Financial buildings",
       "item.workspace_test.drone_spawn_egg": "Drone Spawn Egg",
       "gui.workspace_test.minegui.label_status": "Status:"
     }
