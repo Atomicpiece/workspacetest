@@ -37,6 +37,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -124,7 +125,7 @@ public class RoboticPhantomEntity extends Monster implements GeoEntity {
 			public void start() {
 				LivingEntity livingentity = RoboticPhantomEntity.this.getTarget();
 				Vec3 vec3d = livingentity.getEyePosition(1);
-				RoboticPhantomEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
+				RoboticPhantomEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 0.2);
 			}
 
 			@Override
@@ -136,13 +137,22 @@ public class RoboticPhantomEntity extends Monster implements GeoEntity {
 					double d0 = RoboticPhantomEntity.this.distanceToSqr(livingentity);
 					if (d0 < 16) {
 						Vec3 vec3d = livingentity.getEyePosition(1);
-						RoboticPhantomEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
+						RoboticPhantomEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 0.2);
 					}
 				}
 			}
 		});
 		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, AbstractGolem.class, false, false));
-		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
+		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1, 20) {
+			@Override
+			protected Vec3 getPosition() {
+				RandomSource random = RoboticPhantomEntity.this.getRandom();
+				double dir_x = RoboticPhantomEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
+				double dir_y = RoboticPhantomEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
+				double dir_z = RoboticPhantomEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);
+				return new Vec3(dir_x, dir_y, dir_z);
+			}
+		});
 		this.targetSelector.addGoal(4, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(6, new FloatGoal(this));

@@ -37,6 +37,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
@@ -145,7 +146,16 @@ public class WarplaneEntity extends Monster implements RangedAttackMob, GeoEntit
 				}
 			}
 		});
-		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
+		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1, 20) {
+			@Override
+			protected Vec3 getPosition() {
+				RandomSource random = WarplaneEntity.this.getRandom();
+				double dir_x = WarplaneEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
+				double dir_y = WarplaneEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
+				double dir_z = WarplaneEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);
+				return new Vec3(dir_x, dir_y, dir_z);
+			}
+		});
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(5, new FloatGoal(this));

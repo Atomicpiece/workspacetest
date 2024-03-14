@@ -8,6 +8,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.network.chat.Component;
@@ -45,6 +46,21 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.ROBOTIC_PHANTOM_SPAWN_EGG.get());
 				tabData.accept(WorkspaceTestModItems.BOMB_SPAWN_EGG.get());
 				tabData.accept(WorkspaceTestModItems.WARPLANE_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.FIRE_CIRCLE_CREATOR.get());
+				tabData.accept(WorkspaceTestModItems.SKELETER_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.MOSSY_GOLEM_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.GREAT_CHICKEN_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.FROST_BLAZE_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.FURNACE_POWERED_GOLEM_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.DEFENDER_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.REDSTRONE_BLASTER.get());
+				tabData.accept(WorkspaceTestModItems.WAND.get());
+			})
+
+					.build());
+	public static final RegistryObject<CreativeModeTab> RESOURCES = REGISTRY.register("resources",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.resources")).icon(() -> new ItemStack(Items.RAW_IRON)).displayItems((parameters, tabData) -> {
+				tabData.accept(WorkspaceTestModBlocks.CCC.get().asItem());
 			})
 
 					.build());

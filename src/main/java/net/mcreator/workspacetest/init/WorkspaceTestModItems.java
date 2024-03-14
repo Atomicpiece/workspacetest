@@ -13,10 +13,13 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.workspacetest.item.WandItem;
+import net.mcreator.workspacetest.item.RedstroneBlasterItem;
 import net.mcreator.workspacetest.item.PercentageCheckerItem;
 import net.mcreator.workspacetest.item.IonSwordItem;
 import net.mcreator.workspacetest.item.IgniterItem;
 import net.mcreator.workspacetest.item.FirebeltItem;
+import net.mcreator.workspacetest.item.FireCircleCreatorItem;
 import net.mcreator.workspacetest.item.BombsItem;
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
@@ -40,9 +43,20 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> ION_SWORD = REGISTRY.register("ion_sword", () -> new IonSwordItem());
 	public static final RegistryObject<Item> CREEPERBOT_SPAWN_EGG = REGISTRY.register("creeperbot_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.CREEPERBOT, -1, -26368, new Item.Properties()));
 	public static final RegistryObject<Item> SPIDERBOT_SPAWN_EGG = REGISTRY.register("spiderbot_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.SPIDERBOT, -26368, -16777216, new Item.Properties()));
+	public static final RegistryObject<Item> CCC = block(WorkspaceTestModBlocks.CCC);
 	public static final RegistryObject<Item> ROBOTIC_PHANTOM_SPAWN_EGG = REGISTRY.register("robotic_phantom_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.ROBOTIC_PHANTOM, -6710887, -16763905, new Item.Properties()));
 	public static final RegistryObject<Item> BOMB_SPAWN_EGG = REGISTRY.register("bomb_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.BOMB, -26368, -256, new Item.Properties()));
 	public static final RegistryObject<Item> WARPLANE_SPAWN_EGG = REGISTRY.register("warplane_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.WARPLANE, -13312, -26368, new Item.Properties()));
+	public static final RegistryObject<Item> FIRE_CIRCLE_CREATOR = REGISTRY.register("fire_circle_creator", () -> new FireCircleCreatorItem());
+	public static final RegistryObject<Item> SKELETER_SPAWN_EGG = REGISTRY.register("skeleter_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.SKELETER, -6710887, -10066330, new Item.Properties()));
+	public static final RegistryObject<Item> MOSSY_GOLEM_SPAWN_EGG = REGISTRY.register("mossy_golem_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.MOSSY_GOLEM, -6710887, -16724992, new Item.Properties()));
+	public static final RegistryObject<Item> GREAT_CHICKEN_SPAWN_EGG = REGISTRY.register("great_chicken_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.GREAT_CHICKEN, -1, -65536, new Item.Properties()));
+	public static final RegistryObject<Item> FROST_BLAZE_SPAWN_EGG = REGISTRY.register("frost_blaze_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.FROST_BLAZE, -13369345, -1, new Item.Properties()));
+	public static final RegistryObject<Item> FURNACE_POWERED_GOLEM_SPAWN_EGG = REGISTRY.register("furnace_powered_golem_spawn_egg",
+			() -> new ForgeSpawnEggItem(WorkspaceTestModEntities.FURNACE_POWERED_GOLEM, -13421773, -39424, new Item.Properties()));
+	public static final RegistryObject<Item> DEFENDER_SPAWN_EGG = REGISTRY.register("defender_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.DEFENDER, -10066330, -6710887, new Item.Properties()));
+	public static final RegistryObject<Item> REDSTRONE_BLASTER = REGISTRY.register("redstrone_blaster", () -> new RedstroneBlasterItem());
+	public static final RegistryObject<Item> WAND = REGISTRY.register("wand", () -> new WandItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

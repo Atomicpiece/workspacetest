@@ -32,11 +32,11 @@
       "registry_name": "microbot",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/layer/MicrobotLayer.java",
           "src/main/resources/assets/workspace_test/models/item/microbot_spawn_egg.json",
-          "src/main/java/net/mcreator/workspacetest/entity/model/MicrobotModel.java",
-          "src/main/java/net/mcreator/workspacetest/client/renderer/MicrobotRenderer.java",
           "src/main/java/net/mcreator/workspacetest/entity/MicrobotEntity.java",
-          "src/main/java/net/mcreator/workspacetest/entity/layer/MicrobotLayer.java"
+          "src/main/java/net/mcreator/workspacetest/entity/model/MicrobotModel.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/MicrobotRenderer.java"
         ]
       },
       "path": "~/Defence"
@@ -50,10 +50,10 @@
       "registry_name": "tinybot",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/entity/model/TinybotModel.java",
-          "src/main/java/net/mcreator/workspacetest/entity/TinybotEntity.java",
           "src/main/java/net/mcreator/workspacetest/entity/layer/TinybotLayer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/model/TinybotModel.java",
           "src/main/resources/assets/workspace_test/models/item/tinybot_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/entity/TinybotEntity.java",
           "src/main/java/net/mcreator/workspacetest/client/renderer/TinybotRenderer.java"
         ]
       },
@@ -68,11 +68,11 @@
       "registry_name": "nuke",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/workspacetest/block/NukeBlock.java",
+          "src/main/java/net/mcreator/workspacetest/block/entity/NukeBlockEntity.java",
           "src/main/resources/assets/workspace_test/blockstates/nuke.json",
           "src/main/resources/assets/workspace_test/models/block/nuke.json",
-          "src/main/java/net/mcreator/workspacetest/block/NukeBlock.java",
-          "src/main/resources/assets/workspace_test/models/item/nuke.json",
-          "src/main/java/net/mcreator/workspacetest/block/entity/NukeBlockEntity.java"
+          "src/main/resources/assets/workspace_test/models/item/nuke.json"
         ]
       },
       "path": "~/Defence"
@@ -87,10 +87,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/workspace_test/models/item/tower.json",
+          "src/main/java/net/mcreator/workspacetest/block/entity/TowerBlockEntity.java",
           "src/main/resources/assets/workspace_test/blockstates/tower.json",
           "src/main/java/net/mcreator/workspacetest/block/TowerBlock.java",
-          "src/main/resources/assets/workspace_test/models/block/tower.json",
-          "src/main/java/net/mcreator/workspacetest/block/entity/TowerBlockEntity.java"
+          "src/main/resources/assets/workspace_test/models/block/tower.json"
         ]
       },
       "path": "~/Defence"
@@ -104,11 +104,11 @@
       "registry_name": "walls",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/walls.json",
+          "src/main/resources/assets/workspace_test/blockstates/walls.json",
           "src/main/java/net/mcreator/workspacetest/block/entity/WallsBlockEntity.java",
           "src/main/java/net/mcreator/workspacetest/block/WallsBlock.java",
           "src/main/resources/assets/workspace_test/models/block/walls.json",
-          "src/main/resources/assets/workspace_test/blockstates/walls.json"
+          "src/main/resources/assets/workspace_test/models/item/walls.json"
         ]
       },
       "path": "~/Defence"
@@ -122,11 +122,11 @@
       "registry_name": "landmine",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/landmine.json",
           "src/main/resources/assets/workspace_test/blockstates/landmine.json",
           "src/main/java/net/mcreator/workspacetest/block/entity/LandmineBlockEntity.java",
+          "src/main/resources/assets/workspace_test/models/block/landmine.json",
           "src/main/java/net/mcreator/workspacetest/block/LandmineBlock.java",
-          "src/main/resources/assets/workspace_test/models/block/landmine.json"
+          "src/main/resources/assets/workspace_test/models/item/landmine.json"
         ]
       },
       "path": "~/Defence"
@@ -141,10 +141,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/workspace_test/models/block/robotic_assembler.json",
-          "src/main/java/net/mcreator/workspacetest/block/entity/RoboticAssemblerBlockEntity.java",
+          "src/main/resources/assets/workspace_test/blockstates/robotic_assembler.json",
           "src/main/resources/assets/workspace_test/models/item/robotic_assembler.json",
           "src/main/java/net/mcreator/workspacetest/block/RoboticAssemblerBlock.java",
-          "src/main/resources/assets/workspace_test/blockstates/robotic_assembler.json"
+          "src/main/java/net/mcreator/workspacetest/block/entity/RoboticAssemblerBlockEntity.java"
         ]
       },
       "path": "~/Defence"
@@ -464,10 +464,10 @@
       "registry_name": "tank",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/model/TankModel.java",
           "src/main/java/net/mcreator/workspacetest/entity/TankEntity.java",
-          "src/main/java/net/mcreator/workspacetest/client/renderer/TankRenderer.java",
           "src/main/resources/assets/workspace_test/models/item/tank_spawn_egg.json",
-          "src/main/java/net/mcreator/workspacetest/entity/model/TankModel.java"
+          "src/main/java/net/mcreator/workspacetest/client/renderer/TankRenderer.java"
         ]
       },
       "path": "~/Defence"
@@ -481,10 +481,10 @@
       "registry_name": "destroyer",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/client/renderer/DestroyerRenderer.java",
-          "src/main/java/net/mcreator/workspacetest/entity/model/DestroyerModel.java",
           "src/main/java/net/mcreator/workspacetest/entity/DestroyerEntity.java",
-          "src/main/resources/assets/workspace_test/models/item/destroyer_spawn_egg.json"
+          "src/main/resources/assets/workspace_test/models/item/destroyer_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/entity/model/DestroyerModel.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/DestroyerRenderer.java"
         ]
       },
       "path": "~/Defence"
@@ -603,9 +603,9 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/workspacetest/client/renderer/LevitationRobotRenderer.java",
-          "src/main/java/net/mcreator/workspacetest/entity/model/LevitationRobotModel.java",
+          "src/main/java/net/mcreator/workspacetest/entity/LevitationRobotEntity.java",
           "src/main/resources/assets/workspace_test/models/item/levitation_robot_spawn_egg.json",
-          "src/main/java/net/mcreator/workspacetest/entity/LevitationRobotEntity.java"
+          "src/main/java/net/mcreator/workspacetest/entity/model/LevitationRobotModel.java"
         ]
       },
       "path": "~/Defence"
@@ -666,8 +666,8 @@
       "registry_name": "spiderbot",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/spiderbot_spawn_egg.json",
           "src/main/java/net/mcreator/workspacetest/entity/model/SpiderbotModel.java",
+          "src/main/resources/assets/workspace_test/models/item/spiderbot_spawn_egg.json",
           "src/main/java/net/mcreator/workspacetest/entity/SpiderbotEntity.java",
           "src/main/java/net/mcreator/workspacetest/client/renderer/SpiderbotRenderer.java"
         ]
@@ -684,8 +684,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/workspacetest/entity/DroneEntity.java",
-          "src/main/resources/assets/workspace_test/models/item/drone_spawn_egg.json",
-          "src/main/java/net/mcreator/workspacetest/client/renderer/DroneRenderer.java"
+          "src/main/java/net/mcreator/workspacetest/client/renderer/DroneRenderer.java",
+          "src/main/resources/assets/workspace_test/models/item/drone_spawn_egg.json"
         ]
       },
       "path": "~/Defence"
@@ -699,8 +699,8 @@
       "registry_name": "firebolt",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/client/renderer/FireboltRenderer.java",
-          "src/main/java/net/mcreator/workspacetest/entity/FireboltEntity.java"
+          "src/main/java/net/mcreator/workspacetest/entity/FireboltEntity.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/FireboltRenderer.java"
         ]
       },
       "path": "~/Defence"
@@ -880,10 +880,10 @@
       "registry_name": "creeperbot",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/entity/CreeperbotEntity.java",
-          "src/main/resources/assets/workspace_test/models/item/creeperbot_spawn_egg.json",
           "src/main/java/net/mcreator/workspacetest/entity/layer/CreeperbotLayer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/CreeperbotEntity.java",
           "src/main/java/net/mcreator/workspacetest/client/renderer/CreeperbotRenderer.java",
+          "src/main/resources/assets/workspace_test/models/item/creeperbot_spawn_egg.json",
           "src/main/java/net/mcreator/workspacetest/entity/model/CreeperbotModel.java"
         ]
       },
@@ -932,9 +932,9 @@
         "files": [
           "src/main/java/net/mcreator/workspacetest/block/CccBlock.java",
           "src/main/resources/assets/workspace_test/models/item/ccc.json",
-          "src/main/java/net/mcreator/workspacetest/block/entity/CccBlockEntity.java",
+          "src/main/resources/assets/workspace_test/models/block/ccc.json",
           "src/main/resources/assets/workspace_test/blockstates/ccc.json",
-          "src/main/resources/assets/workspace_test/models/block/ccc.json"
+          "src/main/java/net/mcreator/workspacetest/block/entity/CccBlockEntity.java"
         ]
       },
       "path": "~/assembly machines"
@@ -948,8 +948,8 @@
       "registry_name": "minegui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/client/gui/MineguiScreen.java",
-          "src/main/java/net/mcreator/workspacetest/world/inventory/MineguiMenu.java"
+          "src/main/java/net/mcreator/workspacetest/world/inventory/MineguiMenu.java",
+          "src/main/java/net/mcreator/workspacetest/client/gui/MineguiScreen.java"
         ]
       },
       "path": "~/assembly machines"
@@ -999,10 +999,10 @@
       "registry_name": "warplane",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/warplane_spawn_egg.json",
           "src/main/java/net/mcreator/workspacetest/client/renderer/WarplaneRenderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/WarplaneEntity.java",
           "src/main/java/net/mcreator/workspacetest/entity/model/WarplaneModel.java",
-          "src/main/java/net/mcreator/workspacetest/entity/WarplaneEntity.java"
+          "src/main/resources/assets/workspace_test/models/item/warplane_spawn_egg.json"
         ]
       },
       "path": "~/Defence"
@@ -1017,10 +1017,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/workspacetest/entity/model/BombModel.java",
+          "src/main/java/net/mcreator/workspacetest/entity/BombEntity.java",
           "src/main/resources/assets/workspace_test/models/item/bomb_spawn_egg.json",
-          "src/main/java/net/mcreator/workspacetest/entity/layer/BombLayer.java",
           "src/main/java/net/mcreator/workspacetest/client/renderer/BombRenderer.java",
-          "src/main/java/net/mcreator/workspacetest/entity/BombEntity.java"
+          "src/main/java/net/mcreator/workspacetest/entity/layer/BombLayer.java"
         ]
       },
       "path": "~/Defence"
@@ -1049,10 +1049,10 @@
       "registry_name": "robotic_phantom",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/entity/model/RoboticPhantomModel.java",
-          "src/main/resources/assets/workspace_test/models/item/robotic_phantom_spawn_egg.json",
           "src/main/java/net/mcreator/workspacetest/client/renderer/RoboticPhantomRenderer.java",
-          "src/main/java/net/mcreator/workspacetest/entity/RoboticPhantomEntity.java"
+          "src/main/java/net/mcreator/workspacetest/entity/model/RoboticPhantomModel.java",
+          "src/main/java/net/mcreator/workspacetest/entity/RoboticPhantomEntity.java",
+          "src/main/resources/assets/workspace_test/models/item/robotic_phantom_spawn_egg.json"
         ]
       },
       "path": "~/Defence"
@@ -1160,6 +1160,587 @@
         ]
       },
       "path": "~/Defence"
+    },
+    {
+      "name": "FireCircleCreatorItemInHandTick",
+      "type": "procedure",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_circle_creator_item_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/FireCircleCreatorItemInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "FireCircleCreator",
+      "type": "item",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_circle_creator",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/fire_circle_creator.json",
+          "src/main/java/net/mcreator/workspacetest/item/FireCircleCreatorItem.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Skeleter",
+      "type": "animatedentity",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skeleter",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/model/SkeleterModel.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/SkeleterRenderer.java",
+          "src/main/resources/assets/workspace_test/models/item/skeleter_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/entity/SkeleterEntity.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "MossyGolem",
+      "type": "animatedentity",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mossy_golem",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/MossyGolemEntity.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/MossyGolemRenderer.java",
+          "src/main/resources/assets/workspace_test/models/item/mossy_golem_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/entity/model/MossyGolemModel.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "CreeperbotOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "creeperbot_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/CreeperbotOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "MossyGolemEntityDies",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mossy_golem_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MossyGolemEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "MossyGolemEntityIsHurt",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mossy_golem_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MossyGolemEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "GreatChicken",
+      "type": "animatedentity",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "great_chicken",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/GreatChickenEntity.java",
+          "src/main/resources/assets/workspace_test/models/item/great_chicken_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/GreatChickenRenderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/model/GreatChickenModel.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "FrostBlazeOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frost_blaze_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/FrostBlazeOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "FrostBlaze",
+      "type": "animatedentity",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frost_blaze",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/frost_blaze_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/FrostBlazeRenderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/FrostBlazeEntityProjectile.java",
+          "src/main/java/net/mcreator/workspacetest/entity/model/FrostBlazeModel.java",
+          "src/main/java/net/mcreator/workspacetest/entity/FrostBlazeEntity.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "FurnacePoweredGolem",
+      "type": "livingentity",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "furnace_powered_golem",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/furnace_powered_golem_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/FurnacePoweredGolemRenderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/FurnacePoweredGolemEntity.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Defender",
+      "type": "animatedentity",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "defender",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/model/DefenderModel.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/DefenderRenderer.java",
+          "src/main/resources/assets/workspace_test/models/item/defender_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/entity/DefenderEntity.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "MagicalBoltProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magical_bolt_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MagicalBoltProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "MagicalBoltProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magical_bolt_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MagicalBoltProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "MagicalBoltProjectileHitsPlayer",
+      "type": "procedure",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magical_bolt_projectile_hits_player",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MagicalBoltProjectileHitsPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "MagicalBoltWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magical_bolt_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MagicalBoltWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "MagicalBolt",
+      "type": "projectile",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magical_bolt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/MagicalBoltEntity.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/MagicalBoltRenderer.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "RedstoneVoltProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "redstone_volt_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/RedstoneVoltProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "RedstoneVoltProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "redstone_volt_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/RedstoneVoltProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "RedstoneVoltWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "redstone_volt_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/RedstoneVoltWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "RedstoneVolt",
+      "type": "projectile",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "redstone_volt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/renderer/RedstoneVoltRenderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/RedstoneVoltEntity.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "RedstroneBlaster",
+      "type": "item",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "redstrone_blaster",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/redstrone_blaster.json",
+          "src/main/java/net/mcreator/workspacetest/item/RedstroneBlasterItem.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Wand",
+      "type": "item",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wand",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/WandItem.java",
+          "src/main/resources/assets/workspace_test/models/item/wand.json"
+        ]
+      },
+      "path": "~/Defence"
     }
   ],
   "variable_elements": [],
@@ -1169,47 +1750,62 @@
       "item.workspace_test.bombs": "Bombs",
       "item.workspace_test.bomb_spawn_egg": "Bomb Spawn Egg",
       "item_group.workspace_test.machines": "Machines",
-      "entity.workspace_test.levitation_robot": "Levitation Robot",
-      "item_group.workspace_test.defence": "Defence",
       "entity.workspace_test.robotic_phantom": "Robotic Phantom",
-      "entity.workspace_test.tinybot": "Tinybot",
-      "item.workspace_test.creeperbot_spawn_egg": "Creeperbot Spawn Egg",
-      "gui.workspace_test.minegui.label_output": "Output:",
       "entity.workspace_test.spiderbot": "Spiderbot",
       "item.workspace_test.firebelt": "Firebelt",
       "entity.workspace_test.drone": "Drone",
-      "gui.workspace_test.minegui.label_mine": "Mine",
       "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
+      "item.workspace_test.fire_circle_creator": "Fire Circle Creator",
+      "item.workspace_test.great_chicken_spawn_egg": "Great Chicken Spawn Egg",
+      "item.workspace_test.ion_sword": "Ion Sword",
+      "gui.workspace_test.minegui.label_resource": "Resource:",
+      "item.workspace_test.mossy_golem_spawn_egg": "Mossy Golem Spawn Egg",
+      "entity.workspace_test.defender": "Defender",
+      "block.workspace_test.ccc": "mine",
+      "item.workspace_test.igniter": "Igniter",
+      "entity.workspace_test.frost_blaze": "Frost Blaze",
+      "block.workspace_test.landmine": "Landmine",
+      "entity.workspace_test.great_chicken": "Great Chicken",
+      "item.workspace_test.destroyer_spawn_egg": "Destroyer Spawn Egg",
+      "block.workspace_test.walls": "Walls",
+      "item.workspace_test.skeleter_spawn_egg": "Skeleter Spawn Egg",
+      "entity.workspace_test.skeleter": "Skeleter",
+      "item.workspace_test.warplane_spawn_egg": "Warplane Spawn Egg",
+      "entity.workspace_test.creeperbot": "Creeperbot",
+      "entity.workspace_test.furnace_powered_golem": "Furnace Powered Golem",
+      "item_group.workspace_test.resources": "Resources",
+      "entity.workspace_test.bomb": "Bomb",
+      "block.workspace_test.tower": "Tower",
+      "item_group.workspace_test.finanbuild": "Financial buildings",
+      "entity.workspace_test.levitation_robot": "Levitation Robot",
+      "item_group.workspace_test.defence": "Defence",
+      "entity.workspace_test.tinybot": "Tinybot",
+      "item.workspace_test.creeperbot_spawn_egg": "Creeperbot Spawn Egg",
+      "gui.workspace_test.minegui.label_output": "Output:",
+      "gui.workspace_test.minegui.label_mine": "Mine",
+      "item.workspace_test.defender_spawn_egg": "Defender Spawn Egg",
       "item.workspace_test.robotic_phantom_spawn_egg": "Robotic Phantom Spawn Egg",
       "item.workspace_test.percentage_checker": "Percentage Checker",
       "entity.workspace_test.destroyer": "Destroyer",
-      "block.workspace_test.nuke": "Nuke",
+      "item.workspace_test.wand": "Wand",
       "entity.workspace_test.microbot": "Microbot",
-      "item.workspace_test.ion_sword": "Ion Sword",
+      "block.workspace_test.nuke": "Nuke",
       "block.workspace_test.robotic_assembler": "Robotic Assembler",
-      "gui.workspace_test.minegui.label_resource": "Resource:",
+      "item.workspace_test.frost_blaze_spawn_egg": "Frost Blaze Spawn Egg",
       "item.workspace_test.tank_spawn_egg": "Tank Spawn Egg",
       "item.workspace_test.spiderbot_spawn_egg": "Spiderbot Spawn Egg",
-      "block.workspace_test.ccc": "mine",
-      "item.workspace_test.igniter": "Igniter",
       "item.workspace_test.microbot_spawn_egg": "Microbot Spawn Egg",
       "entity.workspace_test.tank": "Tank",
-      "block.workspace_test.landmine": "Landmine",
       "gui.workspace_test.minegui.button_start": "Start mining",
       "gui.workspace_test.minesgui.label_mine": "Mine",
-      "item.workspace_test.destroyer_spawn_egg": "Destroyer Spawn Egg",
-      "block.workspace_test.walls": "Walls",
       "block.workspace_test.minese": "Minese",
       "item.workspace_test.levitation_robot_spawn_egg": "Levitation Robot Spawn Egg",
-      "item.workspace_test.warplane_spawn_egg": "Warplane Spawn Egg",
       "item_group.workspace_test.test": "Test",
-      "entity.workspace_test.creeperbot": "Creeperbot",
       "item.workspace_test.tinybot_spawn_egg": "Tinybot Spawn Egg",
-      "item_group.workspace_test.resources": "Resources",
-      "entity.workspace_test.bomb": "Bomb",
+      "item.workspace_test.redstrone_blaster": "Redstrone Blaster",
+      "entity.workspace_test.mossy_golem": "Mossy Golem",
+      "item.workspace_test.furnace_powered_golem_spawn_egg": "Furnace Powered Golem Spawn Egg",
       "entity.workspace_test.warplane": "Warplane",
-      "block.workspace_test.tower": "Tower",
-      "item_group.workspace_test.finanbuild": "Financial buildings",
       "item.workspace_test.drone_spawn_egg": "Drone Spawn Egg",
       "gui.workspace_test.minegui.label_status": "Status:"
     }
