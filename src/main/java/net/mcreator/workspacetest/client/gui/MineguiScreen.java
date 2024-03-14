@@ -1,13 +1,25 @@
 package net.mcreator.workspacetest.client.gui;
 
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.GuiGraphics;
+
+import net.mcreator.workspacetest.world.inventory.MineguiMenu;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class MineguiScreen extends AbstractContainerScreen<MineguiMenu> {
-
 	private final static HashMap<String, Object> guistate = MineguiMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-
 	Button button_start;
 
 	public MineguiScreen(MineguiMenu container, Inventory inventory, Component text) {
@@ -26,11 +38,8 @@ public class MineguiScreen extends AbstractContainerScreen<MineguiMenu> {
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
-
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-
 	}
 
 	@Override
@@ -38,7 +47,6 @@ public class MineguiScreen extends AbstractContainerScreen<MineguiMenu> {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
 		guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/monitor.png"), this.leftPos + 7, this.topPos + 13, 0, 0, 16, 16, 16, 16);
@@ -56,7 +64,6 @@ public class MineguiScreen extends AbstractContainerScreen<MineguiMenu> {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -82,13 +89,9 @@ public class MineguiScreen extends AbstractContainerScreen<MineguiMenu> {
 	@Override
 	public void init() {
 		super.init();
-
 		button_start = Button.builder(Component.translatable("gui.workspace_test.minegui.button_start"), e -> {
 		}).bounds(this.leftPos + 8, this.topPos + 57, 77, 20).build();
-
 		guistate.put("button:button_start", button_start);
 		this.addRenderableWidget(button_start);
-
 	}
-
 }
