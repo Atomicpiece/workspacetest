@@ -14,7 +14,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.workspacetest.item.PercentageCheckerItem;
+import net.mcreator.workspacetest.item.IonSwordItem;
 import net.mcreator.workspacetest.item.IgniterItem;
+import net.mcreator.workspacetest.item.FirebeltItem;
 import net.mcreator.workspacetest.item.BombsItem;
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
@@ -33,6 +35,12 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> DESTROYER_SPAWN_EGG = REGISTRY.register("destroyer_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.DESTROYER, -10066330, -16777216, new Item.Properties()));
 	public static final RegistryObject<Item> MINESE = block(WorkspaceTestModBlocks.MINESE);
 	public static final RegistryObject<Item> BOMBS = REGISTRY.register("bombs", () -> new BombsItem());
+	public static final RegistryObject<Item> LEVITATION_ROBOT_SPAWN_EGG = REGISTRY.register("levitation_robot_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.LEVITATION_ROBOT, -6710887, -1, new Item.Properties()));
+	public static final RegistryObject<Item> FIREBELT = REGISTRY.register("firebelt", () -> new FirebeltItem());
+	public static final RegistryObject<Item> DRONE_SPAWN_EGG = REGISTRY.register("drone_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.DRONE, -13312, -6710887, new Item.Properties()));
+	public static final RegistryObject<Item> ION_SWORD = REGISTRY.register("ion_sword", () -> new IonSwordItem());
+	public static final RegistryObject<Item> CREEPERBOT_SPAWN_EGG = REGISTRY.register("creeperbot_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.CREEPERBOT, -1, -26368, new Item.Properties()));
+	public static final RegistryObject<Item> SPIDERBOT_SPAWN_EGG = REGISTRY.register("spiderbot_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.SPIDERBOT, -26368, -16777216, new Item.Properties()));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

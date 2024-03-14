@@ -1,0 +1,31 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Items.FIRE_CHARGE"
+    },
+    "showParticles": true,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 1.5,
+    "damage": 5.0,
+    "knockback": 5,
+    "entityModel": "Modelfirebolt",
+    "customModelTexture": "texture.png",
+    "onHitsBlock": {
+      "name": "FireboltProjectileHitsBlock"
+    },
+    "onHitsPlayer": {
+      "name": "FireboltProjectileHitsPlayer"
+    },
+    "onHitsEntity": {
+      "name": "FireboltProjectileHitsLivingEntity"
+    },
+    "onFlyingTick": {
+      "name": "FireboltWhileProjectileFlyingTick"
+    }
+  }
+}

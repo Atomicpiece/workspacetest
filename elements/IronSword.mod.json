@@ -1,0 +1,28 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Items.IRON_SWORD"
+    },
+    "showParticles": true,
+    "actionSound": {
+      "value": "block.note_block.iron_xylophone"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 5.0,
+    "knockback": 5,
+    "entityModel": "Modelironsword",
+    "customModelTexture": "swordtexture.png",
+    "onHitsBlock": {
+      "name": "IronSwordProjectileHitsBlock"
+    },
+    "onHitsEntity": {
+      "name": "IronSwordProjectileHitsLivingEntity"
+    },
+    "onFlyingTick": {
+      "name": "IronSwordWhileProjectileFlyingTick"
+    }
+  }
+}

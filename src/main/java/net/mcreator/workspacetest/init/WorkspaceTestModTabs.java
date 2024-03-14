@@ -37,6 +37,12 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.PERCENTAGE_CHECKER.get());
 				tabData.accept(WorkspaceTestModItems.TANK_SPAWN_EGG.get());
 				tabData.accept(WorkspaceTestModItems.DESTROYER_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.LEVITATION_ROBOT_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.FIREBELT.get());
+				tabData.accept(WorkspaceTestModItems.DRONE_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.ION_SWORD.get());
+				tabData.accept(WorkspaceTestModItems.CREEPERBOT_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.SPIDERBOT_SPAWN_EGG.get());
 			})
 
 					.build());

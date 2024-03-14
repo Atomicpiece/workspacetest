@@ -18,8 +18,14 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.workspacetest.entity.TinybotEntity;
 import net.mcreator.workspacetest.entity.TankEntity;
+import net.mcreator.workspacetest.entity.SpiderbotEntity;
 import net.mcreator.workspacetest.entity.MicrobotEntity;
+import net.mcreator.workspacetest.entity.LevitationRobotEntity;
+import net.mcreator.workspacetest.entity.IronSwordEntity;
+import net.mcreator.workspacetest.entity.FireboltEntity;
+import net.mcreator.workspacetest.entity.DroneEntity;
 import net.mcreator.workspacetest.entity.DestroyerEntity;
+import net.mcreator.workspacetest.entity.CreeperbotEntity;
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -41,6 +47,26 @@ public class WorkspaceTestModEntities {
 			EntityType.Builder.<DestroyerEntity>of(DestroyerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DestroyerEntity::new)
 
 					.sized(0.6f, 0.6f));
+	public static final RegistryObject<EntityType<FireboltEntity>> FIREBOLT = register("projectile_firebolt",
+			EntityType.Builder.<FireboltEntity>of(FireboltEntity::new, MobCategory.MISC).setCustomClientFactory(FireboltEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<LevitationRobotEntity>> LEVITATION_ROBOT = register("levitation_robot",
+			EntityType.Builder.<LevitationRobotEntity>of(LevitationRobotEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LevitationRobotEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<DroneEntity>> DRONE = register("drone",
+			EntityType.Builder.<DroneEntity>of(DroneEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DroneEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<IronSwordEntity>> IRON_SWORD = register("projectile_iron_sword",
+			EntityType.Builder.<IronSwordEntity>of(IronSwordEntity::new, MobCategory.MISC).setCustomClientFactory(IronSwordEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<CreeperbotEntity>> CREEPERBOT = register("creeperbot",
+			EntityType.Builder.<CreeperbotEntity>of(CreeperbotEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CreeperbotEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<SpiderbotEntity>> SPIDERBOT = register("spiderbot",
+			EntityType.Builder.<SpiderbotEntity>of(SpiderbotEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SpiderbotEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -53,6 +79,10 @@ public class WorkspaceTestModEntities {
 			TinybotEntity.init();
 			TankEntity.init();
 			DestroyerEntity.init();
+			LevitationRobotEntity.init();
+			DroneEntity.init();
+			CreeperbotEntity.init();
+			SpiderbotEntity.init();
 		});
 	}
 
@@ -62,5 +92,9 @@ public class WorkspaceTestModEntities {
 		event.put(TINYBOT.get(), TinybotEntity.createAttributes().build());
 		event.put(TANK.get(), TankEntity.createAttributes().build());
 		event.put(DESTROYER.get(), DestroyerEntity.createAttributes().build());
+		event.put(LEVITATION_ROBOT.get(), LevitationRobotEntity.createAttributes().build());
+		event.put(DRONE.get(), DroneEntity.createAttributes().build());
+		event.put(CREEPERBOT.get(), CreeperbotEntity.createAttributes().build());
+		event.put(SPIDERBOT.get(), SpiderbotEntity.createAttributes().build());
 	}
 }
