@@ -1,8 +1,9 @@
 package net.mcreator.workspacetest.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.core.BlockPos;
 
-import javax.annotation.Nullable;
+import net.mcreator.workspacetest.init.WorkspaceTestModBlocks;
 
 public class IronproProcedure {
 	public static boolean execute(LevelAccessor world, double x, double y, double z) {
