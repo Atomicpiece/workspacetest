@@ -13,12 +13,12 @@
   "item.workspace_test.destroyer_spawn_egg": "Destroyer Spawn Egg",
   "block.workspace_test.walls": "Walls",
   "entity.workspace_test.tinybot": "Tinybot",
-  "block.workspace_test.minese": "Minese",
   "item_group.workspace_test.test": "Test",
   "item.workspace_test.tinybot_spawn_egg": "Tinybot Spawn Egg",
   "item_group.workspace_test.resources": "Resources",
   "item.workspace_test.percentage_checker": "Percentage Checker",
   "entity.workspace_test.destroyer": "Destroyer",
+  "block.workspace_test.mein": "Mein",
   "block.workspace_test.tower": "Tower",
   "item_group.workspace_test.finanbuild": "Financial buildings"
 }

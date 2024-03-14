@@ -505,18 +505,19 @@
       "path": "~/Defence"
     },
     {
-      "name": "Minese",
+      "name": "Mein",
       "type": "block",
       "sortid": 22,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "minese",
+      "registry_name": "mein",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/block/MineseBlock.java",
-          "src/main/resources/assets/workspace_test/models/item/minese.json",
-          "src/main/resources/assets/workspace_test/models/block/minese.json",
-          "src/main/resources/assets/workspace_test/blockstates/minese.json"
+          "src/main/java/net/mcreator/workspacetest/block/MeinBlock.java",
+          "src/main/java/net/mcreator/workspacetest/block/entity/MeinBlockEntity.java",
+          "src/main/resources/assets/workspace_test/models/item/mein.json",
+          "src/main/resources/assets/workspace_test/blockstates/mein.json",
+          "src/main/resources/assets/workspace_test/models/block/mein.json"
         ]
       },
       "path": "~/assembly machines"
@@ -540,12 +541,12 @@
       "item.workspace_test.destroyer_spawn_egg": "Destroyer Spawn Egg",
       "block.workspace_test.walls": "Walls",
       "entity.workspace_test.tinybot": "Tinybot",
-      "block.workspace_test.minese": "Minese",
       "item_group.workspace_test.test": "Test",
       "item.workspace_test.tinybot_spawn_egg": "Tinybot Spawn Egg",
       "item_group.workspace_test.resources": "Resources",
       "item.workspace_test.percentage_checker": "Percentage Checker",
       "entity.workspace_test.destroyer": "Destroyer",
+      "block.workspace_test.mein": "Mein",
       "block.workspace_test.tower": "Tower",
       "item_group.workspace_test.finanbuild": "Financial buildings"
     }
