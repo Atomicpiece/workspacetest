@@ -3,7 +3,7 @@
   "_type": "gui",
   "definition": {
     "type": 1,
-    "width": 176,
+    "width": 214,
     "height": 166,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
@@ -15,14 +15,14 @@
         "data": {
           "name": "label_mine",
           "text": {
-            "fixedValue": "Mine"
+            "fixedValue": "Mine:"
           },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 201,
-          "y": 40
+          "x": 112,
+          "y": 41
         }
       },
       {
@@ -39,8 +39,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 259,
-          "y": 71
+          "x": 277,
+          "y": 95
         }
       },
       {
@@ -48,7 +48,7 @@
         "data": {
           "image": "monitor.png",
           "use1Xscale": false,
-          "x": 133,
+          "x": 110,
           "y": 50
         }
       },
@@ -57,7 +57,7 @@
         "data": {
           "image": "monitor.png",
           "use1Xscale": false,
-          "x": 133,
+          "x": 110,
           "y": 64
         }
       },
@@ -66,7 +66,7 @@
         "data": {
           "image": "monitor.png",
           "use1Xscale": false,
-          "x": 133,
+          "x": 110,
           "y": 78
         }
       },
@@ -81,7 +81,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 149,
+          "x": 125,
           "y": 53
         }
       },
@@ -96,7 +96,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 149,
+          "x": 125,
           "y": 81
         }
       },
@@ -111,7 +111,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 149,
+          "x": 125,
           "y": 67
         }
       },
@@ -123,8 +123,8 @@
           "isUndecorated": false,
           "width": 77,
           "height": 20,
-          "x": 134,
-          "y": 94
+          "x": 111,
+          "y": 93
         }
       },
       {
@@ -138,8 +138,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 251,
-          "y": 58
+          "x": 231,
+          "y": 98
         }
       },
       {
@@ -156,7 +156,7 @@
           "displayCondition": {
             "name": "Coalpro"
           },
-          "x": 201,
+          "x": 175,
           "y": 53
         }
       },
@@ -174,7 +174,7 @@
           "displayCondition": {
             "name": "Ironpro"
           },
-          "x": 201,
+          "x": 174,
           "y": 53
         }
       },
@@ -192,8 +192,80 @@
           "displayCondition": {
             "name": "Goldpro"
           },
-          "x": 201,
+          "x": 174,
           "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_power_usage",
+          "text": {
+            "fixedValue": "Power usage:"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 208,
+          "y": 79
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "name": "minespeed",
+          "width": 23,
+          "height": 20,
+          "x": 285,
+          "y": 43
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_mining_speed",
+          "text": {
+            "fixedValue": "Mining speed:"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 214,
+          "y": 43
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_minepowerusage",
+          "text": {
+            "fixedValue": "",
+            "name": "Minepowerusage"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 270,
+          "y": 79
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_save",
+          "text": "Save",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Minepowerusage"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 228,
+          "y": 54
         }
       }
     ],
