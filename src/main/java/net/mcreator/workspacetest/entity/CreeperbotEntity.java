@@ -41,6 +41,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.workspacetest.procedures.CreeperbotOnEntityTickUpdateProcedure;
 import net.mcreator.workspacetest.init.WorkspaceTestModEntities;
 
 public class CreeperbotEntity extends Monster implements GeoEntity {
@@ -141,6 +142,7 @@ public class CreeperbotEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		CreeperbotOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 

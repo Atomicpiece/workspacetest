@@ -8,10 +8,15 @@ import net.mcreator.workspacetest.entity.WarplaneEntity;
 import net.mcreator.workspacetest.entity.TinybotEntity;
 import net.mcreator.workspacetest.entity.TankEntity;
 import net.mcreator.workspacetest.entity.SpiderbotEntity;
+import net.mcreator.workspacetest.entity.SkeleterEntity;
 import net.mcreator.workspacetest.entity.RoboticPhantomEntity;
+import net.mcreator.workspacetest.entity.MossyGolemEntity;
 import net.mcreator.workspacetest.entity.MicrobotEntity;
 import net.mcreator.workspacetest.entity.LevitationRobotEntity;
+import net.mcreator.workspacetest.entity.GreatChickenEntity;
+import net.mcreator.workspacetest.entity.FrostBlazeEntity;
 import net.mcreator.workspacetest.entity.DestroyerEntity;
+import net.mcreator.workspacetest.entity.DefenderEntity;
 import net.mcreator.workspacetest.entity.CreeperbotEntity;
 import net.mcreator.workspacetest.entity.BombEntity;
 
@@ -84,6 +89,41 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof WarplaneEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof SkeleterEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof MossyGolemEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof GreatChickenEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof FrostBlazeEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof DefenderEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

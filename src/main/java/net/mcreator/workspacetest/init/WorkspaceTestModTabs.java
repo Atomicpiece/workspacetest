@@ -46,6 +46,15 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.ROBOTIC_PHANTOM_SPAWN_EGG.get());
 				tabData.accept(WorkspaceTestModItems.BOMB_SPAWN_EGG.get());
 				tabData.accept(WorkspaceTestModItems.WARPLANE_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.FIRE_CIRCLE_CREATOR.get());
+				tabData.accept(WorkspaceTestModItems.SKELETER_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.MOSSY_GOLEM_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.GREAT_CHICKEN_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.FROST_BLAZE_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.FURNACE_POWERED_GOLEM_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.DEFENDER_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.REDSTRONE_BLASTER.get());
+				tabData.accept(WorkspaceTestModItems.WAND.get());
 			})
 
 					.build());

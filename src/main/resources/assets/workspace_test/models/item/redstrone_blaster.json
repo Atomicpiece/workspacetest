@@ -1,0 +1,7 @@
+{
+  "parent": "workspace_test:custom/weapon",
+  "textures": {
+    "0": "workspace_test:block/weapon",
+    "particle": "workspace_test:item/ray"
+  }
+}

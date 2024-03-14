@@ -1313,6 +1313,39 @@
       "path": "~/assembly machines"
     },
     {
+      "name": "Minigrate",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minigrate",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MinigrateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
       "name": "Minepowerusage",
       "type": "procedure",
       "sortid": 55,
@@ -1350,16 +1383,51 @@
       "path": "~/assembly machines"
     },
     {
-      "name": "Minigrate",
+      "name": "CreeperbotOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 56,
+      "sortid": 53,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "minigrate",
+      "registry_name": "creeperbot_on_entity_tick_update",
       "metadata": {
-        "return_type": "string",
         "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/MinigrateProcedure.java"
+          "src/main/java/net/mcreator/workspacetest/procedures/CreeperbotOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "MossyGolemEntityIsHurt",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mossy_golem_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MossyGolemEntityIsHurtProcedure.java"
         ],
         "dependencies": [
           {
@@ -1380,7 +1448,520 @@
           }
         ]
       },
-      "path": "~/assembly machines"
+      "path": "~/Defence"
+    },
+    {
+      "name": "RedstoneVoltProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "redstone_volt_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/RedstoneVoltProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "MagicalBoltProjectileHitsPlayer",
+      "type": "procedure",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magical_bolt_projectile_hits_player",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MagicalBoltProjectileHitsPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "RedstoneVoltWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "redstone_volt_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/RedstoneVoltWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "MagicalBoltWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magical_bolt_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MagicalBoltWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "FireCircleCreatorItemInHandTick",
+      "type": "procedure",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_circle_creator_item_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/FireCircleCreatorItemInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Wand",
+      "type": "item",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wand",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/WandItem.java",
+          "src/main/resources/assets/workspace_test/models/item/wand.json"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Skeleter",
+      "type": "animatedentity",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skeleter",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/SkeleterEntity.java",
+          "src/main/resources/assets/workspace_test/models/item/skeleter_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/entity/model/SkeleterModel.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/SkeleterRenderer.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "MagicalBoltProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magical_bolt_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MagicalBoltProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "RedstoneVolt",
+      "type": "projectile",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "redstone_volt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/renderer/RedstoneVoltRenderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/RedstoneVoltEntity.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "MagicalBolt",
+      "type": "projectile",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magical_bolt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/MagicalBoltEntity.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/MagicalBoltRenderer.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "GreatChicken",
+      "type": "animatedentity",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "great_chicken",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/GreatChickenEntity.java",
+          "src/main/resources/assets/workspace_test/models/item/great_chicken_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/entity/model/GreatChickenModel.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/GreatChickenRenderer.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "RedstoneVoltProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "redstone_volt_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/RedstoneVoltProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "MossyGolemEntityDies",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mossy_golem_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MossyGolemEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "FrostBlazeOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frost_blaze_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/FrostBlazeOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Defender",
+      "type": "animatedentity",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "defender",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/renderer/DefenderRenderer.java",
+          "src/main/resources/assets/workspace_test/models/item/defender_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/entity/model/DefenderModel.java",
+          "src/main/java/net/mcreator/workspacetest/entity/DefenderEntity.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "RedstroneBlaster",
+      "type": "item",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "redstrone_blaster",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/redstrone_blaster.json",
+          "src/main/java/net/mcreator/workspacetest/item/RedstroneBlasterItem.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "MossyGolem",
+      "type": "animatedentity",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mossy_golem",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/model/MossyGolemModel.java",
+          "src/main/java/net/mcreator/workspacetest/entity/MossyGolemEntity.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/MossyGolemRenderer.java",
+          "src/main/resources/assets/workspace_test/models/item/mossy_golem_spawn_egg.json"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "FireCircleCreator",
+      "type": "item",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_circle_creator",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/fire_circle_creator.json",
+          "src/main/java/net/mcreator/workspacetest/item/FireCircleCreatorItem.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "FrostBlaze",
+      "type": "animatedentity",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frost_blaze",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/FrostBlazeEntityProjectile.java",
+          "src/main/java/net/mcreator/workspacetest/entity/model/FrostBlazeModel.java",
+          "src/main/java/net/mcreator/workspacetest/entity/FrostBlazeEntity.java",
+          "src/main/resources/assets/workspace_test/models/item/frost_blaze_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/FrostBlazeRenderer.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "MagicalBoltProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magical_bolt_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MagicalBoltProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "FurnacePoweredGolem",
+      "type": "livingentity",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "furnace_powered_golem",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/renderer/FurnacePoweredGolemRenderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/FurnacePoweredGolemEntity.java",
+          "src/main/resources/assets/workspace_test/models/item/furnace_powered_golem_spawn_egg.json"
+        ]
+      },
+      "path": "~/Defence"
     }
   ],
   "variable_elements": [],
@@ -1392,8 +1973,8 @@
       "item_group.workspace_test.machines": "Machines",
       "entity.workspace_test.robotic_phantom": "Robotic Phantom",
       "entity.workspace_test.spiderbot": "Spiderbot",
-      "item.workspace_test.firebelt": "Firebelt",
       "entity.workspace_test.drone": "Drone",
+      "item.workspace_test.firebelt": "Firebelt",
       "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
       "gui.workspace_test.minegui.label_coal": "coal",
       "gui.workspace_test.minegui.button_save": "Save",
