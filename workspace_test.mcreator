@@ -949,7 +949,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/workspacetest/client/gui/MineguiScreen.java",
-          "src/main/java/net/mcreator/workspacetest/world/inventory/MineguiMenu.java"
+          "src/main/java/net/mcreator/workspacetest/world/inventory/MineguiMenu.java",
+          "src/main/java/net/mcreator/workspacetest/network/MineguiButtonMessage.java"
         ]
       },
       "path": "~/assembly machines"
@@ -1310,6 +1311,76 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "Minepowerusage",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minepowerusage",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MinepowerusageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Minigrate",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minigrate",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MinigrateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [],
@@ -1325,8 +1396,10 @@
       "entity.workspace_test.drone": "Drone",
       "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
       "gui.workspace_test.minegui.label_coal": "coal",
+      "gui.workspace_test.minegui.button_save": "Save",
       "item.workspace_test.ion_sword": "Ion Sword",
       "gui.workspace_test.minegui.label_resource": "Resource:",
+      "gui.workspace_test.minegui.label_mining_speed": "Mining speed:",
       "block.workspace_test.ccc": "mine",
       "item.workspace_test.igniter": "Igniter",
       "block.workspace_test.coalde": "Coal deposit",
@@ -1339,13 +1412,14 @@
       "entity.workspace_test.bomb": "Bomb",
       "block.workspace_test.tower": "Tower",
       "item_group.workspace_test.finanbuild": "Financial buildings",
+      "gui.workspace_test.minegui.minespeed": "",
       "gui.workspace_test.minegui.label_gold": "gold",
       "entity.workspace_test.levitation_robot": "Levitation Robot",
       "item_group.workspace_test.defence": "Defence",
       "entity.workspace_test.tinybot": "Tinybot",
       "item.workspace_test.creeperbot_spawn_egg": "Creeperbot Spawn Egg",
       "gui.workspace_test.minegui.label_output": "Output:",
-      "gui.workspace_test.minegui.label_mine": "Mine",
+      "gui.workspace_test.minegui.label_mine": "Mine:",
       "item.workspace_test.robotic_phantom_spawn_egg": "Robotic Phantom Spawn Egg",
       "item.workspace_test.percentage_checker": "Percentage Checker",
       "entity.workspace_test.destroyer": "Destroyer",
@@ -1358,6 +1432,7 @@
       "entity.workspace_test.tank": "Tank",
       "gui.workspace_test.minegui.button_start": "Start mining",
       "block.workspace_test.ironde": "Iron deposit",
+      "gui.workspace_test.minegui.label_power_usage": "Power usage:",
       "gui.workspace_test.minegui.label_iron": "iron",
       "gui.workspace_test.minesgui.label_mine": "Mine",
       "block.workspace_test.goldde": "Gold deposit",
