@@ -337,6 +337,7 @@ public class LevitationRobotEntity extends IronGolem implements RangedAttackMob,
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 5);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 100);
 		builder = builder.add(Attributes.FLYING_SPEED, 0.35);
 		return builder;
 	}

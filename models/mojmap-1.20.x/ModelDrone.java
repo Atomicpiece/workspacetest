@@ -177,8 +177,6 @@ public class ModelDrone<T extends Entity> extends EntityModel<T> {
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
 			float headPitch) {
 		this.fan2.yRot = ageInTicks;
-		this.head.yRot = netHeadYaw / (180F / (float) Math.PI);
-		this.head.xRot = headPitch / (180F / (float) Math.PI);
 		this.fan1.yRot = ageInTicks;
 		this.fan4.yRot = ageInTicks;
 		this.fan3.yRot = ageInTicks;

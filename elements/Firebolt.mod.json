@@ -9,10 +9,10 @@
     "actionSound": {
       "value": "entity.arrow.shoot"
     },
-    "igniteFire": false,
+    "igniteFire": true,
     "power": 1.5,
     "damage": 5.0,
-    "knockback": 5,
+    "knockback": 0,
     "entityModel": "Modelfirebolt",
     "customModelTexture": "texture.png",
     "onHitsBlock": {

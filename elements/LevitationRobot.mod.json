@@ -54,7 +54,7 @@
     "mobCreatureType": "ARTHROPOD",
     "attackStrength": 5,
     "attackKnockback": 0.0,
-    "knockbackResistance": 0.0,
+    "knockbackResistance": 100.0,
     "movementSpeed": 0.35,
     "armorBaseValue": 0.0,
     "trackingRange": 64,

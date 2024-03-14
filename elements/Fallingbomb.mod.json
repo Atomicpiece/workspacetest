@@ -1,0 +1,22 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:Bombs"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "item.crossbow.shoot"
+    },
+    "igniteFire": true,
+    "power": 1.0,
+    "damage": 50.0,
+    "knockback": 5,
+    "entityModel": "Modelfallbomb",
+    "customModelTexture": "fallbomb.png",
+    "onFlyingTick": {
+      "name": "FallingbombWhileProjectileFlyingTick"
+    }
+  }
+}
