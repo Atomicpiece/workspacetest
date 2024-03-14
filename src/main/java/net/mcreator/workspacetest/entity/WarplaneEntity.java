@@ -48,6 +48,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.workspacetest.procedures.WarplaneOnEntityTickUpdateProcedure;
 import net.mcreator.workspacetest.init.WorkspaceTestModEntities;
 
 import javax.annotation.Nullable;
@@ -295,6 +296,7 @@ public class WarplaneEntity extends Monster implements RangedAttackMob, GeoEntit
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		WarplaneOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 

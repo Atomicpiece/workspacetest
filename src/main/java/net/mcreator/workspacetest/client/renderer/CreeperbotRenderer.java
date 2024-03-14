@@ -36,9 +36,4 @@ public class CreeperbotRenderer extends GeoEntityRenderer<CreeperbotEntity> {
 		this.scaleWidth = scale;
 		super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, red, green, blue, alpha);
 	}
-
-	@Override
-	protected float getDeathMaxRotation(CreeperbotEntity entityLivingBaseIn) {
-		return 0.0F;
-	}
 }

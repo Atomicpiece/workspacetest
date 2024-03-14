@@ -41,6 +41,8 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.workspacetest.procedures.BombOnEntityTickUpdateProcedure;
+import net.mcreator.workspacetest.procedures.BombEntityDiesProcedure;
 import net.mcreator.workspacetest.init.WorkspaceTestModEntities;
 
 public class BombEntity extends Monster implements GeoEntity {
@@ -126,6 +128,12 @@ public class BombEntity extends Monster implements GeoEntity {
 	}
 
 	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		BombEntityDiesProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+	}
+
+	@Override
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putString("Texture", this.getTexture());
@@ -141,6 +149,7 @@ public class BombEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		BombOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 
