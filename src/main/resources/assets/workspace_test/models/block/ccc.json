@@ -1,0 +1,9 @@
+{
+  "parent": "workspace_test:custom/minesete",
+  "textures": {
+    "all": "workspace_test:block/minesetre",
+    "particle": "workspace_test:block/minesetre",
+    "1": "workspace_test:block/minesetre"
+  },
+  "render_type": "solid"
+}
