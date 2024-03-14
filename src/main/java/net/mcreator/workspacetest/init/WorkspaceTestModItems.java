@@ -47,9 +47,12 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> ROBOTIC_PHANTOM_SPAWN_EGG = REGISTRY.register("robotic_phantom_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.ROBOTIC_PHANTOM, -6710887, -16763905, new Item.Properties()));
 	public static final RegistryObject<Item> BOMB_SPAWN_EGG = REGISTRY.register("bomb_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.BOMB, -26368, -256, new Item.Properties()));
 	public static final RegistryObject<Item> WARPLANE_SPAWN_EGG = REGISTRY.register("warplane_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.WARPLANE, -13312, -26368, new Item.Properties()));
+	public static final RegistryObject<Item> COALDE = block(WorkspaceTestModBlocks.COALDE);
 	public static final RegistryObject<Item> FIRE_CIRCLE_CREATOR = REGISTRY.register("fire_circle_creator", () -> new FireCircleCreatorItem());
 	public static final RegistryObject<Item> SKELETER_SPAWN_EGG = REGISTRY.register("skeleter_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.SKELETER, -6710887, -10066330, new Item.Properties()));
+	public static final RegistryObject<Item> IRONDE = block(WorkspaceTestModBlocks.IRONDE);
 	public static final RegistryObject<Item> MOSSY_GOLEM_SPAWN_EGG = REGISTRY.register("mossy_golem_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.MOSSY_GOLEM, -6710887, -16724992, new Item.Properties()));
+	public static final RegistryObject<Item> GOLDDE = block(WorkspaceTestModBlocks.GOLDDE);
 	public static final RegistryObject<Item> GREAT_CHICKEN_SPAWN_EGG = REGISTRY.register("great_chicken_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.GREAT_CHICKEN, -1, -65536, new Item.Properties()));
 	public static final RegistryObject<Item> FROST_BLAZE_SPAWN_EGG = REGISTRY.register("frost_blaze_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.FROST_BLAZE, -13369345, -1, new Item.Properties()));
 	public static final RegistryObject<Item> FURNACE_POWERED_GOLEM_SPAWN_EGG = REGISTRY.register("furnace_powered_golem_spawn_egg",
