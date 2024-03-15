@@ -1,10 +1,10 @@
 package net.mcreator.workspacetest.procedures;
 
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.core.BlockPos;
+import net.minecraftforge.eventbus.api.Event;
 
-public class MinigrateProcedure {
+import javax.annotation.Nullable;
+
+public class MiningrateProcedure {
 	public static String execute(LevelAccessor world, double x, double y, double z) {
 		return (new Object() {
 			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
@@ -13,6 +13,6 @@ public class MinigrateProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, BlockPos.containing(x, y, z), "minespeed")) + "unit per second";
+		}.getValue(world, BlockPos.containing(x, y, z), "a")) + "unit per second";
 	}
 }

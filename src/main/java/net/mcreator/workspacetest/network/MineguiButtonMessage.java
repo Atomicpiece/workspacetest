@@ -12,7 +12,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.workspacetest.world.inventory.MineguiMenu;
-import net.mcreator.workspacetest.procedures.MinepowerusageProcedure;
+import net.mcreator.workspacetest.procedures.SaveProcedure;
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
 import java.util.function.Supplier;
@@ -64,7 +64,7 @@ public class MineguiButtonMessage {
 			return;
 		if (buttonID == 1) {
 
-			MinepowerusageProcedure.execute(world, x, y, z, guistate);
+			SaveProcedure.execute(world, x, y, z);
 		}
 	}
 

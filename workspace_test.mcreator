@@ -1829,72 +1829,6 @@
       "path": "~/assembly machines"
     },
     {
-      "name": "Goldpro",
-      "type": "procedure",
-      "sortid": 54,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "goldpro",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/GoldproProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
-      "name": "Ironpro",
-      "type": "procedure",
-      "sortid": 52,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ironpro",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/IronproProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
       "name": "Battleship",
       "type": "animatedentity",
       "sortid": 72,
@@ -1910,39 +1844,6 @@
         ]
       },
       "path": "~/Defence"
-    },
-    {
-      "name": "Minigrate",
-      "type": "procedure",
-      "sortid": 56,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "minigrate",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/MinigrateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/assembly machines"
     },
     {
       "name": "Minepowerusage",
@@ -1961,6 +1862,88 @@
             "name": "guistate",
             "type": "map"
           },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Copperde",
+      "type": "block",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copperde",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/block/CopperdeBlock.java",
+          "src/main/resources/assets/workspace_test/models/block/copperde.json",
+          "src/main/resources/assets/workspace_test/models/item/copperde.json",
+          "src/main/resources/assets/workspace_test/blockstates/copperde.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Save",
+      "type": "procedure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "save",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/SaveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Miningrate",
+      "type": "procedure",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "miningrate",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MiningrateProcedure.java"
+        ],
+        "dependencies": [
           {
             "name": "x",
             "type": "number"
@@ -2003,6 +1986,7 @@
       "gui.workspace_test.minegui.label_resource": "Resource:",
       "gui.workspace_test.minegui.label_mining_speed": "Mining speed:",
       "item.workspace_test.mossy_golem_spawn_egg": "Mossy Golem Spawn Egg",
+      "gui.workspace_test.minegui.save": "",
       "entity.workspace_test.defender": "Defender",
       "block.workspace_test.ccc": "mine",
       "item.workspace_test.igniter": "Igniter",
@@ -2015,7 +1999,9 @@
       "item.workspace_test.skeleter_spawn_egg": "Skeleter Spawn Egg",
       "entity.workspace_test.skeleter": "Skeleter",
       "item.workspace_test.warplane_spawn_egg": "Warplane Spawn Egg",
+      "gui.workspace_test.minegui.label_save": "save",
       "entity.workspace_test.creeperbot": "Creeperbot",
+      "gui.workspace_test.minegui.minespe": "",
       "entity.workspace_test.furnace_powered_golem": "Furnace Powered Golem",
       "item_group.workspace_test.resources": "Resources",
       "entity.workspace_test.bomb": "Bomb",
