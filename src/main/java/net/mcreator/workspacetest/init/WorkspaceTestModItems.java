@@ -60,6 +60,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> DEFENDER_SPAWN_EGG = REGISTRY.register("defender_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.DEFENDER, -10066330, -6710887, new Item.Properties()));
 	public static final RegistryObject<Item> REDSTRONE_BLASTER = REGISTRY.register("redstrone_blaster", () -> new RedstroneBlasterItem());
 	public static final RegistryObject<Item> WAND = REGISTRY.register("wand", () -> new WandItem());
+	public static final RegistryObject<Item> COPPERDE = block(WorkspaceTestModBlocks.COPPERDE);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

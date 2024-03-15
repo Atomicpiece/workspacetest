@@ -64,6 +64,7 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModBlocks.COALDE.get().asItem());
 				tabData.accept(WorkspaceTestModBlocks.IRONDE.get().asItem());
 				tabData.accept(WorkspaceTestModBlocks.GOLDDE.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.COPPERDE.get().asItem());
 			})
 
 					.build());

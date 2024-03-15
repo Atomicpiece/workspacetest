@@ -77,7 +77,7 @@ public class MineguiMenu extends AbstractContainerMenu implements Supplier<Map<I
 					});
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 171, 59) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 191, 56) {
 			private final int slot = 0;
 		}));
 		for (int si = 0; si < 3; ++si)
