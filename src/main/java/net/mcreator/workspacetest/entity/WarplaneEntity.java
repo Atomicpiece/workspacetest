@@ -26,6 +26,7 @@ import net.minecraft.world.entity.ai.goal.RangedAttackGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.Goal;
+import net.minecraft.world.entity.ai.goal.FollowMobGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -129,7 +130,7 @@ public class WarplaneEntity extends Monster implements RangedAttackMob, GeoEntit
 			public void start() {
 				LivingEntity livingentity = WarplaneEntity.this.getTarget();
 				Vec3 vec3d = livingentity.getEyePosition(1);
-				WarplaneEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 2);
+				WarplaneEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 3);
 			}
 
 			@Override
@@ -141,12 +142,12 @@ public class WarplaneEntity extends Monster implements RangedAttackMob, GeoEntit
 					double d0 = WarplaneEntity.this.distanceToSqr(livingentity);
 					if (d0 < 16) {
 						Vec3 vec3d = livingentity.getEyePosition(1);
-						WarplaneEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 2);
+						WarplaneEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 3);
 					}
 				}
 			}
 		});
-		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 2.5, 20) {
+		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 5, 20) {
 			@Override
 			protected Vec3 getPosition() {
 				RandomSource random = WarplaneEntity.this.getRandom();
@@ -157,8 +158,9 @@ public class WarplaneEntity extends Monster implements RangedAttackMob, GeoEntit
 			}
 		});
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(5, new FloatGoal(this));
+		this.goalSelector.addGoal(4, new FollowMobGoal(this, 1, (float) 20, (float) 5));
+		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(6, new FloatGoal(this));
 		this.goalSelector.addGoal(1, new WarplaneEntity.RangedAttackGoal(this, 1.25, 20, 10f) {
 			@Override
 			public boolean canContinueToUse() {
@@ -339,13 +341,13 @@ public class WarplaneEntity extends Monster implements RangedAttackMob, GeoEntit
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.6);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 1);
 		builder = builder.add(Attributes.MAX_HEALTH, 50);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 10);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 100);
-		builder = builder.add(Attributes.FLYING_SPEED, 0.6);
+		builder = builder.add(Attributes.FLYING_SPEED, 1);
 		return builder;
 	}
 

@@ -7,7 +7,7 @@
     },
     "showParticles": true,
     "actionSound": {
-      "value": "block.portal.travel"
+      "value": "item.trident.throw"
     },
     "igniteFire": false,
     "power": 3.0,
