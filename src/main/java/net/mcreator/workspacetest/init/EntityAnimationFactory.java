@@ -19,6 +19,7 @@ import net.mcreator.workspacetest.entity.DestroyerEntity;
 import net.mcreator.workspacetest.entity.DefenderEntity;
 import net.mcreator.workspacetest.entity.CreeperbotEntity;
 import net.mcreator.workspacetest.entity.BombEntity;
+import net.mcreator.workspacetest.entity.BattleshipEntity;
 
 @Mod.EventBusSubscriber
 public class EntityAnimationFactory {
@@ -124,6 +125,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof DefenderEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof BattleshipEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

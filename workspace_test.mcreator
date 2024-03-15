@@ -1187,7 +1187,7 @@
       "locked_code": false,
       "registry_name": "coalpro",
       "metadata": {
-        "return_type": "string",
+        "return_type": "logic",
         "files": [
           "src/main/java/net/mcreator/workspacetest/procedures/CoalproProcedure.java"
         ],
@@ -1945,6 +1945,23 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "Battleship",
+      "type": "animatedentity",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battleship",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/BattleshipEntity.java",
+          "src/main/java/net/mcreator/workspacetest/entity/model/BattleshipModel.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/BattleshipRenderer.java",
+          "src/main/resources/assets/workspace_test/models/item/battleship_spawn_egg.json"
+        ]
+      },
+      "path": "~/Defence"
     }
   ],
   "variable_elements": [],
@@ -1962,7 +1979,7 @@
       "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
       "item.workspace_test.fire_circle_creator": "Fire Circle Creator",
       "item.workspace_test.great_chicken_spawn_egg": "Great Chicken Spawn Egg",
-      "gui.workspace_test.minegui.button_save": "SAVE",
+      "gui.workspace_test.minegui.button_save": "Save",
       "item.workspace_test.ion_sword": "Ion Sword",
       "gui.workspace_test.minegui.label_mining_speed": "Mining speed:",
       "gui.workspace_test.minegui.label_resource": "Resource:",
@@ -1990,7 +2007,6 @@
       "item_group.workspace_test.finanbuild": "Financial buildings",
       "gui.workspace_test.minegui.minespeed": "",
       "gui.workspace_test.minegui.label_gold": "gold",
-      "block.workspace_test.copperde": "Copper deposit",
       "entity.workspace_test.levitation_robot": "Levitation Robot",
       "item_group.workspace_test.defence": "Defence",
       "entity.workspace_test.tinybot": "Tinybot",

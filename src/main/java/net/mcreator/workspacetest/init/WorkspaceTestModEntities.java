@@ -18,6 +18,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.workspacetest.entity.WarplaneEntity;
 import net.mcreator.workspacetest.entity.TinybotEntity;
+import net.mcreator.workspacetest.entity.TankEntityProjectile;
 import net.mcreator.workspacetest.entity.TankEntity;
 import net.mcreator.workspacetest.entity.SpiderbotEntity;
 import net.mcreator.workspacetest.entity.SkeleterEntity;
@@ -39,6 +40,7 @@ import net.mcreator.workspacetest.entity.DestroyerEntity;
 import net.mcreator.workspacetest.entity.DefenderEntity;
 import net.mcreator.workspacetest.entity.CreeperbotEntity;
 import net.mcreator.workspacetest.entity.BombEntity;
+import net.mcreator.workspacetest.entity.BattleshipEntity;
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -56,6 +58,8 @@ public class WorkspaceTestModEntities {
 			EntityType.Builder.<TankEntity>of(TankEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TankEntity::new)
 
 					.sized(0.6f, 0.6f));
+	public static final RegistryObject<EntityType<TankEntityProjectile>> TANK_PROJECTILE = register("projectile_tank",
+			EntityType.Builder.<TankEntityProjectile>of(TankEntityProjectile::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(TankEntityProjectile::new).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<DestroyerEntity>> DESTROYER = register("destroyer",
 			EntityType.Builder.<DestroyerEntity>of(DestroyerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DestroyerEntity::new)
 
@@ -124,6 +128,10 @@ public class WorkspaceTestModEntities {
 			EntityType.Builder.<MagicalBoltEntity>of(MagicalBoltEntity::new, MobCategory.MISC).setCustomClientFactory(MagicalBoltEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<RedstoneVoltEntity>> REDSTONE_VOLT = register("projectile_redstone_volt",
 			EntityType.Builder.<RedstoneVoltEntity>of(RedstoneVoltEntity::new, MobCategory.MISC).setCustomClientFactory(RedstoneVoltEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<BattleshipEntity>> BATTLESHIP = register("battleship",
+			EntityType.Builder.<BattleshipEntity>of(BattleshipEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BattleshipEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -149,6 +157,7 @@ public class WorkspaceTestModEntities {
 			FrostBlazeEntity.init();
 			FurnacePoweredGolemEntity.init();
 			DefenderEntity.init();
+			BattleshipEntity.init();
 		});
 	}
 
@@ -171,5 +180,6 @@ public class WorkspaceTestModEntities {
 		event.put(FROST_BLAZE.get(), FrostBlazeEntity.createAttributes().build());
 		event.put(FURNACE_POWERED_GOLEM.get(), FurnacePoweredGolemEntity.createAttributes().build());
 		event.put(DEFENDER.get(), DefenderEntity.createAttributes().build());
+		event.put(BATTLESHIP.get(), BattleshipEntity.createAttributes().build());
 	}
 }
