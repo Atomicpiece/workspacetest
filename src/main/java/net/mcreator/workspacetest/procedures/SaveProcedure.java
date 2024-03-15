@@ -8,8 +8,12 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
+import java.util.HashMap;
+
 public class SaveProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z) {
+	public static void execute(LevelAccessor world, double x, double y, double z, HashMap guistate) {
+		if (guistate == null)
+			return;
 		if (!world.isClientSide()) {
 			BlockPos _bp = BlockPos.containing(x, y, z);
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -19,6 +23,9 @@ public class SaveProcedure {
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}
+		WorkspaceTestMod.queueServerWork(3, () -> {
+			MinepowerusageProcedure.execute(world, x, y, z, guistate);
+		});
 		WorkspaceTestMod.queueServerWork(5, () -> {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);

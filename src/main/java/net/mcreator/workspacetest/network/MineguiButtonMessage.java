@@ -64,7 +64,7 @@ public class MineguiButtonMessage {
 			return;
 		if (buttonID == 1) {
 
-			SaveProcedure.execute(world, x, y, z);
+			SaveProcedure.execute(world, x, y, z, guistate);
 		}
 	}
 

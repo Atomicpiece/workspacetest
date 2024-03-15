@@ -161,7 +161,7 @@
         "type": "textfield",
         "data": {
           "placeholder": "",
-          "name": "minespe",
+          "name": "minespend",
           "width": 23,
           "height": 20,
           "x": 285,

@@ -1912,6 +1912,10 @@
         ],
         "dependencies": [
           {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -2029,6 +2033,7 @@
       "item.workspace_test.spiderbot_spawn_egg": "Spiderbot Spawn Egg",
       "entity.workspace_test.battleship": "Battleship",
       "item.workspace_test.microbot_spawn_egg": "Microbot Spawn Egg",
+      "gui.workspace_test.minegui.minespend": "",
       "entity.workspace_test.tank": "Tank",
       "gui.workspace_test.minegui.button_start": "Start mining",
       "block.workspace_test.ironde": "Iron deposit",
