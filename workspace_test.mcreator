@@ -1752,7 +1752,7 @@
       "locked_code": false,
       "registry_name": "coalpro",
       "metadata": {
-        "return_type": "logic",
+        "return_type": "string",
         "files": [
           "src/main/java/net/mcreator/workspacetest/procedures/CoalproProcedure.java"
         ],
@@ -1977,11 +1977,11 @@
       "entity.workspace_test.spiderbot": "Spiderbot",
       "entity.workspace_test.drone": "Drone",
       "item.workspace_test.firebelt": "Firebelt",
-      "gui.workspace_test.minegui.label_coal": "coal",
       "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
+      "gui.workspace_test.minegui.label_coal": "coal",
       "item.workspace_test.fire_circle_creator": "Fire Circle Creator",
       "item.workspace_test.great_chicken_spawn_egg": "Great Chicken Spawn Egg",
-      "gui.workspace_test.minegui.button_save": "Save",
+      "gui.workspace_test.minegui.button_save": "SAVE",
       "item.workspace_test.ion_sword": "Ion Sword",
       "gui.workspace_test.minegui.label_resource": "Resource:",
       "gui.workspace_test.minegui.label_mining_speed": "Mining speed:",
@@ -2009,6 +2009,7 @@
       "item_group.workspace_test.finanbuild": "Financial buildings",
       "gui.workspace_test.minegui.minespeed": "",
       "gui.workspace_test.minegui.label_gold": "gold",
+      "block.workspace_test.copperde": "Copper deposit",
       "entity.workspace_test.levitation_robot": "Levitation Robot",
       "item_group.workspace_test.defence": "Defence",
       "entity.workspace_test.tinybot": "Tinybot",
