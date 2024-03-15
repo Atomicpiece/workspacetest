@@ -466,6 +466,7 @@
         "files": [
           "src/main/java/net/mcreator/workspacetest/entity/TankEntity.java",
           "src/main/java/net/mcreator/workspacetest/client/renderer/TankRenderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/TankEntityProjectile.java",
           "src/main/resources/assets/workspace_test/models/item/tank_spawn_egg.json",
           "src/main/java/net/mcreator/workspacetest/entity/model/TankModel.java"
         ]
@@ -1187,7 +1188,7 @@
       "locked_code": false,
       "registry_name": "coalpro",
       "metadata": {
-        "return_type": "logic",
+        "return_type": "string",
         "files": [
           "src/main/java/net/mcreator/workspacetest/procedures/CoalproProcedure.java"
         ],
@@ -1972,14 +1973,15 @@
       "item.workspace_test.bomb_spawn_egg": "Bomb Spawn Egg",
       "item_group.workspace_test.machines": "Machines",
       "entity.workspace_test.robotic_phantom": "Robotic Phantom",
+      "item.workspace_test.battleship_spawn_egg": "Battleship Spawn Egg",
       "entity.workspace_test.spiderbot": "Spiderbot",
       "item.workspace_test.firebelt": "Firebelt",
       "entity.workspace_test.drone": "Drone",
-      "gui.workspace_test.minegui.label_coal": "coal",
       "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
+      "gui.workspace_test.minegui.label_coal": "coal",
       "item.workspace_test.fire_circle_creator": "Fire Circle Creator",
       "item.workspace_test.great_chicken_spawn_egg": "Great Chicken Spawn Egg",
-      "gui.workspace_test.minegui.button_save": "Save",
+      "gui.workspace_test.minegui.button_save": "SAVE",
       "item.workspace_test.ion_sword": "Ion Sword",
       "gui.workspace_test.minegui.label_mining_speed": "Mining speed:",
       "gui.workspace_test.minegui.label_resource": "Resource:",
@@ -2007,6 +2009,7 @@
       "item_group.workspace_test.finanbuild": "Financial buildings",
       "gui.workspace_test.minegui.minespeed": "",
       "gui.workspace_test.minegui.label_gold": "gold",
+      "block.workspace_test.copperde": "Copper deposit",
       "entity.workspace_test.levitation_robot": "Levitation Robot",
       "item_group.workspace_test.defence": "Defence",
       "entity.workspace_test.tinybot": "Tinybot",
@@ -2024,6 +2027,7 @@
       "item.workspace_test.frost_blaze_spawn_egg": "Frost Blaze Spawn Egg",
       "item.workspace_test.tank_spawn_egg": "Tank Spawn Egg",
       "item.workspace_test.spiderbot_spawn_egg": "Spiderbot Spawn Egg",
+      "entity.workspace_test.battleship": "Battleship",
       "item.workspace_test.microbot_spawn_egg": "Microbot Spawn Egg",
       "entity.workspace_test.tank": "Tank",
       "gui.workspace_test.minegui.button_start": "Start mining",
