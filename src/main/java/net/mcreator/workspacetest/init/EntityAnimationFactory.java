@@ -5,6 +5,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 
 import net.mcreator.workspacetest.entity.WarplaneEntity;
+import net.mcreator.workspacetest.entity.TurretEntity;
 import net.mcreator.workspacetest.entity.TinybotEntity;
 import net.mcreator.workspacetest.entity.TankEntity;
 import net.mcreator.workspacetest.entity.SpiderbotEntity;
@@ -132,6 +133,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof BattleshipEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof TurretEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

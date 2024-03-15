@@ -17,6 +17,8 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.workspacetest.entity.WarplaneEntity;
+import net.mcreator.workspacetest.entity.TurretEntityProjectile;
+import net.mcreator.workspacetest.entity.TurretEntity;
 import net.mcreator.workspacetest.entity.TinybotEntity;
 import net.mcreator.workspacetest.entity.TankEntityProjectile;
 import net.mcreator.workspacetest.entity.TankEntity;
@@ -91,9 +93,7 @@ public class WorkspaceTestModEntities {
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<BombEntity>> BOMB = register("bomb",
-			EntityType.Builder.<BombEntity>of(BombEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BombEntity::new)
-
-					.sized(0.6f, 0.6f));
+			EntityType.Builder.<BombEntity>of(BombEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BombEntity::new).fireImmune().sized(0.6f, 0.6f));
 	public static final RegistryObject<EntityType<WarplaneEntity>> WARPLANE = register("warplane",
 			EntityType.Builder.<WarplaneEntity>of(WarplaneEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WarplaneEntity::new)
 
@@ -132,6 +132,12 @@ public class WorkspaceTestModEntities {
 			EntityType.Builder.<BattleshipEntity>of(BattleshipEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BattleshipEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<TurretEntity>> TURRET = register("turret",
+			EntityType.Builder.<TurretEntity>of(TurretEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TurretEntity::new)
+
+					.sized(0.6f, 1f));
+	public static final RegistryObject<EntityType<TurretEntityProjectile>> TURRET_PROJECTILE = register("projectile_turret", EntityType.Builder.<TurretEntityProjectile>of(TurretEntityProjectile::new, MobCategory.MISC)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(TurretEntityProjectile::new).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -158,6 +164,7 @@ public class WorkspaceTestModEntities {
 			FurnacePoweredGolemEntity.init();
 			DefenderEntity.init();
 			BattleshipEntity.init();
+			TurretEntity.init();
 		});
 	}
 
@@ -181,5 +188,6 @@ public class WorkspaceTestModEntities {
 		event.put(FURNACE_POWERED_GOLEM.get(), FurnacePoweredGolemEntity.createAttributes().build());
 		event.put(DEFENDER.get(), DefenderEntity.createAttributes().build());
 		event.put(BATTLESHIP.get(), BattleshipEntity.createAttributes().build());
+		event.put(TURRET.get(), TurretEntity.createAttributes().build());
 	}
 }

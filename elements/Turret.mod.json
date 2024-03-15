@@ -2,9 +2,9 @@
   "_fv": 57,
   "_type": "animatedentity",
   "definition": {
-    "mobName": "Tank",
+    "mobName": "Turret",
     "mobLabel": "",
-    "mobModelTexture": "tank.png",
+    "mobModelTexture": "turret.png",
     "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.0
@@ -14,16 +14,16 @@
     },
     "entityDataEntries": [],
     "modelWidth": 0.6,
-    "modelHeight": 0.6,
-    "modelShadowSize": 0.6,
+    "modelHeight": 1.0,
+    "modelShadowSize": 0.8,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -16738048,
+      "value": -1,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -10066330,
+      "value": -3355444,
       "falpha": 0.0
     },
     "creativeTab": {
@@ -50,12 +50,12 @@
     "equipmentBoots": {
       "value": ""
     },
-    "mobBehaviourType": "Mob",
-    "mobCreatureType": "ARTHROPOD",
-    "attackStrength": 10,
+    "mobBehaviourType": "Creature",
+    "mobCreatureType": "UNDEFINED",
+    "attackStrength": 8,
     "attackKnockback": 0.0,
     "knockbackResistance": 100.0,
-    "movementSpeed": 0.2,
+    "movementSpeed": 0.0,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 16,
@@ -66,14 +66,14 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "deathTime": 50,
-    "lerp": 4,
+    "deathTime": 20,
+    "lerp": 0,
     "disableCollisions": false,
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
     "immuneToFire": false,
-    "immuneToArrows": false,
+    "immuneToArrows": true,
     "immuneToFallDamage": false,
     "immuneToCactus": false,
     "immuneToDrowning": false,
@@ -89,24 +89,27 @@
       "value": ""
     },
     "livingSound": {
-      "value": "block.brewing_stand.brew"
+      "value": "block.water.ambient"
     },
     "hurtSound": {
-      "value": "entity.irongolem.step"
+      "value": "block.grindstone.use"
     },
     "deathSound": {
-      "value": "block.note_block.iron_xylophone"
+      "value": "entity.firework.blast"
     },
     "stepSound": {
-      "value": "item.elytra.flying"
+      "value": "block.anvil.place"
+    },
+    "onMobTickUpdate": {
+      "name": "TurretOnEntityTickUpdate"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
-    "model": "tank.geo.json",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"watch_closest_entity\"><field name=\"entity\">EntityMonster</field><field name=\"radius\">16</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityMonster</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></xml>",
+    "model": "turret.geo.json",
     "groupName": "head",
     "animation1": "idle",
-    "animation2": "walk",
+    "animation2": "",
     "animation3": "",
     "animation4": "attack",
     "animation5": "",
@@ -115,7 +118,7 @@
     "animation8": "",
     "animation9": "",
     "animation10": "",
-    "enable2": true,
+    "enable2": false,
     "enable3": false,
     "enable4": true,
     "enable5": false,
@@ -132,11 +135,11 @@
     "breedTriggerItems": [],
     "ranged": true,
     "rangedAttackItem": {
-      "value": "Blocks.STONE_BUTTON"
+      "value": "Blocks.BAMBOO_BUTTON"
     },
     "rangedItemType": "Default item",
-    "rangedAttackInterval": 30,
-    "rangedAttackRadius": 10.0,
+    "rangedAttackInterval": 20,
+    "rangedAttackRadius": 20.0,
     "height": 1.0,
     "spawnThisMob": false,
     "doesDespawnWhenIdle": false,

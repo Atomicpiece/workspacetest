@@ -30,6 +30,7 @@ import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
@@ -125,6 +126,15 @@ public class BombEntity extends Monster implements GeoEntity {
 	@Override
 	public SoundEvent getDeathSound() {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode"));
+	}
+
+	@Override
+	public boolean hurt(DamageSource source, float amount) {
+		if (source.is(DamageTypes.IN_FIRE))
+			return false;
+		if (source.is(DamageTypes.EXPLOSION))
+			return false;
+		return super.hurt(source, amount);
 	}
 
 	@Override

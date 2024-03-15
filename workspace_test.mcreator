@@ -1967,6 +1967,127 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "Turret",
+      "type": "animatedentity",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "turret",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/model/TurretModel.java",
+          "src/main/java/net/mcreator/workspacetest/entity/TurretEntity.java",
+          "src/main/java/net/mcreator/workspacetest/entity/TurretEntityProjectile.java",
+          "src/main/resources/assets/workspace_test/models/item/turret_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/TurretRenderer.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "TurretOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "turret_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/TurretOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "HealtIndicatorRightclicked",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healt_indicator_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/HealtIndicatorRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "HealtIndicatorPlayerFinishesUsingItem",
+      "type": "procedure",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healt_indicator_player_finishes_using_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/HealtIndicatorPlayerFinishesUsingItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "HealtIndicator",
+      "type": "item",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healt_indicator",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/HealtIndicatorItem.java",
+          "src/main/resources/assets/workspace_test/models/item/healt_indicator.json"
+        ]
+      },
+      "path": "~/Defence"
     }
   ],
   "variable_elements": [],
@@ -2007,10 +2128,12 @@
       "entity.workspace_test.creeperbot": "Creeperbot",
       "gui.workspace_test.minegui.minespe": "",
       "entity.workspace_test.furnace_powered_golem": "Furnace Powered Golem",
+      "entity.workspace_test.turret": "Turret",
       "item_group.workspace_test.resources": "Resources",
       "entity.workspace_test.bomb": "Bomb",
       "block.workspace_test.tower": "Tower",
       "item_group.workspace_test.finanbuild": "Financial buildings",
+      "item.workspace_test.healt_indicator": "Healt Indicator",
       "gui.workspace_test.minegui.minespeed": "",
       "gui.workspace_test.minegui.label_gold": "gold",
       "block.workspace_test.copperde": "Copper deposit",
@@ -2038,6 +2161,7 @@
       "gui.workspace_test.minegui.button_start": "Start mining",
       "block.workspace_test.ironde": "Iron deposit",
       "gui.workspace_test.minegui.label_power_usage": "Power usage:",
+      "item.workspace_test.turret_spawn_egg": "Turret Spawn Egg",
       "gui.workspace_test.minegui.label_iron": "iron",
       "gui.workspace_test.minesgui.label_mine": "Mine",
       "block.workspace_test.goldde": "Gold deposit",
