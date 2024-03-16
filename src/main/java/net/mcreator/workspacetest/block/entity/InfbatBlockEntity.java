@@ -10,34 +10,31 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.inventory.ChestMenu;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.WorldlyContainer;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.nbt.IntTag;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.workspacetest.world.inventory.MineguiMenu;
 import net.mcreator.workspacetest.init.WorkspaceTestModBlockEntities;
 
 import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
 
-import io.netty.buffer.Unpooled;
-
-public class CccBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(1, ItemStack.EMPTY);
+public class InfbatBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
+	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
-	public CccBlockEntity(BlockPos position, BlockState state) {
-		super(WorkspaceTestModBlockEntities.CCC.get(), position, state);
+	public InfbatBlockEntity(BlockPos position, BlockState state) {
+		super(WorkspaceTestModBlockEntities.INFBAT.get(), position, state);
 	}
 
 	@Override
@@ -84,7 +81,7 @@ public class CccBlockEntity extends RandomizableContainerBlockEntity implements 
 
 	@Override
 	public Component getDefaultName() {
-		return Component.literal("ccc");
+		return Component.literal("infbat");
 	}
 
 	@Override
@@ -94,12 +91,12 @@ public class CccBlockEntity extends RandomizableContainerBlockEntity implements 
 
 	@Override
 	public AbstractContainerMenu createMenu(int id, Inventory inventory) {
-		return new MineguiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(this.worldPosition));
+		return ChestMenu.threeRows(id, inventory);
 	}
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("mine");
+		return Component.literal("Infinite battery");
 	}
 
 	@Override
@@ -132,7 +129,7 @@ public class CccBlockEntity extends RandomizableContainerBlockEntity implements 
 		return true;
 	}
 
-	private final EnergyStorage energyStorage = new EnergyStorage(400000, 10000, 10000, 0) {
+	private final EnergyStorage energyStorage = new EnergyStorage(400000, 100000, 100000, 400000) {
 		@Override
 		public int receiveEnergy(int maxReceive, boolean simulate) {
 			int retval = super.receiveEnergy(maxReceive, simulate);

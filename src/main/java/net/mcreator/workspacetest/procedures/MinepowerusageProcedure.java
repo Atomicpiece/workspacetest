@@ -36,7 +36,7 @@ public class MinepowerusageProcedure {
 							}
 							return 0;
 						}
-					}.convert(guistate.containsKey("text:textFieldName") ? ((EditBox) guistate.get("text:textFieldName")).getValue() : "")) > 100 ? 100 : Math.abs(new Object() {
+					}.convert(guistate.containsKey("text:minespend") ? ((EditBox) guistate.get("text:minespend")).getValue() : "")) > 40 ? 40 : Math.abs(new Object() {
 						double convert(String s) {
 							try {
 								return Double.parseDouble(s.trim());
@@ -64,6 +64,6 @@ public class MinepowerusageProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, BlockPos.containing(x, y, z), "a")) + " ET";
+		}.getValue(world, BlockPos.containing(x, y, z), "a")) + "PU";
 	}
 }

@@ -2088,6 +2088,221 @@
         ]
       },
       "path": "~/Defence"
+    },
+    {
+      "name": "Mineprocces",
+      "type": "procedure",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mineprocces",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MineproccesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Ironchunk",
+      "type": "item",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ironchunk",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/ironchunk.json",
+          "src/main/java/net/mcreator/workspacetest/item/IronchunkItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Run",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "run",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/RunProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "InfbatUpdateTick",
+      "type": "procedure",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infbat_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/InfbatUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Infbat",
+      "type": "block",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infbat",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/infbat.json",
+          "src/main/resources/assets/workspace_test/blockstates/infbat.json",
+          "src/main/java/net/mcreator/workspacetest/block/entity/InfbatBlockEntity.java",
+          "src/main/resources/assets/workspace_test/models/block/infbat.json",
+          "src/main/java/net/mcreator/workspacetest/block/InfbatBlock.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Tools",
+      "type": "tab",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tools",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "MultimeterPlayerFinishesUsingItem",
+      "type": "procedure",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "multimeter_player_finishes_using_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MultimeterPlayerFinishesUsingItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Multimeter",
+      "type": "item",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "multimeter",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/multimeter.json",
+          "src/main/java/net/mcreator/workspacetest/item/MultimeterItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Startmine",
+      "type": "procedure",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "startmine",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/StartmineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [],
@@ -2104,6 +2319,7 @@
       "entity.workspace_test.drone": "Drone",
       "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
       "gui.workspace_test.minegui.label_coal": "coal",
+      "item_group.workspace_test.tools": "Tools",
       "item.workspace_test.fire_circle_creator": "Fire Circle Creator",
       "item.workspace_test.great_chicken_spawn_egg": "Great Chicken Spawn Egg",
       "gui.workspace_test.minegui.button_save": "SAVE",
@@ -2136,9 +2352,11 @@
       "item.workspace_test.healt_indicator": "Healt Indicator",
       "gui.workspace_test.minegui.minespeed": "",
       "gui.workspace_test.minegui.label_gold": "gold",
+      "item.workspace_test.ironchunk": "Iron chunk",
       "block.workspace_test.copperde": "Copper deposit",
       "entity.workspace_test.levitation_robot": "Levitation Robot",
       "item_group.workspace_test.defence": "Defence",
+      "block.workspace_test.infbat": "Infinite battery",
       "entity.workspace_test.tinybot": "Tinybot",
       "item.workspace_test.creeperbot_spawn_egg": "Creeperbot Spawn Egg",
       "gui.workspace_test.minegui.label_output": "Output:",
@@ -2165,6 +2383,7 @@
       "gui.workspace_test.minegui.label_iron": "iron",
       "gui.workspace_test.minesgui.label_mine": "Mine",
       "block.workspace_test.goldde": "Gold deposit",
+      "item.workspace_test.multimeter": "Tablet",
       "block.workspace_test.minese": "Minese",
       "item.workspace_test.levitation_robot_spawn_egg": "Levitation Robot Spawn Egg",
       "item_group.workspace_test.test": "Test",

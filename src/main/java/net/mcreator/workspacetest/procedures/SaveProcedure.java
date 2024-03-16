@@ -23,10 +23,10 @@ public class SaveProcedure {
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}
-		WorkspaceTestMod.queueServerWork(3, () -> {
+		WorkspaceTestMod.queueServerWork(1, () -> {
 			MinepowerusageProcedure.execute(world, x, y, z, guistate);
 		});
-		WorkspaceTestMod.queueServerWork(5, () -> {
+		WorkspaceTestMod.queueServerWork(2, () -> {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);

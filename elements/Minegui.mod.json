@@ -121,6 +121,12 @@
           "name": "button_start",
           "text": "Start mining",
           "isUndecorated": false,
+          "onClick": {
+            "name": "Startmine"
+          },
+          "displayCondition": {
+            "name": "Run"
+          },
           "width": 77,
           "height": 20,
           "x": 111,
@@ -195,7 +201,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 256,
+          "x": 257,
           "y": 110
         }
       },
@@ -211,7 +217,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 189,
+          "x": 191,
           "y": 80
         }
       },
@@ -227,7 +233,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 176,
+          "x": 177,
           "y": 53
         }
       },
@@ -244,6 +250,22 @@
           "height": 20,
           "x": 223,
           "y": 54
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_mineprocces",
+          "text": {
+            "fixedValue": "",
+            "name": "Mineprocces"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 165,
+          "y": 66
         }
       }
     ],

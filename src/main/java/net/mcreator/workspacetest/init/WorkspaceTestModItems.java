@@ -16,6 +16,8 @@ import net.minecraft.world.item.BlockItem;
 import net.mcreator.workspacetest.item.WandItem;
 import net.mcreator.workspacetest.item.RedstroneBlasterItem;
 import net.mcreator.workspacetest.item.PercentageCheckerItem;
+import net.mcreator.workspacetest.item.MultimeterItem;
+import net.mcreator.workspacetest.item.IronchunkItem;
 import net.mcreator.workspacetest.item.IonSwordItem;
 import net.mcreator.workspacetest.item.IgniterItem;
 import net.mcreator.workspacetest.item.HealtIndicatorItem;
@@ -64,6 +66,9 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> BATTLESHIP_SPAWN_EGG = REGISTRY.register("battleship_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.BATTLESHIP, -10066330, -65536, new Item.Properties()));
 	public static final RegistryObject<Item> TURRET_SPAWN_EGG = REGISTRY.register("turret_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.TURRET, -1, -3355444, new Item.Properties()));
 	public static final RegistryObject<Item> HEALT_INDICATOR = REGISTRY.register("healt_indicator", () -> new HealtIndicatorItem());
+	public static final RegistryObject<Item> IRONCHUNK = REGISTRY.register("ironchunk", () -> new IronchunkItem());
+	public static final RegistryObject<Item> INFBAT = block(WorkspaceTestModBlocks.INFBAT);
+	public static final RegistryObject<Item> MULTIMETER = REGISTRY.register("multimeter", () -> new MultimeterItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

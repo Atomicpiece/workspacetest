@@ -12,6 +12,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.workspacetest.world.inventory.MineguiMenu;
+import net.mcreator.workspacetest.procedures.StartmineProcedure;
 import net.mcreator.workspacetest.procedures.SaveProcedure;
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
@@ -62,6 +63,10 @@ public class MineguiButtonMessage {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+		if (buttonID == 0) {
+
+			StartmineProcedure.execute(world, x, y, z);
+		}
 		if (buttonID == 1) {
 
 			SaveProcedure.execute(world, x, y, z, guistate);
