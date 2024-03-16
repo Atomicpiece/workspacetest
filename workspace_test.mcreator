@@ -1895,6 +1895,10 @@
         ],
         "dependencies": [
           {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -2098,8 +2102,8 @@
       "entity.workspace_test.spiderbot": "Spiderbot",
       "item.workspace_test.firebelt": "Firebelt",
       "entity.workspace_test.drone": "Drone",
-      "gui.workspace_test.minegui.label_coal": "coal",
       "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
+      "gui.workspace_test.minegui.label_coal": "coal",
       "item.workspace_test.fire_circle_creator": "Fire Circle Creator",
       "item.workspace_test.great_chicken_spawn_egg": "Great Chicken Spawn Egg",
       "gui.workspace_test.minegui.button_save": "SAVE",
@@ -2124,10 +2128,12 @@
       "entity.workspace_test.creeperbot": "Creeperbot",
       "gui.workspace_test.minegui.minespe": "",
       "entity.workspace_test.furnace_powered_golem": "Furnace Powered Golem",
+      "entity.workspace_test.turret": "Turret",
       "item_group.workspace_test.resources": "Resources",
       "entity.workspace_test.bomb": "Bomb",
       "block.workspace_test.tower": "Tower",
       "item_group.workspace_test.finanbuild": "Financial buildings",
+      "item.workspace_test.healt_indicator": "Healt Indicator",
       "gui.workspace_test.minegui.minespeed": "",
       "gui.workspace_test.minegui.label_gold": "gold",
       "block.workspace_test.copperde": "Copper deposit",
@@ -2155,6 +2161,7 @@
       "gui.workspace_test.minegui.button_start": "Start mining",
       "block.workspace_test.ironde": "Iron deposit",
       "gui.workspace_test.minegui.label_power_usage": "Power usage:",
+      "item.workspace_test.turret_spawn_egg": "Turret Spawn Egg",
       "gui.workspace_test.minegui.label_iron": "iron",
       "gui.workspace_test.minesgui.label_mine": "Mine",
       "block.workspace_test.goldde": "Gold deposit",
