@@ -36,7 +36,7 @@ public class MinepowerusageProcedure {
 							}
 							return 0;
 						}
-					}.convert(guistate.containsKey("text:minespe") ? ((EditBox) guistate.get("text:minespe")).getValue() : "")) > 100 ? 100 : Math.abs(new Object() {
+					}.convert(guistate.containsKey("text:textFieldName") ? ((EditBox) guistate.get("text:textFieldName")).getValue() : "")) > 100 ? 100 : Math.abs(new Object() {
 						double convert(String s) {
 							try {
 								return Double.parseDouble(s.trim());
@@ -44,11 +44,12 @@ public class MinepowerusageProcedure {
 							}
 							return 0;
 						}
-					}.convert(guistate.containsKey("text:minespe") ? ((EditBox) guistate.get("text:minespe")).getValue() : ""))));
+					}.convert(guistate.containsKey("text:minespend") ? ((EditBox) guistate.get("text:minespend")).getValue() : ""))));
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		}
+		MiningrateProcedure.execute(world, x, y, z);
 		return ((new Object() {
 			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -63,6 +64,6 @@ public class MinepowerusageProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, BlockPos.containing(x, y, z), "a")) + "" + "ET";
+		}.getValue(world, BlockPos.containing(x, y, z), "a")) + " ET";
 	}
 }

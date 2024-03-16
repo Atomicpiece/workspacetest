@@ -1,75 +1,41 @@
 
 package net.mcreator.workspacetest.entity;
 
-import software.bernie.geckolib.util.GeckoLibUtil;
-import software.bernie.geckolib.core.object.PlayState;
-import software.bernie.geckolib.core.animation.RawAnimation;
-import software.bernie.geckolib.core.animation.AnimationState;
-import software.bernie.geckolib.core.animation.AnimationController;
-import software.bernie.geckolib.core.animation.AnimatableManager;
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.animatable.GeoEntity;
-
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
-
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.monster.RangedAttackMob;
-import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.RangedAttackGoal;
-import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.Goal;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
+import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.Pose;
-import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.EntityDimensions;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.util.Mth;
+import net.minecraft.nbt.Tag;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.protocol.game.ClientGamePacketListener;
-import net.minecraft.network.protocol.Packet;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.workspacetest.init.WorkspaceTestModEntities;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 
 import javax.annotation.Nullable;
 
-import java.util.EnumSet;
+import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.core.animation.AnimationState;
 
-public class TankEntity extends Monster implements RangedAttackMob, GeoEntity {
-	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(TankEntity.class, EntityDataSerializers.BOOLEAN);
-	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(TankEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(TankEntity.class, EntityDataSerializers.STRING);
+public class TurretEntity extends PathfinderMob implements RangedAttackMob, GeoEntity {
+	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(TurretEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(TurretEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(TurretEntity.class, EntityDataSerializers.STRING);
+
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
 
-	public TankEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(WorkspaceTestModEntities.TANK.get(), world);
+	public TurretEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(WorkspaceTestModEntities.TURRET.get(), world);
 	}
 
-	public TankEntity(EntityType<TankEntity> type, Level world) {
+	public TurretEntity(EntityType<TurretEntity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
+
 		setPersistenceRequired();
+
 	}
 
 	@Override
@@ -77,7 +43,7 @@ public class TankEntity extends Monster implements RangedAttackMob, GeoEntity {
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "tank");
+		this.entityData.define(TEXTURE, "turret");
 	}
 
 	public void setTexture(String texture) {
@@ -96,17 +62,13 @@ public class TankEntity extends Monster implements RangedAttackMob, GeoEntity {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new RandomStrollGoal(this, 1));
-		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, false) {
-			@Override
-			protected double getAttackReachSqr(LivingEntity entity) {
-				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
-			}
-		});
-		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(5, new FloatGoal(this));
-		this.goalSelector.addGoal(1, new TankEntity.RangedAttackGoal(this, 1.25, 30, 10f) {
+
+		this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Monster.class, (float) 16));
+		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Monster.class, true, true));
+		this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(4, new FloatGoal(this));
+
+		this.goalSelector.addGoal(1, new TurretEntity.RangedAttackGoal(this, 1.25, 20, 20f) {
 			@Override
 			public boolean canContinueToUse() {
 				return this.canUse();
@@ -164,7 +126,7 @@ public class TankEntity extends Monster implements RangedAttackMob, GeoEntity {
 			this.target = null;
 			this.seeTime = 0;
 			this.attackTime = -1;
-			((TankEntity) rangedAttackMob).entityData.set(SHOOT, false);
+			((TurretEntity) rangedAttackMob).entityData.set(SHOOT, false);
 		}
 
 		public boolean requiresUpdateEveryTick() {
@@ -187,10 +149,10 @@ public class TankEntity extends Monster implements RangedAttackMob, GeoEntity {
 			this.mob.getLookControl().setLookAt(this.target, 30.0F, 30.0F);
 			if (--this.attackTime == 0) {
 				if (!flag) {
-					((TankEntity) rangedAttackMob).entityData.set(SHOOT, false);
+					((TurretEntity) rangedAttackMob).entityData.set(SHOOT, false);
 					return;
 				}
-				((TankEntity) rangedAttackMob).entityData.set(SHOOT, true);
+				((TurretEntity) rangedAttackMob).entityData.set(SHOOT, true);
 				float f = (float) Math.sqrt(d0) / this.attackRadius;
 				float f1 = Mth.clamp(f, 0.1F, 1.0F);
 				this.rangedAttackMob.performRangedAttack(this.target, f1);
@@ -198,13 +160,13 @@ public class TankEntity extends Monster implements RangedAttackMob, GeoEntity {
 			} else if (this.attackTime < 0) {
 				this.attackTime = Mth.floor(Mth.lerp(Math.sqrt(d0) / (double) this.attackRadius, (double) this.attackIntervalMin, (double) this.attackIntervalMax));
 			} else
-				((TankEntity) rangedAttackMob).entityData.set(SHOOT, false);
+				((TurretEntity) rangedAttackMob).entityData.set(SHOOT, false);
 		}
 	}
 
 	@Override
 	public MobType getMobType() {
-		return MobType.ARTHROPOD;
+		return MobType.UNDEFINED;
 	}
 
 	@Override
@@ -214,22 +176,29 @@ public class TankEntity extends Monster implements RangedAttackMob, GeoEntity {
 
 	@Override
 	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.brewing_stand.brew"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.water.ambient"));
 	}
 
 	@Override
 	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.elytra.flying")), 0.15f, 1);
+		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.place")), 0.15f, 1);
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.iron_golem.step"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.grindstone.use"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.iron_xylophone"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.firework_rocket.blast"));
+	}
+
+	@Override
+	public boolean hurt(DamageSource source, float amount) {
+		if (source.getDirectEntity() instanceof AbstractArrow)
+			return false;
+		return super.hurt(source, amount);
 	}
 
 	@Override
@@ -248,6 +217,7 @@ public class TankEntity extends Monster implements RangedAttackMob, GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		TurretOnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 
@@ -258,7 +228,7 @@ public class TankEntity extends Monster implements RangedAttackMob, GeoEntity {
 
 	@Override
 	public void performRangedAttack(LivingEntity target, float flval) {
-		TankEntityProjectile entityarrow = new TankEntityProjectile(WorkspaceTestModEntities.TANK_PROJECTILE.get(), this, this.level());
+		TurretEntityProjectile entityarrow = new TurretEntityProjectile(WorkspaceTestModEntities.TURRET_PROJECTILE.get(), this, this.level());
 		double d0 = target.getY() + target.getEyeHeight() - 1.1;
 		double d1 = target.getX() - this.getX();
 		double d3 = target.getZ() - this.getZ();
@@ -266,27 +236,31 @@ public class TankEntity extends Monster implements RangedAttackMob, GeoEntity {
 		this.level().addFreshEntity(entityarrow);
 	}
 
+	@Override
+	public void aiStep() {
+		super.aiStep();
+		this.updateSwingTime();
+	}
+
 	public static void init() {
+
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.2);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0);
 		builder = builder.add(Attributes.MAX_HEALTH, 100);
 		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 10);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 8);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 100);
+
 		return builder;
 	}
 
 	private PlayState movementPredicate(AnimationState event) {
 		if (this.animationprocedure.equals("empty")) {
-			if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F))
-
-			) {
-				return event.setAndContinue(RawAnimation.begin().thenLoop("walk"));
-			}
 			return event.setAndContinue(RawAnimation.begin().thenLoop("idle"));
 		}
 		return PlayState.STOP;
@@ -326,9 +300,10 @@ public class TankEntity extends Monster implements RangedAttackMob, GeoEntity {
 	@Override
 	protected void tickDeath() {
 		++this.deathTime;
-		if (this.deathTime == 50) {
-			this.remove(TankEntity.RemovalReason.KILLED);
+		if (this.deathTime == 20) {
+			this.remove(TurretEntity.RemovalReason.KILLED);
 			this.dropExperience();
+
 		}
 	}
 
@@ -342,13 +317,14 @@ public class TankEntity extends Monster implements RangedAttackMob, GeoEntity {
 
 	@Override
 	public void registerControllers(AnimatableManager.ControllerRegistrar data) {
-		data.add(new AnimationController<>(this, "movement", 4, this::movementPredicate));
-		data.add(new AnimationController<>(this, "attacking", 4, this::attackingPredicate));
-		data.add(new AnimationController<>(this, "procedure", 4, this::procedurePredicate));
+		data.add(new AnimationController<>(this, "movement", 0, this::movementPredicate));
+		data.add(new AnimationController<>(this, "attacking", 0, this::attackingPredicate));
+		data.add(new AnimationController<>(this, "procedure", 0, this::procedurePredicate));
 	}
 
 	@Override
 	public AnimatableInstanceCache getAnimatableInstanceCache() {
 		return this.cache;
 	}
+
 }

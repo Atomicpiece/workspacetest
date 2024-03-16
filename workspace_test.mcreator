@@ -1963,6 +1963,127 @@
         ]
       },
       "path": "~/Defence"
+    },
+    {
+      "name": "HealtIndicatorRightclicked",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healt_indicator_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/HealtIndicatorRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "HealtIndicator",
+      "type": "item",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healt_indicator",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/HealtIndicatorItem.java",
+          "src/main/resources/assets/workspace_test/models/item/healt_indicator.json"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "HealtIndicatorPlayerFinishesUsingItem",
+      "type": "procedure",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healt_indicator_player_finishes_using_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/HealtIndicatorPlayerFinishesUsingItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "TurretOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "turret_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/TurretOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Turret",
+      "type": "animatedentity",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "turret",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/model/TurretModel.java",
+          "src/main/java/net/mcreator/workspacetest/entity/TurretEntity.java",
+          "src/main/resources/assets/workspace_test/models/item/turret_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/TurretRenderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/TurretEntityProjectile.java"
+        ]
+      },
+      "path": "~/Defence"
     }
   ],
   "variable_elements": [],
@@ -2029,6 +2150,7 @@
       "item.workspace_test.spiderbot_spawn_egg": "Spiderbot Spawn Egg",
       "entity.workspace_test.battleship": "Battleship",
       "item.workspace_test.microbot_spawn_egg": "Microbot Spawn Egg",
+      "gui.workspace_test.minegui.minespend": "",
       "entity.workspace_test.tank": "Tank",
       "gui.workspace_test.minegui.button_start": "Start mining",
       "block.workspace_test.ironde": "Iron deposit",

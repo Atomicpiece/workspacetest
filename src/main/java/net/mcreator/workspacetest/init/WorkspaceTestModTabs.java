@@ -21,6 +21,7 @@ public class WorkspaceTestModTabs {
 	public static final RegistryObject<CreativeModeTab> TEST = REGISTRY.register("test",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.test")).icon(() -> new ItemStack(Blocks.GILDED_BLACKSTONE)).displayItems((parameters, tabData) -> {
 				tabData.accept(WorkspaceTestModItems.BOMBS.get());
+				tabData.accept(WorkspaceTestModItems.HEALT_INDICATOR.get());
 			})
 
 					.build());
@@ -56,6 +57,7 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.REDSTRONE_BLASTER.get());
 				tabData.accept(WorkspaceTestModItems.WAND.get());
 				tabData.accept(WorkspaceTestModItems.BATTLESHIP_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.TURRET_SPAWN_EGG.get());
 			})
 
 					.build());

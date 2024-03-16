@@ -26,7 +26,7 @@ public class MineguiScreen extends AbstractContainerScreen<MineguiMenu> {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	EditBox minespe;
+	EditBox minespend;
 	Button button_start;
 	Button button_save;
 
@@ -47,7 +47,7 @@ public class MineguiScreen extends AbstractContainerScreen<MineguiMenu> {
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		minespe.render(guiGraphics, mouseX, mouseY, partialTicks);
+		minespend.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
@@ -73,15 +73,15 @@ public class MineguiScreen extends AbstractContainerScreen<MineguiMenu> {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-		if (minespe.isFocused())
-			return minespe.keyPressed(key, b, c);
+		if (minespend.isFocused())
+			return minespend.keyPressed(key, b, c);
 		return super.keyPressed(key, b, c);
 	}
 
 	@Override
 	public void containerTick() {
 		super.containerTick();
-		minespe.tick();
+		minespend.tick();
 	}
 
 	@Override
@@ -112,10 +112,10 @@ public class MineguiScreen extends AbstractContainerScreen<MineguiMenu> {
 	@Override
 	public void init() {
 		super.init();
-		minespe = new EditBox(this.font, this.leftPos + 179, this.topPos + 7, 21, 18, Component.translatable("gui.workspace_test.minegui.minespe"));
-		minespe.setMaxLength(32767);
-		guistate.put("text:minespe", minespe);
-		this.addWidget(this.minespe);
+		minespend = new EditBox(this.font, this.leftPos + 179, this.topPos + 7, 21, 18, Component.translatable("gui.workspace_test.minegui.minespend"));
+		minespend.setMaxLength(32767);
+		guistate.put("text:minespend", minespend);
+		this.addWidget(this.minespend);
 		button_start = Button.builder(Component.translatable("gui.workspace_test.minegui.button_start"), e -> {
 		}).bounds(this.leftPos + 4, this.topPos + 56, 77, 20).build();
 		guistate.put("button:button_start", button_start);

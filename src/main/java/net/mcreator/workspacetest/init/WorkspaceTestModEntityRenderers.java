@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.workspacetest.client.renderer.WarplaneRenderer;
+import net.mcreator.workspacetest.client.renderer.TurretRenderer;
 import net.mcreator.workspacetest.client.renderer.TinybotRenderer;
 import net.mcreator.workspacetest.client.renderer.TankRenderer;
 import net.mcreator.workspacetest.client.renderer.SpiderbotRenderer;
@@ -64,5 +65,7 @@ public class WorkspaceTestModEntityRenderers {
 		event.registerEntityRenderer(WorkspaceTestModEntities.MAGICAL_BOLT.get(), MagicalBoltRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.REDSTONE_VOLT.get(), RedstoneVoltRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.BATTLESHIP.get(), BattleshipRenderer::new);
+		event.registerEntityRenderer(WorkspaceTestModEntities.TURRET.get(), TurretRenderer::new);
+		event.registerEntityRenderer(WorkspaceTestModEntities.TURRET_PROJECTILE.get(), ThrownItemRenderer::new);
 	}
 }
