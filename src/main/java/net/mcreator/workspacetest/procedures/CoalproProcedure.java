@@ -1,21 +1,23 @@
 package net.mcreator.workspacetest.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.core.BlockPos;
 
-import javax.annotation.Nullable;
+import net.mcreator.workspacetest.init.WorkspaceTestModBlocks;
 
 public class CoalproProcedure {
 	public static String execute(LevelAccessor world, double x, double y, double z) {
-		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModItems.DELETED_MOD_ELEMENT.get()) {
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.COALDE.get()) {
 			return "coal";
 		}
-		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModItems.DELETED_MOD_ELEMENT.get()) {
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.IRONDE.get()) {
 			return "iron";
 		}
-		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModItems.DELETED_MOD_ELEMENT.get()) {
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.GOLDDE.get()) {
 			return "gold";
 		}
-		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModItems.DELETED_MOD_ELEMENT.get()) {
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.COPPERDE.get()) {
 			return "copper";
 		}
 		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == Blocks.DIAMOND_ORE) {

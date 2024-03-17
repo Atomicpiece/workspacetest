@@ -1,24 +1,54 @@
 
 package net.mcreator.workspacetest.entity;
 
-import net.minecraft.world.entity.ai.attributes.Attribute;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.nbt.Tag;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.syncher.EntityDataSerializers;
-import net.minecraft.network.syncher.SynchedEntityData;
-
-import javax.annotation.Nullable;
-
-import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.util.GeckoLibUtil;
+import software.bernie.geckolib.core.object.PlayState;
+import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.core.animation.AnimationState;
+import software.bernie.geckolib.core.animation.AnimationController;
+import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animatable.GeoEntity;
+
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.network.PlayMessages;
+import net.minecraftforge.network.NetworkHooks;
+
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.animal.AbstractGolem;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.FloatGoal;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.workspacetest.procedures.MossyGolemEntityIsHurtProcedure;
+import net.mcreator.workspacetest.procedures.MossyGolemEntityDiesProcedure;
+import net.mcreator.workspacetest.init.WorkspaceTestModEntities;
 
 public class MossyGolemEntity extends Monster implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(MossyGolemEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(MossyGolemEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(MossyGolemEntity.class, EntityDataSerializers.STRING);
-
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
@@ -33,9 +63,7 @@ public class MossyGolemEntity extends Monster implements GeoEntity {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
-
 		setPersistenceRequired();
-
 	}
 
 	@Override
@@ -62,13 +90,11 @@ public class MossyGolemEntity extends Monster implements GeoEntity {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-
 		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, AbstractGolem.class, false, false));
 		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this).setAlertOthers());
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(5, new FloatGoal(this));
-
 	}
 
 	@Override
@@ -103,14 +129,14 @@ public class MossyGolemEntity extends Monster implements GeoEntity {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		MossyGolemEntityIsHurtProcedure.execute();
+		MossyGolemEntityIsHurtProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 		return super.hurt(source, amount);
 	}
 
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		MossyGolemEntityDiesProcedure.execute();
+		MossyGolemEntityDiesProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override
@@ -138,7 +164,6 @@ public class MossyGolemEntity extends Monster implements GeoEntity {
 	}
 
 	public static void init() {
-
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -148,9 +173,7 @@ public class MossyGolemEntity extends Monster implements GeoEntity {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 12);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 100);
-
 		return builder;
 	}
 
@@ -206,7 +229,6 @@ public class MossyGolemEntity extends Monster implements GeoEntity {
 		if (this.deathTime == 20) {
 			this.remove(MossyGolemEntity.RemovalReason.KILLED);
 			this.dropExperience();
-
 		}
 	}
 
@@ -229,5 +251,4 @@ public class MossyGolemEntity extends Monster implements GeoEntity {
 	public AnimatableInstanceCache getAnimatableInstanceCache() {
 		return this.cache;
 	}
-
 }

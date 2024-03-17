@@ -1,8 +1,15 @@
 package net.mcreator.workspacetest.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.particles.ParticleTypes;
 
-import javax.annotation.Nullable;
+import java.util.List;
+import java.util.Comparator;
 
 public class MissileWhileProjectileFlyingTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity immediatesourceentity) {
@@ -10,7 +17,7 @@ public class MissileWhileProjectileFlyingTickProcedure {
 			return;
 		double dis = 0;
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.CAMPFIRE_COSY_SMOKE, x, y, z, 5, 0.1, 0.1, 0.1, 0.01);
+			_level.sendParticles(ParticleTypes.CAMPFIRE_COSY_SMOKE, x, y, z, 20, 0.1, 0.1, 0.1, 0.01);
 		if (immediatesourceentity.isInWaterOrBubble()) {
 			immediatesourceentity.setDeltaMovement(new Vec3((immediatesourceentity.getDeltaMovement().x() * 1.6), (immediatesourceentity.getDeltaMovement().y()), (immediatesourceentity.getDeltaMovement().z() * 1.6)));
 		}
