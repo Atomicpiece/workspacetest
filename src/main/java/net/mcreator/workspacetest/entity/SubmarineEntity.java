@@ -1,24 +1,68 @@
 
 package net.mcreator.workspacetest.entity;
 
-import net.minecraft.world.entity.ai.attributes.Attribute;
+import software.bernie.geckolib.util.GeckoLibUtil;
+import software.bernie.geckolib.core.object.PlayState;
+import software.bernie.geckolib.core.animation.RawAnimation;
+import software.bernie.geckolib.core.animation.AnimationState;
+import software.bernie.geckolib.core.animation.AnimationController;
+import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animatable.GeoEntity;
+
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.network.PlayMessages;
+import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.common.ForgeMod;
+
+import net.minecraft.world.level.pathfinder.BlockPathTypes;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.monster.RangedAttackMob;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.animal.AbstractGolem;
+import net.minecraft.world.entity.ai.navigation.WaterBoundPathNavigation;
+import net.minecraft.world.entity.ai.navigation.PathNavigation;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.RangedAttackGoal;
+import net.minecraft.world.entity.ai.goal.RandomSwimmingGoal;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.Goal;
+import net.minecraft.world.entity.ai.control.MoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.nbt.Tag;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.workspacetest.procedures.SubmarineOnEntityTickUpdateProcedure;
+import net.mcreator.workspacetest.init.WorkspaceTestModEntities;
 
 import javax.annotation.Nullable;
 
-import software.bernie.geckolib.core.animation.AnimatableManager;
-import software.bernie.geckolib.core.animation.AnimationState;
+import java.util.EnumSet;
 
 public class SubmarineEntity extends Monster implements RangedAttackMob, GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(SubmarineEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(SubmarineEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(SubmarineEntity.class, EntityDataSerializers.STRING);
-
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
@@ -33,36 +77,28 @@ public class SubmarineEntity extends Monster implements RangedAttackMob, GeoEnti
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
-
 		setPersistenceRequired();
-
 		this.setPathfindingMalus(BlockPathTypes.WATER, 0);
 		this.moveControl = new MoveControl(this) {
 			@Override
 			public void tick() {
 				if (SubmarineEntity.this.isInWater())
 					SubmarineEntity.this.setDeltaMovement(SubmarineEntity.this.getDeltaMovement().add(0, 0.005, 0));
-
 				if (this.operation == MoveControl.Operation.MOVE_TO && !SubmarineEntity.this.getNavigation().isDone()) {
 					double dx = this.wantedX - SubmarineEntity.this.getX();
 					double dy = this.wantedY - SubmarineEntity.this.getY();
 					double dz = this.wantedZ - SubmarineEntity.this.getZ();
-
 					float f = (float) (Mth.atan2(dz, dx) * (double) (180 / Math.PI)) - 90;
 					float f1 = (float) (this.speedModifier * SubmarineEntity.this.getAttribute(Attributes.MOVEMENT_SPEED).getValue());
-
 					SubmarineEntity.this.setYRot(this.rotlerp(SubmarineEntity.this.getYRot(), f, 10));
 					SubmarineEntity.this.yBodyRot = SubmarineEntity.this.getYRot();
 					SubmarineEntity.this.yHeadRot = SubmarineEntity.this.getYRot();
-
 					if (SubmarineEntity.this.isInWater()) {
 						SubmarineEntity.this.setSpeed((float) SubmarineEntity.this.getAttribute(Attributes.MOVEMENT_SPEED).getValue());
-
 						float f2 = -(float) (Mth.atan2(dy, (float) Math.sqrt(dx * dx + dz * dz)) * (180 / Math.PI));
 						f2 = Mth.clamp(Mth.wrapDegrees(f2), -85, 85);
 						SubmarineEntity.this.setXRot(this.rotlerp(SubmarineEntity.this.getXRot(), f2, 5));
 						float f3 = Mth.cos(SubmarineEntity.this.getXRot() * (float) (Math.PI / 180.0));
-
 						SubmarineEntity.this.setZza(f3 * f1);
 						SubmarineEntity.this.setYya((float) (f1 * dy));
 					} else {
@@ -106,12 +142,10 @@ public class SubmarineEntity extends Monster implements RangedAttackMob, GeoEnti
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-
 		this.goalSelector.addGoal(1, new RandomSwimmingGoal(this, 1.5, 40));
 		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, AbstractGolem.class, false, false));
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-
 		this.goalSelector.addGoal(1, new SubmarineEntity.RangedAttackGoal(this, 1.25, 20, 10f) {
 			@Override
 			public boolean canContinueToUse() {
@@ -291,7 +325,6 @@ public class SubmarineEntity extends Monster implements RangedAttackMob, GeoEnti
 	}
 
 	public static void init() {
-
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -301,13 +334,9 @@ public class SubmarineEntity extends Monster implements RangedAttackMob, GeoEnti
 		builder = builder.add(Attributes.ARMOR, 5);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 7);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 32);
-
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 100);
-
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 2);
-
 		builder = builder.add(ForgeMod.SWIM_SPEED.get(), 0.6);
-
 		return builder;
 	}
 
@@ -361,7 +390,6 @@ public class SubmarineEntity extends Monster implements RangedAttackMob, GeoEnti
 		if (this.deathTime == 20) {
 			this.remove(SubmarineEntity.RemovalReason.KILLED);
 			this.dropExperience();
-
 		}
 	}
 
@@ -384,5 +412,4 @@ public class SubmarineEntity extends Monster implements RangedAttackMob, GeoEnti
 	public AnimatableInstanceCache getAnimatableInstanceCache() {
 		return this.cache;
 	}
-
 }
