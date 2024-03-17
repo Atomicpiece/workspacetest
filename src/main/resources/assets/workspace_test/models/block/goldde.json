@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "workspace_test:block/golde",
+    "up": "workspace_test:block/golde",
+    "north": "workspace_test:block/golde",
+    "east": "workspace_test:block/golde",
+    "south": "workspace_test:block/golde",
+    "west": "workspace_test:block/golde",
+    "particle": "workspace_test:block/golde"
+  },
+  "render_type": "solid"
+}

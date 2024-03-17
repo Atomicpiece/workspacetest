@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "workspace_test:block/copperde",
+    "up": "workspace_test:block/copperde",
+    "north": "workspace_test:block/copperde",
+    "east": "workspace_test:block/copperde",
+    "south": "workspace_test:block/copperde",
+    "west": "workspace_test:block/copperde",
+    "particle": "workspace_test:block/copperde"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,31 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.ICE"
+    },
+    "showParticles": true,
+    "actionSound": {
+      "value": "item.trident.throw"
+    },
+    "igniteFire": false,
+    "power": 3.0,
+    "damage": 4.0,
+    "knockback": 0,
+    "entityModel": "Modelmagicalbolt_Converted",
+    "customModelTexture": "magicalbolt.png",
+    "onHitsBlock": {
+      "name": "MagicalBoltProjectileHitsBlock"
+    },
+    "onHitsPlayer": {
+      "name": "MagicalBoltProjectileHitsPlayer"
+    },
+    "onHitsEntity": {
+      "name": "MagicalBoltProjectileHitsLivingEntity"
+    },
+    "onFlyingTick": {
+      "name": "MagicalBoltWhileProjectileFlyingTick"
+    }
+  }
+}

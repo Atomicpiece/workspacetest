@@ -21,6 +21,7 @@ public class WorkspaceTestModTabs {
 	public static final RegistryObject<CreativeModeTab> TEST = REGISTRY.register("test",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.test")).icon(() -> new ItemStack(Blocks.GILDED_BLACKSTONE)).displayItems((parameters, tabData) -> {
 				tabData.accept(WorkspaceTestModItems.BOMBS.get());
+				tabData.accept(WorkspaceTestModItems.HEALT_INDICATOR.get());
 			})
 
 					.build());
@@ -37,12 +38,44 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.PERCENTAGE_CHECKER.get());
 				tabData.accept(WorkspaceTestModItems.TANK_SPAWN_EGG.get());
 				tabData.accept(WorkspaceTestModItems.DESTROYER_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.LEVITATION_ROBOT_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.FIREBELT.get());
+				tabData.accept(WorkspaceTestModItems.DRONE_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.ION_SWORD.get());
+				tabData.accept(WorkspaceTestModItems.CREEPERBOT_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.SPIDERBOT_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.ROBOTIC_PHANTOM_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.BOMB_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.WARPLANE_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.FIRE_CIRCLE_CREATOR.get());
+				tabData.accept(WorkspaceTestModItems.SKELETER_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.MOSSY_GOLEM_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.GREAT_CHICKEN_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.FROST_BLAZE_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.FURNACE_POWERED_GOLEM_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.DEFENDER_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.REDSTRONE_BLASTER.get());
+				tabData.accept(WorkspaceTestModItems.WAND.get());
+				tabData.accept(WorkspaceTestModItems.BATTLESHIP_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.TURRET_SPAWN_EGG.get());
 			})
 
 					.build());
 	public static final RegistryObject<CreativeModeTab> RESOURCES = REGISTRY.register("resources",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.resources")).icon(() -> new ItemStack(Items.RAW_IRON)).displayItems((parameters, tabData) -> {
-				tabData.accept(WorkspaceTestModBlocks.MINESE.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.CCC.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.COALDE.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.IRONDE.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.GOLDDE.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.COPPERDE.get().asItem());
+				tabData.accept(WorkspaceTestModItems.IRONCHUNK.get());
+			})
+
+					.build());
+	public static final RegistryObject<CreativeModeTab> TOOLS = REGISTRY.register("tools",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.tools")).icon(() -> new ItemStack(Blocks.TRIPWIRE_HOOK)).displayItems((parameters, tabData) -> {
+				tabData.accept(WorkspaceTestModBlocks.INFBAT.get().asItem());
+				tabData.accept(WorkspaceTestModItems.MULTIMETER.get());
 			})
 
 					.build());
