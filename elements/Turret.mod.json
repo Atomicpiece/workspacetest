@@ -73,7 +73,7 @@
     "canControlForward": false,
     "canControlStrafe": false,
     "immuneToFire": false,
-    "immuneToArrows": true,
+    "immuneToArrows": false,
     "immuneToFallDamage": false,
     "immuneToCactus": false,
     "immuneToDrowning": false,
@@ -99,6 +99,9 @@
     },
     "stepSound": {
       "value": "block.anvil.place"
+    },
+    "whenMobIsHurt": {
+      "name": "TurretEntityIsHurt"
     },
     "onMobTickUpdate": {
       "name": "TurretOnEntityTickUpdate"

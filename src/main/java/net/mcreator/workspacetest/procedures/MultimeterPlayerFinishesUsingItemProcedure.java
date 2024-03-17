@@ -1,17 +1,8 @@
 package net.mcreator.workspacetest.procedures;
 
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.ClipContext;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.Component;
-import net.minecraft.core.BlockPos;
-
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicBoolean;
+import javax.annotation.Nullable;
 
 public class MultimeterPlayerFinishesUsingItemProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {

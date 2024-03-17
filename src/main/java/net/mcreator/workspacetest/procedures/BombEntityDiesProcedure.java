@@ -1,7 +1,8 @@
 package net.mcreator.workspacetest.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
+import net.minecraftforge.eventbus.api.Event;
+
+import javax.annotation.Nullable;
 
 public class BombEntityDiesProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {

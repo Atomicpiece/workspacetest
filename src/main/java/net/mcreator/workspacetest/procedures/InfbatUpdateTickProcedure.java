@@ -1,12 +1,8 @@
 package net.mcreator.workspacetest.procedures;
 
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.core.BlockPos;
-
-import java.util.concurrent.atomic.AtomicBoolean;
+import javax.annotation.Nullable;
 
 public class InfbatUpdateTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {

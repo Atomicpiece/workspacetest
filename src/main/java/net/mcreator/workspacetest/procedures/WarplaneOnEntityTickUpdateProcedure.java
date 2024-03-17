@@ -1,17 +1,8 @@
 package net.mcreator.workspacetest.procedures;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.util.RandomSource;
-import net.minecraft.util.Mth;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.BlockPos;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.workspacetest.init.WorkspaceTestModEntities;
-import net.mcreator.workspacetest.init.WorkspaceTestModBlocks;
-import net.mcreator.workspacetest.WorkspaceTestMod;
+import javax.annotation.Nullable;
 
 public class WarplaneOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
