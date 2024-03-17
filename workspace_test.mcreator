@@ -2088,6 +2088,205 @@
         ]
       },
       "path": "~/Defence"
+    },
+    {
+      "name": "Submarine",
+      "type": "animatedentity",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "submarine",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/renderer/SubmarineRenderer.java",
+          "src/main/resources/assets/workspace_test/models/item/submarine_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/entity/SubmarineEntity.java",
+          "src/main/java/net/mcreator/workspacetest/entity/model/SubmarineModel.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "SubmarineOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "submarine_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/SubmarineOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "TurretEntityIsHurt",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "turret_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/TurretEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "MissileWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "missile_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MissileWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "MissileProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "missile_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MissileProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "MissileProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "missile_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MissileProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Missile",
+      "type": "projectile",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "missile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/renderer/MissileRenderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/MissileEntity.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Basooka",
+      "type": "item",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bazooka",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/bazooka.json",
+          "src/main/java/net/mcreator/workspacetest/item/BasookaItem.java"
+        ]
+      },
+      "path": "~/Defence"
     }
   ],
   "variable_elements": [],
@@ -2107,6 +2306,8 @@
       "item.workspace_test.fire_circle_creator": "Fire Circle Creator",
       "item.workspace_test.great_chicken_spawn_egg": "Great Chicken Spawn Egg",
       "gui.workspace_test.minegui.button_save": "SAVE",
+      "entity.workspace_test.submarine": "Submarine",
+      "item.workspace_test.submarine_spawn_egg": "Submarine Spawn Egg",
       "item.workspace_test.ion_sword": "Ion Sword",
       "gui.workspace_test.minegui.label_resource": "Resource:",
       "gui.workspace_test.minegui.label_mining_speed": "Mining speed:",
@@ -2155,6 +2356,7 @@
       "item.workspace_test.tank_spawn_egg": "Tank Spawn Egg",
       "item.workspace_test.spiderbot_spawn_egg": "Spiderbot Spawn Egg",
       "entity.workspace_test.battleship": "Battleship",
+      "item.workspace_test.bazooka": "Bazooka",
       "item.workspace_test.microbot_spawn_egg": "Microbot Spawn Egg",
       "gui.workspace_test.minegui.minespend": "",
       "entity.workspace_test.tank": "Tank",

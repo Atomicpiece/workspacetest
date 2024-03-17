@@ -22,6 +22,7 @@ import net.mcreator.workspacetest.item.HealtIndicatorItem;
 import net.mcreator.workspacetest.item.FirebeltItem;
 import net.mcreator.workspacetest.item.FireCircleCreatorItem;
 import net.mcreator.workspacetest.item.BombsItem;
+import net.mcreator.workspacetest.item.BasookaItem;
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
 public class WorkspaceTestModItems {
@@ -64,6 +65,8 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> COPPERDE = block(WorkspaceTestModBlocks.COPPERDE);
 	public static final RegistryObject<Item> TURRET_SPAWN_EGG = REGISTRY.register("turret_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.TURRET, -1, -3355444, new Item.Properties()));
 	public static final RegistryObject<Item> HEALT_INDICATOR = REGISTRY.register("healt_indicator", () -> new HealtIndicatorItem());
+	public static final RegistryObject<Item> SUBMARINE_SPAWN_EGG = REGISTRY.register("submarine_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.SUBMARINE, -16724737, -6710887, new Item.Properties()));
+	public static final RegistryObject<Item> BAZOOKA = REGISTRY.register("bazooka", () -> new BasookaItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

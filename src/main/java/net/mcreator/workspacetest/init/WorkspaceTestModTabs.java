@@ -58,6 +58,8 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.WAND.get());
 				tabData.accept(WorkspaceTestModItems.BATTLESHIP_SPAWN_EGG.get());
 				tabData.accept(WorkspaceTestModItems.TURRET_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.SUBMARINE_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.BAZOOKA.get());
 			})
 
 					.build());

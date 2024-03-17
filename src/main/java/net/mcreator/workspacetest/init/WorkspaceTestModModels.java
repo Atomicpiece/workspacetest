@@ -10,6 +10,7 @@ import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.workspacetest.client.model.Modelredstonevolt;
+import net.mcreator.workspacetest.client.model.Modelmissile;
 import net.mcreator.workspacetest.client.model.Modelmagicalbolt_Converted;
 import net.mcreator.workspacetest.client.model.Modelironsword;
 import net.mcreator.workspacetest.client.model.Modelfurnacegolem;
@@ -24,6 +25,7 @@ public class WorkspaceTestModModels {
 		event.registerLayerDefinition(Modelfirebolt.LAYER_LOCATION, Modelfirebolt::createBodyLayer);
 		event.registerLayerDefinition(Modelfallbomb.LAYER_LOCATION, Modelfallbomb::createBodyLayer);
 		event.registerLayerDefinition(Modelmagicalbolt_Converted.LAYER_LOCATION, Modelmagicalbolt_Converted::createBodyLayer);
+		event.registerLayerDefinition(Modelmissile.LAYER_LOCATION, Modelmissile::createBodyLayer);
 		event.registerLayerDefinition(Modelironsword.LAYER_LOCATION, Modelironsword::createBodyLayer);
 		event.registerLayerDefinition(Modelfurnacegolem.LAYER_LOCATION, Modelfurnacegolem::createBodyLayer);
 		event.registerLayerDefinition(Modelredstonevolt.LAYER_LOCATION, Modelredstonevolt::createBodyLayer);
