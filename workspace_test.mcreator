@@ -2379,7 +2379,7 @@
       "locked_code": false,
       "registry_name": "run",
       "metadata": {
-        "return_type": "logic",
+        "return_type": "string",
         "files": [
           "src/main/java/net/mcreator/workspacetest/procedures/RunProcedure.java"
         ],
@@ -2445,7 +2445,6 @@
       "locked_code": false,
       "registry_name": "mineprocces",
       "metadata": {
-        "return_type": "string",
         "files": [
           "src/main/java/net/mcreator/workspacetest/procedures/MineproccesProcedure.java"
         ],
@@ -2515,8 +2514,8 @@
       "entity.workspace_test.spiderbot": "Spiderbot",
       "item.workspace_test.firebelt": "Firebelt",
       "entity.workspace_test.drone": "Drone",
-      "item_group.workspace_test.tools": "Tools",
       "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
+      "item_group.workspace_test.tools": "Tools",
       "item.workspace_test.fire_circle_creator": "Fire Circle Creator",
       "item.workspace_test.great_chicken_spawn_egg": "Great Chicken Spawn Egg",
       "gui.workspace_test.minegui.button_save": "SAVE",
