@@ -8,10 +8,12 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.workspacetest.WorkspaceTestMod;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class StartmineProcedure {
-	public static String execute(LevelAccessor world, double x, double y, double z) {
+	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (new Object() {
 			public int getEnergyStored(LevelAccessor level, BlockPos pos) {
 				AtomicInteger _retval = new AtomicInteger(0);
@@ -34,7 +36,7 @@ public class StartmineProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, BlockPos.containing(x, y, z), "a")) * 20) {
+		}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2 * 20) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -45,6 +47,8 @@ public class StartmineProcedure {
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		}
-		return "No energy";
+		WorkspaceTestMod.queueServerWork(1, () -> {
+			MineproccesProcedure.execute(world, x, y, z);
+		});
 	}
 }

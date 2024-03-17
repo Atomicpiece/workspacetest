@@ -77,8 +77,13 @@ public class MineguiMenu extends AbstractContainerMenu implements Supplier<Map<I
 					});
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 191, 56) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 188, 56) {
 			private final int slot = 0;
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
@@ -214,10 +219,14 @@ public class MineguiMenu extends AbstractContainerMenu implements Supplier<Map<I
 		if (!bound && playerIn instanceof ServerPlayer serverPlayer) {
 			if (!serverPlayer.isAlive() || serverPlayer.hasDisconnected()) {
 				for (int j = 0; j < internal.getSlots(); ++j) {
+					if (j == 0)
+						continue;
 					playerIn.drop(internal.extractItem(j, internal.getStackInSlot(j).getCount(), false), false);
 				}
 			} else {
 				for (int i = 0; i < internal.getSlots(); ++i) {
+					if (i == 0)
+						continue;
 					playerIn.getInventory().placeItemBackInInventory(internal.extractItem(i, internal.getStackInSlot(i).getCount(), false));
 				}
 			}

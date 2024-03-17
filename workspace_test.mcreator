@@ -2097,7 +2097,6 @@
       "locked_code": false,
       "registry_name": "mineprocces",
       "metadata": {
-        "return_type": "string",
         "files": [
           "src/main/java/net/mcreator/workspacetest/procedures/MineproccesProcedure.java"
         ],
@@ -2145,7 +2144,7 @@
       "locked_code": false,
       "registry_name": "run",
       "metadata": {
-        "return_type": "logic",
+        "return_type": "string",
         "files": [
           "src/main/java/net/mcreator/workspacetest/procedures/RunProcedure.java"
         ],
@@ -2279,7 +2278,6 @@
       "locked_code": false,
       "registry_name": "startmine",
       "metadata": {
-        "return_type": "string",
         "files": [
           "src/main/java/net/mcreator/workspacetest/procedures/StartmineProcedure.java"
         ],

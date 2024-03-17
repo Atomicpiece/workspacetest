@@ -13,7 +13,6 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.mcreator.workspacetest.world.inventory.MineguiMenu;
 import net.mcreator.workspacetest.procedures.RunProcedure;
 import net.mcreator.workspacetest.procedures.MiningrateProcedure;
-import net.mcreator.workspacetest.procedures.MineproccesProcedure;
 import net.mcreator.workspacetest.procedures.MinepowerusageProcedure;
 import net.mcreator.workspacetest.procedures.CoalproProcedure;
 import net.mcreator.workspacetest.network.MineguiButtonMessage;
@@ -106,7 +105,7 @@ public class MineguiScreen extends AbstractContainerScreen<MineguiMenu> {
 				CoalproProcedure.execute(world, x, y, z), 70, 16, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				MineproccesProcedure.execute(world, x, y, z), 58, 29, -12829636, false);
+				RunProcedure.execute(world, x, y, z), 58, 29, -12829636, false);
 	}
 
 	@Override
@@ -122,17 +121,11 @@ public class MineguiScreen extends AbstractContainerScreen<MineguiMenu> {
 		guistate.put("text:minespend", minespend);
 		this.addWidget(this.minespend);
 		button_start = Button.builder(Component.translatable("gui.workspace_test.minegui.button_start"), e -> {
-			if (RunProcedure.execute(world, x, y, z)) {
+			if (true) {
 				WorkspaceTestMod.PACKET_HANDLER.sendToServer(new MineguiButtonMessage(0, x, y, z));
 				MineguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 4, this.topPos + 56, 77, 20).build(builder -> new Button(builder) {
-			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (RunProcedure.execute(world, x, y, z))
-					super.render(guiGraphics, gx, gy, ticks);
-			}
-		});
+		}).bounds(this.leftPos + 4, this.topPos + 56, 77, 20).build();
 		guistate.put("button:button_start", button_start);
 		this.addRenderableWidget(button_start);
 		button_save = Button.builder(Component.translatable("gui.workspace_test.minegui.button_save"), e -> {
