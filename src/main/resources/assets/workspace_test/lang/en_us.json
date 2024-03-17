@@ -1,6 +1,7 @@
 {
   "block.workspace_test.nuke": "Nuke",
   "entity.workspace_test.microbot": "Microbot",
+  "item.workspace_test.bombs": "Bombs",
   "block.workspace_test.robotic_assembler": "Robotic Assembler",
   "item.workspace_test.tank_spawn_egg": "Tank Spawn Egg",
   "item.workspace_test.igniter": "Igniter",

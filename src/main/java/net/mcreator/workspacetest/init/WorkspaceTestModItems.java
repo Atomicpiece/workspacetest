@@ -15,6 +15,7 @@ import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.workspacetest.item.PercentageCheckerItem;
 import net.mcreator.workspacetest.item.IgniterItem;
+import net.mcreator.workspacetest.item.BombsItem;
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
 public class WorkspaceTestModItems {
@@ -31,6 +32,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> TANK_SPAWN_EGG = REGISTRY.register("tank_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.TANK, -16738048, -10066330, new Item.Properties()));
 	public static final RegistryObject<Item> DESTROYER_SPAWN_EGG = REGISTRY.register("destroyer_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.DESTROYER, -10066330, -16777216, new Item.Properties()));
 	public static final RegistryObject<Item> MINESE = block(WorkspaceTestModBlocks.MINESE);
+	public static final RegistryObject<Item> BOMBS = REGISTRY.register("bombs", () -> new BombsItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
