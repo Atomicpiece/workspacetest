@@ -70,6 +70,14 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModBlocks.IRONDE.get().asItem());
 				tabData.accept(WorkspaceTestModBlocks.GOLDDE.get().asItem());
 				tabData.accept(WorkspaceTestModBlocks.COPPERDE.get().asItem());
+				tabData.accept(WorkspaceTestModItems.IRONCHUNK.get());
+			})
+
+					.build());
+	public static final RegistryObject<CreativeModeTab> TOOLS = REGISTRY.register("tools",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.tools")).icon(() -> new ItemStack(Blocks.TRIPWIRE_HOOK)).displayItems((parameters, tabData) -> {
+				tabData.accept(WorkspaceTestModBlocks.INFBAT.get().asItem());
+				tabData.accept(WorkspaceTestModItems.MULTIMETER.get());
 			})
 
 					.build());

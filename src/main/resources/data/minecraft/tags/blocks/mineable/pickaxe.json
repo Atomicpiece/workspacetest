@@ -4,6 +4,7 @@
     "workspace_test:coalde",
     "workspace_test:ironde",
     "workspace_test:goldde",
-    "workspace_test:copperde"
+    "workspace_test:copperde",
+    "workspace_test:infbat"
   ]
 }

@@ -1,19 +1,14 @@
 package net.mcreator.workspacetest.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.BlockPos;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.workspacetest.init.WorkspaceTestModEntities;
-import net.mcreator.workspacetest.init.WorkspaceTestModBlocks;
-import net.mcreator.workspacetest.WorkspaceTestMod;
+import javax.annotation.Nullable;
 
 public class WarplaneOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		double vx = 0;
 		if ((world.getBlockState(BlockPos.containing(x, y - 3, z))).getBlock() == WorkspaceTestModBlocks.ROBOTIC_ASSEMBLER.get() || (world.getBlockState(BlockPos.containing(x, y - 4, z))).getBlock() == WorkspaceTestModBlocks.ROBOTIC_ASSEMBLER.get()
 				|| (world.getBlockState(BlockPos.containing(x, y - 5, z))).getBlock() == WorkspaceTestModBlocks.ROBOTIC_ASSEMBLER.get()
 				|| (world.getBlockState(BlockPos.containing(x, y - 6, z))).getBlock() == WorkspaceTestModBlocks.ROBOTIC_ASSEMBLER.get()
@@ -31,6 +26,7 @@ public class WarplaneOnEntityTickUpdateProcedure {
 					entity.getPersistentData().putBoolean("bomb", false);
 				});
 			}
+			entity.setDeltaMovement(new Vec3((Mth.nextInt(RandomSource.create(), -1, 1)), 0, (Mth.nextInt(RandomSource.create(), -1, 1))));
 		}
 	}
 }

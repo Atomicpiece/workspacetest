@@ -1,15 +1,8 @@
 package net.mcreator.workspacetest.procedures;
 
-import org.checkerframework.checker.units.qual.s;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.core.BlockPos;
-import net.minecraft.client.gui.components.EditBox;
-
-import java.util.HashMap;
+import javax.annotation.Nullable;
 
 public class MinepowerusageProcedure {
 	public static String execute(LevelAccessor world, double x, double y, double z, HashMap guistate) {
@@ -36,7 +29,7 @@ public class MinepowerusageProcedure {
 							}
 							return 0;
 						}
-					}.convert(guistate.containsKey("text:textFieldName") ? ((EditBox) guistate.get("text:textFieldName")).getValue() : "")) > 100 ? 100 : Math.abs(new Object() {
+					}.convert(guistate.containsKey("text:minespend") ? ((EditBox) guistate.get("text:minespend")).getValue() : "")) > 40 ? 40 : Math.abs(new Object() {
 						double convert(String s) {
 							try {
 								return Double.parseDouble(s.trim());
@@ -64,6 +57,6 @@ public class MinepowerusageProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, BlockPos.containing(x, y, z), "a")) + " ET";
+		}.getValue(world, BlockPos.containing(x, y, z), "a")) + "PU";
 	}
 }

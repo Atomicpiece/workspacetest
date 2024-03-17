@@ -1,19 +1,11 @@
 package net.mcreator.workspacetest.procedures;
 
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.core.BlockPos;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.workspacetest.WorkspaceTestMod;
-
-import java.util.HashMap;
+import javax.annotation.Nullable;
 
 public class SaveProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, HashMap guistate) {
-		if (guistate == null)
-			return;
+	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (!world.isClientSide()) {
 			BlockPos _bp = BlockPos.containing(x, y, z);
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -23,10 +15,9 @@ public class SaveProcedure {
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}
-		WorkspaceTestMod.queueServerWork(3, () -> {
-			MinepowerusageProcedure.execute(world, x, y, z, guistate);
+		WorkspaceTestMod.queueServerWork(1, () -> {
 		});
-		WorkspaceTestMod.queueServerWork(5, () -> {
+		WorkspaceTestMod.queueServerWork(2, () -> {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);

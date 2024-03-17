@@ -2090,43 +2090,6 @@
       "path": "~/Defence"
     },
     {
-      "name": "Submarine",
-      "type": "animatedentity",
-      "sortid": 80,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "submarine",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/client/renderer/SubmarineRenderer.java",
-          "src/main/resources/assets/workspace_test/models/item/submarine_spawn_egg.json",
-          "src/main/java/net/mcreator/workspacetest/entity/SubmarineEntity.java",
-          "src/main/java/net/mcreator/workspacetest/entity/model/SubmarineModel.java"
-        ]
-      },
-      "path": "~/Defence"
-    },
-    {
-      "name": "SubmarineOnEntityTickUpdate",
-      "type": "procedure",
-      "sortid": 81,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "submarine_on_entity_tick_update",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/SubmarineOnEntityTickUpdateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Defence"
-    },
-    {
       "name": "TurretEntityIsHurt",
       "type": "procedure",
       "sortid": 82,
@@ -2155,25 +2118,67 @@
       "path": "~/Defence"
     },
     {
-      "name": "MissileWhileProjectileFlyingTick",
-      "type": "procedure",
-      "sortid": 83,
+      "name": "Basooka",
+      "type": "item",
+      "sortid": 87,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "missile_while_projectile_flying_tick",
+      "registry_name": "bazooka",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/MissileWhileProjectileFlyingTickProcedure.java"
+          "src/main/resources/assets/workspace_test/models/item/bazooka.json",
+          "src/main/java/net/mcreator/workspacetest/item/BasookaItem.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Missile",
+      "type": "projectile",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "missile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/renderer/MissileRenderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/MissileEntity.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "SubmarineOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "submarine_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/SubmarineOnEntityTickUpdateProcedure.java"
         ],
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "MissileProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "missile_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MissileProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
           {
             "name": "x",
             "type": "number"
@@ -2227,17 +2232,25 @@
       "path": "~/Defence"
     },
     {
-      "name": "MissileProjectileHitsLivingEntity",
+      "name": "MissileWhileProjectileFlyingTick",
       "type": "procedure",
-      "sortid": 85,
+      "sortid": 83,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "missile_projectile_hits_living_entity",
+      "registry_name": "missile_while_projectile_flying_tick",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/MissileProjectileHitsLivingEntityProcedure.java"
+          "src/main/java/net/mcreator/workspacetest/procedures/MissileWhileProjectileFlyingTickProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -2259,34 +2272,268 @@
       "path": "~/Defence"
     },
     {
-      "name": "Missile",
-      "type": "projectile",
-      "sortid": 86,
+      "name": "Submarine",
+      "type": "animatedentity",
+      "sortid": 80,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "missile",
+      "registry_name": "submarine",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/client/renderer/MissileRenderer.java",
-          "src/main/java/net/mcreator/workspacetest/entity/MissileEntity.java"
+          "src/main/java/net/mcreator/workspacetest/client/renderer/SubmarineRenderer.java",
+          "src/main/resources/assets/workspace_test/models/item/submarine_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/entity/SubmarineEntity.java",
+          "src/main/java/net/mcreator/workspacetest/entity/model/SubmarineModel.java"
         ]
       },
       "path": "~/Defence"
     },
     {
-      "name": "Basooka",
+      "name": "Ironchunk",
+      "type": "item",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ironchunk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/IronchunkItem.java",
+          "src/main/resources/assets/workspace_test/models/item/ironchunk.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "MultimeterPlayerFinishesUsingItem",
+      "type": "procedure",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "multimeter_player_finishes_using_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MultimeterPlayerFinishesUsingItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Minese",
+      "type": "block",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minese",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/block/MineseBlock.java",
+          "src/main/resources/assets/workspace_test/models/item/minese.json",
+          "src/main/resources/assets/workspace_test/models/block/minese.json",
+          "src/main/resources/assets/workspace_test/blockstates/minese.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Startmine",
+      "type": "procedure",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "startmine",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/StartmineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Tools",
+      "type": "tab",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tools",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Minesgui",
+      "type": "gui",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minesgui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/gui/MinesguiScreen.java",
+          "src/main/java/net/mcreator/workspacetest/world/inventory/MinesguiMenu.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Run",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "run",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/RunProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Infbat",
+      "type": "block",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infbat",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/block/entity/InfbatBlockEntity.java",
+          "src/main/resources/assets/workspace_test/models/block/infbat.json",
+          "src/main/resources/assets/workspace_test/models/item/infbat.json",
+          "src/main/resources/assets/workspace_test/blockstates/infbat.json",
+          "src/main/java/net/mcreator/workspacetest/block/InfbatBlock.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Multimeter",
       "type": "item",
       "sortid": 87,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "bazooka",
+      "registry_name": "multimeter",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/bazooka.json",
-          "src/main/java/net/mcreator/workspacetest/item/BasookaItem.java"
+          "src/main/java/net/mcreator/workspacetest/item/MultimeterItem.java",
+          "src/main/resources/assets/workspace_test/models/item/multimeter.json"
         ]
       },
-      "path": "~/Defence"
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Mineprocces",
+      "type": "procedure",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mineprocces",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MineproccesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "InfbatUpdateTick",
+      "type": "procedure",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infbat_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/InfbatUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [],
@@ -2294,89 +2541,30 @@
   "language_map": {
     "en_us": {
       "item.workspace_test.bombs": "Bombs",
-      "item.workspace_test.bomb_spawn_egg": "Bomb Spawn Egg",
       "item_group.workspace_test.machines": "Machines",
-      "entity.workspace_test.robotic_phantom": "Robotic Phantom",
-      "item.workspace_test.battleship_spawn_egg": "Battleship Spawn Egg",
-      "entity.workspace_test.spiderbot": "Spiderbot",
-      "entity.workspace_test.drone": "Drone",
-      "item.workspace_test.firebelt": "Firebelt",
-      "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
-      "gui.workspace_test.minegui.label_coal": "coal",
-      "item.workspace_test.fire_circle_creator": "Fire Circle Creator",
-      "item.workspace_test.great_chicken_spawn_egg": "Great Chicken Spawn Egg",
-      "gui.workspace_test.minegui.button_save": "SAVE",
-      "entity.workspace_test.submarine": "Submarine",
-      "item.workspace_test.submarine_spawn_egg": "Submarine Spawn Egg",
-      "item.workspace_test.ion_sword": "Ion Sword",
-      "gui.workspace_test.minegui.label_resource": "Resource:",
-      "gui.workspace_test.minegui.label_mining_speed": "Mining speed:",
-      "item.workspace_test.mossy_golem_spawn_egg": "Mossy Golem Spawn Egg",
-      "gui.workspace_test.minegui.save": "",
-      "entity.workspace_test.defender": "Defender",
-      "block.workspace_test.ccc": "mine",
       "item.workspace_test.igniter": "Igniter",
-      "entity.workspace_test.frost_blaze": "Frost Blaze",
-      "block.workspace_test.coalde": "Coal deposit",
       "block.workspace_test.landmine": "Landmine",
-      "entity.workspace_test.great_chicken": "Great Chicken",
       "item.workspace_test.destroyer_spawn_egg": "Destroyer Spawn Egg",
       "block.workspace_test.walls": "Walls",
-      "item.workspace_test.skeleter_spawn_egg": "Skeleter Spawn Egg",
-      "entity.workspace_test.skeleter": "Skeleter",
-      "item.workspace_test.warplane_spawn_egg": "Warplane Spawn Egg",
-      "gui.workspace_test.minegui.label_save": "save",
-      "entity.workspace_test.creeperbot": "Creeperbot",
-      "gui.workspace_test.minegui.minespe": "",
-      "entity.workspace_test.furnace_powered_golem": "Furnace Powered Golem",
       "entity.workspace_test.turret": "Turret",
       "item_group.workspace_test.resources": "Resources",
-      "entity.workspace_test.bomb": "Bomb",
       "block.workspace_test.tower": "Tower",
       "item_group.workspace_test.finanbuild": "Financial buildings",
-      "item.workspace_test.healt_indicator": "Healt Indicator",
-      "gui.workspace_test.minegui.minespeed": "",
-      "gui.workspace_test.minegui.label_gold": "gold",
-      "block.workspace_test.copperde": "Copper deposit",
-      "entity.workspace_test.levitation_robot": "Levitation Robot",
       "item_group.workspace_test.defence": "Defence",
       "entity.workspace_test.tinybot": "Tinybot",
-      "item.workspace_test.creeperbot_spawn_egg": "Creeperbot Spawn Egg",
-      "gui.workspace_test.minegui.label_output": "Output:",
-      "gui.workspace_test.minegui.label_mine": "Mine:",
-      "item.workspace_test.defender_spawn_egg": "Defender Spawn Egg",
-      "item.workspace_test.robotic_phantom_spawn_egg": "Robotic Phantom Spawn Egg",
       "item.workspace_test.percentage_checker": "Percentage Checker",
       "entity.workspace_test.destroyer": "Destroyer",
-      "item.workspace_test.wand": "Wand",
       "entity.workspace_test.microbot": "Microbot",
       "block.workspace_test.nuke": "Nuke",
       "block.workspace_test.robotic_assembler": "Robotic Assembler",
-      "item.workspace_test.frost_blaze_spawn_egg": "Frost Blaze Spawn Egg",
       "item.workspace_test.tank_spawn_egg": "Tank Spawn Egg",
-      "item.workspace_test.spiderbot_spawn_egg": "Spiderbot Spawn Egg",
-      "entity.workspace_test.battleship": "Battleship",
-      "item.workspace_test.bazooka": "Bazooka",
       "item.workspace_test.microbot_spawn_egg": "Microbot Spawn Egg",
-      "gui.workspace_test.minegui.minespend": "",
       "entity.workspace_test.tank": "Tank",
-      "gui.workspace_test.minegui.button_start": "Start mining",
-      "block.workspace_test.ironde": "Iron deposit",
-      "gui.workspace_test.minegui.label_power_usage": "Power usage:",
       "item.workspace_test.turret_spawn_egg": "Turret Spawn Egg",
-      "gui.workspace_test.minegui.label_iron": "iron",
       "gui.workspace_test.minesgui.label_mine": "Mine",
-      "block.workspace_test.goldde": "Gold deposit",
       "block.workspace_test.minese": "Minese",
-      "item.workspace_test.levitation_robot_spawn_egg": "Levitation Robot Spawn Egg",
       "item_group.workspace_test.test": "Test",
-      "item.workspace_test.tinybot_spawn_egg": "Tinybot Spawn Egg",
-      "item.workspace_test.redstrone_blaster": "Redstrone Blaster",
-      "entity.workspace_test.mossy_golem": "Mossy Golem",
-      "item.workspace_test.furnace_powered_golem_spawn_egg": "Furnace Powered Golem Spawn Egg",
-      "entity.workspace_test.warplane": "Warplane",
-      "item.workspace_test.drone_spawn_egg": "Drone Spawn Egg",
-      "gui.workspace_test.minegui.label_status": "Status:"
+      "item.workspace_test.tinybot_spawn_egg": "Tinybot Spawn Egg"
     }
   },
   "foldersRoot": {
