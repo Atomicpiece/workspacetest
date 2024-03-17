@@ -2335,7 +2335,6 @@
       "locked_code": false,
       "registry_name": "startmine",
       "metadata": {
-        "return_type": "string",
         "files": [
           "src/main/java/net/mcreator/workspacetest/procedures/StartmineProcedure.java"
         ],
