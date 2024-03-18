@@ -97,6 +97,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> TINCHUNK = REGISTRY.register("tinchunk", () -> new TinchunkItem());
 	public static final RegistryObject<Item> DIAMONDDE = block(WorkspaceTestModBlocks.DIAMONDDE);
 	public static final RegistryObject<Item> DIAMONDS = REGISTRY.register("diamonds", () -> new DiamondsItem());
+	public static final RegistryObject<Item> TRANSPORTER = block(WorkspaceTestModBlocks.TRANSPORTER);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

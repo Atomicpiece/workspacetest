@@ -90,6 +90,12 @@ public class WorkspaceTestModTabs {
 			})
 
 					.build());
+	public static final RegistryObject<CreativeModeTab> MACHINES = REGISTRY.register("machines",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.machines")).icon(() -> new ItemStack(Blocks.OBSERVER)).displayItems((parameters, tabData) -> {
+				tabData.accept(WorkspaceTestModBlocks.TRANSPORTER.get().asItem());
+			})
+
+					.build());
 	public static final RegistryObject<CreativeModeTab> TOOLS = REGISTRY.register("tools",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.tools")).icon(() -> new ItemStack(Blocks.TRIPWIRE_HOOK)).displayItems((parameters, tabData) -> {
 				tabData.accept(WorkspaceTestModBlocks.INFBAT.get().asItem());

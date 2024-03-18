@@ -2754,6 +2754,39 @@
         ]
       },
       "path": "~/Defence"
+    },
+    {
+      "name": "Transporter",
+      "type": "block",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "transporter",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/transporter.json",
+          "src/main/resources/assets/workspace_test/models/block/transporter.json",
+          "src/main/java/net/mcreator/workspacetest/block/TransporterBlock.java",
+          "src/main/java/net/mcreator/workspacetest/block/entity/TransporterBlockEntity.java",
+          "src/main/resources/assets/workspace_test/blockstates/transporter.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Transportgui",
+      "type": "gui",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "transportgui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/gui/TransportguiScreen.java",
+          "src/main/java/net/mcreator/workspacetest/world/inventory/TransportguiMenu.java"
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [],
@@ -2788,6 +2821,7 @@
       "entity.workspace_test.bomb": "Bomb",
       "item_group.workspace_test.finanbuild": "Financial buildings",
       "item.workspace_test.ironchunk": "Iron chunk",
+      "gui.workspace_test.transportgui.label_fluid": "fluid:",
       "gui.workspace_test.minegui.label_output": "Output:",
       "item.workspace_test.defender_spawn_egg": "Defender Spawn Egg",
       "item.workspace_test.robotic_phantom_spawn_egg": "Robotic Phantom Spawn Egg",
@@ -2814,6 +2848,7 @@
       "gui.workspace_test.minegui.label_mining_speed": "Mining speed:",
       "gui.workspace_test.minegui.label_resource": "Resource:",
       "item.workspace_test.mossy_golem_spawn_egg": "Mossy Golem Spawn Egg",
+      "block.workspace_test.transporter": "Transporter",
       "entity.workspace_test.defender": "Defender",
       "block.workspace_test.ccc": "mine",
       "item.workspace_test.igniter": "Igniter",
@@ -2823,6 +2858,7 @@
       "entity.workspace_test.turret": "Turret",
       "item_group.workspace_test.resources": "Resources",
       "block.workspace_test.tower": "Tower",
+      "gui.workspace_test.transportgui.label_transporter": "Transporter:",
       "item.workspace_test.sulfur": "Sulfur crystal",
       "item.workspace_test.healt_indicator": "Healt Indicator",
       "item.workspace_test.diamonds": "Diamonds",

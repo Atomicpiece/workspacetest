@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.Block;
 
 import net.mcreator.workspacetest.block.ZincdeBlock;
 import net.mcreator.workspacetest.block.WallsBlock;
+import net.mcreator.workspacetest.block.TransporterBlock;
 import net.mcreator.workspacetest.block.TowerBlock;
 import net.mcreator.workspacetest.block.TitandeBlock;
 import net.mcreator.workspacetest.block.TindeBlock;
@@ -48,4 +49,5 @@ public class WorkspaceTestModBlocks {
 	public static final RegistryObject<Block> ZINCDE = REGISTRY.register("zincde", () -> new ZincdeBlock());
 	public static final RegistryObject<Block> TINDE = REGISTRY.register("tinde", () -> new TindeBlock());
 	public static final RegistryObject<Block> DIAMONDDE = REGISTRY.register("diamondde", () -> new DiamonddeBlock());
+	public static final RegistryObject<Block> TRANSPORTER = REGISTRY.register("transporter", () -> new TransporterBlock());
 }

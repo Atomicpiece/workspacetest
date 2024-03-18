@@ -1,0 +1,9 @@
+{
+  "parent": "workspace_test:custom/beltpipe",
+  "textures": {
+    "all": "workspace_test:block/beltpipe",
+    "particle": "workspace_test:block/beltpipe",
+    "0": "workspace_test:block/beltpipe"
+  },
+  "render_type": "solid"
+}
