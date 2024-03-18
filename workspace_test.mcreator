@@ -2500,6 +2500,23 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "RocketLauncher",
+      "type": "animatedentity",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rocket_launcher",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/model/RocketLauncherModel.java",
+          "src/main/java/net/mcreator/workspacetest/entity/RocketLauncherEntity.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/RocketLauncherRenderer.java",
+          "src/main/resources/assets/workspace_test/models/item/rocket_launcher_spawn_egg.json"
+        ]
+      },
+      "path": "~/Defence"
     }
   ],
   "variable_elements": [],
@@ -2521,12 +2538,14 @@
       "gui.workspace_test.minegui.button_save": "SAVE",
       "entity.workspace_test.submarine": "Submarine",
       "item.workspace_test.submarine_spawn_egg": "Submarine Spawn Egg",
+      "entity.workspace_test.rocket_launcher": "Rocket Launcher",
       "item.workspace_test.ion_sword": "Ion Sword",
       "gui.workspace_test.minegui.label_resource": "Resource:",
       "gui.workspace_test.minegui.label_mining_speed": "Mining speed:",
       "item.workspace_test.mossy_golem_spawn_egg": "Mossy Golem Spawn Egg",
       "entity.workspace_test.defender": "Defender",
       "block.workspace_test.ccc": "mine",
+      "item.workspace_test.rocket_launcher_spawn_egg": "Rocket Launcher Spawn Egg",
       "item.workspace_test.igniter": "Igniter",
       "entity.workspace_test.frost_blaze": "Frost Blaze",
       "block.workspace_test.coalde": "Coal deposit",

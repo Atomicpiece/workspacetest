@@ -72,6 +72,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> INFBAT = block(WorkspaceTestModBlocks.INFBAT);
 	public static final RegistryObject<Item> BAZOOKA = REGISTRY.register("bazooka", () -> new BasookaItem());
 	public static final RegistryObject<Item> MULTIMETER = REGISTRY.register("multimeter", () -> new MultimeterItem());
+	public static final RegistryObject<Item> ROCKET_LAUNCHER_SPAWN_EGG = REGISTRY.register("rocket_launcher_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.ROCKET_LAUNCHER, -65536, -1, new Item.Properties()));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

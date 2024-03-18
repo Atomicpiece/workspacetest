@@ -18,6 +18,7 @@ import net.mcreator.workspacetest.client.renderer.TankRenderer;
 import net.mcreator.workspacetest.client.renderer.SubmarineRenderer;
 import net.mcreator.workspacetest.client.renderer.SpiderbotRenderer;
 import net.mcreator.workspacetest.client.renderer.SkeleterRenderer;
+import net.mcreator.workspacetest.client.renderer.RocketLauncherRenderer;
 import net.mcreator.workspacetest.client.renderer.RoboticPhantomRenderer;
 import net.mcreator.workspacetest.client.renderer.RedstoneVoltRenderer;
 import net.mcreator.workspacetest.client.renderer.MossyGolemRenderer;
@@ -71,5 +72,6 @@ public class WorkspaceTestModEntityRenderers {
 		event.registerEntityRenderer(WorkspaceTestModEntities.TURRET_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.SUBMARINE.get(), SubmarineRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.MISSILE.get(), MissileRenderer::new);
+		event.registerEntityRenderer(WorkspaceTestModEntities.ROCKET_LAUNCHER.get(), RocketLauncherRenderer::new);
 	}
 }
