@@ -82,6 +82,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> MULTIMETER = REGISTRY.register("multimeter", () -> new MultimeterItem());
 	public static final RegistryObject<Item> BAZOOKA = REGISTRY.register("bazooka", () -> new BasookaItem());
 	public static final RegistryObject<Item> COALCHUNK = REGISTRY.register("coalchunk", () -> new CoalchunkItem());
+	public static final RegistryObject<Item> ROCKET_LAUNCHER_SPAWN_EGG = REGISTRY.register("rocket_launcher_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.ROCKET_LAUNCHER, -65536, -1, new Item.Properties()));
 	public static final RegistryObject<Item> GOLDCHUNK = REGISTRY.register("goldchunk", () -> new GoldchunkItem());
 	public static final RegistryObject<Item> COPPERCHUNK = REGISTRY.register("copperchunk", () -> new CopperchunkItem());
 	public static final RegistryObject<Item> TITANDE = block(WorkspaceTestModBlocks.TITANDE);

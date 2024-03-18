@@ -2,6 +2,8 @@ package net.mcreator.workspacetest.procedures;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
@@ -18,6 +20,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.workspacetest.init.WorkspaceTestModItems;
 
+import java.util.Map;
 import java.util.List;
 import java.util.Comparator;
 
@@ -86,6 +89,23 @@ public class NukeOnBlockRightClickedProcedure {
 						(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(50)), ClipContext.Block.COLLIDER, ClipContext.Fluid.ANY, entity)).getBlockPos().getY()),
 						(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(50)), ClipContext.Block.COLLIDER, ClipContext.Fluid.ANY, entity)).getBlockPos().getZ()), 30, 3, 3, 3,
 						1);
+			{
+				BlockPos _bp = new BlockPos(
+						entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(50)), ClipContext.Block.COLLIDER, ClipContext.Fluid.ANY, entity)).getBlockPos().getX(),
+						entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(50)), ClipContext.Block.COLLIDER, ClipContext.Fluid.ANY, entity)).getBlockPos().getY(),
+						entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(50)), ClipContext.Block.COLLIDER, ClipContext.Fluid.ANY, entity)).getBlockPos().getZ());
+				BlockState _bs = Blocks.SHROOMLIGHT.defaultBlockState();
+				BlockState _bso = world.getBlockState(_bp);
+				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+					if (_property != null && _bs.getValue(_property) != null)
+						try {
+							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+						} catch (Exception e) {
+						}
+				}
+				world.setBlock(_bp, _bs, 3);
+			}
 			world.setBlock(
 					new BlockPos(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(50)), ClipContext.Block.COLLIDER, ClipContext.Fluid.ANY, entity)).getBlockPos().getX(),
 							entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(50)), ClipContext.Block.COLLIDER, ClipContext.Fluid.ANY, entity)).getBlockPos().getY(),

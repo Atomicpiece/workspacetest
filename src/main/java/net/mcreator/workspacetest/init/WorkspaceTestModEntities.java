@@ -25,6 +25,7 @@ import net.mcreator.workspacetest.entity.TankEntity;
 import net.mcreator.workspacetest.entity.SubmarineEntity;
 import net.mcreator.workspacetest.entity.SpiderbotEntity;
 import net.mcreator.workspacetest.entity.SkeleterEntity;
+import net.mcreator.workspacetest.entity.RocketLauncherEntity;
 import net.mcreator.workspacetest.entity.RoboticPhantomEntity;
 import net.mcreator.workspacetest.entity.RedstoneVoltEntity;
 import net.mcreator.workspacetest.entity.MossyGolemEntity;
@@ -146,6 +147,10 @@ public class WorkspaceTestModEntities {
 					.sized(1f, 0.6f));
 	public static final RegistryObject<EntityType<MissileEntity>> MISSILE = register("projectile_missile",
 			EntityType.Builder.<MissileEntity>of(MissileEntity::new, MobCategory.MISC).setCustomClientFactory(MissileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<RocketLauncherEntity>> ROCKET_LAUNCHER = register("rocket_launcher",
+			EntityType.Builder.<RocketLauncherEntity>of(RocketLauncherEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3).setCustomClientFactory(RocketLauncherEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -174,6 +179,7 @@ public class WorkspaceTestModEntities {
 			BattleshipEntity.init();
 			TurretEntity.init();
 			SubmarineEntity.init();
+			RocketLauncherEntity.init();
 		});
 	}
 
@@ -199,5 +205,6 @@ public class WorkspaceTestModEntities {
 		event.put(BATTLESHIP.get(), BattleshipEntity.createAttributes().build());
 		event.put(TURRET.get(), TurretEntity.createAttributes().build());
 		event.put(SUBMARINE.get(), SubmarineEntity.createAttributes().build());
+		event.put(ROCKET_LAUNCHER.get(), RocketLauncherEntity.createAttributes().build());
 	}
 }

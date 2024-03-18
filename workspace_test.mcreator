@@ -2502,83 +2502,6 @@
       "path": "~/Defence"
     },
     {
-      "name": "Coalchunk",
-      "type": "item",
-      "sortid": 89,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "coalchunk",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/workspace_test/models/item/coalchunk.json",
-          "src/main/java/net/mcreator/workspacetest/item/CoalchunkItem.java"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
-      "name": "Goldchunk",
-      "type": "item",
-      "sortid": 90,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "goldchunk",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/workspace_test/models/item/goldchunk.json",
-          "src/main/java/net/mcreator/workspacetest/item/GoldchunkItem.java"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
-      "name": "Copperchunk",
-      "type": "item",
-      "sortid": 91,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "copperchunk",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/workspace_test/models/item/copperchunk.json",
-          "src/main/java/net/mcreator/workspacetest/item/CopperchunkItem.java"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
-      "name": "Titande",
-      "type": "block",
-      "sortid": 92,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "titande",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/block/TitandeBlock.java",
-          "src/main/resources/assets/workspace_test/blockstates/titande.json",
-          "src/main/resources/assets/workspace_test/models/block/titande.json",
-          "src/main/resources/assets/workspace_test/models/item/titande.json"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
-      "name": "Titanchunk",
-      "type": "item",
-      "sortid": 93,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "titanchunk",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/item/TitanchunkItem.java",
-          "src/main/resources/assets/workspace_test/models/item/titanchunk.json"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
       "name": "Sulfurde",
       "type": "block",
       "sortid": 94,
@@ -2591,117 +2514,6 @@
           "src/main/resources/assets/workspace_test/models/item/sulfurde.json",
           "src/main/java/net/mcreator/workspacetest/block/SulfurdeBlock.java",
           "src/main/resources/assets/workspace_test/blockstates/sulfurde.json"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
-      "name": "Sulfur",
-      "type": "item",
-      "sortid": 95,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sulfur",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/item/SulfurItem.java",
-          "src/main/resources/assets/workspace_test/models/item/sulfur.json"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
-      "name": "Leadde",
-      "type": "block",
-      "sortid": 96,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "leadde",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/workspace_test/blockstates/leadde.json",
-          "src/main/resources/assets/workspace_test/models/item/leadde.json",
-          "src/main/java/net/mcreator/workspacetest/block/LeaddeBlock.java",
-          "src/main/resources/assets/workspace_test/models/block/leadde.json"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
-      "name": "Leadchunk",
-      "type": "item",
-      "sortid": 97,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "leadchunk",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/item/LeadchunkItem.java",
-          "src/main/resources/assets/workspace_test/models/item/leadchunk.json"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
-      "name": "Zincde",
-      "type": "block",
-      "sortid": 98,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "zincde",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/block/ZincdeBlock.java",
-          "src/main/resources/assets/workspace_test/models/block/zincde.json",
-          "src/main/resources/assets/workspace_test/blockstates/zincde.json",
-          "src/main/resources/assets/workspace_test/models/item/zincde.json"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
-      "name": "Zincchunk",
-      "type": "item",
-      "sortid": 99,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "zincchunk",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/item/ZincchunkItem.java",
-          "src/main/resources/assets/workspace_test/models/item/zincchunk.json"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
-      "name": "Tinde",
-      "type": "block",
-      "sortid": 100,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "tinde",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/workspace_test/blockstates/tinde.json",
-          "src/main/resources/assets/workspace_test/models/block/tinde.json",
-          "src/main/java/net/mcreator/workspacetest/block/TindeBlock.java",
-          "src/main/resources/assets/workspace_test/models/item/tinde.json"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
-      "name": "Tinchunk",
-      "type": "item",
-      "sortid": 101,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "tinchunk",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/item/TinchunkItem.java",
-          "src/main/resources/assets/workspace_test/models/item/tinchunk.json"
         ]
       },
       "path": "~/assembly machines"
@@ -2724,6 +2536,53 @@
       "path": "~/assembly machines"
     },
     {
+      "name": "Coalchunk",
+      "type": "item",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coalchunk",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/coalchunk.json",
+          "src/main/java/net/mcreator/workspacetest/item/CoalchunkItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Zincchunk",
+      "type": "item",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zincchunk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/ZincchunkItem.java",
+          "src/main/resources/assets/workspace_test/models/item/zincchunk.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Titande",
+      "type": "block",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titande",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/block/TitandeBlock.java",
+          "src/main/resources/assets/workspace_test/blockstates/titande.json",
+          "src/main/resources/assets/workspace_test/models/block/titande.json",
+          "src/main/resources/assets/workspace_test/models/item/titande.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
       "name": "Diamonds",
       "type": "item",
       "sortid": 103,
@@ -2737,6 +2596,164 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "Titanchunk",
+      "type": "item",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titanchunk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/TitanchunkItem.java",
+          "src/main/resources/assets/workspace_test/models/item/titanchunk.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Zincde",
+      "type": "block",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zincde",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/block/ZincdeBlock.java",
+          "src/main/resources/assets/workspace_test/models/block/zincde.json",
+          "src/main/resources/assets/workspace_test/blockstates/zincde.json",
+          "src/main/resources/assets/workspace_test/models/item/zincde.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Goldchunk",
+      "type": "item",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goldchunk",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/goldchunk.json",
+          "src/main/java/net/mcreator/workspacetest/item/GoldchunkItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Tinde",
+      "type": "block",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tinde",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/blockstates/tinde.json",
+          "src/main/resources/assets/workspace_test/models/block/tinde.json",
+          "src/main/java/net/mcreator/workspacetest/block/TindeBlock.java",
+          "src/main/resources/assets/workspace_test/models/item/tinde.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Leadde",
+      "type": "block",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "leadde",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/blockstates/leadde.json",
+          "src/main/resources/assets/workspace_test/models/item/leadde.json",
+          "src/main/java/net/mcreator/workspacetest/block/LeaddeBlock.java",
+          "src/main/resources/assets/workspace_test/models/block/leadde.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Sulfur",
+      "type": "item",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sulfur",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/SulfurItem.java",
+          "src/main/resources/assets/workspace_test/models/item/sulfur.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Copperchunk",
+      "type": "item",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copperchunk",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/copperchunk.json",
+          "src/main/java/net/mcreator/workspacetest/item/CopperchunkItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Leadchunk",
+      "type": "item",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "leadchunk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/LeadchunkItem.java",
+          "src/main/resources/assets/workspace_test/models/item/leadchunk.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Tinchunk",
+      "type": "item",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tinchunk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/TinchunkItem.java",
+          "src/main/resources/assets/workspace_test/models/item/tinchunk.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "RocketLauncher",
+      "type": "animatedentity",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rocket_launcher",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/model/RocketLauncherModel.java",
+          "src/main/resources/assets/workspace_test/models/item/rocket_launcher_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/entity/RocketLauncherEntity.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/RocketLauncherRenderer.java"
+        ]
+      },
+      "path": "~/Defence"
     }
   ],
   "variable_elements": [],
@@ -2744,11 +2761,7 @@
   "language_map": {
     "en_us": {
       "item.workspace_test.bombs": "Bombs",
-      "block.workspace_test.diamondde": "Diamond deposit",
-      "item.workspace_test.leadchunk": "Lead chunk",
       "item.workspace_test.bomb_spawn_egg": "Bomb Spawn Egg",
-      "block.workspace_test.sulfurde": "Sulfur deposit",
-      "item.workspace_test.zincchunk": "Zinc chunk",
       "item.workspace_test.battleship_spawn_egg": "Battleship Spawn Egg",
       "entity.workspace_test.spiderbot": "Spiderbot",
       "item.workspace_test.firebelt": "Firebelt",
@@ -2757,7 +2770,6 @@
       "item.workspace_test.great_chicken_spawn_egg": "Great Chicken Spawn Egg",
       "entity.workspace_test.submarine": "Submarine",
       "item.workspace_test.submarine_spawn_egg": "Submarine Spawn Egg",
-      "item.workspace_test.tinchunk": "Tin chunk",
       "block.workspace_test.coalde": "Coal deposit",
       "entity.workspace_test.great_chicken": "Great Chicken",
       "item.workspace_test.destroyer_spawn_egg": "Destroyer Spawn Egg",
@@ -2784,12 +2796,10 @@
       "item.workspace_test.redstrone_blaster": "Redstrone Blaster",
       "entity.workspace_test.mossy_golem": "Mossy Golem",
       "entity.workspace_test.warplane": "Warplane",
-      "block.workspace_test.zincde": "Zinc deposit",
       "item_group.workspace_test.machines": "Machines",
       "entity.workspace_test.robotic_phantom": "Robotic Phantom",
       "entity.workspace_test.drone": "Drone",
       "item_group.workspace_test.tools": "Tools",
-      "item.workspace_test.coalchunk": "Coal chunk",
       "gui.workspace_test.minegui.button_save": "SAVE",
       "item.workspace_test.ion_sword": "Ion Sword",
       "gui.workspace_test.minegui.label_mining_speed": "Mining speed:",
@@ -2804,19 +2814,14 @@
       "entity.workspace_test.turret": "Turret",
       "item_group.workspace_test.resources": "Resources",
       "block.workspace_test.tower": "Tower",
-      "item.workspace_test.sulfur": "Sulfur crystal",
       "item.workspace_test.healt_indicator": "Healt Indicator",
-      "item.workspace_test.diamonds": "Diamonds",
       "block.workspace_test.copperde": "Copper deposit",
-      "block.workspace_test.tinde": "Tin deposit",
       "entity.workspace_test.levitation_robot": "Levitation Robot",
       "item_group.workspace_test.defence": "Defence",
       "block.workspace_test.infbat": "Infinite battery",
       "entity.workspace_test.tinybot": "Tinybot",
       "item.workspace_test.creeperbot_spawn_egg": "Creeperbot Spawn Egg",
-      "block.workspace_test.titande": "Titanium deposit",
       "gui.workspace_test.minegui.label_mine": "Mine:",
-      "item.workspace_test.titanchunk": "Titanium chunk",
       "item.workspace_test.wand": "Wand",
       "block.workspace_test.nuke": "Nuke",
       "block.workspace_test.robotic_assembler": "Robotic Assembler",
@@ -2829,14 +2834,11 @@
       "block.workspace_test.ironde": "Iron deposit",
       "gui.workspace_test.minesgui.label_mine": "Mine",
       "block.workspace_test.goldde": "Gold deposit",
-      "item.workspace_test.goldchunk": "Gold chunk",
-      "item.workspace_test.copperchunk": "Copper chunk",
       "block.workspace_test.minese": "Minese",
       "item.workspace_test.levitation_robot_spawn_egg": "Levitation Robot Spawn Egg",
       "item_group.workspace_test.test": "Test",
       "item.workspace_test.tinybot_spawn_egg": "Tinybot Spawn Egg",
       "item.workspace_test.furnace_powered_golem_spawn_egg": "Furnace Powered Golem Spawn Egg",
-      "block.workspace_test.leadde": "Lead deposit",
       "gui.workspace_test.minegui.label_status": "Status:",
       "item.workspace_test.drone_spawn_egg": "Drone Spawn Egg"
     }
