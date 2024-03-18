@@ -13,16 +13,25 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.workspacetest.item.ZincchunkItem;
 import net.mcreator.workspacetest.item.WandItem;
+import net.mcreator.workspacetest.item.TitanchunkItem;
+import net.mcreator.workspacetest.item.TinchunkItem;
+import net.mcreator.workspacetest.item.SulfurItem;
 import net.mcreator.workspacetest.item.RedstroneBlasterItem;
 import net.mcreator.workspacetest.item.PercentageCheckerItem;
 import net.mcreator.workspacetest.item.MultimeterItem;
+import net.mcreator.workspacetest.item.LeadchunkItem;
 import net.mcreator.workspacetest.item.IronchunkItem;
 import net.mcreator.workspacetest.item.IonSwordItem;
 import net.mcreator.workspacetest.item.IgniterItem;
 import net.mcreator.workspacetest.item.HealtIndicatorItem;
+import net.mcreator.workspacetest.item.GoldchunkItem;
 import net.mcreator.workspacetest.item.FirebeltItem;
 import net.mcreator.workspacetest.item.FireCircleCreatorItem;
+import net.mcreator.workspacetest.item.DiamondsItem;
+import net.mcreator.workspacetest.item.CopperchunkItem;
+import net.mcreator.workspacetest.item.CoalchunkItem;
 import net.mcreator.workspacetest.item.BombsItem;
 import net.mcreator.workspacetest.item.BasookaItem;
 import net.mcreator.workspacetest.WorkspaceTestMod;
@@ -72,6 +81,21 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> INFBAT = block(WorkspaceTestModBlocks.INFBAT);
 	public static final RegistryObject<Item> MULTIMETER = REGISTRY.register("multimeter", () -> new MultimeterItem());
 	public static final RegistryObject<Item> BAZOOKA = REGISTRY.register("bazooka", () -> new BasookaItem());
+	public static final RegistryObject<Item> COALCHUNK = REGISTRY.register("coalchunk", () -> new CoalchunkItem());
+	public static final RegistryObject<Item> GOLDCHUNK = REGISTRY.register("goldchunk", () -> new GoldchunkItem());
+	public static final RegistryObject<Item> COPPERCHUNK = REGISTRY.register("copperchunk", () -> new CopperchunkItem());
+	public static final RegistryObject<Item> TITANDE = block(WorkspaceTestModBlocks.TITANDE);
+	public static final RegistryObject<Item> TITANCHUNK = REGISTRY.register("titanchunk", () -> new TitanchunkItem());
+	public static final RegistryObject<Item> SULFURDE = block(WorkspaceTestModBlocks.SULFURDE);
+	public static final RegistryObject<Item> SULFUR = REGISTRY.register("sulfur", () -> new SulfurItem());
+	public static final RegistryObject<Item> LEADDE = block(WorkspaceTestModBlocks.LEADDE);
+	public static final RegistryObject<Item> LEADCHUNK = REGISTRY.register("leadchunk", () -> new LeadchunkItem());
+	public static final RegistryObject<Item> ZINCDE = block(WorkspaceTestModBlocks.ZINCDE);
+	public static final RegistryObject<Item> ZINCCHUNK = REGISTRY.register("zincchunk", () -> new ZincchunkItem());
+	public static final RegistryObject<Item> TINDE = block(WorkspaceTestModBlocks.TINDE);
+	public static final RegistryObject<Item> TINCHUNK = REGISTRY.register("tinchunk", () -> new TinchunkItem());
+	public static final RegistryObject<Item> DIAMONDDE = block(WorkspaceTestModBlocks.DIAMONDDE);
+	public static final RegistryObject<Item> DIAMONDS = REGISTRY.register("diamonds", () -> new DiamondsItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

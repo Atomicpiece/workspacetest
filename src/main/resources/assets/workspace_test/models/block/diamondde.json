@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "workspace_test:block/diamonde",
+    "up": "workspace_test:block/diamonde",
+    "north": "workspace_test:block/diamonde",
+    "east": "workspace_test:block/diamonde",
+    "south": "workspace_test:block/diamonde",
+    "west": "workspace_test:block/diamonde",
+    "particle": "workspace_test:block/diamonde"
+  },
+  "render_type": "solid"
+}

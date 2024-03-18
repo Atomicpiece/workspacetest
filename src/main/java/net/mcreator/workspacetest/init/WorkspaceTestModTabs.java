@@ -22,6 +22,7 @@ public class WorkspaceTestModTabs {
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.test")).icon(() -> new ItemStack(Blocks.GILDED_BLACKSTONE)).displayItems((parameters, tabData) -> {
 				tabData.accept(WorkspaceTestModItems.BOMBS.get());
 				tabData.accept(WorkspaceTestModItems.HEALT_INDICATOR.get());
+				tabData.accept(WorkspaceTestModItems.DIAMONDS.get());
 			})
 
 					.build());
@@ -71,6 +72,20 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModBlocks.GOLDDE.get().asItem());
 				tabData.accept(WorkspaceTestModBlocks.COPPERDE.get().asItem());
 				tabData.accept(WorkspaceTestModItems.IRONCHUNK.get());
+				tabData.accept(WorkspaceTestModItems.COALCHUNK.get());
+				tabData.accept(WorkspaceTestModItems.GOLDCHUNK.get());
+				tabData.accept(WorkspaceTestModItems.COPPERCHUNK.get());
+				tabData.accept(WorkspaceTestModBlocks.TITANDE.get().asItem());
+				tabData.accept(WorkspaceTestModItems.TITANCHUNK.get());
+				tabData.accept(WorkspaceTestModBlocks.SULFURDE.get().asItem());
+				tabData.accept(WorkspaceTestModItems.SULFUR.get());
+				tabData.accept(WorkspaceTestModBlocks.LEADDE.get().asItem());
+				tabData.accept(WorkspaceTestModItems.LEADCHUNK.get());
+				tabData.accept(WorkspaceTestModBlocks.ZINCDE.get().asItem());
+				tabData.accept(WorkspaceTestModItems.ZINCCHUNK.get());
+				tabData.accept(WorkspaceTestModBlocks.TINDE.get().asItem());
+				tabData.accept(WorkspaceTestModItems.TINCHUNK.get());
+				tabData.accept(WorkspaceTestModBlocks.DIAMONDDE.get().asItem());
 			})
 
 					.build());

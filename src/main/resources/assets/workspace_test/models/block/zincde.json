@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "workspace_test:block/zincde",
+    "up": "workspace_test:block/zincde",
+    "north": "workspace_test:block/zincde",
+    "east": "workspace_test:block/zincde",
+    "south": "workspace_test:block/zincde",
+    "west": "workspace_test:block/zincde",
+    "particle": "workspace_test:block/zincde"
+  },
+  "render_type": "solid"
+}

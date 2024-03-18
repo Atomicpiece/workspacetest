@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "workspace_test:block/tinde",
+    "up": "workspace_test:block/tinde",
+    "north": "workspace_test:block/tinde",
+    "east": "workspace_test:block/tinde",
+    "south": "workspace_test:block/tinde",
+    "west": "workspace_test:block/tinde",
+    "particle": "workspace_test:block/tinde"
+  },
+  "render_type": "solid"
+}

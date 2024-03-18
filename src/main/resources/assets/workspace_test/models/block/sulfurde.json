@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "workspace_test:block/sulfurde",
+    "up": "workspace_test:block/sulfurde",
+    "north": "workspace_test:block/sulfurde",
+    "east": "workspace_test:block/sulfurde",
+    "south": "workspace_test:block/sulfurde",
+    "west": "workspace_test:block/sulfurde",
+    "particle": "workspace_test:block/sulfurde"
+  },
+  "render_type": "solid"
+}
