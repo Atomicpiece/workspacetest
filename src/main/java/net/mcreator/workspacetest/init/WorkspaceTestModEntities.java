@@ -43,6 +43,7 @@ import net.mcreator.workspacetest.entity.FallingbombEntity;
 import net.mcreator.workspacetest.entity.DroneEntity;
 import net.mcreator.workspacetest.entity.DestroyerEntity;
 import net.mcreator.workspacetest.entity.DefenderEntity;
+import net.mcreator.workspacetest.entity.DPSOrbEntity;
 import net.mcreator.workspacetest.entity.CreeperbotEntity;
 import net.mcreator.workspacetest.entity.BombEntity;
 import net.mcreator.workspacetest.entity.BattleshipEntity;
@@ -151,6 +152,8 @@ public class WorkspaceTestModEntities {
 			EntityType.Builder.<RocketLauncherEntity>of(RocketLauncherEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3).setCustomClientFactory(RocketLauncherEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<DPSOrbEntity>> DPS_ORB = register("dps_orb",
+			EntityType.Builder.<DPSOrbEntity>of(DPSOrbEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(10).setUpdateInterval(3).setCustomClientFactory(DPSOrbEntity::new).fireImmune().sized(1f, 1f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -180,6 +183,7 @@ public class WorkspaceTestModEntities {
 			TurretEntity.init();
 			SubmarineEntity.init();
 			RocketLauncherEntity.init();
+			DPSOrbEntity.init();
 		});
 	}
 
@@ -206,5 +210,6 @@ public class WorkspaceTestModEntities {
 		event.put(TURRET.get(), TurretEntity.createAttributes().build());
 		event.put(SUBMARINE.get(), SubmarineEntity.createAttributes().build());
 		event.put(ROCKET_LAUNCHER.get(), RocketLauncherEntity.createAttributes().build());
+		event.put(DPS_ORB.get(), DPSOrbEntity.createAttributes().build());
 	}
 }

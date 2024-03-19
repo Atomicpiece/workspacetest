@@ -20,7 +20,6 @@ import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.RangedAttackGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
@@ -100,8 +99,7 @@ public class TurretEntity extends PathfinderMob implements RangedAttackMob, GeoE
 		super.registerGoals();
 		this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Monster.class, (float) 16));
 		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Monster.class, true, true));
-		this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(4, new FloatGoal(this));
+		this.goalSelector.addGoal(3, new FloatGoal(this));
 		this.goalSelector.addGoal(1, new TurretEntity.RangedAttackGoal(this, 1.25, 20, 20f) {
 			@Override
 			public boolean canContinueToUse() {

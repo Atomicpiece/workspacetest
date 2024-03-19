@@ -2244,10 +2244,6 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "immediatesourceentity",
             "type": "entity"
           },
@@ -2517,6 +2513,141 @@
         ]
       },
       "path": "~/Defence"
+    },
+    {
+      "name": "DPSOrbOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dps_orb_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/DPSOrbOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "DPSOrbOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dps_orb_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/DPSOrbOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "DPSOrb",
+      "type": "livingentity",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dps_orb",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/DPSOrbEntity.java",
+          "src/main/resources/assets/workspace_test/models/item/dps_orb_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/DPSOrbRenderer.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Shake1",
+      "type": "procedure",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shake_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/Shake1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "CB",
+      "type": "procedure",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cb",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/CBProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "SB",
+      "type": "procedure",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sb",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/SBProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Defence"
     }
   ],
   "variable_elements": [],
@@ -2576,6 +2707,7 @@
       "item.workspace_test.defender_spawn_egg": "Defender Spawn Egg",
       "item.workspace_test.robotic_phantom_spawn_egg": "Robotic Phantom Spawn Egg",
       "item.workspace_test.percentage_checker": "Percentage Checker",
+      "entity.workspace_test.dps_orb": "DPS Orb",
       "entity.workspace_test.destroyer": "Destroyer",
       "item.workspace_test.wand": "Wand",
       "block.workspace_test.nuke": "Nuke",
@@ -2586,6 +2718,7 @@
       "item.workspace_test.spiderbot_spawn_egg": "Spiderbot Spawn Egg",
       "entity.workspace_test.battleship": "Battleship",
       "item.workspace_test.bazooka": "Bazooka",
+      "item.workspace_test.dps_orb_spawn_egg": "DPS Orb Spawn Egg",
       "item.workspace_test.microbot_spawn_egg": "Microbot Spawn Egg",
       "gui.workspace_test.minegui.minespend": "",
       "entity.workspace_test.tank": "Tank",
