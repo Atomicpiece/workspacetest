@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.Block;
 
 import net.mcreator.workspacetest.block.entity.WallsBlockEntity;
+import net.mcreator.workspacetest.block.entity.TransporterBlockEntity;
 import net.mcreator.workspacetest.block.entity.TowerBlockEntity;
 import net.mcreator.workspacetest.block.entity.RoboticAssemblerBlockEntity;
 import net.mcreator.workspacetest.block.entity.NukeBlockEntity;
@@ -29,6 +30,7 @@ public class WorkspaceTestModBlockEntities {
 	public static final RegistryObject<BlockEntityType<?>> ROBOTIC_ASSEMBLER = register("robotic_assembler", WorkspaceTestModBlocks.ROBOTIC_ASSEMBLER, RoboticAssemblerBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> CCC = register("ccc", WorkspaceTestModBlocks.CCC, CccBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> INFBAT = register("infbat", WorkspaceTestModBlocks.INFBAT, InfbatBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> TRANSPORTER = register("transporter", WorkspaceTestModBlocks.TRANSPORTER, TransporterBlockEntity::new);
 
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));
