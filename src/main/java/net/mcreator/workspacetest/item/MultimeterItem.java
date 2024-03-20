@@ -1,8 +1,19 @@
 
 package net.mcreator.workspacetest.item;
 
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import javax.annotation.Nullable;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.network.chat.Component;
+
+import net.mcreator.workspacetest.procedures.MultimeterPlayerFinishesUsingItemProcedure;
+
+import java.util.List;
 
 public class MultimeterItem extends Item {
 	public MultimeterItem() {
@@ -30,7 +41,7 @@ public class MultimeterItem extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		MultimeterPlayerFinishesUsingItemProcedure.execute();
+		MultimeterPlayerFinishesUsingItemProcedure.execute(world, entity);
 		return retval;
 	}
 
@@ -38,6 +49,6 @@ public class MultimeterItem extends Item {
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
 		if (selected)
-			MultimeterPlayerFinishesUsingItemProcedure.execute();
+			MultimeterPlayerFinishesUsingItemProcedure.execute(world, entity);
 	}
 }

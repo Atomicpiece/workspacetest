@@ -1,11 +1,22 @@
 package net.mcreator.workspacetest.client.renderer;
 
+import net.minecraft.util.Mth;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.texture.OverlayTexture;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.MultiBufferSource;
+
+import net.mcreator.workspacetest.entity.FallingbombEntity;
+import net.mcreator.workspacetest.client.model.Modelfallbomb;
+
 import com.mojang.math.Axis;
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import com.mojang.blaze3d.vertex.PoseStack;
 
 public class FallingbombRenderer extends EntityRenderer<FallingbombEntity> {
-
 	private static final ResourceLocation texture = new ResourceLocation("workspace_test:textures/entities/fallbomb.png");
-
 	private final Modelfallbomb model;
 
 	public FallingbombRenderer(EntityRendererProvider.Context context) {
@@ -21,7 +32,6 @@ public class FallingbombRenderer extends EntityRenderer<FallingbombEntity> {
 		poseStack.mulPose(Axis.ZP.rotationDegrees(90 + Mth.lerp(partialTicks, entityIn.xRotO, entityIn.getXRot())));
 		model.renderToBuffer(poseStack, vb, packedLightIn, OverlayTexture.NO_OVERLAY, 1, 1, 1, 0.0625f);
 		poseStack.popPose();
-
 		super.render(entityIn, entityYaw, partialTicks, poseStack, bufferIn, packedLightIn);
 	}
 
@@ -29,5 +39,4 @@ public class FallingbombRenderer extends EntityRenderer<FallingbombEntity> {
 	public ResourceLocation getTextureLocation(FallingbombEntity entity) {
 		return texture;
 	}
-
 }
