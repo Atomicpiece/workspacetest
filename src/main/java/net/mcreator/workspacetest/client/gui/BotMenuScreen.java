@@ -11,7 +11,9 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.workspacetest.world.inventory.BotMenuMenu;
 import net.mcreator.workspacetest.procedures.TbProcedure;
+import net.mcreator.workspacetest.procedures.SBProcedure;
 import net.mcreator.workspacetest.procedures.MbProcedure;
+import net.mcreator.workspacetest.procedures.CBProcedure;
 
 import java.util.HashMap;
 
@@ -60,10 +62,16 @@ public class BotMenuScreen extends AbstractContainerScreen<BotMenuMenu> {
 		guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/monitor.png"), this.leftPos + 161, this.topPos + 74, 0, 0, 8, 8, 8, 8);
 
 		if (MbProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/myte.png"), this.leftPos + 89, this.topPos + 11, 0, 0, 64, 64, 64, 64);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/myte.png"), this.leftPos + 93, this.topPos + 12, 0, 0, 64, 64, 64, 64);
 		}
 		if (TbProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/bot.png"), this.leftPos + 89, this.topPos + 11, 0, 0, 64, 64, 64, 64);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/bot.png"), this.leftPos + 94, this.topPos + 12, 0, 0, 64, 64, 64, 64);
+		}
+		if (CBProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/creeper.png"), this.leftPos + 94, this.topPos + 12, 0, 0, 64, 64, 64, 64);
+		}
+		if (SBProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/spooder.png"), this.leftPos + 95, this.topPos + 12, 0, 0, 64, 64, 64, 64);
 		}
 		RenderSystem.disableBlend();
 	}
@@ -94,7 +102,7 @@ public class BotMenuScreen extends AbstractContainerScreen<BotMenuMenu> {
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_screemn = new ImageButton(this.leftPos + 89, this.topPos + 11, 64, 64, 0, 0, 64, new ResourceLocation("workspace_test:textures/screens/atlas/imagebutton_screemn.png"), 64, 128, e -> {
+		imagebutton_screemn = new ImageButton(this.leftPos + 92, this.topPos + 12, 64, 64, 0, 0, 64, new ResourceLocation("workspace_test:textures/screens/atlas/imagebutton_screemn.png"), 64, 128, e -> {
 		});
 		guistate.put("button:imagebutton_screemn", imagebutton_screemn);
 		this.addRenderableWidget(imagebutton_screemn);

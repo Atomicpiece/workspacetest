@@ -158,8 +158,8 @@
       "registry_name": "igniter",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/igniter.json",
-          "src/main/java/net/mcreator/workspacetest/item/IgniterItem.java"
+          "src/main/java/net/mcreator/workspacetest/item/IgniterItem.java",
+          "src/main/resources/assets/workspace_test/models/item/igniter.json"
         ]
       },
       "path": "~/Defence"
@@ -277,8 +277,8 @@
       "registry_name": "percentage_checker",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/PercentageCheckerItem.java",
-          "src/main/resources/assets/workspace_test/models/item/percentage_checker.json"
+          "src/main/resources/assets/workspace_test/models/item/percentage_checker.json",
+          "src/main/java/net/mcreator/workspacetest/item/PercentageCheckerItem.java"
         ]
       },
       "path": "~/Defence"
@@ -535,8 +535,8 @@
       "registry_name": "bot_menu",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/client/gui/BotMenuScreen.java",
-          "src/main/java/net/mcreator/workspacetest/world/inventory/BotMenuMenu.java"
+          "src/main/java/net/mcreator/workspacetest/world/inventory/BotMenuMenu.java",
+          "src/main/java/net/mcreator/workspacetest/client/gui/BotMenuScreen.java"
         ]
       },
       "path": "~/Defence"
@@ -606,7 +606,6 @@
       "locked_code": false,
       "registry_name": "startmine",
       "metadata": {
-        "return_type": "string",
         "files": [
           "src/main/java/net/mcreator/workspacetest/procedures/StartmineProcedure.java"
         ],
@@ -2300,6 +2299,655 @@
           "src/main/java/net/mcreator/workspacetest/block/InfbatBlock.java",
           "src/main/java/net/mcreator/workspacetest/block/entity/InfbatBlockEntity.java",
           "src/main/resources/assets/workspace_test/models/item/infbat.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Basooka",
+      "type": "item",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bazooka",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/BasookaItem.java",
+          "src/main/resources/assets/workspace_test/models/item/bazooka.json"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Sulfurde",
+      "type": "block",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sulfurde",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/sulfurde.json",
+          "src/main/resources/assets/workspace_test/blockstates/sulfurde.json",
+          "src/main/java/net/mcreator/workspacetest/block/SulfurdeBlock.java",
+          "src/main/resources/assets/workspace_test/models/block/sulfurde.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Shake1",
+      "type": "procedure",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shake_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/Shake1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Zincchunk",
+      "type": "item",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zincchunk",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/zincchunk.json",
+          "src/main/java/net/mcreator/workspacetest/item/ZincchunkItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "DPSOrbOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dps_orb_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/DPSOrbOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Diamonds",
+      "type": "item",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamonds",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/DiamondsItem.java",
+          "src/main/resources/assets/workspace_test/models/item/diamonds.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Titanchunk",
+      "type": "item",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titanchunk",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/titanchunk.json",
+          "src/main/java/net/mcreator/workspacetest/item/TitanchunkItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Zincde",
+      "type": "block",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zincde",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/blockstates/zincde.json",
+          "src/main/java/net/mcreator/workspacetest/block/ZincdeBlock.java",
+          "src/main/resources/assets/workspace_test/models/item/zincde.json",
+          "src/main/resources/assets/workspace_test/models/block/zincde.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "DPSOrb",
+      "type": "livingentity",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dps_orb",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/renderer/DPSOrbRenderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/DPSOrbEntity.java",
+          "src/main/resources/assets/workspace_test/models/item/dps_orb_spawn_egg.json"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "SB",
+      "type": "procedure",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sb",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/SBProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Leadde",
+      "type": "block",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "leadde",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/leadde.json",
+          "src/main/resources/assets/workspace_test/models/block/leadde.json",
+          "src/main/resources/assets/workspace_test/blockstates/leadde.json",
+          "src/main/java/net/mcreator/workspacetest/block/LeaddeBlock.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "DPSOrbOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dps_orb_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/DPSOrbOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Sulfur",
+      "type": "item",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sulfur",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/sulfur.json",
+          "src/main/java/net/mcreator/workspacetest/item/SulfurItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Leadchunk",
+      "type": "item",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "leadchunk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/LeadchunkItem.java",
+          "src/main/resources/assets/workspace_test/models/item/leadchunk.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "TransporterUpdateTick",
+      "type": "procedure",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "transporter_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/TransporterUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "CB",
+      "type": "procedure",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cb",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/CBProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "TurretEntityIsHurt",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "turret_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/TurretEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Diamondde",
+      "type": "block",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamondde",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/diamondde.json",
+          "src/main/resources/assets/workspace_test/blockstates/diamondde.json",
+          "src/main/java/net/mcreator/workspacetest/block/DiamonddeBlock.java",
+          "src/main/resources/assets/workspace_test/models/block/diamondde.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Coalchunk",
+      "type": "item",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coalchunk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/CoalchunkItem.java",
+          "src/main/resources/assets/workspace_test/models/item/coalchunk.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "SubmarineOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "submarine_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/SubmarineOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Titande",
+      "type": "block",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titande",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/block/TitandeBlock.java",
+          "src/main/resources/assets/workspace_test/models/item/titande.json",
+          "src/main/resources/assets/workspace_test/models/block/titande.json",
+          "src/main/resources/assets/workspace_test/blockstates/titande.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Submarine",
+      "type": "animatedentity",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "submarine",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/model/SubmarineModel.java",
+          "src/main/java/net/mcreator/workspacetest/entity/SubmarineEntity.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/SubmarineRenderer.java",
+          "src/main/resources/assets/workspace_test/models/item/submarine_spawn_egg.json"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Goldchunk",
+      "type": "item",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goldchunk",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/goldchunk.json",
+          "src/main/java/net/mcreator/workspacetest/item/GoldchunkItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Tinde",
+      "type": "block",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tinde",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/block/TindeBlock.java",
+          "src/main/resources/assets/workspace_test/models/item/tinde.json",
+          "src/main/resources/assets/workspace_test/blockstates/tinde.json",
+          "src/main/resources/assets/workspace_test/models/block/tinde.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "RocketLauncher",
+      "type": "animatedentity",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rocket_launcher",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/RocketLauncherEntity.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/RocketLauncherRenderer.java",
+          "src/main/resources/assets/workspace_test/models/item/rocket_launcher_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/entity/model/RocketLauncherModel.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Missile",
+      "type": "projectile",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "missile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/renderer/MissileRenderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/MissileEntity.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "MissileProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "missile_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MissileProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "MissileProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "missile_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MissileProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Transportgui",
+      "type": "gui",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "transportgui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/world/inventory/TransportguiMenu.java",
+          "src/main/java/net/mcreator/workspacetest/client/gui/TransportguiScreen.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "MissileWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "missile_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MissileWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Copperchunk",
+      "type": "item",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copperchunk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/CopperchunkItem.java",
+          "src/main/resources/assets/workspace_test/models/item/copperchunk.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Transporter",
+      "type": "block",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "transporter",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/block/entity/TransporterBlockEntity.java",
+          "src/main/resources/assets/workspace_test/models/item/transporter.json",
+          "src/main/java/net/mcreator/workspacetest/block/TransporterBlock.java",
+          "src/main/resources/assets/workspace_test/models/block/transporter.json",
+          "src/main/resources/assets/workspace_test/blockstates/transporter.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Tinchunk",
+      "type": "item",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tinchunk",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/tinchunk.json",
+          "src/main/java/net/mcreator/workspacetest/item/TinchunkItem.java"
         ]
       },
       "path": "~/assembly machines"

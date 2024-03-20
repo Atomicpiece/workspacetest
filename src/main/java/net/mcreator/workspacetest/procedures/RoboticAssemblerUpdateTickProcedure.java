@@ -28,6 +28,7 @@ import net.mcreator.workspacetest.init.WorkspaceTestModItems;
 import net.mcreator.workspacetest.init.WorkspaceTestModEntities;
 import net.mcreator.workspacetest.entity.FallingbombEntity;
 import net.mcreator.workspacetest.entity.DestroyerEntity;
+import net.mcreator.workspacetest.WorkspaceTestMod;
 
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -75,7 +76,6 @@ public class RoboticAssemblerUpdateTickProcedure {
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
-					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.ARROW)), (float) 0.1);
 				}
 			}
 		}
@@ -100,7 +100,7 @@ public class RoboticAssemblerUpdateTickProcedure {
 				final Vec3 _center = new Vec3(x, y, z);
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(10 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 				for (Entity entityiterator : _entfound) {
-					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.ARROW)), 50);
+					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.ARROW)), 100);
 				}
 			}
 			world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
@@ -119,7 +119,7 @@ public class RoboticAssemblerUpdateTickProcedure {
 				final Vec3 _center = new Vec3(x, y, z);
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(10 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 				for (Entity entityiterator : _entfound) {
-					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.ARROW)), 50);
+					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.ARROW)), 100);
 				}
 			}
 			world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
@@ -133,13 +133,42 @@ public class RoboticAssemblerUpdateTickProcedure {
 				return _retval.get();
 			}
 		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem()) {
-			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = WorkspaceTestModEntities.MICROBOT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-				if (entityToSpawn != null) {
-					entityToSpawn.setDeltaMovement(0, 0, 0);
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
 				}
+			}.getValue(world, BlockPos.containing(x, y, z), "Set")) == true) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("Set", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+				WorkspaceTestMod.queueServerWork(20, () -> {
+					if (world instanceof ServerLevel _level) {
+						Entity entityToSpawn = WorkspaceTestModEntities.MICROBOT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+						if (entityToSpawn != null) {
+							entityToSpawn.setDeltaMovement(0, 0, 0);
+						}
+					}
+					world.addParticle(ParticleTypes.SMOKE, x, y, z, 0, 1, 0);
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putBoolean("Set", true);
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+				});
 			}
-			world.addParticle(ParticleTypes.SMOKE, x, y, z, 0, 1, 0);
 		} else if (WorkspaceTestModItems.TINYBOT_SPAWN_EGG.get() == (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -149,13 +178,132 @@ public class RoboticAssemblerUpdateTickProcedure {
 				return _retval.get();
 			}
 		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem()) {
-			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = WorkspaceTestModEntities.TINYBOT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-				if (entityToSpawn != null) {
-					entityToSpawn.setDeltaMovement(0, 0, 0);
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
 				}
+			}.getValue(world, BlockPos.containing(x, y, z), "Set")) == true) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("Set", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+				WorkspaceTestMod.queueServerWork(20, () -> {
+					if (world instanceof ServerLevel _level) {
+						Entity entityToSpawn = WorkspaceTestModEntities.TINYBOT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+						if (entityToSpawn != null) {
+							entityToSpawn.setDeltaMovement(0, 0, 0);
+						}
+					}
+					world.addParticle(ParticleTypes.SMOKE, x, y, z, 0, 1, 0);
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putBoolean("Set", true);
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+				});
 			}
-			world.addParticle(ParticleTypes.SMOKE, x, y, z, 0, 1, 0);
+		} else if (WorkspaceTestModItems.CREEPERBOT_SPAWN_EGG.get() == (new Object() {
+			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+				BlockEntity _ent = world.getBlockEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+				return _retval.get();
+			}
+		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem()) {
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "Set")) == true) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("Set", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+				WorkspaceTestMod.queueServerWork(20, () -> {
+					if (world instanceof ServerLevel _level) {
+						Entity entityToSpawn = WorkspaceTestModEntities.CREEPERBOT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+						if (entityToSpawn != null) {
+							entityToSpawn.setDeltaMovement(0, 0, 0);
+						}
+					}
+					world.addParticle(ParticleTypes.SMOKE, x, y, z, 0, 1, 0);
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putBoolean("Set", true);
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+				});
+			}
+		} else if (WorkspaceTestModItems.SPIDERBOT_SPAWN_EGG.get() == (new Object() {
+			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+				BlockEntity _ent = world.getBlockEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+				return _retval.get();
+			}
+		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem()) {
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "Set")) == true) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("Set", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+				WorkspaceTestMod.queueServerWork(20, () -> {
+					if (world instanceof ServerLevel _level) {
+						Entity entityToSpawn = WorkspaceTestModEntities.SPIDERBOT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+						if (entityToSpawn != null) {
+							entityToSpawn.setDeltaMovement(0, 0, 0);
+						}
+					}
+					world.addParticle(ParticleTypes.SMOKE, x, y, z, 0, 1, 0);
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putBoolean("Set", true);
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+				});
+			}
 		}
 		{
 			final Vec3 _center = new Vec3(x, y, z);

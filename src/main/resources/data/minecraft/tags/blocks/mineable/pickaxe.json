@@ -5,6 +5,13 @@
     "workspace_test:ironde",
     "workspace_test:goldde",
     "workspace_test:copperde",
-    "workspace_test:infbat"
+    "workspace_test:infbat",
+    "workspace_test:titande",
+    "workspace_test:sulfurde",
+    "workspace_test:leadde",
+    "workspace_test:zincde",
+    "workspace_test:tinde",
+    "workspace_test:diamondde",
+    "workspace_test:transporter"
   ]
 }

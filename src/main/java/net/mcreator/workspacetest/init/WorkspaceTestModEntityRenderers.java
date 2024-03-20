@@ -15,11 +15,14 @@ import net.mcreator.workspacetest.client.renderer.WarplaneRenderer;
 import net.mcreator.workspacetest.client.renderer.TurretRenderer;
 import net.mcreator.workspacetest.client.renderer.TinybotRenderer;
 import net.mcreator.workspacetest.client.renderer.TankRenderer;
+import net.mcreator.workspacetest.client.renderer.SubmarineRenderer;
 import net.mcreator.workspacetest.client.renderer.SpiderbotRenderer;
 import net.mcreator.workspacetest.client.renderer.SkeleterRenderer;
+import net.mcreator.workspacetest.client.renderer.RocketLauncherRenderer;
 import net.mcreator.workspacetest.client.renderer.RoboticPhantomRenderer;
 import net.mcreator.workspacetest.client.renderer.RedstoneVoltRenderer;
 import net.mcreator.workspacetest.client.renderer.MossyGolemRenderer;
+import net.mcreator.workspacetest.client.renderer.MissileRenderer;
 import net.mcreator.workspacetest.client.renderer.MicrobotRenderer;
 import net.mcreator.workspacetest.client.renderer.MagicalBoltRenderer;
 import net.mcreator.workspacetest.client.renderer.LevitationRobotRenderer;
@@ -32,6 +35,7 @@ import net.mcreator.workspacetest.client.renderer.FallingbombRenderer;
 import net.mcreator.workspacetest.client.renderer.DroneRenderer;
 import net.mcreator.workspacetest.client.renderer.DestroyerRenderer;
 import net.mcreator.workspacetest.client.renderer.DefenderRenderer;
+import net.mcreator.workspacetest.client.renderer.DPSOrbRenderer;
 import net.mcreator.workspacetest.client.renderer.CreeperbotRenderer;
 import net.mcreator.workspacetest.client.renderer.BombRenderer;
 import net.mcreator.workspacetest.client.renderer.BattleshipRenderer;
@@ -67,5 +71,9 @@ public class WorkspaceTestModEntityRenderers {
 		event.registerEntityRenderer(WorkspaceTestModEntities.BATTLESHIP.get(), BattleshipRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.TURRET.get(), TurretRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.TURRET_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(WorkspaceTestModEntities.SUBMARINE.get(), SubmarineRenderer::new);
+		event.registerEntityRenderer(WorkspaceTestModEntities.MISSILE.get(), MissileRenderer::new);
+		event.registerEntityRenderer(WorkspaceTestModEntities.ROCKET_LAUNCHER.get(), RocketLauncherRenderer::new);
+		event.registerEntityRenderer(WorkspaceTestModEntities.DPS_ORB.get(), DPSOrbRenderer::new);
 	}
 }

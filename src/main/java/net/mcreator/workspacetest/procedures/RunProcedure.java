@@ -5,7 +5,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.core.BlockPos;
 
 public class RunProcedure {
-	public static boolean execute(LevelAccessor world, double x, double y, double z) {
+	public static String execute(LevelAccessor world, double x, double y, double z) {
 		if ((new Object() {
 			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -13,9 +13,9 @@ public class RunProcedure {
 					return blockEntity.getPersistentData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == false) {
-			return true;
+		}.getValue(world, BlockPos.containing(x, y, z), "runn")) == true) {
+			return "Running";
 		}
-		return false;
+		return "Fault";
 	}
 }

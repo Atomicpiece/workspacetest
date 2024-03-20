@@ -26,24 +26,6 @@
         }
       },
       {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
-            "value": ""
-          },
-          "disablePlacement": {
-            "fixedValue": false
-          },
-          "id": 0,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": true,
-          "x": 297,
-          "y": 92
-        }
-      },
-      {
         "type": "image",
         "data": {
           "image": "monitor.png",
@@ -123,9 +105,6 @@
           "isUndecorated": false,
           "onClick": {
             "name": "Startmine"
-          },
-          "displayCondition": {
-            "name": "Run"
           },
           "width": 77,
           "height": 20,
@@ -258,7 +237,7 @@
           "name": "label_proc_mineprocces",
           "text": {
             "fixedValue": "",
-            "name": "Mineprocces"
+            "name": "Run"
           },
           "color": {
             "value": -12829636,
@@ -266,6 +245,18 @@
           },
           "x": 165,
           "y": 66
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 294,
+          "y": 92
         }
       }
     ],

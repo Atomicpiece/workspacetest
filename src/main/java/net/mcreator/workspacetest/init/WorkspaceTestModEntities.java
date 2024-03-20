@@ -22,11 +22,14 @@ import net.mcreator.workspacetest.entity.TurretEntity;
 import net.mcreator.workspacetest.entity.TinybotEntity;
 import net.mcreator.workspacetest.entity.TankEntityProjectile;
 import net.mcreator.workspacetest.entity.TankEntity;
+import net.mcreator.workspacetest.entity.SubmarineEntity;
 import net.mcreator.workspacetest.entity.SpiderbotEntity;
 import net.mcreator.workspacetest.entity.SkeleterEntity;
+import net.mcreator.workspacetest.entity.RocketLauncherEntity;
 import net.mcreator.workspacetest.entity.RoboticPhantomEntity;
 import net.mcreator.workspacetest.entity.RedstoneVoltEntity;
 import net.mcreator.workspacetest.entity.MossyGolemEntity;
+import net.mcreator.workspacetest.entity.MissileEntity;
 import net.mcreator.workspacetest.entity.MicrobotEntity;
 import net.mcreator.workspacetest.entity.MagicalBoltEntity;
 import net.mcreator.workspacetest.entity.LevitationRobotEntity;
@@ -40,6 +43,7 @@ import net.mcreator.workspacetest.entity.FallingbombEntity;
 import net.mcreator.workspacetest.entity.DroneEntity;
 import net.mcreator.workspacetest.entity.DestroyerEntity;
 import net.mcreator.workspacetest.entity.DefenderEntity;
+import net.mcreator.workspacetest.entity.DPSOrbEntity;
 import net.mcreator.workspacetest.entity.CreeperbotEntity;
 import net.mcreator.workspacetest.entity.BombEntity;
 import net.mcreator.workspacetest.entity.BattleshipEntity;
@@ -138,6 +142,18 @@ public class WorkspaceTestModEntities {
 					.sized(0.6f, 1f));
 	public static final RegistryObject<EntityType<TurretEntityProjectile>> TURRET_PROJECTILE = register("projectile_turret", EntityType.Builder.<TurretEntityProjectile>of(TurretEntityProjectile::new, MobCategory.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(TurretEntityProjectile::new).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<SubmarineEntity>> SUBMARINE = register("submarine",
+			EntityType.Builder.<SubmarineEntity>of(SubmarineEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SubmarineEntity::new)
+
+					.sized(1f, 0.6f));
+	public static final RegistryObject<EntityType<MissileEntity>> MISSILE = register("projectile_missile",
+			EntityType.Builder.<MissileEntity>of(MissileEntity::new, MobCategory.MISC).setCustomClientFactory(MissileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<RocketLauncherEntity>> ROCKET_LAUNCHER = register("rocket_launcher",
+			EntityType.Builder.<RocketLauncherEntity>of(RocketLauncherEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3).setCustomClientFactory(RocketLauncherEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<DPSOrbEntity>> DPS_ORB = register("dps_orb",
+			EntityType.Builder.<DPSOrbEntity>of(DPSOrbEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(10).setUpdateInterval(3).setCustomClientFactory(DPSOrbEntity::new).fireImmune().sized(1f, 1f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -165,6 +181,9 @@ public class WorkspaceTestModEntities {
 			DefenderEntity.init();
 			BattleshipEntity.init();
 			TurretEntity.init();
+			SubmarineEntity.init();
+			RocketLauncherEntity.init();
+			DPSOrbEntity.init();
 		});
 	}
 
@@ -189,5 +208,8 @@ public class WorkspaceTestModEntities {
 		event.put(DEFENDER.get(), DefenderEntity.createAttributes().build());
 		event.put(BATTLESHIP.get(), BattleshipEntity.createAttributes().build());
 		event.put(TURRET.get(), TurretEntity.createAttributes().build());
+		event.put(SUBMARINE.get(), SubmarineEntity.createAttributes().build());
+		event.put(ROCKET_LAUNCHER.get(), RocketLauncherEntity.createAttributes().build());
+		event.put(DPS_ORB.get(), DPSOrbEntity.createAttributes().build());
 	}
 }

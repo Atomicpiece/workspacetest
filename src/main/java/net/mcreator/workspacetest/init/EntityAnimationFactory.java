@@ -8,8 +8,10 @@ import net.mcreator.workspacetest.entity.WarplaneEntity;
 import net.mcreator.workspacetest.entity.TurretEntity;
 import net.mcreator.workspacetest.entity.TinybotEntity;
 import net.mcreator.workspacetest.entity.TankEntity;
+import net.mcreator.workspacetest.entity.SubmarineEntity;
 import net.mcreator.workspacetest.entity.SpiderbotEntity;
 import net.mcreator.workspacetest.entity.SkeleterEntity;
+import net.mcreator.workspacetest.entity.RocketLauncherEntity;
 import net.mcreator.workspacetest.entity.RoboticPhantomEntity;
 import net.mcreator.workspacetest.entity.MossyGolemEntity;
 import net.mcreator.workspacetest.entity.MicrobotEntity;
@@ -140,6 +142,20 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof TurretEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof SubmarineEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof RocketLauncherEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

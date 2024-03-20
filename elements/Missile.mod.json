@@ -1,0 +1,28 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.TNT"
+    },
+    "showParticles": true,
+    "actionSound": {
+      "value": "entity.firework.launch"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 10.0,
+    "knockback": 0,
+    "entityModel": "Modelmissile",
+    "customModelTexture": "missiled.png",
+    "onHitsBlock": {
+      "name": "MissileProjectileHitsBlock"
+    },
+    "onHitsEntity": {
+      "name": "MissileProjectileHitsLivingEntity"
+    },
+    "onFlyingTick": {
+      "name": "MissileWhileProjectileFlyingTick"
+    }
+  }
+}
