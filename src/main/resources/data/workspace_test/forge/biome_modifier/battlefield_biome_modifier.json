@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "workspace_test:lost_lands",
+  "features": "workspace_test:battlefield",
+  "step": "surface_structures"
+}

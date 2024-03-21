@@ -1,0 +1,139 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "config": {
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:delta_feature",
+          "config": {
+            "contents": {
+              "Name": "minecraft:cracked_stone_bricks"
+            },
+            "rim": {
+              "Name": "minecraft:stone_bricks"
+            },
+            "size": 5,
+            "rim_size": 1
+          }
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "minecraft:block_pile",
+          "config": {
+            "state_provider": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:iron_bars",
+                "Properties": {
+                  "east": "false",
+                  "north": "false",
+                  "south": "false",
+                  "waterlogged": "false",
+                  "west": "false"
+                }
+              }
+            }
+          }
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "minecraft:lake",
+          "config": {
+            "fluid": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:air"
+              }
+            },
+            "barrier": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:cobbled_deepslate"
+              }
+            }
+          }
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "minecraft:block_column",
+          "config": {
+            "allowed_placement": {
+              "type": "minecraft:matching_blocks",
+              "blocks": "minecraft:air"
+            },
+            "direction": "up",
+            "layers": [
+              {
+                "height": 3,
+                "provider": {
+                  "type": "minecraft:simple_state_provider",
+                  "state": {
+                    "Name": "minecraft:polished_basalt",
+                    "Properties": {
+                      "axis": "y"
+                    }
+                  }
+                }
+              }
+            ],
+            "prioritize_tip": false
+          }
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "minecraft:block_pile",
+          "config": {
+            "state_provider": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:mud_bricks"
+              }
+            }
+          }
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "minecraft:block_column",
+          "config": {
+            "allowed_placement": {
+              "type": "minecraft:matching_blocks",
+              "blocks": "minecraft:air"
+            },
+            "direction": "up",
+            "layers": [
+              {
+                "height": 1,
+                "provider": {
+                  "type": "minecraft:simple_state_provider",
+                  "state": {
+                    "Name": "minecraft:andesite_wall",
+                    "Properties": {
+                      "east": "none",
+                      "north": "none",
+                      "south": "none",
+                      "up": "true",
+                      "waterlogged": "false",
+                      "west": "none"
+                    }
+                  }
+                }
+              }
+            ],
+            "prioritize_tip": false
+          }
+        },
+        "placement": []
+      }
+    ]
+  }
+}

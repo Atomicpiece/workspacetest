@@ -99,6 +99,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> DIAMONDDE = block(WorkspaceTestModBlocks.DIAMONDDE);
 	public static final RegistryObject<Item> DIAMONDS = REGISTRY.register("diamonds", () -> new DiamondsItem());
 	public static final RegistryObject<Item> TRANSPORTER = block(WorkspaceTestModBlocks.TRANSPORTER);
+	public static final RegistryObject<Item> ANCIENT_SPAWNER = block(WorkspaceTestModBlocks.ANCIENT_SPAWNER);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

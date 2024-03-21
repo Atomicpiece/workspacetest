@@ -28,6 +28,7 @@ import net.mcreator.workspacetest.block.DiamonddeBlock;
 import net.mcreator.workspacetest.block.CopperdeBlock;
 import net.mcreator.workspacetest.block.CoaldeBlock;
 import net.mcreator.workspacetest.block.CccBlock;
+import net.mcreator.workspacetest.block.AncientSpawnerBlock;
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
 public class WorkspaceTestModBlocks {
@@ -50,4 +51,5 @@ public class WorkspaceTestModBlocks {
 	public static final RegistryObject<Block> TINDE = REGISTRY.register("tinde", () -> new TindeBlock());
 	public static final RegistryObject<Block> DIAMONDDE = REGISTRY.register("diamondde", () -> new DiamonddeBlock());
 	public static final RegistryObject<Block> TRANSPORTER = REGISTRY.register("transporter", () -> new TransporterBlock());
+	public static final RegistryObject<Block> ANCIENT_SPAWNER = REGISTRY.register("ancient_spawner", () -> new AncientSpawnerBlock());
 }

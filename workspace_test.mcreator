@@ -2950,6 +2950,107 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "Battlefield",
+      "type": "feature",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battlefield",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/workspace_test/worldgen/configured_feature/battlefield.json",
+          "src/main/resources/data/workspace_test/worldgen/placed_feature/battlefield.json",
+          "src/main/resources/data/workspace_test/forge/biome_modifier/battlefield_biome_modifier.json"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "LostLands",
+      "type": "biome",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lost_lands",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/workspace_test/worldgen/configured_feature/lost_lands_tree.json",
+          "src/main/resources/data/workspace_test/worldgen/placed_feature/lost_lands_tree.json",
+          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/LostLandsFruitDecorator.java",
+          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/LostLandsLeaveDecorator.java",
+          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/LostLandsTrunkDecorator.java",
+          "src/main/resources/data/workspace_test/worldgen/biome/lost_lands.json"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Battlefields",
+      "type": "structure",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battlefields",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/workspace_test/worldgen/structure_set/battlefields.json",
+          "src/main/resources/data/workspace_test/worldgen/template_pool/battlefields.json",
+          "src/main/resources/data/workspace_test/worldgen/structure/battlefields.json"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "AncientSpawner",
+      "type": "block",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ancient_spawner",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/ancient_spawner.json",
+          "src/main/java/net/mcreator/workspacetest/block/AncientSpawnerBlock.java",
+          "src/main/resources/assets/workspace_test/blockstates/ancient_spawner.json",
+          "src/main/java/net/mcreator/workspacetest/block/entity/AncientSpawnerBlockEntity.java",
+          "src/main/resources/assets/workspace_test/models/block/ancient_spawner.json"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "AncientSpawnerUpdateTick",
+      "type": "procedure",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ancient_spawner_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/AncientSpawnerUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
     }
   ],
   "variable_elements": [],
@@ -2959,6 +3060,7 @@
       "item.workspace_test.bombs": "Bombs",
       "block.workspace_test.diamondde": "Diamond deposit",
       "item.workspace_test.leadchunk": "Lead chunk",
+      "block.workspace_test.ancient_spawner": "Ancient Spawner",
       "item.workspace_test.bomb_spawn_egg": "Bomb Spawn Egg",
       "block.workspace_test.sulfurde": "Sulfur deposit",
       "item.workspace_test.zincchunk": "Zinc chunk",
@@ -2993,8 +3095,9 @@
       "entity.workspace_test.microbot": "Microbot",
       "item.workspace_test.frost_blaze_spawn_egg": "Frost Blaze Spawn Egg",
       "item.workspace_test.tank_spawn_egg": "Tank Spawn Egg",
-      "item.workspace_test.spiderbot_spawn_egg": "Spiderbot Spawn Egg",
       "entity.workspace_test.battleship": "Battleship",
+      "item.workspace_test.spiderbot_spawn_egg": "Spiderbot Spawn Egg",
+      "biome.workspace_test.lost_lands": "Lost Lands",
       "gui.workspace_test.minegui.button_start": "Start mining",
       "item.workspace_test.multimeter": "Tablet",
       "item.workspace_test.redstrone_blaster": "Redstrone Blaster",
