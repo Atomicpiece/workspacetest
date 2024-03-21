@@ -70,8 +70,8 @@
           "name": "imagebutton_screemn",
           "image": "screemn.png",
           "hoveredImage": "",
-          "x": 215,
-          "y": 48
+          "x": 218,
+          "y": 49
         }
       },
       {
@@ -82,8 +82,8 @@
           "displayCondition": {
             "name": "Mb"
           },
-          "x": 215,
-          "y": 48
+          "x": 219,
+          "y": 49
         }
       },
       {
@@ -94,8 +94,32 @@
           "displayCondition": {
             "name": "Tb"
           },
-          "x": 215,
-          "y": 48
+          "x": 220,
+          "y": 49
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "creeper.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "CB"
+          },
+          "x": 220,
+          "y": 49
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "spooder.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "SB"
+          },
+          "x": 221,
+          "y": 49
         }
       }
     ],

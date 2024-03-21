@@ -35,6 +35,7 @@ import net.mcreator.workspacetest.client.renderer.FallingbombRenderer;
 import net.mcreator.workspacetest.client.renderer.DroneRenderer;
 import net.mcreator.workspacetest.client.renderer.DestroyerRenderer;
 import net.mcreator.workspacetest.client.renderer.DefenderRenderer;
+import net.mcreator.workspacetest.client.renderer.DPSOrbRenderer;
 import net.mcreator.workspacetest.client.renderer.CreeperbotRenderer;
 import net.mcreator.workspacetest.client.renderer.BombRenderer;
 import net.mcreator.workspacetest.client.renderer.BattleshipRenderer;
@@ -73,5 +74,6 @@ public class WorkspaceTestModEntityRenderers {
 		event.registerEntityRenderer(WorkspaceTestModEntities.SUBMARINE.get(), SubmarineRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.MISSILE.get(), MissileRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.ROCKET_LAUNCHER.get(), RocketLauncherRenderer::new);
+		event.registerEntityRenderer(WorkspaceTestModEntities.DPS_ORB.get(), DPSOrbRenderer::new);
 	}
 }

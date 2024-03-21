@@ -10,9 +10,9 @@
       "value": "entity.firework.launch"
     },
     "igniteFire": false,
-    "power": 2.0,
+    "power": 1.0,
     "damage": 10.0,
-    "knockback": 5,
+    "knockback": 0,
     "entityModel": "Modelmissile",
     "customModelTexture": "missiled.png",
     "onHitsBlock": {

@@ -87,6 +87,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> COPPERCHUNK = REGISTRY.register("copperchunk", () -> new CopperchunkItem());
 	public static final RegistryObject<Item> TITANDE = block(WorkspaceTestModBlocks.TITANDE);
 	public static final RegistryObject<Item> TITANCHUNK = REGISTRY.register("titanchunk", () -> new TitanchunkItem());
+	public static final RegistryObject<Item> DPS_ORB_SPAWN_EGG = REGISTRY.register("dps_orb_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.DPS_ORB, -26368, -26368, new Item.Properties()));
 	public static final RegistryObject<Item> SULFURDE = block(WorkspaceTestModBlocks.SULFURDE);
 	public static final RegistryObject<Item> SULFUR = REGISTRY.register("sulfur", () -> new SulfurItem());
 	public static final RegistryObject<Item> LEADDE = block(WorkspaceTestModBlocks.LEADDE);
