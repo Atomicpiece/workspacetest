@@ -2952,41 +2952,6 @@
       "path": "~/assembly machines"
     },
     {
-      "name": "Battlefield",
-      "type": "feature",
-      "sortid": 107,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "battlefield",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/workspace_test/worldgen/configured_feature/battlefield.json",
-          "src/main/resources/data/workspace_test/worldgen/placed_feature/battlefield.json",
-          "src/main/resources/data/workspace_test/forge/biome_modifier/battlefield_biome_modifier.json"
-        ]
-      },
-      "path": "~/Defence"
-    },
-    {
-      "name": "LostLands",
-      "type": "biome",
-      "sortid": 108,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lost_lands",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/workspace_test/worldgen/configured_feature/lost_lands_tree.json",
-          "src/main/resources/data/workspace_test/worldgen/placed_feature/lost_lands_tree.json",
-          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/LostLandsFruitDecorator.java",
-          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/LostLandsLeaveDecorator.java",
-          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/LostLandsTrunkDecorator.java",
-          "src/main/resources/data/workspace_test/worldgen/biome/lost_lands.json"
-        ]
-      },
-      "path": "~/Defence"
-    },
-    {
       "name": "Battlefields",
       "type": "structure",
       "sortid": 109,
@@ -3021,6 +2986,25 @@
       "path": "~/Defence"
     },
     {
+      "name": "LostLands",
+      "type": "biome",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lost_lands",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/workspace_test/worldgen/configured_feature/lost_lands_tree.json",
+          "src/main/resources/data/workspace_test/worldgen/placed_feature/lost_lands_tree.json",
+          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/LostLandsFruitDecorator.java",
+          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/LostLandsLeaveDecorator.java",
+          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/LostLandsTrunkDecorator.java",
+          "src/main/resources/data/workspace_test/worldgen/biome/lost_lands.json"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
       "name": "AncientSpawnerUpdateTick",
       "type": "procedure",
       "sortid": 111,
@@ -3048,6 +3032,22 @@
             "name": "world",
             "type": "world"
           }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Battlefield",
+      "type": "feature",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battlefield",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/workspace_test/worldgen/configured_feature/battlefield.json",
+          "src/main/resources/data/workspace_test/worldgen/placed_feature/battlefield.json",
+          "src/main/resources/data/workspace_test/forge/biome_modifier/battlefield_biome_modifier.json"
         ]
       },
       "path": "~/Defence"
