@@ -15,6 +15,7 @@ import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.workspacetest.item.ZincchunkItem;
 import net.mcreator.workspacetest.item.WandItem;
+import net.mcreator.workspacetest.item.TungstenchunkItem;
 import net.mcreator.workspacetest.item.TitanchunkItem;
 import net.mcreator.workspacetest.item.TinchunkItem;
 import net.mcreator.workspacetest.item.SulfurItem;
@@ -62,8 +63,8 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> WARPLANE_SPAWN_EGG = REGISTRY.register("warplane_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.WARPLANE, -13312, -26368, new Item.Properties()));
 	public static final RegistryObject<Item> COALDE = block(WorkspaceTestModBlocks.COALDE);
 	public static final RegistryObject<Item> FIRE_CIRCLE_CREATOR = REGISTRY.register("fire_circle_creator", () -> new FireCircleCreatorItem());
-	public static final RegistryObject<Item> IRONDE = block(WorkspaceTestModBlocks.IRONDE);
 	public static final RegistryObject<Item> SKELETER_SPAWN_EGG = REGISTRY.register("skeleter_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.SKELETER, -6710887, -10066330, new Item.Properties()));
+	public static final RegistryObject<Item> IRONDE = block(WorkspaceTestModBlocks.IRONDE);
 	public static final RegistryObject<Item> MOSSY_GOLEM_SPAWN_EGG = REGISTRY.register("mossy_golem_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.MOSSY_GOLEM, -6710887, -16724992, new Item.Properties()));
 	public static final RegistryObject<Item> GOLDDE = block(WorkspaceTestModBlocks.GOLDDE);
 	public static final RegistryObject<Item> GREAT_CHICKEN_SPAWN_EGG = REGISTRY.register("great_chicken_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.GREAT_CHICKEN, -1, -65536, new Item.Properties()));
@@ -72,22 +73,22 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> DEFENDER_SPAWN_EGG = REGISTRY.register("defender_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.DEFENDER, -10066330, -6710887, new Item.Properties()));
 	public static final RegistryObject<Item> REDSTRONE_BLASTER = REGISTRY.register("redstrone_blaster", () -> new RedstroneBlasterItem());
 	public static final RegistryObject<Item> WAND = REGISTRY.register("wand", () -> new WandItem());
-	public static final RegistryObject<Item> COPPERDE = block(WorkspaceTestModBlocks.COPPERDE);
 	public static final RegistryObject<Item> BATTLESHIP_SPAWN_EGG = REGISTRY.register("battleship_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.BATTLESHIP, -10066330, -65536, new Item.Properties()));
+	public static final RegistryObject<Item> COPPERDE = block(WorkspaceTestModBlocks.COPPERDE);
 	public static final RegistryObject<Item> TURRET_SPAWN_EGG = REGISTRY.register("turret_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.TURRET, -1, -3355444, new Item.Properties()));
 	public static final RegistryObject<Item> HEALT_INDICATOR = REGISTRY.register("healt_indicator", () -> new HealtIndicatorItem());
 	public static final RegistryObject<Item> SUBMARINE_SPAWN_EGG = REGISTRY.register("submarine_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.SUBMARINE, -16724737, -6710887, new Item.Properties()));
 	public static final RegistryObject<Item> IRONCHUNK = REGISTRY.register("ironchunk", () -> new IronchunkItem());
 	public static final RegistryObject<Item> INFBAT = block(WorkspaceTestModBlocks.INFBAT);
-	public static final RegistryObject<Item> MULTIMETER = REGISTRY.register("multimeter", () -> new MultimeterItem());
 	public static final RegistryObject<Item> BAZOOKA = REGISTRY.register("bazooka", () -> new BasookaItem());
-	public static final RegistryObject<Item> COALCHUNK = REGISTRY.register("coalchunk", () -> new CoalchunkItem());
+	public static final RegistryObject<Item> MULTIMETER = REGISTRY.register("multimeter", () -> new MultimeterItem());
 	public static final RegistryObject<Item> ROCKET_LAUNCHER_SPAWN_EGG = REGISTRY.register("rocket_launcher_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.ROCKET_LAUNCHER, -65536, -1, new Item.Properties()));
+	public static final RegistryObject<Item> COALCHUNK = REGISTRY.register("coalchunk", () -> new CoalchunkItem());
 	public static final RegistryObject<Item> GOLDCHUNK = REGISTRY.register("goldchunk", () -> new GoldchunkItem());
 	public static final RegistryObject<Item> COPPERCHUNK = REGISTRY.register("copperchunk", () -> new CopperchunkItem());
 	public static final RegistryObject<Item> TITANDE = block(WorkspaceTestModBlocks.TITANDE);
-	public static final RegistryObject<Item> TITANCHUNK = REGISTRY.register("titanchunk", () -> new TitanchunkItem());
 	public static final RegistryObject<Item> DPS_ORB_SPAWN_EGG = REGISTRY.register("dps_orb_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.DPS_ORB, -26368, -26368, new Item.Properties()));
+	public static final RegistryObject<Item> TITANCHUNK = REGISTRY.register("titanchunk", () -> new TitanchunkItem());
 	public static final RegistryObject<Item> SULFURDE = block(WorkspaceTestModBlocks.SULFURDE);
 	public static final RegistryObject<Item> SULFUR = REGISTRY.register("sulfur", () -> new SulfurItem());
 	public static final RegistryObject<Item> LEADDE = block(WorkspaceTestModBlocks.LEADDE);
@@ -99,6 +100,9 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> DIAMONDDE = block(WorkspaceTestModBlocks.DIAMONDDE);
 	public static final RegistryObject<Item> DIAMONDS = REGISTRY.register("diamonds", () -> new DiamondsItem());
 	public static final RegistryObject<Item> TRANSPORTER = block(WorkspaceTestModBlocks.TRANSPORTER);
+	public static final RegistryObject<Item> ANCIENT_SPAWNER = block(WorkspaceTestModBlocks.ANCIENT_SPAWNER);
+	public static final RegistryObject<Item> TUNGSTENDE = block(WorkspaceTestModBlocks.TUNGSTENDE);
+	public static final RegistryObject<Item> TUNGSTENCHUNK = REGISTRY.register("tungstenchunk", () -> new TungstenchunkItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

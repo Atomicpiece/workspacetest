@@ -1,0 +1,131 @@
+{
+  "_fv": 57,
+  "_type": "biome",
+  "definition": {
+    "name": "Lost Lands",
+    "groundBlock": {
+      "value": "Blocks.DIRT#1"
+    },
+    "undergroundBlock": {
+      "value": "Blocks.STONE#0"
+    },
+    "underwaterBlock": {
+      "value": "Blocks.SUSPICIOUS_GRAVEL"
+    },
+    "airColor": {
+      "value": -13421773,
+      "falpha": 0.0
+    },
+    "grassColor": {
+      "value": -10066330,
+      "falpha": 0.0
+    },
+    "foliageColor": {
+      "value": -10066330,
+      "falpha": 0.0
+    },
+    "waterColor": {
+      "value": -13421773,
+      "falpha": 0.0
+    },
+    "waterFogColor": {
+      "value": -16777216,
+      "falpha": 0.0
+    },
+    "ambientSound": {
+      "value": ""
+    },
+    "additionsSound": {
+      "value": ""
+    },
+    "music": {
+      "value": "music.overworld.badlands"
+    },
+    "moodSound": {
+      "value": "block.pointed_dripstone.break"
+    },
+    "moodSoundDelay": 20000,
+    "spawnParticles": true,
+    "particleToSpawn": {
+      "value": "ASH"
+    },
+    "particlesProbability": 33.0,
+    "rainingPossibility": 0.75,
+    "temperature": 1.0,
+    "spawnBiome": true,
+    "spawnInCaves": false,
+    "spawnBiomeNether": false,
+    "genTemperature": {
+      "min": -0.5,
+      "max": 0.5
+    },
+    "genHumidity": {
+      "min": -0.25,
+      "max": 0.25
+    },
+    "genContinentalness": {
+      "min": 0.3,
+      "max": 1.0
+    },
+    "genErosion": {
+      "min": 0.0,
+      "max": 0.25
+    },
+    "genWeirdness": {
+      "min": -1.0,
+      "max": 0.5
+    },
+    "treesPerChunk": 2,
+    "vanillaTreeType": "Default",
+    "treeType": 1,
+    "minHeight": 1,
+    "treeStem": {
+      "value": "Blocks.LOG2#1"
+    },
+    "treeBranch": {
+      "value": "Blocks.LEAVES#1"
+    },
+    "treeVines": {
+      "value": "Blocks.GLOW_LICHEN"
+    },
+    "treeFruits": {
+      "value": "Blocks.SMALL_DRIPLEAF"
+    },
+    "defaultFeatures": [
+      "Caves",
+      "Ores",
+      "DeadBushes"
+    ],
+    "spawnStronghold": false,
+    "spawnMineshaft": false,
+    "spawnMineshaftMesa": true,
+    "spawnPillagerOutpost": true,
+    "villageType": "none",
+    "spawnWoodlandMansion": false,
+    "spawnJungleTemple": true,
+    "spawnDesertPyramid": false,
+    "spawnSwampHut": false,
+    "spawnIgloo": false,
+    "spawnOceanMonument": false,
+    "spawnShipwreck": false,
+    "spawnShipwreckBeached": false,
+    "spawnBuriedTreasure": false,
+    "oceanRuinType": "COLD",
+    "spawnNetherBridge": false,
+    "spawnNetherFossil": false,
+    "spawnBastionRemnant": false,
+    "spawnEndCity": false,
+    "spawnRuinedPortal": "NONE",
+    "spawnEntries": [
+      {
+        "entity": {
+          "value": "CUSTOM:MossyGolem"
+        },
+        "minGroup": 1,
+        "maxGroup": 2,
+        "weight": 100,
+        "spawnType": "creature"
+      }
+    ]
+  }
+}
