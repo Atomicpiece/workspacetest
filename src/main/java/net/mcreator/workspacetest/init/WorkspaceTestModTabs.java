@@ -63,7 +63,6 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.BAZOOKA.get());
 				tabData.accept(WorkspaceTestModItems.ROCKET_LAUNCHER_SPAWN_EGG.get());
 				tabData.accept(WorkspaceTestModItems.DPS_ORB_SPAWN_EGG.get());
-				tabData.accept(WorkspaceTestModBlocks.ANCIENT_SPAWNER.get().asItem());
 			})
 
 					.build());
@@ -89,8 +88,6 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModBlocks.TINDE.get().asItem());
 				tabData.accept(WorkspaceTestModItems.TINCHUNK.get());
 				tabData.accept(WorkspaceTestModBlocks.DIAMONDDE.get().asItem());
-				tabData.accept(WorkspaceTestModBlocks.TUNGSTENDE.get().asItem());
-				tabData.accept(WorkspaceTestModItems.TUNGSTENCHUNK.get());
 			})
 
 					.build());
