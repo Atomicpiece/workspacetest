@@ -3051,6 +3051,38 @@
         ]
       },
       "path": "~/Defence"
+    },
+    {
+      "name": "Tungstende",
+      "type": "block",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tungstende",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/block/TungstendeBlock.java",
+          "src/main/resources/assets/workspace_test/models/item/tungstende.json",
+          "src/main/resources/assets/workspace_test/models/block/tungstende.json",
+          "src/main/resources/assets/workspace_test/blockstates/tungstende.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Tungstenchunk",
+      "type": "item",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tungstenchunk",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/tungstenchunk.json",
+          "src/main/java/net/mcreator/workspacetest/item/TungstenchunkItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [],
@@ -3059,8 +3091,8 @@
     "en_us": {
       "item.workspace_test.bombs": "Bombs",
       "block.workspace_test.diamondde": "Diamond deposit",
-      "item.workspace_test.leadchunk": "Lead chunk",
       "block.workspace_test.ancient_spawner": "Ancient Spawner",
+      "item.workspace_test.leadchunk": "Lead chunk",
       "item.workspace_test.bomb_spawn_egg": "Bomb Spawn Egg",
       "block.workspace_test.sulfurde": "Sulfur deposit",
       "item.workspace_test.zincchunk": "Zinc chunk",
@@ -3088,6 +3120,7 @@
       "item.workspace_test.ironchunk": "Iron chunk",
       "gui.workspace_test.transportgui.label_fluid": "fluid:",
       "gui.workspace_test.minegui.label_output": "Output:",
+      "item.workspace_test.tungstenchunk": "Tungsten chunk",
       "item.workspace_test.defender_spawn_egg": "Defender Spawn Egg",
       "item.workspace_test.robotic_phantom_spawn_egg": "Robotic Phantom Spawn Egg",
       "item.workspace_test.percentage_checker": "Percentage Checker",
@@ -3095,10 +3128,11 @@
       "entity.workspace_test.microbot": "Microbot",
       "item.workspace_test.frost_blaze_spawn_egg": "Frost Blaze Spawn Egg",
       "item.workspace_test.tank_spawn_egg": "Tank Spawn Egg",
-      "entity.workspace_test.battleship": "Battleship",
       "item.workspace_test.spiderbot_spawn_egg": "Spiderbot Spawn Egg",
+      "entity.workspace_test.battleship": "Battleship",
       "biome.workspace_test.lost_lands": "Lost Lands",
       "gui.workspace_test.minegui.button_start": "Start mining",
+      "block.workspace_test.tungstende": "Tungsten deposit",
       "item.workspace_test.multimeter": "Tablet",
       "item.workspace_test.redstrone_blaster": "Redstrone Blaster",
       "entity.workspace_test.mossy_golem": "Mossy Golem",

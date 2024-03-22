@@ -15,6 +15,7 @@ import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.workspacetest.item.ZincchunkItem;
 import net.mcreator.workspacetest.item.WandItem;
+import net.mcreator.workspacetest.item.TungstenchunkItem;
 import net.mcreator.workspacetest.item.TitanchunkItem;
 import net.mcreator.workspacetest.item.TinchunkItem;
 import net.mcreator.workspacetest.item.SulfurItem;
@@ -100,6 +101,8 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> DIAMONDS = REGISTRY.register("diamonds", () -> new DiamondsItem());
 	public static final RegistryObject<Item> TRANSPORTER = block(WorkspaceTestModBlocks.TRANSPORTER);
 	public static final RegistryObject<Item> ANCIENT_SPAWNER = block(WorkspaceTestModBlocks.ANCIENT_SPAWNER);
+	public static final RegistryObject<Item> TUNGSTENDE = block(WorkspaceTestModBlocks.TUNGSTENDE);
+	public static final RegistryObject<Item> TUNGSTENCHUNK = REGISTRY.register("tungstenchunk", () -> new TungstenchunkItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

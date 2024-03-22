@@ -89,6 +89,8 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModBlocks.TINDE.get().asItem());
 				tabData.accept(WorkspaceTestModItems.TINCHUNK.get());
 				tabData.accept(WorkspaceTestModBlocks.DIAMONDDE.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.TUNGSTENDE.get().asItem());
+				tabData.accept(WorkspaceTestModItems.TUNGSTENCHUNK.get());
 			})
 
 					.build());
