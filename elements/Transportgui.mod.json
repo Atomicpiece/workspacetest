@@ -18,31 +18,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 223,
-          "y": 88
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 1,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": true,
           "x": 241,
-          "y": 88
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 2,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": true,
-          "x": 259,
           "y": 88
         }
       },

@@ -50,11 +50,11 @@ public class TransporterUpdateTickProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
 				return _retval.get();
 			}
-		}.getAmount(world, BlockPos.containing(x, y, z), 1) < 64) {
+		}.getAmount(world, BlockPos.containing(x, y, z), 0) < 64) {
 			{
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
-					final int _slotid = 1;
+					final int _slotid = 0;
 					final ItemStack _setstack = (new Object() {
 						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -72,7 +72,7 @@ public class TransporterUpdateTickProcedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
 							return _retval.get();
 						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 1) + new Object() {
+					}.getAmount(world, BlockPos.containing(x, y, z), 0) + new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							BlockEntity _ent = world.getBlockEntity(pos);
@@ -133,960 +133,6 @@ public class TransporterUpdateTickProcedure {
 				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
 			}
 		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == (new Object() {
-			public Direction getDirection(BlockState _bs) {
-				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_prop instanceof DirectionProperty _dp)
-					return _bs.getValue(_dp);
-				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-			}
-		}.getDirection((world.getBlockState(BlockPos.containing(x - 1, y, z))))) && new Object() {
-			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-				return _retval.get();
-			}
-		}.getAmount(world, BlockPos.containing(x - 1, y, z), 0) > 0 && new Object() {
-			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-				return _retval.get();
-			}
-		}.getAmount(world, BlockPos.containing(x, y, z), 1) < 64) {
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				if (_ent != null) {
-					final int _slotid = 1;
-					final ItemStack _setstack = (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-							return _retval.get();
-						}
-					}.getItemStack(world, BlockPos.containing(x - 1, y, z), 0));
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 1) + new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x - 1, y, z), 0)));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x - 1, y, z));
-				if (_ent != null) {
-					final int _slotid = 0;
-					final ItemStack _setstack = (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-							return _retval.get();
-						}
-					}.getItemStack(world, BlockPos.containing(x - 1, y, z), 0));
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x - 1, y, z), 0) - new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x - 1, y, z), 0)));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-		}
-		if ((new Object() {
-			public Direction getDirection(BlockState _bs) {
-				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_prop instanceof DirectionProperty _dp)
-					return _bs.getValue(_dp);
-				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-			}
-		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == (new Object() {
-			public Direction getDirection(BlockState _bs) {
-				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_prop instanceof DirectionProperty _dp)
-					return _bs.getValue(_dp);
-				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-			}
-		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z - 1))))) && new Object() {
-			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-				return _retval.get();
-			}
-		}.getAmount(world, BlockPos.containing(x, y, z - 1), 0) > 0 && new Object() {
-			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-				return _retval.get();
-			}
-		}.getAmount(world, BlockPos.containing(x, y, z), 1) < 64) {
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				if (_ent != null) {
-					final int _slotid = 1;
-					final ItemStack _setstack = (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-							return _retval.get();
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z - 1), 0));
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 1) + new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z - 1), 0)));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z - 1));
-				if (_ent != null) {
-					final int _slotid = 0;
-					final ItemStack _setstack = (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-							return _retval.get();
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z - 1), 0));
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z - 1), 0) - new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z - 1), 0)));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-		}
-		if ((new Object() {
-			public Direction getDirection(BlockState _bs) {
-				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_prop instanceof DirectionProperty _dp)
-					return _bs.getValue(_dp);
-				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-			}
-		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == (new Object() {
-			public Direction getDirection(BlockState _bs) {
-				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_prop instanceof DirectionProperty _dp)
-					return _bs.getValue(_dp);
-				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-			}
-		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z + 1))))) && new Object() {
-			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-				return _retval.get();
-			}
-		}.getAmount(world, BlockPos.containing(x, y, z + 1), 0) > 0 && new Object() {
-			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-				return _retval.get();
-			}
-		}.getAmount(world, BlockPos.containing(x, y, z), 1) < 64) {
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				if (_ent != null) {
-					final int _slotid = 1;
-					final ItemStack _setstack = (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-							return _retval.get();
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z + 1), 0));
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 1) + new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z + 1), 0)));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z + 1));
-				if (_ent != null) {
-					final int _slotid = 0;
-					final ItemStack _setstack = (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-							return _retval.get();
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z + 1), 0));
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z + 1), 0) - new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z + 1), 0)));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-		}
-		if (((new Object() {
-			public Direction getDirection(BlockState _bs) {
-				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_prop instanceof DirectionProperty _dp)
-					return _bs.getValue(_dp);
-				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-			}
-		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))).getClockWise(Direction.Axis.Y)) == (new Object() {
-			public Direction getDirection(BlockState _bs) {
-				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_prop instanceof DirectionProperty _dp)
-					return _bs.getValue(_dp);
-				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-			}
-		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z + 1))))) && new Object() {
-			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-				return _retval.get();
-			}
-		}.getAmount(world, BlockPos.containing(x, y, z + 1), 0) > 0 && new Object() {
-			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-				return _retval.get();
-			}
-		}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64) {
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				if (_ent != null) {
-					final int _slotid = 2;
-					final ItemStack _setstack = (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-							return _retval.get();
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z + 1), 0));
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 2) + new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z + 1), 0)));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z + 1));
-				if (_ent != null) {
-					final int _slotid = 0;
-					final ItemStack _setstack = (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-							return _retval.get();
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z + 1), 0));
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z + 1), 0) - new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z + 1), 0)));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-		}
-		if (((new Object() {
-			public Direction getDirection(BlockState _bs) {
-				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_prop instanceof DirectionProperty _dp)
-					return _bs.getValue(_dp);
-				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-			}
-		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))).getClockWise(Direction.Axis.Y)) == (new Object() {
-			public Direction getDirection(BlockState _bs) {
-				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_prop instanceof DirectionProperty _dp)
-					return _bs.getValue(_dp);
-				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-			}
-		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z - 1))))) && new Object() {
-			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-				return _retval.get();
-			}
-		}.getAmount(world, BlockPos.containing(x, y, z - 1), 0) > 0 && new Object() {
-			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-				return _retval.get();
-			}
-		}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64) {
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				if (_ent != null) {
-					final int _slotid = 2;
-					final ItemStack _setstack = (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-							return _retval.get();
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z - 1), 0));
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 2) + new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z - 1), 0)));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z - 1));
-				if (_ent != null) {
-					final int _slotid = 0;
-					final ItemStack _setstack = (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-							return _retval.get();
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z - 1), 0));
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z - 1), 0) - new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z - 1), 0)));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-		}
-		if (((new Object() {
-			public Direction getDirection(BlockState _bs) {
-				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_prop instanceof DirectionProperty _dp)
-					return _bs.getValue(_dp);
-				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-			}
-		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))).getClockWise(Direction.Axis.Y)) == (new Object() {
-			public Direction getDirection(BlockState _bs) {
-				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_prop instanceof DirectionProperty _dp)
-					return _bs.getValue(_dp);
-				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-			}
-		}.getDirection((world.getBlockState(BlockPos.containing(x - 1, y, z))))) && new Object() {
-			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-				return _retval.get();
-			}
-		}.getAmount(world, BlockPos.containing(x - 1, y, z), 0) > 0 && new Object() {
-			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-				return _retval.get();
-			}
-		}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64) {
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				if (_ent != null) {
-					final int _slotid = 2;
-					final ItemStack _setstack = (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-							return _retval.get();
-						}
-					}.getItemStack(world, BlockPos.containing(x - 1, y, z), 0));
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 2) + new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x - 1, y, z), 0)));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x - 1, y, z));
-				if (_ent != null) {
-					final int _slotid = 0;
-					final ItemStack _setstack = (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-							return _retval.get();
-						}
-					}.getItemStack(world, BlockPos.containing(x - 1, y, z), 0));
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x - 1, y, z), 0) - new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x - 1, y, z), 0)));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-		}
-		if (((new Object() {
-			public Direction getDirection(BlockState _bs) {
-				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_prop instanceof DirectionProperty _dp)
-					return _bs.getValue(_dp);
-				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-			}
-		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))).getClockWise(Direction.Axis.Y)) == (new Object() {
-			public Direction getDirection(BlockState _bs) {
-				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_prop instanceof DirectionProperty _dp)
-					return _bs.getValue(_dp);
-				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-			}
-		}.getDirection((world.getBlockState(BlockPos.containing(x + 1, y, z))))) && new Object() {
-			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-				return _retval.get();
-			}
-		}.getAmount(world, BlockPos.containing(x + 1, y, z), 0) > 0 && new Object() {
-			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-				return _retval.get();
-			}
-		}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64) {
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				if (_ent != null) {
-					final int _slotid = 2;
-					final ItemStack _setstack = (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-							return _retval.get();
-						}
-					}.getItemStack(world, BlockPos.containing(x + 1, y, z), 0));
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 2) + new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x + 1, y, z), 0)));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x + 1, y, z));
-				if (_ent != null) {
-					final int _slotid = 0;
-					final ItemStack _setstack = (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-							return _retval.get();
-						}
-					}.getItemStack(world, BlockPos.containing(x + 1, y, z), 0));
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x + 1, y, z), 0) - new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x + 1, y, z), 0)));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-		}
-		if (((new Object() {
-			public Direction getDirection(BlockState _bs) {
-				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_prop instanceof DirectionProperty _dp)
-					return _bs.getValue(_dp);
-				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-			}
-		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))).getCounterClockWise(Direction.Axis.Y)) == (new Object() {
-			public Direction getDirection(BlockState _bs) {
-				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_prop instanceof DirectionProperty _dp)
-					return _bs.getValue(_dp);
-				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-			}
-		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z + 1))))) && new Object() {
-			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-				return _retval.get();
-			}
-		}.getAmount(world, BlockPos.containing(x, y, z + 1), 0) > 0 && new Object() {
-			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-				return _retval.get();
-			}
-		}.getAmount(world, BlockPos.containing(x, y, z), 0) < 64) {
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				if (_ent != null) {
-					final int _slotid = 0;
-					final ItemStack _setstack = (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-							return _retval.get();
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z + 1), 0));
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 0) + new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z + 1), 0)));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z + 1));
-				if (_ent != null) {
-					final int _slotid = 0;
-					final ItemStack _setstack = (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-							return _retval.get();
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z + 1), 0));
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z + 1), 0) - new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z + 1), 0)));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-		}
-		if (((new Object() {
-			public Direction getDirection(BlockState _bs) {
-				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_prop instanceof DirectionProperty _dp)
-					return _bs.getValue(_dp);
-				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-			}
-		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))).getCounterClockWise(Direction.Axis.Y)) == (new Object() {
-			public Direction getDirection(BlockState _bs) {
-				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_prop instanceof DirectionProperty _dp)
-					return _bs.getValue(_dp);
-				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-			}
-		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z - 1))))) && new Object() {
-			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-				return _retval.get();
-			}
-		}.getAmount(world, BlockPos.containing(x, y, z - 1), 0) > 0 && new Object() {
-			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicInteger _retval = new AtomicInteger(0);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-				return _retval.get();
-			}
-		}.getAmount(world, BlockPos.containing(x, y, z), 0) < 64) {
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				if (_ent != null) {
-					final int _slotid = 0;
-					final ItemStack _setstack = (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-							return _retval.get();
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z - 1), 0));
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 0) + new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z - 1), 0)));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z - 1));
-				if (_ent != null) {
-					final int _slotid = 0;
-					final ItemStack _setstack = (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-							return _retval.get();
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z - 1), 0));
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z - 1), 0) - new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z - 1), 0)));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-		}
-		if (((new Object() {
-			public Direction getDirection(BlockState _bs) {
-				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_prop instanceof DirectionProperty _dp)
-					return _bs.getValue(_dp);
-				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-			}
-		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))).getCounterClockWise(Direction.Axis.Y)) == (new Object() {
 			public Direction getDirection(BlockState _bs) {
 				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
 				if (_prop instanceof DirectionProperty _dp)
@@ -1184,7 +230,7 @@ public class TransporterUpdateTickProcedure {
 				}
 			}
 		}
-		if (((new Object() {
+		if ((new Object() {
 			public Direction getDirection(BlockState _bs) {
 				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
 				if (_prop instanceof DirectionProperty _dp)
@@ -1192,7 +238,7 @@ public class TransporterUpdateTickProcedure {
 				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
 				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
 			}
-		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))).getCounterClockWise(Direction.Axis.Y)) == (new Object() {
+		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == (new Object() {
 			public Direction getDirection(BlockState _bs) {
 				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
 				if (_prop instanceof DirectionProperty _dp)
@@ -1200,7 +246,7 @@ public class TransporterUpdateTickProcedure {
 				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
 				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
 			}
-		}.getDirection((world.getBlockState(BlockPos.containing(x + 1, y, z))))) && new Object() {
+		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z - 1))))) && new Object() {
 			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -1208,7 +254,7 @@ public class TransporterUpdateTickProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
 				return _retval.get();
 			}
-		}.getAmount(world, BlockPos.containing(x + 1, y, z), 0) > 0 && new Object() {
+		}.getAmount(world, BlockPos.containing(x, y, z - 1), 0) > 0 && new Object() {
 			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 				AtomicInteger _retval = new AtomicInteger(0);
 				BlockEntity _ent = world.getBlockEntity(pos);
@@ -1229,7 +275,7 @@ public class TransporterUpdateTickProcedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, BlockPos.containing(x + 1, y, z), 0));
+					}.getItemStack(world, BlockPos.containing(x, y, z - 1), 0));
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -1246,7 +292,7 @@ public class TransporterUpdateTickProcedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
 							return _retval.get();
 						}
-					}.getAmount(world, BlockPos.containing(x + 1, y, z), 0)));
+					}.getAmount(world, BlockPos.containing(x, y, z - 1), 0)));
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable)
 							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
@@ -1254,7 +300,7 @@ public class TransporterUpdateTickProcedure {
 				}
 			}
 			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x + 1, y, z));
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z - 1));
 				if (_ent != null) {
 					final int _slotid = 0;
 					final ItemStack _setstack = (new Object() {
@@ -1265,7 +311,7 @@ public class TransporterUpdateTickProcedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, BlockPos.containing(x + 1, y, z), 0));
+					}.getItemStack(world, BlockPos.containing(x, y, z - 1), 0));
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -1274,7 +320,7 @@ public class TransporterUpdateTickProcedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
 							return _retval.get();
 						}
-					}.getAmount(world, BlockPos.containing(x + 1, y, z), 0) - new Object() {
+					}.getAmount(world, BlockPos.containing(x, y, z - 1), 0) - new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							BlockEntity _ent = world.getBlockEntity(pos);
@@ -1282,7 +328,113 @@ public class TransporterUpdateTickProcedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
 							return _retval.get();
 						}
-					}.getAmount(world, BlockPos.containing(x + 1, y, z), 0)));
+					}.getAmount(world, BlockPos.containing(x, y, z - 1), 0)));
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+						if (capability instanceof IItemHandlerModifiable)
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
+					});
+				}
+			}
+		}
+		if ((new Object() {
+			public Direction getDirection(BlockState _bs) {
+				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+				if (_prop instanceof DirectionProperty _dp)
+					return _bs.getValue(_dp);
+				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
+			}
+		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == (new Object() {
+			public Direction getDirection(BlockState _bs) {
+				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
+				if (_prop instanceof DirectionProperty _dp)
+					return _bs.getValue(_dp);
+				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
+				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
+			}
+		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z + 1))))) && new Object() {
+			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+				AtomicInteger _retval = new AtomicInteger(0);
+				BlockEntity _ent = world.getBlockEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
+				return _retval.get();
+			}
+		}.getAmount(world, BlockPos.containing(x, y, z + 1), 0) > 0 && new Object() {
+			public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+				AtomicInteger _retval = new AtomicInteger(0);
+				BlockEntity _ent = world.getBlockEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
+				return _retval.get();
+			}
+		}.getAmount(world, BlockPos.containing(x, y, z), 0) < 64) {
+			{
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
+				if (_ent != null) {
+					final int _slotid = 0;
+					final ItemStack _setstack = (new Object() {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+							BlockEntity _ent = world.getBlockEntity(pos);
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+							return _retval.get();
+						}
+					}.getItemStack(world, BlockPos.containing(x, y, z + 1), 0));
+					_setstack.setCount((int) (new Object() {
+						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+							AtomicInteger _retval = new AtomicInteger(0);
+							BlockEntity _ent = world.getBlockEntity(pos);
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
+							return _retval.get();
+						}
+					}.getAmount(world, BlockPos.containing(x, y, z), 0) + new Object() {
+						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+							AtomicInteger _retval = new AtomicInteger(0);
+							BlockEntity _ent = world.getBlockEntity(pos);
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
+							return _retval.get();
+						}
+					}.getAmount(world, BlockPos.containing(x, y, z + 1), 0)));
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+						if (capability instanceof IItemHandlerModifiable)
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
+					});
+				}
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z + 1));
+				if (_ent != null) {
+					final int _slotid = 0;
+					final ItemStack _setstack = (new Object() {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+							BlockEntity _ent = world.getBlockEntity(pos);
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+							return _retval.get();
+						}
+					}.getItemStack(world, BlockPos.containing(x, y, z + 1), 0));
+					_setstack.setCount((int) (new Object() {
+						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+							AtomicInteger _retval = new AtomicInteger(0);
+							BlockEntity _ent = world.getBlockEntity(pos);
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
+							return _retval.get();
+						}
+					}.getAmount(world, BlockPos.containing(x, y, z + 1), 0) - new Object() {
+						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+							AtomicInteger _retval = new AtomicInteger(0);
+							BlockEntity _ent = world.getBlockEntity(pos);
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
+							return _retval.get();
+						}
+					}.getAmount(world, BlockPos.containing(x, y, z + 1), 0)));
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable)
 							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
