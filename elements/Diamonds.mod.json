@@ -10,7 +10,7 @@
     "name": "Diamonds",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "CUSTOM:Test"
+      "value": "CUSTOM:Resources"
     },
     "stackSize": 64,
     "enchantability": 0,

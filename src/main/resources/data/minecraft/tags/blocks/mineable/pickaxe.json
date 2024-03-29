@@ -12,6 +12,8 @@
     "workspace_test:zincde",
     "workspace_test:tinde",
     "workspace_test:diamondde",
-    "workspace_test:transporter"
+    "workspace_test:transporter",
+    "workspace_test:tungstende",
+    "workspace_test:smeltery"
   ]
 }

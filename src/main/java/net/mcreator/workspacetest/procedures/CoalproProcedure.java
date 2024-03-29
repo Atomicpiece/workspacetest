@@ -44,6 +44,9 @@ public class CoalproProcedure {
 		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.TINDE.get()) {
 			return "tin";
 		}
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.TUNGSTENDE.get()) {
+			return "tungsten";
+		}
 		return "";
 	}
 }

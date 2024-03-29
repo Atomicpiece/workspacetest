@@ -1,0 +1,9 @@
+{
+  "parent": "workspace_test:custom/smeltery",
+  "textures": {
+    "all": "workspace_test:block/factorytexture",
+    "particle": "workspace_test:block/factorytexture",
+    "0": "workspace_test:block/factorytexture"
+  },
+  "render_type": "solid"
+}

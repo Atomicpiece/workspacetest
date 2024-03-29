@@ -12,6 +12,7 @@ import net.minecraftforge.common.extensions.IForgeMenuType;
 import net.minecraft.world.inventory.MenuType;
 
 import net.mcreator.workspacetest.world.inventory.TransportguiMenu;
+import net.mcreator.workspacetest.world.inventory.SmelteryguiMenu;
 import net.mcreator.workspacetest.world.inventory.MineguiMenu;
 import net.mcreator.workspacetest.world.inventory.BotMenuMenu;
 import net.mcreator.workspacetest.WorkspaceTestMod;
@@ -21,4 +22,5 @@ public class WorkspaceTestModMenus {
 	public static final RegistryObject<MenuType<BotMenuMenu>> BOT_MENU = REGISTRY.register("bot_menu", () -> IForgeMenuType.create(BotMenuMenu::new));
 	public static final RegistryObject<MenuType<MineguiMenu>> MINEGUI = REGISTRY.register("minegui", () -> IForgeMenuType.create(MineguiMenu::new));
 	public static final RegistryObject<MenuType<TransportguiMenu>> TRANSPORTGUI = REGISTRY.register("transportgui", () -> IForgeMenuType.create(TransportguiMenu::new));
+	public static final RegistryObject<MenuType<SmelteryguiMenu>> SMELTERYGUI = REGISTRY.register("smelterygui", () -> IForgeMenuType.create(SmelteryguiMenu::new));
 }

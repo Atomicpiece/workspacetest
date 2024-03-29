@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.mcreator.workspacetest.client.gui.TransportguiScreen;
+import net.mcreator.workspacetest.client.gui.SmelteryguiScreen;
 import net.mcreator.workspacetest.client.gui.MineguiScreen;
 import net.mcreator.workspacetest.client.gui.BotMenuScreen;
 
@@ -23,6 +24,7 @@ public class WorkspaceTestModScreens {
 			MenuScreens.register(WorkspaceTestModMenus.BOT_MENU.get(), BotMenuScreen::new);
 			MenuScreens.register(WorkspaceTestModMenus.MINEGUI.get(), MineguiScreen::new);
 			MenuScreens.register(WorkspaceTestModMenus.TRANSPORTGUI.get(), TransportguiScreen::new);
+			MenuScreens.register(WorkspaceTestModMenus.SMELTERYGUI.get(), SmelteryguiScreen::new);
 		});
 	}
 }

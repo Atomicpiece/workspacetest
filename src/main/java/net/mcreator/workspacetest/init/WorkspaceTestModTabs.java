@@ -22,7 +22,6 @@ public class WorkspaceTestModTabs {
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.test")).icon(() -> new ItemStack(Blocks.GILDED_BLACKSTONE)).displayItems((parameters, tabData) -> {
 				tabData.accept(WorkspaceTestModItems.BOMBS.get());
 				tabData.accept(WorkspaceTestModItems.HEALT_INDICATOR.get());
-				tabData.accept(WorkspaceTestModItems.DIAMONDS.get());
 			})
 
 					.build());
@@ -63,6 +62,7 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.BAZOOKA.get());
 				tabData.accept(WorkspaceTestModItems.ROCKET_LAUNCHER_SPAWN_EGG.get());
 				tabData.accept(WorkspaceTestModItems.DPS_ORB_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModBlocks.ANCIENT_SPAWNER.get().asItem());
 			})
 
 					.build());
@@ -88,12 +88,16 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModBlocks.TINDE.get().asItem());
 				tabData.accept(WorkspaceTestModItems.TINCHUNK.get());
 				tabData.accept(WorkspaceTestModBlocks.DIAMONDDE.get().asItem());
+				tabData.accept(WorkspaceTestModItems.DIAMONDS.get());
+				tabData.accept(WorkspaceTestModBlocks.TUNGSTENDE.get().asItem());
+				tabData.accept(WorkspaceTestModItems.TUNGSTENCHUNK.get());
 			})
 
 					.build());
 	public static final RegistryObject<CreativeModeTab> MACHINES = REGISTRY.register("machines",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.machines")).icon(() -> new ItemStack(Blocks.OBSERVER)).displayItems((parameters, tabData) -> {
 				tabData.accept(WorkspaceTestModBlocks.TRANSPORTER.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.SMELTERY.get().asItem());
 			})
 
 					.build());
