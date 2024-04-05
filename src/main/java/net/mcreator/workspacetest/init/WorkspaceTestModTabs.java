@@ -116,4 +116,10 @@ public class WorkspaceTestModTabs {
 			})
 
 					.build());
+	public static final RegistryObject<CreativeModeTab> ELECTRICITY = REGISTRY.register("electricity",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.electricity")).icon(() -> new ItemStack(Blocks.LIGHT)).displayItems((parameters, tabData) -> {
+				tabData.accept(WorkspaceTestModBlocks.COALPLANT.get().asItem());
+			})
+
+					.build());
 }

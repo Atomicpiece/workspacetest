@@ -3258,6 +3258,36 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "Electricity",
+      "type": "tab",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electricity",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Coalplant",
+      "type": "block",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coalplant",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/coalplant.json",
+          "src/main/resources/assets/workspace_test/blockstates/coalplant.json",
+          "src/main/java/net/mcreator/workspacetest/block/CoalplantBlock.java",
+          "src/main/resources/assets/workspace_test/models/block/coalplant.json",
+          "src/main/java/net/mcreator/workspacetest/block/entity/CoalplantBlockEntity.java"
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [],
@@ -3265,15 +3295,17 @@
   "language_map": {
     "en_us": {
       "item.workspace_test.bombs": "Bombs",
+      "block.workspace_test.coalplant": "Coalplant",
       "block.workspace_test.diamondde": "Diamond deposit",
-      "item.workspace_test.leadchunk": "Lead chunk",
       "block.workspace_test.ancient_spawner": "Ancient Spawner",
+      "item.workspace_test.leadchunk": "Lead chunk",
       "item.workspace_test.bomb_spawn_egg": "Bomb Spawn Egg",
       "block.workspace_test.sulfurde": "Sulfur deposit",
       "item.workspace_test.zincchunk": "Zinc chunk",
       "item.workspace_test.battleship_spawn_egg": "Battleship Spawn Egg",
       "entity.workspace_test.spiderbot": "Spiderbot",
       "item.workspace_test.firebelt": "Firebelt",
+      "item_group.workspace_test.electricity": "Electricity",
       "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
       "item.workspace_test.fire_circle_creator": "Fire Circle Creator",
       "item.workspace_test.great_chicken_spawn_egg": "Great Chicken Spawn Egg",
