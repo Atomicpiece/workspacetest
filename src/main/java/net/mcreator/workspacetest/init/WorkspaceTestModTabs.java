@@ -101,6 +101,7 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.THORCHUNK.get());
 				tabData.accept(WorkspaceTestModItems.LITHCHUNK.get());
 				tabData.accept(WorkspaceTestModBlocks.OILRIG.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.FARM.get().asItem());
 				tabData.accept(WorkspaceTestModBlocks.CRUDEOILDE.get().asItem());
 				tabData.accept(WorkspaceTestModItems.CRUDEOIL_BUCKET.get());
 			})

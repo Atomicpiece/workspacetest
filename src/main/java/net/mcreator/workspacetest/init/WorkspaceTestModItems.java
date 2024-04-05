@@ -120,6 +120,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> LITHCHUNK = REGISTRY.register("lithchunk", () -> new LithchunkItem());
 	public static final RegistryObject<Item> COALPLANT = block(WorkspaceTestModBlocks.COALPLANT);
 	public static final RegistryObject<Item> OILRIG = block(WorkspaceTestModBlocks.OILRIG);
+	public static final RegistryObject<Item> FARM = block(WorkspaceTestModBlocks.FARM);
 	public static final RegistryObject<Item> CRUDEOILDE = block(WorkspaceTestModBlocks.CRUDEOILDE);
 	public static final RegistryObject<Item> CRUDEOIL_BUCKET = REGISTRY.register("crudeoil_bucket", () -> new CrudeoilItem());
 

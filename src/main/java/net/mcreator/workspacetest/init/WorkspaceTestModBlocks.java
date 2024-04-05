@@ -32,6 +32,7 @@ import net.mcreator.workspacetest.block.IrondeBlock;
 import net.mcreator.workspacetest.block.InfbatBlock;
 import net.mcreator.workspacetest.block.GolddeBlock;
 import net.mcreator.workspacetest.block.ForestBlock;
+import net.mcreator.workspacetest.block.FarmBlock;
 import net.mcreator.workspacetest.block.DiamonddeBlock;
 import net.mcreator.workspacetest.block.CrudeoildeBlock;
 import net.mcreator.workspacetest.block.CrudeoilBlock;
@@ -72,6 +73,7 @@ public class WorkspaceTestModBlocks {
 	public static final RegistryObject<Block> LITHDE = REGISTRY.register("lithde", () -> new LithdeBlock());
 	public static final RegistryObject<Block> COALPLANT = REGISTRY.register("coalplant", () -> new CoalplantBlock());
 	public static final RegistryObject<Block> OILRIG = REGISTRY.register("oilrig", () -> new OilrigBlock());
+	public static final RegistryObject<Block> FARM = REGISTRY.register("farm", () -> new FarmBlock());
 	public static final RegistryObject<Block> CRUDEOILDE = REGISTRY.register("crudeoilde", () -> new CrudeoildeBlock());
 	public static final RegistryObject<Block> CRUDEOIL = REGISTRY.register("crudeoil", () -> new CrudeoilBlock());
 }

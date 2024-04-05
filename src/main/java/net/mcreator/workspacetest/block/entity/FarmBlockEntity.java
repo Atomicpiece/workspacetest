@@ -2,14 +2,14 @@ package net.mcreator.workspacetest.block.entity;
 
 import javax.annotation.Nullable;
 
-public class OilrigBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
+public class FarmBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
 
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(1, ItemStack.EMPTY);
+	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
 
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
-	public OilrigBlockEntity(BlockPos position, BlockState state) {
-		super(WorkspaceTestModBlockEntities.OILRIG.get(), position, state);
+	public FarmBlockEntity(BlockPos position, BlockState state) {
+		super(WorkspaceTestModBlockEntities.FARM.get(), position, state);
 	}
 
 	@Override
@@ -21,11 +21,6 @@ public class OilrigBlockEntity extends RandomizableContainerBlockEntity implemen
 
 		ContainerHelper.loadAllItems(compound, this.stacks);
 
-		if (compound.get("energyStorage") instanceof IntTag intTag)
-			energyStorage.deserializeNBT(intTag);
-
-		if (compound.get("fluidTank") instanceof CompoundTag compoundTag)
-			fluidTank.readFromNBT(compoundTag);
 	}
 
 	@Override
@@ -36,9 +31,6 @@ public class OilrigBlockEntity extends RandomizableContainerBlockEntity implemen
 			ContainerHelper.saveAllItems(compound, this.stacks);
 		}
 
-		compound.put("energyStorage", energyStorage.serializeNBT());
-
-		compound.put("fluidTank", fluidTank.writeToNBT(new CompoundTag()));
 	}
 
 	@Override
@@ -66,7 +58,7 @@ public class OilrigBlockEntity extends RandomizableContainerBlockEntity implemen
 
 	@Override
 	public Component getDefaultName() {
-		return Component.literal("oilrig");
+		return Component.literal("farm");
 	}
 
 	@Override
@@ -76,12 +68,12 @@ public class OilrigBlockEntity extends RandomizableContainerBlockEntity implemen
 
 	@Override
 	public AbstractContainerMenu createMenu(int id, Inventory inventory) {
-		return new RigguiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(this.worldPosition));
+		return ChestMenu.threeRows(id, inventory);
 	}
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Oil derrick");
+		return Component.literal("Farm");
 	}
 
 	@Override
@@ -114,47 +106,10 @@ public class OilrigBlockEntity extends RandomizableContainerBlockEntity implemen
 		return true;
 	}
 
-	private final EnergyStorage energyStorage = new EnergyStorage(400000, 200, 200, 0) {
-		@Override
-		public int receiveEnergy(int maxReceive, boolean simulate) {
-			int retval = super.receiveEnergy(maxReceive, simulate);
-			if (!simulate) {
-				setChanged();
-				level.sendBlockUpdated(worldPosition, level.getBlockState(worldPosition), level.getBlockState(worldPosition), 2);
-			}
-			return retval;
-		}
-
-		@Override
-		public int extractEnergy(int maxExtract, boolean simulate) {
-			int retval = super.extractEnergy(maxExtract, simulate);
-			if (!simulate) {
-				setChanged();
-				level.sendBlockUpdated(worldPosition, level.getBlockState(worldPosition), level.getBlockState(worldPosition), 2);
-			}
-			return retval;
-		}
-	};
-
-	private final FluidTank fluidTank = new FluidTank(8000) {
-		@Override
-		protected void onContentsChanged() {
-			super.onContentsChanged();
-			setChanged();
-			level.sendBlockUpdated(worldPosition, level.getBlockState(worldPosition), level.getBlockState(worldPosition), 2);
-		}
-	};
-
 	@Override
 	public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
 		if (!this.remove && facing != null && capability == ForgeCapabilities.ITEM_HANDLER)
 			return handlers[facing.ordinal()].cast();
-
-		if (!this.remove && capability == ForgeCapabilities.ENERGY)
-			return LazyOptional.of(() -> energyStorage).cast();
-
-		if (!this.remove && capability == ForgeCapabilities.FLUID_HANDLER)
-			return LazyOptional.of(() -> fluidTank).cast();
 
 		return super.getCapability(capability, facing);
 	}

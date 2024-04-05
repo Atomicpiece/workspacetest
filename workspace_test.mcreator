@@ -3340,57 +3340,6 @@
       "path": "~/assembly machines"
     },
     {
-      "name": "Oilrig",
-      "type": "block",
-      "sortid": 127,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oilrig",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/workspace_test/blockstates/oilrig.json",
-          "src/main/java/net/mcreator/workspacetest/block/entity/OilrigBlockEntity.java",
-          "src/main/resources/assets/workspace_test/models/block/oilrig.json",
-          "src/main/resources/assets/workspace_test/models/item/oilrig.json",
-          "src/main/java/net/mcreator/workspacetest/block/OilrigBlock.java"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
-      "name": "Crudeoilde",
-      "type": "block",
-      "sortid": 128,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crudeoilde",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/workspace_test/models/block/crudeoilde.json",
-          "src/main/resources/assets/workspace_test/models/item/crudeoilde.json",
-          "src/main/resources/assets/workspace_test/blockstates/crudeoilde.json",
-          "src/main/java/net/mcreator/workspacetest/block/CrudeoildeBlock.java"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
-      "name": "Riggui",
-      "type": "gui",
-      "sortid": 129,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "riggui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/world/inventory/RigguiMenu.java",
-          "src/main/java/net/mcreator/workspacetest/network/RigguiButtonMessage.java",
-          "src/main/java/net/mcreator/workspacetest/client/gui/RigguiScreen.java"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
       "name": "Oilpro",
       "type": "procedure",
       "sortid": 130,
@@ -3419,6 +3368,24 @@
             "name": "world",
             "type": "world"
           }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Oilrig",
+      "type": "block",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oilrig",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/blockstates/oilrig.json",
+          "src/main/java/net/mcreator/workspacetest/block/entity/OilrigBlockEntity.java",
+          "src/main/resources/assets/workspace_test/models/block/oilrig.json",
+          "src/main/resources/assets/workspace_test/models/item/oilrig.json",
+          "src/main/java/net/mcreator/workspacetest/block/OilrigBlock.java"
         ]
       },
       "path": "~/assembly machines"
@@ -3489,6 +3456,57 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "Crudeoilde",
+      "type": "block",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crudeoilde",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/block/crudeoilde.json",
+          "src/main/resources/assets/workspace_test/models/item/crudeoilde.json",
+          "src/main/resources/assets/workspace_test/blockstates/crudeoilde.json",
+          "src/main/java/net/mcreator/workspacetest/block/CrudeoildeBlock.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Riggui",
+      "type": "gui",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "riggui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/world/inventory/RigguiMenu.java",
+          "src/main/java/net/mcreator/workspacetest/network/RigguiButtonMessage.java",
+          "src/main/java/net/mcreator/workspacetest/client/gui/RigguiScreen.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Farm",
+      "type": "block",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "farm",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/block/entity/FarmBlockEntity.java",
+          "src/main/resources/assets/workspace_test/models/item/farm.json",
+          "src/main/java/net/mcreator/workspacetest/block/FarmBlock.java",
+          "src/main/resources/assets/workspace_test/blockstates/farm.json",
+          "src/main/resources/assets/workspace_test/models/block/farm.json"
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [],
@@ -3501,16 +3519,12 @@
       "block.workspace_test.ancient_spawner": "Ancient Spawner",
       "item.workspace_test.leadchunk": "Lead chunk",
       "item.workspace_test.bomb_spawn_egg": "Bomb Spawn Egg",
-      "gui.workspace_test.riggui.label_mining_speed": "Mining speed:",
       "block.workspace_test.sulfurde": "Sulfur deposit",
-      "gui.workspace_test.riggui.label_resource": "Resource:",
       "item.workspace_test.zincchunk": "Zinc chunk",
       "item.workspace_test.battleship_spawn_egg": "Battleship Spawn Egg",
-      "gui.workspace_test.riggui.label_output": "Output:",
       "entity.workspace_test.spiderbot": "Spiderbot",
       "item.workspace_test.firebelt": "Firebelt",
       "item_group.workspace_test.electricity": "Electricity",
-      "gui.workspace_test.riggui.button_save": "SAVE",
       "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
       "item.workspace_test.fire_circle_creator": "Fire Circle Creator",
       "item.workspace_test.great_chicken_spawn_egg": "Great Chicken Spawn Egg",
@@ -3521,8 +3535,6 @@
       "item.workspace_test.rocket_launcher_spawn_egg": "Rocket Launcher Spawn Egg",
       "block.workspace_test.coalde": "Coal deposit",
       "gui.workspace_test.smelterygui.label_smeltery": "Smeltery",
-      "item.workspace_test.crudeoil_bucket": "Crudeoil Bucket",
-      "block.workspace_test.crudeoil": "Crudeoil",
       "entity.workspace_test.great_chicken": "Great Chicken",
       "item.workspace_test.destroyer_spawn_egg": "Destroyer Spawn Egg",
       "item.workspace_test.skeleter_spawn_egg": "Skeleter Spawn Egg",
@@ -3545,14 +3557,12 @@
       "item.workspace_test.percentage_checker": "Percentage Checker",
       "entity.workspace_test.destroyer": "Destroyer",
       "entity.workspace_test.microbot": "Microbot",
-      "block.workspace_test.oilrig": "Oil derrick",
       "item.workspace_test.frost_blaze_spawn_egg": "Frost Blaze Spawn Egg",
       "item.workspace_test.tank_spawn_egg": "Tank Spawn Egg",
       "item.workspace_test.spiderbot_spawn_egg": "Spiderbot Spawn Egg",
       "entity.workspace_test.battleship": "Battleship",
       "item.workspace_test.niterchunk": "Niter chunk",
       "item.workspace_test.lithchunk": "Lithium chunk",
-      "gui.workspace_test.riggui.button_start": "Start mining",
       "biome.workspace_test.lost_lands": "Lost Lands",
       "block.workspace_test.tungstende": "Tungsten deposit",
       "gui.workspace_test.minegui.button_start": "Start mining",
@@ -3562,7 +3572,6 @@
       "block.workspace_test.smeltery": "Smeltery",
       "entity.workspace_test.warplane": "Warplane",
       "block.workspace_test.niterde": "Niterde",
-      "block.workspace_test.crudeoilde": "Crude oil deposit",
       "block.workspace_test.zincde": "Zinc deposit",
       "item_group.workspace_test.machines": "Machines",
       "entity.workspace_test.robotic_phantom": "Robotic Phantom",
@@ -3582,7 +3591,6 @@
       "gui.workspace_test.smelterygui.label_status": "Status:",
       "entity.workspace_test.frost_blaze": "Frost Blaze",
       "item.workspace_test.uranchunk": "Uranium chunk",
-      "gui.workspace_test.riggui.label_mine": "Mine:",
       "block.workspace_test.landmine": "Landmine",
       "gui.workspace_test.smelterygui.label_speed": "Speed:",
       "entity.workspace_test.skeleter": "Skeleter",
@@ -3594,15 +3602,12 @@
       "item.workspace_test.sulfur": "Sulfur crystal",
       "item.workspace_test.healt_indicator": "Healt Indicator",
       "block.workspace_test.thorde": "Thorium deposit",
-      "fluid.workspace_test.crudeoil": "Crudeoil",
       "item.workspace_test.diamonds": "Diamonds",
-      "gui.workspace_test.riggui.label_power_usage": "Power usage:",
       "block.workspace_test.copperde": "Copper deposit",
       "block.workspace_test.tinde": "Tin deposit",
       "entity.workspace_test.levitation_robot": "Levitation Robot",
       "item_group.workspace_test.defence": "Defence",
       "block.workspace_test.infbat": "Infinite battery",
-      "gui.workspace_test.riggui.minespend": "",
       "item.workspace_test.creeperbot_spawn_egg": "Creeperbot Spawn Egg",
       "entity.workspace_test.tinybot": "Tinybot",
       "block.workspace_test.titande": "Titanium deposit",
@@ -3631,8 +3636,6 @@
       "item.workspace_test.tinybot_spawn_egg": "Tinybot Spawn Egg",
       "item.workspace_test.furnace_powered_golem_spawn_egg": "Furnace Powered Golem Spawn Egg",
       "block.workspace_test.leadde": "Lead deposit",
-      "gui.workspace_test.riggui.label_status": "Status:",
-      "gui.workspace_test.riggui.label_mining_rate": "Mining rate:",
       "item.workspace_test.drone_spawn_egg": "Drone Spawn Egg",
       "gui.workspace_test.minegui.label_status": "Status:"
     }
