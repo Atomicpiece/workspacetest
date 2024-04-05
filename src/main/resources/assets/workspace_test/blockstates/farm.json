@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "workspace_test:block/farm"
+    },
+    "facing=east": {
+      "model": "workspace_test:block/farm",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "workspace_test:block/farm",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "workspace_test:block/farm",
+      "y": 270
+    }
+  }
+}

@@ -3338,6 +3338,24 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "Farm",
+      "type": "block",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "farm",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/block/farm.json",
+          "src/main/resources/assets/workspace_test/blockstates/farm.json",
+          "src/main/java/net/mcreator/workspacetest/block/FarmBlock.java",
+          "src/main/java/net/mcreator/workspacetest/block/entity/FarmBlockEntity.java",
+          "src/main/resources/assets/workspace_test/models/item/farm.json"
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [],
@@ -3364,8 +3382,8 @@
       "entity.workspace_test.rocket_launcher": "Rocket Launcher",
       "item.workspace_test.tinchunk": "Tin chunk",
       "item.workspace_test.rocket_launcher_spawn_egg": "Rocket Launcher Spawn Egg",
-      "block.workspace_test.coalde": "Coal deposit",
       "gui.workspace_test.smelterygui.label_smeltery": "Smeltery",
+      "block.workspace_test.coalde": "Coal deposit",
       "entity.workspace_test.great_chicken": "Great Chicken",
       "item.workspace_test.destroyer_spawn_egg": "Destroyer Spawn Egg",
       "item.workspace_test.skeleter_spawn_egg": "Skeleter Spawn Egg",
@@ -3434,6 +3452,7 @@
       "item.workspace_test.healt_indicator": "Healt Indicator",
       "block.workspace_test.thorde": "Thorium deposit",
       "item.workspace_test.diamonds": "Diamonds",
+      "block.workspace_test.farm": "Farm",
       "block.workspace_test.copperde": "Copper deposit",
       "block.workspace_test.tinde": "Tin deposit",
       "entity.workspace_test.levitation_robot": "Levitation Robot",

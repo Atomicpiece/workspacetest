@@ -100,6 +100,7 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.NITERCHUNK.get());
 				tabData.accept(WorkspaceTestModItems.THORCHUNK.get());
 				tabData.accept(WorkspaceTestModItems.LITHCHUNK.get());
+				tabData.accept(WorkspaceTestModBlocks.FARM.get().asItem());
 			})
 
 					.build());

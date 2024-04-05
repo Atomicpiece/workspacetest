@@ -118,6 +118,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> THORCHUNK = REGISTRY.register("thorchunk", () -> new ThorchunkItem());
 	public static final RegistryObject<Item> LITHCHUNK = REGISTRY.register("lithchunk", () -> new LithchunkItem());
 	public static final RegistryObject<Item> COALPLANT = block(WorkspaceTestModBlocks.COALPLANT);
+	public static final RegistryObject<Item> FARM = block(WorkspaceTestModBlocks.FARM);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
