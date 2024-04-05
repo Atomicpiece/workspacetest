@@ -15,13 +15,17 @@ import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.workspacetest.item.ZincchunkItem;
 import net.mcreator.workspacetest.item.WandItem;
+import net.mcreator.workspacetest.item.UranchunkItem;
 import net.mcreator.workspacetest.item.TungstenchunkItem;
 import net.mcreator.workspacetest.item.TitanchunkItem;
 import net.mcreator.workspacetest.item.TinchunkItem;
+import net.mcreator.workspacetest.item.ThorchunkItem;
 import net.mcreator.workspacetest.item.SulfurItem;
 import net.mcreator.workspacetest.item.RedstroneBlasterItem;
 import net.mcreator.workspacetest.item.PercentageCheckerItem;
+import net.mcreator.workspacetest.item.NiterchunkItem;
 import net.mcreator.workspacetest.item.MultimeterItem;
+import net.mcreator.workspacetest.item.LithchunkItem;
 import net.mcreator.workspacetest.item.LeadchunkItem;
 import net.mcreator.workspacetest.item.IronchunkItem;
 import net.mcreator.workspacetest.item.IonSwordItem;
@@ -104,6 +108,14 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> TUNGSTENDE = block(WorkspaceTestModBlocks.TUNGSTENDE);
 	public static final RegistryObject<Item> TUNGSTENCHUNK = REGISTRY.register("tungstenchunk", () -> new TungstenchunkItem());
 	public static final RegistryObject<Item> SMELTERY = block(WorkspaceTestModBlocks.SMELTERY);
+	public static final RegistryObject<Item> URANDE = block(WorkspaceTestModBlocks.URANDE);
+	public static final RegistryObject<Item> NITERDE = block(WorkspaceTestModBlocks.NITERDE);
+	public static final RegistryObject<Item> THORDE = block(WorkspaceTestModBlocks.THORDE);
+	public static final RegistryObject<Item> LITHDE = block(WorkspaceTestModBlocks.LITHDE);
+	public static final RegistryObject<Item> URANCHUNK = REGISTRY.register("uranchunk", () -> new UranchunkItem());
+	public static final RegistryObject<Item> NITERCHUNK = REGISTRY.register("niterchunk", () -> new NiterchunkItem());
+	public static final RegistryObject<Item> THORCHUNK = REGISTRY.register("thorchunk", () -> new ThorchunkItem());
+	public static final RegistryObject<Item> LITHCHUNK = REGISTRY.register("lithchunk", () -> new LithchunkItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

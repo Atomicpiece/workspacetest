@@ -91,6 +91,14 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.DIAMONDS.get());
 				tabData.accept(WorkspaceTestModBlocks.TUNGSTENDE.get().asItem());
 				tabData.accept(WorkspaceTestModItems.TUNGSTENCHUNK.get());
+				tabData.accept(WorkspaceTestModBlocks.URANDE.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.NITERDE.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.THORDE.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.LITHDE.get().asItem());
+				tabData.accept(WorkspaceTestModItems.URANCHUNK.get());
+				tabData.accept(WorkspaceTestModItems.NITERCHUNK.get());
+				tabData.accept(WorkspaceTestModItems.THORCHUNK.get());
+				tabData.accept(WorkspaceTestModItems.LITHCHUNK.get());
 			})
 
 					.build());

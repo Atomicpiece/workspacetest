@@ -1,0 +1,25 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:Transporter"
+      },
+      {
+        "value": "CUSTOM:Smeltery"
+      },
+      {
+        "value": "CUSTOM:Ccc"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "buildings",
+    "namespace": "minecraft"
+  }
+}
