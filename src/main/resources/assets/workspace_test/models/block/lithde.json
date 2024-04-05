@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "workspace_test:block/lithde",
+    "up": "workspace_test:block/lithde",
+    "north": "workspace_test:block/lithde",
+    "east": "workspace_test:block/lithde",
+    "south": "workspace_test:block/lithde",
+    "west": "workspace_test:block/lithde",
+    "particle": "workspace_test:block/lithde"
+  },
+  "render_type": "solid"
+}

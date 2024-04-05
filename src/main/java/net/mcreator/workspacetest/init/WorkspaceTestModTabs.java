@@ -91,7 +91,15 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.DIAMONDS.get());
 				tabData.accept(WorkspaceTestModBlocks.TUNGSTENDE.get().asItem());
 				tabData.accept(WorkspaceTestModItems.TUNGSTENCHUNK.get());
+				tabData.accept(WorkspaceTestModBlocks.URANDE.get().asItem());
 				tabData.accept(WorkspaceTestModBlocks.FOREST.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.NITERDE.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.THORDE.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.LITHDE.get().asItem());
+				tabData.accept(WorkspaceTestModItems.URANCHUNK.get());
+				tabData.accept(WorkspaceTestModItems.NITERCHUNK.get());
+				tabData.accept(WorkspaceTestModItems.THORCHUNK.get());
+				tabData.accept(WorkspaceTestModItems.LITHCHUNK.get());
 			})
 
 					.build());
@@ -106,6 +114,12 @@ public class WorkspaceTestModTabs {
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.tools")).icon(() -> new ItemStack(Blocks.TRIPWIRE_HOOK)).displayItems((parameters, tabData) -> {
 				tabData.accept(WorkspaceTestModBlocks.INFBAT.get().asItem());
 				tabData.accept(WorkspaceTestModItems.MULTIMETER.get());
+			})
+
+					.build());
+	public static final RegistryObject<CreativeModeTab> ELECTRICITY = REGISTRY.register("electricity",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.electricity")).icon(() -> new ItemStack(Blocks.LIGHT)).displayItems((parameters, tabData) -> {
+				tabData.accept(WorkspaceTestModBlocks.COALPLANT.get().asItem());
 			})
 
 					.build());

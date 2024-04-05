@@ -3118,6 +3118,23 @@
       "path": "~/assembly machines"
     },
     {
+      "name": "Forest",
+      "type": "block",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forest",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/forest.json",
+          "src/main/java/net/mcreator/workspacetest/block/ForestBlock.java",
+          "src/main/resources/assets/workspace_test/models/block/forest.json",
+          "src/main/resources/assets/workspace_test/blockstates/forest.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
       "name": "Smeltinp1",
       "type": "procedure",
       "sortid": 116,
@@ -3151,18 +3168,173 @@
       "path": "~/assembly machines"
     },
     {
-      "name": "Forest",
+      "name": "Niterde",
       "type": "block",
       "sortid": 117,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "forest",
+      "registry_name": "niterde",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/forest.json",
-          "src/main/java/net/mcreator/workspacetest/block/ForestBlock.java",
-          "src/main/resources/assets/workspace_test/models/block/forest.json",
-          "src/main/resources/assets/workspace_test/blockstates/forest.json"
+          "src/main/resources/assets/workspace_test/models/item/niterde.json",
+          "src/main/resources/assets/workspace_test/models/block/niterde.json",
+          "src/main/resources/assets/workspace_test/blockstates/niterde.json",
+          "src/main/java/net/mcreator/workspacetest/block/NiterdeBlock.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Electricity",
+      "type": "tab",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electricity",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Coalplant",
+      "type": "block",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coalplant",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/coalplant.json",
+          "src/main/resources/assets/workspace_test/blockstates/coalplant.json",
+          "src/main/java/net/mcreator/workspacetest/block/CoalplantBlock.java",
+          "src/main/java/net/mcreator/workspacetest/block/entity/CoalplantBlockEntity.java",
+          "src/main/resources/assets/workspace_test/models/block/coalplant.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Buildings",
+      "type": "tag",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buildings",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/tags/items/buildings.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Uranchunk",
+      "type": "item",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "uranchunk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/UranchunkItem.java",
+          "src/main/resources/assets/workspace_test/models/item/uranchunk.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Lithchunk",
+      "type": "item",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lithchunk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/LithchunkItem.java",
+          "src/main/resources/assets/workspace_test/models/item/lithchunk.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Thorchunk",
+      "type": "item",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thorchunk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/ThorchunkItem.java",
+          "src/main/resources/assets/workspace_test/models/item/thorchunk.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Urande",
+      "type": "block",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "urande",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/blockstates/urande.json",
+          "src/main/java/net/mcreator/workspacetest/block/UrandeBlock.java",
+          "src/main/resources/assets/workspace_test/models/item/urande.json",
+          "src/main/resources/assets/workspace_test/models/block/urande.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Niterchunk",
+      "type": "item",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "niterchunk",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/niterchunk.json",
+          "src/main/java/net/mcreator/workspacetest/item/NiterchunkItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Thorde",
+      "type": "block",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thorde",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/blockstates/thorde.json",
+          "src/main/resources/assets/workspace_test/models/block/thorde.json",
+          "src/main/java/net/mcreator/workspacetest/block/ThordeBlock.java",
+          "src/main/resources/assets/workspace_test/models/item/thorde.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Lithde",
+      "type": "block",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lithde",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/lithde.json",
+          "src/main/resources/assets/workspace_test/blockstates/lithde.json",
+          "src/main/java/net/mcreator/workspacetest/block/LithdeBlock.java",
+          "src/main/resources/assets/workspace_test/models/block/lithde.json"
         ]
       },
       "path": "~/assembly machines"
@@ -3203,7 +3375,6 @@
       "entity.workspace_test.bomb": "Bomb",
       "gui.workspace_test.smelterygui.label_recipe": "Recipe:",
       "item_group.workspace_test.finanbuild": "Financial buildings",
-      "block.workspace_test.forest": "Forest",
       "item.workspace_test.ironchunk": "Iron chunk",
       "gui.workspace_test.transportgui.label_fluid": "fluid:",
       "gui.workspace_test.minegui.label_output": "Output:",

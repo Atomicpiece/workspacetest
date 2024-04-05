@@ -12,15 +12,19 @@ import net.minecraft.world.level.block.Block;
 
 import net.mcreator.workspacetest.block.ZincdeBlock;
 import net.mcreator.workspacetest.block.WallsBlock;
+import net.mcreator.workspacetest.block.UrandeBlock;
 import net.mcreator.workspacetest.block.TungstendeBlock;
 import net.mcreator.workspacetest.block.TransporterBlock;
 import net.mcreator.workspacetest.block.TowerBlock;
 import net.mcreator.workspacetest.block.TitandeBlock;
 import net.mcreator.workspacetest.block.TindeBlock;
+import net.mcreator.workspacetest.block.ThordeBlock;
 import net.mcreator.workspacetest.block.SulfurdeBlock;
 import net.mcreator.workspacetest.block.SmelteryBlock;
 import net.mcreator.workspacetest.block.RoboticAssemblerBlock;
 import net.mcreator.workspacetest.block.NukeBlock;
+import net.mcreator.workspacetest.block.NiterdeBlock;
+import net.mcreator.workspacetest.block.LithdeBlock;
 import net.mcreator.workspacetest.block.LeaddeBlock;
 import net.mcreator.workspacetest.block.LandmineBlock;
 import net.mcreator.workspacetest.block.IrondeBlock;
@@ -29,6 +33,7 @@ import net.mcreator.workspacetest.block.GolddeBlock;
 import net.mcreator.workspacetest.block.ForestBlock;
 import net.mcreator.workspacetest.block.DiamonddeBlock;
 import net.mcreator.workspacetest.block.CopperdeBlock;
+import net.mcreator.workspacetest.block.CoalplantBlock;
 import net.mcreator.workspacetest.block.CoaldeBlock;
 import net.mcreator.workspacetest.block.CccBlock;
 import net.mcreator.workspacetest.block.AncientSpawnerBlock;
@@ -57,5 +62,10 @@ public class WorkspaceTestModBlocks {
 	public static final RegistryObject<Block> ANCIENT_SPAWNER = REGISTRY.register("ancient_spawner", () -> new AncientSpawnerBlock());
 	public static final RegistryObject<Block> TUNGSTENDE = REGISTRY.register("tungstende", () -> new TungstendeBlock());
 	public static final RegistryObject<Block> SMELTERY = REGISTRY.register("smeltery", () -> new SmelteryBlock());
+	public static final RegistryObject<Block> URANDE = REGISTRY.register("urande", () -> new UrandeBlock());
 	public static final RegistryObject<Block> FOREST = REGISTRY.register("forest", () -> new ForestBlock());
+	public static final RegistryObject<Block> NITERDE = REGISTRY.register("niterde", () -> new NiterdeBlock());
+	public static final RegistryObject<Block> THORDE = REGISTRY.register("thorde", () -> new ThordeBlock());
+	public static final RegistryObject<Block> LITHDE = REGISTRY.register("lithde", () -> new LithdeBlock());
+	public static final RegistryObject<Block> COALPLANT = REGISTRY.register("coalplant", () -> new CoalplantBlock());
 }

@@ -1,0 +1,9 @@
+{
+  "parent": "workspace_test:custom/powerplant",
+  "textures": {
+    "all": "workspace_test:block/powerplant",
+    "particle": "workspace_test:block/powerplant",
+    "0": "workspace_test:block/powerplant"
+  },
+  "render_type": "cutout"
+}

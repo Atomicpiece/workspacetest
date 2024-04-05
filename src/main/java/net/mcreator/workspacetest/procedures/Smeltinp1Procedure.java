@@ -1,15 +1,8 @@
 package net.mcreator.workspacetest.procedures;
 
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.workspacetest.init.WorkspaceTestModItems;
-
-import java.util.concurrent.atomic.AtomicReference;
+import javax.annotation.Nullable;
 
 public class Smeltinp1Procedure {
 	public static String execute(LevelAccessor world, double x, double y, double z) {

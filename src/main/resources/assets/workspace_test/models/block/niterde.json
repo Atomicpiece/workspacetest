@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "workspace_test:block/niterde",
+    "up": "workspace_test:block/niterde",
+    "north": "workspace_test:block/niterde",
+    "east": "workspace_test:block/niterde",
+    "south": "workspace_test:block/niterde",
+    "west": "workspace_test:block/niterde",
+    "particle": "workspace_test:block/niterde"
+  },
+  "render_type": "solid"
+}
