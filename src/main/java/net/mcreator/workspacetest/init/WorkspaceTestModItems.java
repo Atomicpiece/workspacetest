@@ -104,6 +104,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> TUNGSTENDE = block(WorkspaceTestModBlocks.TUNGSTENDE);
 	public static final RegistryObject<Item> TUNGSTENCHUNK = REGISTRY.register("tungstenchunk", () -> new TungstenchunkItem());
 	public static final RegistryObject<Item> SMELTERY = block(WorkspaceTestModBlocks.SMELTERY);
+	public static final RegistryObject<Item> FOREST = block(WorkspaceTestModBlocks.FOREST);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

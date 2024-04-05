@@ -34,6 +34,10 @@
           "disablePlacement": {
             "fixedValue": false
           },
+          "color": {
+            "value": -3355444,
+            "falpha": 0.0
+          },
           "id": 1,
           "disablePickup": {
             "fixedValue": false
@@ -51,6 +55,10 @@
           },
           "disablePlacement": {
             "fixedValue": false
+          },
+          "color": {
+            "value": -13421773,
+            "falpha": 0.0
           },
           "id": 2,
           "disablePickup": {
@@ -154,6 +162,22 @@
             "falpha": 0.0
           },
           "x": 184,
+          "y": 72
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_smeltinp_1",
+          "text": {
+            "fixedValue": "",
+            "name": "Smeltinp1"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 223,
           "y": 72
         }
       }

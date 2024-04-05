@@ -26,6 +26,7 @@ import net.mcreator.workspacetest.block.LandmineBlock;
 import net.mcreator.workspacetest.block.IrondeBlock;
 import net.mcreator.workspacetest.block.InfbatBlock;
 import net.mcreator.workspacetest.block.GolddeBlock;
+import net.mcreator.workspacetest.block.ForestBlock;
 import net.mcreator.workspacetest.block.DiamonddeBlock;
 import net.mcreator.workspacetest.block.CopperdeBlock;
 import net.mcreator.workspacetest.block.CoaldeBlock;
@@ -56,4 +57,5 @@ public class WorkspaceTestModBlocks {
 	public static final RegistryObject<Block> ANCIENT_SPAWNER = REGISTRY.register("ancient_spawner", () -> new AncientSpawnerBlock());
 	public static final RegistryObject<Block> TUNGSTENDE = REGISTRY.register("tungstende", () -> new TungstendeBlock());
 	public static final RegistryObject<Block> SMELTERY = REGISTRY.register("smeltery", () -> new SmelteryBlock());
+	public static final RegistryObject<Block> FOREST = REGISTRY.register("forest", () -> new ForestBlock());
 }

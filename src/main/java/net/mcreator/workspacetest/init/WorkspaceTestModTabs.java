@@ -91,6 +91,7 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.DIAMONDS.get());
 				tabData.accept(WorkspaceTestModBlocks.TUNGSTENDE.get().asItem());
 				tabData.accept(WorkspaceTestModItems.TUNGSTENCHUNK.get());
+				tabData.accept(WorkspaceTestModBlocks.FOREST.get().asItem());
 			})
 
 					.build());

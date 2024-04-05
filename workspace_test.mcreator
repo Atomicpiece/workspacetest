@@ -3116,6 +3116,56 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "Smeltinp1",
+      "type": "procedure",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smeltinp_1",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/Smeltinp1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Forest",
+      "type": "block",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forest",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/forest.json",
+          "src/main/java/net/mcreator/workspacetest/block/ForestBlock.java",
+          "src/main/resources/assets/workspace_test/models/block/forest.json",
+          "src/main/resources/assets/workspace_test/blockstates/forest.json"
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [],
@@ -3124,8 +3174,8 @@
     "en_us": {
       "item.workspace_test.bombs": "Bombs",
       "block.workspace_test.diamondde": "Diamond deposit",
-      "block.workspace_test.ancient_spawner": "Ancient Spawner",
       "item.workspace_test.leadchunk": "Lead chunk",
+      "block.workspace_test.ancient_spawner": "Ancient Spawner",
       "item.workspace_test.bomb_spawn_egg": "Bomb Spawn Egg",
       "block.workspace_test.sulfurde": "Sulfur deposit",
       "item.workspace_test.zincchunk": "Zinc chunk",
@@ -3153,6 +3203,7 @@
       "entity.workspace_test.bomb": "Bomb",
       "gui.workspace_test.smelterygui.label_recipe": "Recipe:",
       "item_group.workspace_test.finanbuild": "Financial buildings",
+      "block.workspace_test.forest": "Forest",
       "item.workspace_test.ironchunk": "Iron chunk",
       "gui.workspace_test.transportgui.label_fluid": "fluid:",
       "gui.workspace_test.minegui.label_output": "Output:",
@@ -3164,8 +3215,8 @@
       "entity.workspace_test.microbot": "Microbot",
       "item.workspace_test.frost_blaze_spawn_egg": "Frost Blaze Spawn Egg",
       "item.workspace_test.tank_spawn_egg": "Tank Spawn Egg",
-      "item.workspace_test.spiderbot_spawn_egg": "Spiderbot Spawn Egg",
       "entity.workspace_test.battleship": "Battleship",
+      "item.workspace_test.spiderbot_spawn_egg": "Spiderbot Spawn Egg",
       "biome.workspace_test.lost_lands": "Lost Lands",
       "block.workspace_test.tungstende": "Tungsten deposit",
       "gui.workspace_test.minegui.button_start": "Start mining",

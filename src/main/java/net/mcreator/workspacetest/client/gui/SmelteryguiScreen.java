@@ -9,6 +9,7 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.workspacetest.world.inventory.SmelteryguiMenu;
+import net.mcreator.workspacetest.procedures.Smeltinp1Procedure;
 
 import java.util.HashMap;
 
@@ -74,6 +75,9 @@ public class SmelteryguiScreen extends AbstractContainerScreen<SmelteryguiMenu> 
 		guiGraphics.drawString(this.font, Component.translatable("gui.workspace_test.smelterygui.label_requirements"), 61, 49, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.workspace_test.smelterygui.label_status"), 61, 24, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.workspace_test.smelterygui.label_recipe"), 58, 35, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				Smeltinp1Procedure.execute(world, x, y, z), 97, 35, -12829636, false);
 	}
 
 	@Override
