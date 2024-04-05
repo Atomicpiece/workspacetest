@@ -19,8 +19,8 @@
   "entity.workspace_test.rocket_launcher": "Rocket Launcher",
   "item.workspace_test.tinchunk": "Tin chunk",
   "item.workspace_test.rocket_launcher_spawn_egg": "Rocket Launcher Spawn Egg",
-  "gui.workspace_test.smelterygui.label_smeltery": "Smeltery",
   "block.workspace_test.coalde": "Coal deposit",
+  "gui.workspace_test.smelterygui.label_smeltery": "Smeltery",
   "entity.workspace_test.great_chicken": "Great Chicken",
   "item.workspace_test.destroyer_spawn_egg": "Destroyer Spawn Egg",
   "item.workspace_test.skeleter_spawn_egg": "Skeleter Spawn Egg",
@@ -122,6 +122,7 @@
   "item_group.workspace_test.test": "Test",
   "item.workspace_test.tinybot_spawn_egg": "Tinybot Spawn Egg",
   "item.workspace_test.furnace_powered_golem_spawn_egg": "Furnace Powered Golem Spawn Egg",
+  "item.workspace_test.matches": "Matche",
   "block.workspace_test.leadde": "Lead deposit",
   "item.workspace_test.drone_spawn_egg": "Drone Spawn Egg",
   "gui.workspace_test.minegui.label_status": "Status:"

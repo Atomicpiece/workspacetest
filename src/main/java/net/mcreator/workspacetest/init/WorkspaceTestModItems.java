@@ -25,6 +25,7 @@ import net.mcreator.workspacetest.item.RedstroneBlasterItem;
 import net.mcreator.workspacetest.item.PercentageCheckerItem;
 import net.mcreator.workspacetest.item.NiterchunkItem;
 import net.mcreator.workspacetest.item.MultimeterItem;
+import net.mcreator.workspacetest.item.MatchesItem;
 import net.mcreator.workspacetest.item.LithchunkItem;
 import net.mcreator.workspacetest.item.LeadchunkItem;
 import net.mcreator.workspacetest.item.IronchunkItem;
@@ -119,6 +120,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> LITHCHUNK = REGISTRY.register("lithchunk", () -> new LithchunkItem());
 	public static final RegistryObject<Item> COALPLANT = block(WorkspaceTestModBlocks.COALPLANT);
 	public static final RegistryObject<Item> FARM = block(WorkspaceTestModBlocks.FARM);
+	public static final RegistryObject<Item> MATCHES = REGISTRY.register("matches", () -> new MatchesItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

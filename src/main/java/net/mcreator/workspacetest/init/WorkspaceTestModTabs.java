@@ -115,6 +115,7 @@ public class WorkspaceTestModTabs {
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.tools")).icon(() -> new ItemStack(Blocks.TRIPWIRE_HOOK)).displayItems((parameters, tabData) -> {
 				tabData.accept(WorkspaceTestModBlocks.INFBAT.get().asItem());
 				tabData.accept(WorkspaceTestModItems.MULTIMETER.get());
+				tabData.accept(WorkspaceTestModItems.MATCHES.get());
 			})
 
 					.build());
