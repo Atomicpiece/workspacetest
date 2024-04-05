@@ -1,0 +1,9 @@
+{
+  "parent": "workspace_test:custom/oilrig",
+  "textures": {
+    "all": "workspace_test:block/oilrig",
+    "particle": "workspace_test:block/oilrig",
+    "0": "workspace_test:block/oilrig"
+  },
+  "render_type": "cutout"
+}

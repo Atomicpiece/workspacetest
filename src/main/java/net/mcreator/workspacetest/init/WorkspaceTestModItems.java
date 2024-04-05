@@ -35,6 +35,7 @@ import net.mcreator.workspacetest.item.GoldchunkItem;
 import net.mcreator.workspacetest.item.FirebeltItem;
 import net.mcreator.workspacetest.item.FireCircleCreatorItem;
 import net.mcreator.workspacetest.item.DiamondsItem;
+import net.mcreator.workspacetest.item.CrudeoilItem;
 import net.mcreator.workspacetest.item.CopperchunkItem;
 import net.mcreator.workspacetest.item.CoalchunkItem;
 import net.mcreator.workspacetest.item.BombsItem;
@@ -118,6 +119,9 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> THORCHUNK = REGISTRY.register("thorchunk", () -> new ThorchunkItem());
 	public static final RegistryObject<Item> LITHCHUNK = REGISTRY.register("lithchunk", () -> new LithchunkItem());
 	public static final RegistryObject<Item> COALPLANT = block(WorkspaceTestModBlocks.COALPLANT);
+	public static final RegistryObject<Item> OILRIG = block(WorkspaceTestModBlocks.OILRIG);
+	public static final RegistryObject<Item> CRUDEOILDE = block(WorkspaceTestModBlocks.CRUDEOILDE);
+	public static final RegistryObject<Item> CRUDEOIL_BUCKET = REGISTRY.register("crudeoil_bucket", () -> new CrudeoilItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "fluid",
+  "definition": {
+    "name": "Crudeoil",
+    "bucketName": "Crudeoil Bucket",
+    "textureStill": "crudestill",
+    "textureFlowing": "crudeflow",
+    "tintType": "No tint",
+    "canMultiply": false,
+    "flowRate": 100,
+    "levelDecrease": 1,
+    "slopeFindDistance": 3,
+    "spawnParticles": true,
+    "dripParticle": {
+      "value": "CUSTOM:Crudedrip"
+    },
+    "flowStrength": 3.0,
+    "luminosity": 0,
+    "density": 2500,
+    "viscosity": 2000,
+    "temperature": 333,
+    "type": "LAVA",
+    "generateBucket": true,
+    "textureBucket": "crudebuc",
+    "creativeTab": {
+      "value": "CUSTOM:Resources"
+    },
+    "emptySound": {
+      "value": "item.bucket.empty_lava"
+    },
+    "rarity": "UNCOMMON",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "resistance": 10.0,
+    "luminance": 0,
+    "lightOpacity": 5,
+    "emissiveRendering": false,
+    "tickRate": 1,
+    "flammability": 100,
+    "fireSpreadSpeed": 750,
+    "colorOnMap": "DEFAULT",
+    "onTickUpdate": {
+      "name": "CrudeoilUpdateTick"
+    }
+  }
+}

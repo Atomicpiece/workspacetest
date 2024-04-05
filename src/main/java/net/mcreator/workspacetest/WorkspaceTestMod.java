@@ -30,8 +30,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.workspacetest.init.WorkspaceTestModTabs;
+import net.mcreator.workspacetest.init.WorkspaceTestModParticleTypes;
 import net.mcreator.workspacetest.init.WorkspaceTestModMenus;
 import net.mcreator.workspacetest.init.WorkspaceTestModItems;
+import net.mcreator.workspacetest.init.WorkspaceTestModFluids;
+import net.mcreator.workspacetest.init.WorkspaceTestModFluidTypes;
 import net.mcreator.workspacetest.init.WorkspaceTestModEntities;
 import net.mcreator.workspacetest.init.WorkspaceTestModBlocks;
 import net.mcreator.workspacetest.init.WorkspaceTestModBlockEntities;
@@ -61,7 +64,11 @@ public class WorkspaceTestMod {
 
 		WorkspaceTestModTabs.REGISTRY.register(bus);
 
+		WorkspaceTestModParticleTypes.REGISTRY.register(bus);
+
 		WorkspaceTestModMenus.REGISTRY.register(bus);
+		WorkspaceTestModFluids.REGISTRY.register(bus);
+		WorkspaceTestModFluidTypes.REGISTRY.register(bus);
 	}
 
 	private static final String PROTOCOL_VERSION = "1";
