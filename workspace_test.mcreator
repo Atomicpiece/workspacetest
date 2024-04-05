@@ -3340,6 +3340,157 @@
       "path": "~/assembly machines"
     },
     {
+      "name": "Oilpro",
+      "type": "procedure",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oilpro",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/OilproProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Oilrig",
+      "type": "block",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oilrig",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/blockstates/oilrig.json",
+          "src/main/java/net/mcreator/workspacetest/block/entity/OilrigBlockEntity.java",
+          "src/main/resources/assets/workspace_test/models/block/oilrig.json",
+          "src/main/resources/assets/workspace_test/models/item/oilrig.json",
+          "src/main/java/net/mcreator/workspacetest/block/OilrigBlock.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Crudedrip",
+      "type": "particle",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crudedrip",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/particles/crudedrip.json",
+          "src/main/java/net/mcreator/workspacetest/client/particle/CrudedripParticle.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Crudeoil",
+      "type": "fluid",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crudeoil",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/block/CrudeoilBlock.java",
+          "src/main/java/net/mcreator/workspacetest/fluid/CrudeoilFluid.java",
+          "src/main/resources/assets/workspace_test/blockstates/crudeoil.json",
+          "src/main/java/net/mcreator/workspacetest/fluid/types/CrudeoilFluidType.java",
+          "src/main/resources/assets/workspace_test/models/block/crudeoil.json",
+          "src/main/java/net/mcreator/workspacetest/item/CrudeoilItem.java",
+          "src/main/resources/assets/workspace_test/models/item/crudeoil_bucket.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "CrudeoilUpdateTick",
+      "type": "procedure",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crudeoil_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/CrudeoilUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Crudeoilde",
+      "type": "block",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crudeoilde",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/block/crudeoilde.json",
+          "src/main/resources/assets/workspace_test/models/item/crudeoilde.json",
+          "src/main/resources/assets/workspace_test/blockstates/crudeoilde.json",
+          "src/main/java/net/mcreator/workspacetest/block/CrudeoildeBlock.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Riggui",
+      "type": "gui",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "riggui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/world/inventory/RigguiMenu.java",
+          "src/main/java/net/mcreator/workspacetest/network/RigguiButtonMessage.java",
+          "src/main/java/net/mcreator/workspacetest/client/gui/RigguiScreen.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
       "name": "Farm",
       "type": "block",
       "sortid": 127,
@@ -3348,11 +3499,11 @@
       "registry_name": "farm",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/block/farm.json",
-          "src/main/resources/assets/workspace_test/blockstates/farm.json",
-          "src/main/java/net/mcreator/workspacetest/block/FarmBlock.java",
           "src/main/java/net/mcreator/workspacetest/block/entity/FarmBlockEntity.java",
-          "src/main/resources/assets/workspace_test/models/item/farm.json"
+          "src/main/resources/assets/workspace_test/models/item/farm.json",
+          "src/main/java/net/mcreator/workspacetest/block/FarmBlock.java",
+          "src/main/resources/assets/workspace_test/blockstates/farm.json",
+          "src/main/resources/assets/workspace_test/models/block/farm.json"
         ]
       },
       "path": "~/assembly machines"
@@ -3535,7 +3686,6 @@
       "item.workspace_test.healt_indicator": "Healt Indicator",
       "block.workspace_test.thorde": "Thorium deposit",
       "item.workspace_test.diamonds": "Diamonds",
-      "block.workspace_test.farm": "Farm",
       "block.workspace_test.copperde": "Copper deposit",
       "block.workspace_test.tinde": "Tin deposit",
       "entity.workspace_test.levitation_robot": "Levitation Robot",
