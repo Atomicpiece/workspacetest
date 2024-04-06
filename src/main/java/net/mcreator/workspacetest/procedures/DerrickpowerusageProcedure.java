@@ -1,15 +1,8 @@
 package net.mcreator.workspacetest.procedures;
 
-import org.checkerframework.checker.units.qual.s;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.core.BlockPos;
-import net.minecraft.client.gui.components.EditBox;
-
-import java.util.HashMap;
+import javax.annotation.Nullable;
 
 public class DerrickpowerusageProcedure {
 	public static String execute(LevelAccessor world, double x, double y, double z, HashMap guistate) {
@@ -49,7 +42,6 @@ public class DerrickpowerusageProcedure {
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		}
-		PumprateProcedure.execute(world, x, y, z);
 		return ((new Object() {
 			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);

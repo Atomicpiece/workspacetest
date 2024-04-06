@@ -3,18 +3,18 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "tablet",
+    "texture": "match",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Tablet",
-    "rarity": "UNCOMMON",
+    "name": "Matche",
+    "rarity": "EPIC",
     "creativeTab": {
       "value": "CUSTOM:Tools"
     },
-    "stackSize": 1,
+    "stackSize": 64,
     "enchantability": 0,
-    "useDuration": 1,
+    "useDuration": 10,
     "toolType": 1.0,
     "damageCount": 0,
     "recipeRemainder": {
@@ -35,11 +35,14 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onRightClickedOnBlock": {
-      "name": "MultimeterPlayerFinishesUsingItem"
+    "onRightClickedInAir": {
+      "name": "MatchesOnPlayerStoppedUsing"
+    },
+    "onStoppedUsing": {
+      "name": "MatchesOnPlayerStoppedUsing"
     },
     "onFinishUsingItem": {
-      "name": "MultimeterPlayerFinishesUsingItem"
+      "name": "MatchesOnPlayerStoppedUsing"
     },
     "enableRanged": false,
     "shootConstantly": false,
@@ -54,6 +57,6 @@
     },
     "isMeat": false,
     "isAlwaysEdible": false,
-    "animation": "block"
+    "animation": "bow"
   }
 }
