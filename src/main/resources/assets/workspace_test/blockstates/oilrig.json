@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=north": {
       "model": "workspace_test:block/oilrig"
+    },
+    "facing=east": {
+      "model": "workspace_test:block/oilrig",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "workspace_test:block/oilrig",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "workspace_test:block/oilrig",
+      "y": 270
     }
   }
 }

@@ -104,6 +104,7 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModBlocks.FARM.get().asItem());
 				tabData.accept(WorkspaceTestModBlocks.CRUDEOILDE.get().asItem());
 				tabData.accept(WorkspaceTestModItems.CRUDEOIL_BUCKET.get());
+				tabData.accept(WorkspaceTestModItems.CRUDEOILBARREL.get());
 			})
 
 					.build());
