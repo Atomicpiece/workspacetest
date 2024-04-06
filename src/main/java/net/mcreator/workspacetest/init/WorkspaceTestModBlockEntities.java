@@ -16,6 +16,7 @@ import net.mcreator.workspacetest.block.entity.TransporterBlockEntity;
 import net.mcreator.workspacetest.block.entity.TowerBlockEntity;
 import net.mcreator.workspacetest.block.entity.SmelteryBlockEntity;
 import net.mcreator.workspacetest.block.entity.RoboticAssemblerBlockEntity;
+import net.mcreator.workspacetest.block.entity.OilrigBlockEntity;
 import net.mcreator.workspacetest.block.entity.NukeBlockEntity;
 import net.mcreator.workspacetest.block.entity.LandmineBlockEntity;
 import net.mcreator.workspacetest.block.entity.InfbatBlockEntity;
@@ -38,6 +39,7 @@ public class WorkspaceTestModBlockEntities {
 	public static final RegistryObject<BlockEntityType<?>> ANCIENT_SPAWNER = register("ancient_spawner", WorkspaceTestModBlocks.ANCIENT_SPAWNER, AncientSpawnerBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> SMELTERY = register("smeltery", WorkspaceTestModBlocks.SMELTERY, SmelteryBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> COALPLANT = register("coalplant", WorkspaceTestModBlocks.COALPLANT, CoalplantBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> OILRIG = register("oilrig", WorkspaceTestModBlocks.OILRIG, OilrigBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> FARM = register("farm", WorkspaceTestModBlocks.FARM, FarmBlockEntity::new);
 
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {

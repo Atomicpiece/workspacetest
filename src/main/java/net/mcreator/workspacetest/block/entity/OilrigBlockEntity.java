@@ -1,11 +1,40 @@
 package net.mcreator.workspacetest.block.entity;
 
+import net.minecraftforge.items.wrapper.SidedInvWrapper;
+import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.fluids.capability.templates.FluidTank;
+import net.minecraftforge.energy.EnergyStorage;
+import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.minecraftforge.common.capabilities.Capability;
+
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.WorldlyContainer;
+import net.minecraft.world.ContainerHelper;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.nbt.IntTag;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.NonNullList;
+import net.minecraft.core.Direction;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.workspacetest.world.inventory.RigguiMenu;
+import net.mcreator.workspacetest.init.WorkspaceTestModBlockEntities;
+
 import javax.annotation.Nullable;
 
+import java.util.stream.IntStream;
+
+import io.netty.buffer.Unpooled;
+
 public class OilrigBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-
 	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(1, ItemStack.EMPTY);
-
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
 	public OilrigBlockEntity(BlockPos position, BlockState state) {
@@ -15,15 +44,11 @@ public class OilrigBlockEntity extends RandomizableContainerBlockEntity implemen
 	@Override
 	public void load(CompoundTag compound) {
 		super.load(compound);
-
 		if (!this.tryLoadLootTable(compound))
 			this.stacks = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
-
 		ContainerHelper.loadAllItems(compound, this.stacks);
-
 		if (compound.get("energyStorage") instanceof IntTag intTag)
 			energyStorage.deserializeNBT(intTag);
-
 		if (compound.get("fluidTank") instanceof CompoundTag compoundTag)
 			fluidTank.readFromNBT(compoundTag);
 	}
@@ -31,13 +56,10 @@ public class OilrigBlockEntity extends RandomizableContainerBlockEntity implemen
 	@Override
 	public void saveAdditional(CompoundTag compound) {
 		super.saveAdditional(compound);
-
 		if (!this.trySaveLootTable(compound)) {
 			ContainerHelper.saveAllItems(compound, this.stacks);
 		}
-
 		compound.put("energyStorage", energyStorage.serializeNBT());
-
 		compound.put("fluidTank", fluidTank.writeToNBT(new CompoundTag()));
 	}
 
@@ -135,7 +157,6 @@ public class OilrigBlockEntity extends RandomizableContainerBlockEntity implemen
 			return retval;
 		}
 	};
-
 	private final FluidTank fluidTank = new FluidTank(8000) {
 		@Override
 		protected void onContentsChanged() {
@@ -149,13 +170,10 @@ public class OilrigBlockEntity extends RandomizableContainerBlockEntity implemen
 	public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
 		if (!this.remove && facing != null && capability == ForgeCapabilities.ITEM_HANDLER)
 			return handlers[facing.ordinal()].cast();
-
 		if (!this.remove && capability == ForgeCapabilities.ENERGY)
 			return LazyOptional.of(() -> energyStorage).cast();
-
 		if (!this.remove && capability == ForgeCapabilities.FLUID_HANDLER)
 			return LazyOptional.of(() -> fluidTank).cast();
-
 		return super.getCapability(capability, facing);
 	}
 
@@ -165,5 +183,4 @@ public class OilrigBlockEntity extends RandomizableContainerBlockEntity implemen
 		for (LazyOptional<? extends IItemHandler> handler : handlers)
 			handler.invalidate();
 	}
-
 }

@@ -41,6 +41,9 @@
     "onStoppedUsing": {
       "name": "MatchesOnPlayerStoppedUsing"
     },
+    "onFinishUsingItem": {
+      "name": "MatchesOnPlayerStoppedUsing"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "projectile": {

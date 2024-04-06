@@ -1,6 +1,18 @@
 
 package net.mcreator.workspacetest.fluid.types;
 
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.fluids.FluidType;
+import net.minecraftforge.common.SoundActions;
+import net.minecraftforge.client.extensions.common.IClientFluidTypeExtensions;
+
+import net.minecraft.world.level.pathfinder.BlockPathTypes;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.resources.ResourceLocation;
+
+import java.util.function.Consumer;
+
 public class CrudeoilFluidType extends FluidType {
 	public CrudeoilFluidType() {
 		super(FluidType.Properties.create().canSwim(false).canDrown(false).pathType(BlockPathTypes.LAVA).adjacentPathType(null).motionScale(0.021D).density(2500).viscosity(2000).temperature(333).rarity(Rarity.UNCOMMON)

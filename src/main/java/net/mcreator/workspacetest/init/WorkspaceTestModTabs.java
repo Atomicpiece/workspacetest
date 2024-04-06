@@ -100,7 +100,10 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.NITERCHUNK.get());
 				tabData.accept(WorkspaceTestModItems.THORCHUNK.get());
 				tabData.accept(WorkspaceTestModItems.LITHCHUNK.get());
+				tabData.accept(WorkspaceTestModBlocks.OILRIG.get().asItem());
 				tabData.accept(WorkspaceTestModBlocks.FARM.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.CRUDEOILDE.get().asItem());
+				tabData.accept(WorkspaceTestModItems.CRUDEOIL_BUCKET.get());
 			})
 
 					.build());
@@ -116,6 +119,7 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModBlocks.INFBAT.get().asItem());
 				tabData.accept(WorkspaceTestModItems.MULTIMETER.get());
 				tabData.accept(WorkspaceTestModItems.MATCHES.get());
+				tabData.accept(WorkspaceTestModItems.EXTINGUISHER.get());
 			})
 
 					.build());

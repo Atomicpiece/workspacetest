@@ -46,6 +46,16 @@ public class MatchesItem extends Item {
 	}
 
 	@Override
+	public ItemStack finishUsingItem(ItemStack itemstack, Level world, LivingEntity entity) {
+		ItemStack retval = super.finishUsingItem(itemstack, world, entity);
+		double x = entity.getX();
+		double y = entity.getY();
+		double z = entity.getZ();
+		MatchesOnPlayerStoppedUsingProcedure.execute(world, x, y, z, entity);
+		return retval;
+	}
+
+	@Override
 	public void releaseUsing(ItemStack itemstack, Level world, LivingEntity entity, int time) {
 		MatchesOnPlayerStoppedUsingProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
