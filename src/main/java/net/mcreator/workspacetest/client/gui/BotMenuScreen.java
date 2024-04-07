@@ -1,29 +1,13 @@
 package net.mcreator.workspacetest.client.gui;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.ImageButton;
-import net.minecraft.client.gui.GuiGraphics;
-
-import net.mcreator.workspacetest.world.inventory.BotMenuMenu;
-import net.mcreator.workspacetest.procedures.TbProcedure;
-import net.mcreator.workspacetest.procedures.SBProcedure;
-import net.mcreator.workspacetest.procedures.MbProcedure;
-import net.mcreator.workspacetest.procedures.CBProcedure;
-
-import java.util.HashMap;
-
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class BotMenuScreen extends AbstractContainerScreen<BotMenuMenu> {
+
 	private final static HashMap<String, Object> guistate = BotMenuMenu.guistate;
+
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+
 	ImageButton imagebutton_screemn;
 
 	public BotMenuScreen(BotMenuMenu container, Inventory inventory, Component text) {
@@ -42,8 +26,11 @@ public class BotMenuScreen extends AbstractContainerScreen<BotMenuMenu> {
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
+
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+
 	}
 
 	@Override
@@ -51,6 +38,7 @@ public class BotMenuScreen extends AbstractContainerScreen<BotMenuMenu> {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
+
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
 		guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/monitor.png"), this.leftPos + 161, this.topPos + 2, 0, 0, 8, 8, 8, 8);
@@ -61,18 +49,35 @@ public class BotMenuScreen extends AbstractContainerScreen<BotMenuMenu> {
 
 		guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/monitor.png"), this.leftPos + 161, this.topPos + 74, 0, 0, 8, 8, 8, 8);
 
-		if (MbProcedure.execute(entity)) {
+		if (
+
+		MbProcedure.execute(entity)
+
+		) {
 			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/myte.png"), this.leftPos + 93, this.topPos + 12, 0, 0, 64, 64, 64, 64);
 		}
-		if (TbProcedure.execute(entity)) {
+		if (
+
+		TbProcedure.execute(entity)
+
+		) {
 			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/bot.png"), this.leftPos + 94, this.topPos + 12, 0, 0, 64, 64, 64, 64);
 		}
-		if (CBProcedure.execute(entity)) {
+		if (
+
+		CBProcedure.execute(entity)
+
+		) {
 			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/creeper.png"), this.leftPos + 94, this.topPos + 12, 0, 0, 64, 64, 64, 64);
 		}
-		if (SBProcedure.execute(entity)) {
+		if (
+
+		SBProcedure.execute(entity)
+
+		) {
 			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/spooder.png"), this.leftPos + 95, this.topPos + 12, 0, 0, 64, 64, 64, 64);
 		}
+
 		RenderSystem.disableBlend();
 	}
 
@@ -82,6 +87,7 @@ public class BotMenuScreen extends AbstractContainerScreen<BotMenuMenu> {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+
 		return super.keyPressed(key, b, c);
 	}
 
@@ -102,9 +108,13 @@ public class BotMenuScreen extends AbstractContainerScreen<BotMenuMenu> {
 	@Override
 	public void init() {
 		super.init();
+
 		imagebutton_screemn = new ImageButton(this.leftPos + 92, this.topPos + 12, 64, 64, 0, 0, 64, new ResourceLocation("workspace_test:textures/screens/atlas/imagebutton_screemn.png"), 64, 128, e -> {
 		});
+
 		guistate.put("button:imagebutton_screemn", imagebutton_screemn);
 		this.addRenderableWidget(imagebutton_screemn);
+
 	}
+
 }
