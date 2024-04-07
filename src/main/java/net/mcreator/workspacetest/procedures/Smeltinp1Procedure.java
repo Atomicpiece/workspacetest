@@ -1,8 +1,15 @@
 package net.mcreator.workspacetest.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 
-import javax.annotation.Nullable;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.workspacetest.init.WorkspaceTestModItems;
+
+import java.util.concurrent.atomic.AtomicReference;
 
 public class Smeltinp1Procedure {
 	public static String execute(LevelAccessor world, double x, double y, double z) {
@@ -91,7 +98,7 @@ public class Smeltinp1Procedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == WorkspaceTestModItems.DELETED_MOD_ELEMENT.get()) {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == WorkspaceTestModItems.TUNGSTENCHUNK.get()) {
 			return "Tungsten smelting";
 		}
 		if ((new Object() {
