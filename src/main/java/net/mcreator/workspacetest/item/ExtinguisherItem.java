@@ -1,8 +1,19 @@
 
 package net.mcreator.workspacetest.item;
 
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import javax.annotation.Nullable;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.network.chat.Component;
+
+import net.mcreator.workspacetest.procedures.ExtinguisherPlayerFinishesUsingItemProcedure;
+
+import java.util.List;
 
 public class ExtinguisherItem extends Item {
 	public ExtinguisherItem() {
@@ -20,14 +31,14 @@ public class ExtinguisherItem extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		ExtinguisherPlayerFinishesUsingItemProcedure.execute();
+		ExtinguisherPlayerFinishesUsingItemProcedure.execute(world, entity, itemstack);
 		return retval;
 	}
 
 	@Override
 	public InteractionResult useOn(UseOnContext context) {
 		super.useOn(context);
-		ExtinguisherPlayerFinishesUsingItemProcedure.execute();
+		ExtinguisherPlayerFinishesUsingItemProcedure.execute(context.getLevel(), context.getPlayer(), context.getItemInHand());
 		return InteractionResult.SUCCESS;
 	}
 }

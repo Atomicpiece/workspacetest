@@ -121,6 +121,8 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.MULTIMETER.get());
 				tabData.accept(WorkspaceTestModItems.MATCHES.get());
 				tabData.accept(WorkspaceTestModItems.EXTINGUISHER.get());
+				tabData.accept(WorkspaceTestModItems.FIREOFF.get());
+				tabData.accept(WorkspaceTestModItems.FIREHOSE.get());
 			})
 
 					.build());

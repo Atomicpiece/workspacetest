@@ -16,6 +16,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.workspacetest.entity.WaterEntity;
 import net.mcreator.workspacetest.entity.WarplaneEntity;
 import net.mcreator.workspacetest.entity.TurretEntityProjectile;
 import net.mcreator.workspacetest.entity.TurretEntity;
@@ -38,6 +39,7 @@ import net.mcreator.workspacetest.entity.GreatChickenEntity;
 import net.mcreator.workspacetest.entity.FurnacePoweredGolemEntity;
 import net.mcreator.workspacetest.entity.FrostBlazeEntityProjectile;
 import net.mcreator.workspacetest.entity.FrostBlazeEntity;
+import net.mcreator.workspacetest.entity.FoamEntity;
 import net.mcreator.workspacetest.entity.FireboltEntity;
 import net.mcreator.workspacetest.entity.FallingbombEntity;
 import net.mcreator.workspacetest.entity.DroneEntity;
@@ -154,6 +156,10 @@ public class WorkspaceTestModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<DPSOrbEntity>> DPS_ORB = register("dps_orb",
 			EntityType.Builder.<DPSOrbEntity>of(DPSOrbEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(10).setUpdateInterval(3).setCustomClientFactory(DPSOrbEntity::new).fireImmune().sized(1f, 1f));
+	public static final RegistryObject<EntityType<WaterEntity>> WATER = register("projectile_water",
+			EntityType.Builder.<WaterEntity>of(WaterEntity::new, MobCategory.MISC).setCustomClientFactory(WaterEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<FoamEntity>> FOAM = register("projectile_foam",
+			EntityType.Builder.<FoamEntity>of(FoamEntity::new, MobCategory.MISC).setCustomClientFactory(FoamEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

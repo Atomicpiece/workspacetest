@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
+import net.mcreator.workspacetest.client.renderer.WaterRenderer;
 import net.mcreator.workspacetest.client.renderer.WarplaneRenderer;
 import net.mcreator.workspacetest.client.renderer.TurretRenderer;
 import net.mcreator.workspacetest.client.renderer.TinybotRenderer;
@@ -30,6 +31,7 @@ import net.mcreator.workspacetest.client.renderer.IronSwordRenderer;
 import net.mcreator.workspacetest.client.renderer.GreatChickenRenderer;
 import net.mcreator.workspacetest.client.renderer.FurnacePoweredGolemRenderer;
 import net.mcreator.workspacetest.client.renderer.FrostBlazeRenderer;
+import net.mcreator.workspacetest.client.renderer.FoamRenderer;
 import net.mcreator.workspacetest.client.renderer.FireboltRenderer;
 import net.mcreator.workspacetest.client.renderer.FallingbombRenderer;
 import net.mcreator.workspacetest.client.renderer.DroneRenderer;
@@ -75,5 +77,7 @@ public class WorkspaceTestModEntityRenderers {
 		event.registerEntityRenderer(WorkspaceTestModEntities.MISSILE.get(), MissileRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.ROCKET_LAUNCHER.get(), RocketLauncherRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.DPS_ORB.get(), DPSOrbRenderer::new);
+		event.registerEntityRenderer(WorkspaceTestModEntities.WATER.get(), WaterRenderer::new);
+		event.registerEntityRenderer(WorkspaceTestModEntities.FOAM.get(), FoamRenderer::new);
 	}
 }
