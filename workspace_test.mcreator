@@ -158,8 +158,8 @@
       "registry_name": "igniter",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/IgniterItem.java",
-          "src/main/resources/assets/workspace_test/models/item/igniter.json"
+          "src/main/resources/assets/workspace_test/models/item/igniter.json",
+          "src/main/java/net/mcreator/workspacetest/item/IgniterItem.java"
         ]
       },
       "path": "~/Defence"
@@ -277,8 +277,8 @@
       "registry_name": "percentage_checker",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/percentage_checker.json",
-          "src/main/java/net/mcreator/workspacetest/item/PercentageCheckerItem.java"
+          "src/main/java/net/mcreator/workspacetest/item/PercentageCheckerItem.java",
+          "src/main/resources/assets/workspace_test/models/item/percentage_checker.json"
         ]
       },
       "path": "~/Defence"
@@ -535,8 +535,8 @@
       "registry_name": "bot_menu",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/world/inventory/BotMenuMenu.java",
-          "src/main/java/net/mcreator/workspacetest/client/gui/BotMenuScreen.java"
+          "src/main/java/net/mcreator/workspacetest/client/gui/BotMenuScreen.java",
+          "src/main/java/net/mcreator/workspacetest/world/inventory/BotMenuMenu.java"
         ]
       },
       "path": "~/Defence"
@@ -1801,7 +1801,6 @@
       "locked_code": false,
       "registry_name": "mineprocces",
       "metadata": {
-        "return_type": "string",
         "files": [
           "src/main/java/net/mcreator/workspacetest/procedures/MineproccesProcedure.java"
         ],
@@ -2044,7 +2043,7 @@
       "locked_code": false,
       "registry_name": "run",
       "metadata": {
-        "return_type": "logic",
+        "return_type": "string",
         "files": [
           "src/main/java/net/mcreator/workspacetest/procedures/RunProcedure.java"
         ],
@@ -2951,6 +2950,76 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "A",
+      "type": "feature",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "a",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/workspace_test/forge/biome_modifier/a_biome_modifier.json",
+          "src/main/resources/data/workspace_test/worldgen/placed_feature/a.json",
+          "src/main/resources/data/workspace_test/worldgen/configured_feature/a.json"
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "B",
+      "type": "biome",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "b",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/BTrunkDecorator.java",
+          "src/main/resources/data/workspace_test/worldgen/biome/b.json",
+          "src/main/resources/data/workspace_test/worldgen/placed_feature/b_tree.json",
+          "src/main/resources/data/workspace_test/worldgen/configured_feature/b_tree.json",
+          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/BFruitDecorator.java",
+          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/BLeaveDecorator.java"
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "Delta",
+      "type": "feature",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "delta",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/workspace_test/forge/biome_modifier/delta_biome_modifier.json",
+          "src/main/resources/data/workspace_test/worldgen/placed_feature/delta.json",
+          "src/main/resources/data/workspace_test/worldgen/configured_feature/delta.json"
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "Smolderinglands",
+      "type": "biome",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smolderinglands",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/SmolderinglandsTrunkDecorator.java",
+          "src/main/resources/data/workspace_test/worldgen/placed_feature/smolderinglands_tree.json",
+          "src/main/resources/data/workspace_test/worldgen/biome/smolderinglands.json",
+          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/SmolderinglandsLeaveDecorator.java",
+          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/SmolderinglandsFruitDecorator.java",
+          "src/main/resources/data/workspace_test/worldgen/configured_feature/smolderinglands_tree.json"
+        ]
+      },
+      "path": "~/martin mod"
     }
   ],
   "variable_elements": [],
@@ -2958,81 +3027,108 @@
   "language_map": {
     "en_us": {
       "item.workspace_test.bombs": "Bombs",
+      "block.workspace_test.diamondde": "Diamond deposit",
+      "item.workspace_test.leadchunk": "Lead chunk",
       "item.workspace_test.bomb_spawn_egg": "Bomb Spawn Egg",
-      "item_group.workspace_test.machines": "Machines",
-      "entity.workspace_test.robotic_phantom": "Robotic Phantom",
+      "block.workspace_test.sulfurde": "Sulfur deposit",
+      "item.workspace_test.zincchunk": "Zinc chunk",
       "item.workspace_test.battleship_spawn_egg": "Battleship Spawn Egg",
       "entity.workspace_test.spiderbot": "Spiderbot",
-      "entity.workspace_test.drone": "Drone",
       "item.workspace_test.firebelt": "Firebelt",
-      "item_group.workspace_test.tools": "Tools",
       "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
       "item.workspace_test.fire_circle_creator": "Fire Circle Creator",
       "item.workspace_test.great_chicken_spawn_egg": "Great Chicken Spawn Egg",
+      "entity.workspace_test.submarine": "Submarine",
+      "item.workspace_test.submarine_spawn_egg": "Submarine Spawn Egg",
+      "entity.workspace_test.rocket_launcher": "Rocket Launcher",
+      "biome.workspace_test.smolderinglands": "Volcanic lands",
+      "item.workspace_test.tinchunk": "Tin chunk",
+      "item.workspace_test.rocket_launcher_spawn_egg": "Rocket Launcher Spawn Egg",
+      "biome.workspace_test.b": "Stone lands",
+      "block.workspace_test.coalde": "Coal deposit",
+      "entity.workspace_test.great_chicken": "Great Chicken",
+      "item.workspace_test.destroyer_spawn_egg": "Destroyer Spawn Egg",
+      "block.workspace_test.walls": "Walls",
+      "item.workspace_test.skeleter_spawn_egg": "Skeleter Spawn Egg",
+      "item.workspace_test.warplane_spawn_egg": "Warplane Spawn Egg",
+      "entity.workspace_test.creeperbot": "Creeperbot",
+      "entity.workspace_test.furnace_powered_golem": "Furnace Powered Golem",
+      "entity.workspace_test.bomb": "Bomb",
+      "item_group.workspace_test.finanbuild": "Financial buildings",
+      "item.workspace_test.ironchunk": "Iron chunk",
+      "gui.workspace_test.transportgui.label_fluid": "fluid:",
+      "gui.workspace_test.minegui.label_output": "Output:",
+      "item.workspace_test.defender_spawn_egg": "Defender Spawn Egg",
+      "item.workspace_test.robotic_phantom_spawn_egg": "Robotic Phantom Spawn Egg",
+      "item.workspace_test.percentage_checker": "Percentage Checker",
+      "entity.workspace_test.destroyer": "Destroyer",
+      "entity.workspace_test.microbot": "Microbot",
+      "item.workspace_test.frost_blaze_spawn_egg": "Frost Blaze Spawn Egg",
+      "item.workspace_test.tank_spawn_egg": "Tank Spawn Egg",
+      "entity.workspace_test.battleship": "Battleship",
+      "item.workspace_test.spiderbot_spawn_egg": "Spiderbot Spawn Egg",
+      "gui.workspace_test.minegui.button_start": "Start mining",
+      "item.workspace_test.multimeter": "Tablet",
+      "item.workspace_test.redstrone_blaster": "Redstrone Blaster",
+      "entity.workspace_test.mossy_golem": "Mossy Golem",
+      "entity.workspace_test.warplane": "Warplane",
+      "block.workspace_test.zincde": "Zinc deposit",
+      "item_group.workspace_test.machines": "Machines",
+      "entity.workspace_test.robotic_phantom": "Robotic Phantom",
+      "entity.workspace_test.drone": "Drone",
+      "item_group.workspace_test.tools": "Tools",
+      "item.workspace_test.coalchunk": "Coal chunk",
       "gui.workspace_test.minegui.button_save": "SAVE",
       "item.workspace_test.ion_sword": "Ion Sword",
       "gui.workspace_test.minegui.label_resource": "Resource:",
       "gui.workspace_test.minegui.label_mining_speed": "Mining speed:",
       "item.workspace_test.mossy_golem_spawn_egg": "Mossy Golem Spawn Egg",
+      "block.workspace_test.transporter": "Transporter",
       "entity.workspace_test.defender": "Defender",
       "block.workspace_test.ccc": "mine",
       "item.workspace_test.igniter": "Igniter",
       "entity.workspace_test.frost_blaze": "Frost Blaze",
-      "block.workspace_test.coalde": "Coal deposit",
       "block.workspace_test.landmine": "Landmine",
-      "entity.workspace_test.great_chicken": "Great Chicken",
-      "item.workspace_test.destroyer_spawn_egg": "Destroyer Spawn Egg",
-      "block.workspace_test.walls": "Walls",
-      "item.workspace_test.skeleter_spawn_egg": "Skeleter Spawn Egg",
       "entity.workspace_test.skeleter": "Skeleter",
-      "item.workspace_test.warplane_spawn_egg": "Warplane Spawn Egg",
-      "entity.workspace_test.creeperbot": "Creeperbot",
-      "entity.workspace_test.furnace_powered_golem": "Furnace Powered Golem",
       "entity.workspace_test.turret": "Turret",
       "item_group.workspace_test.resources": "Resources",
-      "entity.workspace_test.bomb": "Bomb",
-      "item_group.workspace_test.finanbuild": "Financial buildings",
       "block.workspace_test.tower": "Tower",
+      "gui.workspace_test.transportgui.label_transporter": "Transporter:",
+      "item.workspace_test.sulfur": "Sulfur crystal",
       "item.workspace_test.healt_indicator": "Healt Indicator",
-      "item.workspace_test.ironchunk": "Iron chunk",
+      "item.workspace_test.diamonds": "Diamonds",
       "block.workspace_test.copperde": "Copper deposit",
+      "block.workspace_test.tinde": "Tin deposit",
       "entity.workspace_test.levitation_robot": "Levitation Robot",
       "item_group.workspace_test.defence": "Defence",
       "block.workspace_test.infbat": "Infinite battery",
       "entity.workspace_test.tinybot": "Tinybot",
-      "gui.workspace_test.minegui.label_output": "Output:",
       "item.workspace_test.creeperbot_spawn_egg": "Creeperbot Spawn Egg",
+      "block.workspace_test.titande": "Titanium deposit",
       "gui.workspace_test.minegui.label_mine": "Mine:",
-      "item.workspace_test.defender_spawn_egg": "Defender Spawn Egg",
-      "item.workspace_test.robotic_phantom_spawn_egg": "Robotic Phantom Spawn Egg",
-      "item.workspace_test.percentage_checker": "Percentage Checker",
-      "entity.workspace_test.destroyer": "Destroyer",
+      "entity.workspace_test.dps_orb": "DPS Orb",
+      "item.workspace_test.titanchunk": "Titanium chunk",
       "item.workspace_test.wand": "Wand",
-      "entity.workspace_test.microbot": "Microbot",
       "block.workspace_test.nuke": "Nuke",
       "block.workspace_test.robotic_assembler": "Robotic Assembler",
-      "item.workspace_test.frost_blaze_spawn_egg": "Frost Blaze Spawn Egg",
-      "item.workspace_test.tank_spawn_egg": "Tank Spawn Egg",
-      "item.workspace_test.spiderbot_spawn_egg": "Spiderbot Spawn Egg",
-      "entity.workspace_test.battleship": "Battleship",
+      "item.workspace_test.bazooka": "Bazooka",
+      "item.workspace_test.dps_orb_spawn_egg": "DPS Orb Spawn Egg",
       "item.workspace_test.microbot_spawn_egg": "Microbot Spawn Egg",
       "gui.workspace_test.minegui.minespend": "",
       "entity.workspace_test.tank": "Tank",
       "gui.workspace_test.minegui.label_power_usage": "Power usage:",
-      "gui.workspace_test.minegui.button_start": "Start mining",
       "block.workspace_test.ironde": "Iron deposit",
       "item.workspace_test.turret_spawn_egg": "Turret Spawn Egg",
       "gui.workspace_test.minesgui.label_mine": "Mine",
       "block.workspace_test.goldde": "Gold deposit",
-      "item.workspace_test.multimeter": "Tablet",
+      "item.workspace_test.goldchunk": "Gold chunk",
+      "item.workspace_test.copperchunk": "Copper chunk",
       "block.workspace_test.minese": "Minese",
       "item.workspace_test.levitation_robot_spawn_egg": "Levitation Robot Spawn Egg",
       "item_group.workspace_test.test": "Test",
       "item.workspace_test.tinybot_spawn_egg": "Tinybot Spawn Egg",
-      "item.workspace_test.redstrone_blaster": "Redstrone Blaster",
-      "entity.workspace_test.mossy_golem": "Mossy Golem",
       "item.workspace_test.furnace_powered_golem_spawn_egg": "Furnace Powered Golem Spawn Egg",
-      "entity.workspace_test.warplane": "Warplane",
+      "block.workspace_test.leadde": "Lead deposit",
       "item.workspace_test.drone_spawn_egg": "Drone Spawn Egg",
       "gui.workspace_test.minegui.label_status": "Status:"
     }
