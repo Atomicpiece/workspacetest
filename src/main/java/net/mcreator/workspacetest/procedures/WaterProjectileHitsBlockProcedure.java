@@ -12,6 +12,8 @@ import net.minecraft.core.BlockPos;
 public class WaterProjectileHitsBlockProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (world instanceof ServerLevel _level)
+			_level.sendParticles(ParticleTypes.FALLING_DRIPSTONE_WATER, x, y, z, 5, 0.5, 0.5, 0.5, 1);
+		if (world instanceof ServerLevel _level)
 			_level.sendParticles(ParticleTypes.DRIPPING_DRIPSTONE_WATER, x, y, z, 5, 0.2, 0.2, 0.2, 1);
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles(ParticleTypes.DRIPPING_WATER, x, y, z, 5, 0.5, 0.5, 0.5, 1);

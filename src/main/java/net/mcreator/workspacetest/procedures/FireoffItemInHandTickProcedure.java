@@ -50,25 +50,6 @@ public class FireoffItemInHandTickProcedure {
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}
-			{
-				Entity _shootFrom = entity;
-				Level projectileLevel = _shootFrom.level();
-				if (!projectileLevel.isClientSide()) {
-					Projectile _entityToSpawn = new Object() {
-						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-							AbstractArrow entityToSpawn = new FoamEntity(WorkspaceTestModEntities.FOAM.get(), level);
-							entityToSpawn.setOwner(shooter);
-							entityToSpawn.setBaseDamage(damage);
-							entityToSpawn.setKnockback(knockback);
-							entityToSpawn.setSilent(true);
-							return entityToSpawn;
-						}
-					}.getArrow(projectileLevel, entity, 0, 0);
-					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 0.75, 10);
-					projectileLevel.addFreshEntity(_entityToSpawn);
-				}
-			}
 		}
 		if ((world.getBlockState(
 				new BlockPos(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(5)), ClipContext.Block.VISUAL, ClipContext.Fluid.ANY, entity)).getBlockPos().getX(),
