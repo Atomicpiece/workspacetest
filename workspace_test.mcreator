@@ -3796,76 +3796,6 @@
       "path": "~/assembly machines"
     },
     {
-      "name": "A",
-      "type": "feature",
-      "sortid": 107,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "a",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/workspace_test/worldgen/placed_feature/a.json",
-          "src/main/resources/data/workspace_test/forge/biome_modifier/a_biome_modifier.json",
-          "src/main/resources/data/workspace_test/worldgen/configured_feature/a.json"
-        ]
-      },
-      "path": "~/martin mod"
-    },
-    {
-      "name": "B",
-      "type": "biome",
-      "sortid": 108,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "b",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/BTrunkDecorator.java",
-          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/BLeaveDecorator.java",
-          "src/main/resources/data/workspace_test/worldgen/placed_feature/b_tree.json",
-          "src/main/resources/data/workspace_test/worldgen/biome/b.json",
-          "src/main/resources/data/workspace_test/worldgen/configured_feature/b_tree.json",
-          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/BFruitDecorator.java"
-        ]
-      },
-      "path": "~/martin mod"
-    },
-    {
-      "name": "Delta",
-      "type": "feature",
-      "sortid": 109,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "delta",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/workspace_test/worldgen/configured_feature/delta.json",
-          "src/main/resources/data/workspace_test/forge/biome_modifier/delta_biome_modifier.json",
-          "src/main/resources/data/workspace_test/worldgen/placed_feature/delta.json"
-        ]
-      },
-      "path": "~/martin mod"
-    },
-    {
-      "name": "Smolderinglands",
-      "type": "biome",
-      "sortid": 110,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "smolderinglands",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/workspace_test/worldgen/placed_feature/smolderinglands_tree.json",
-          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/SmolderinglandsTrunkDecorator.java",
-          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/SmolderinglandsFruitDecorator.java",
-          "src/main/resources/data/workspace_test/worldgen/biome/smolderinglands.json",
-          "src/main/resources/data/workspace_test/worldgen/configured_feature/smolderinglands_tree.json",
-          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/SmolderinglandsLeaveDecorator.java"
-        ]
-      },
-      "path": "~/martin mod"
-    },
-    {
       "name": "Chancefireon",
       "type": "procedure",
       "sortid": 139,
@@ -4217,9 +4147,10 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.workspace_test.bombs": "Bombs",
       "block.workspace_test.coalplant": "Coalplant",
+      "item.workspace_test.bombs": "Bombs",
       "block.workspace_test.diamondde": "Diamond deposit",
+      "item.workspace_test.fireoff": "Fireoff",
       "item.workspace_test.leadchunk": "Lead chunk",
       "block.workspace_test.ancient_spawner": "Ancient Spawner",
       "item.workspace_test.bomb_spawn_egg": "Bomb Spawn Egg",
@@ -4227,8 +4158,8 @@
       "block.workspace_test.sulfurde": "Sulfur deposit",
       "gui.workspace_test.riggui.label_resource": "Resource:",
       "item.workspace_test.zincchunk": "Zinc chunk",
-      "item.workspace_test.battleship_spawn_egg": "Battleship Spawn Egg",
       "gui.workspace_test.riggui.label_output": "Output:",
+      "item.workspace_test.battleship_spawn_egg": "Battleship Spawn Egg",
       "entity.workspace_test.spiderbot": "Spiderbot",
       "item.workspace_test.firebelt": "Firebelt",
       "item_group.workspace_test.electricity": "Electricity",
@@ -4241,8 +4172,8 @@
       "entity.workspace_test.rocket_launcher": "Rocket Launcher",
       "item.workspace_test.tinchunk": "Tin chunk",
       "item.workspace_test.rocket_launcher_spawn_egg": "Rocket Launcher Spawn Egg",
-      "block.workspace_test.coalde": "Coal deposit",
       "gui.workspace_test.smelterygui.label_smeltery": "Smeltery",
+      "block.workspace_test.coalde": "Coal deposit",
       "item.workspace_test.crudeoil_bucket": "Crude oil Bucket",
       "block.workspace_test.crudeoil": "Crude oil",
       "entity.workspace_test.great_chicken": "Great Chicken",
@@ -4305,6 +4236,7 @@
       "item.workspace_test.igniter": "Igniter",
       "gui.workspace_test.smelterygui.label_status": "Status:",
       "entity.workspace_test.frost_blaze": "Frost Blaze",
+      "item.workspace_test.firehose": "Firehose",
       "item.workspace_test.uranchunk": "Uranium chunk",
       "gui.workspace_test.riggui.label_mine": "Oil derrick:",
       "block.workspace_test.landmine": "Landmine",
