@@ -84,7 +84,7 @@ public class RandombuildingfireProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			WorkspaceTestMod.queueServerWork(7180, () -> {
+			WorkspaceTestMod.queueServerWork(20, () -> {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -461,7 +461,7 @@ public class RandombuildingfireProcedure {
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
 						}
-						WorkspaceTestMod.queueServerWork(10, () -> {
+						WorkspaceTestMod.queueServerWork(5, () -> {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -471,6 +471,9 @@ public class RandombuildingfireProcedure {
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
+							WorkspaceTestMod.queueServerWork(5, () -> {
+								RandombuildingfireProcedure.execute(world, x, y, z);
+							});
 						});
 					});
 				});
