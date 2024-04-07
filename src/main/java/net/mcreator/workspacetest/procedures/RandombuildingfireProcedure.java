@@ -58,16 +58,8 @@ public class RandombuildingfireProcedure {
 				_level.sendParticles(ParticleTypes.FLAME, (x + 0.5), (y + 0.4), (z + 0.5), 2, 0.1, 0.2, 0.1, 0.01);
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles(ParticleTypes.LARGE_SMOKE, (x + 0.5), (y + 0.4), (z + 0.5), 1, 0.1, 0.2, 0.1, 0.01);
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("chancefire", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-		} else if ((new Object() {
+		}
+		if ((new Object() {
 			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
 				if (blockEntity != null)
@@ -90,11 +82,36 @@ public class RandombuildingfireProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putDouble("chancesfire", (Mth.nextInt(RandomSource.create(), 1, 1000)));
+						_blockEntity.getPersistentData().putDouble("chancesfire", (Mth.nextInt(RandomSource.create(), 1, 100000)));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 				WorkspaceTestMod.queueServerWork(5, () -> {
+					if (true == (new Object() {
+						public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+							BlockEntity blockEntity = world.getBlockEntity(pos);
+							if (blockEntity != null)
+								return blockEntity.getPersistentData().getBoolean(tag);
+							return false;
+						}
+					}.getValue(world, BlockPos.containing(x, y, z), "hasfire"))) {
+						if (!world.isClientSide()) {
+							BlockPos _bp = BlockPos.containing(x, y, z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getPersistentData().putDouble("chancesfire", (new Object() {
+									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+										BlockEntity blockEntity = world.getBlockEntity(pos);
+										if (blockEntity != null)
+											return blockEntity.getPersistentData().getDouble(tag);
+										return -1;
+									}
+								}.getValue(world, BlockPos.containing(x, y, z), "chancesfire") + 10000));
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
+					}
 					if ((new Object() {
 						public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 							BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -136,7 +153,7 @@ public class RandombuildingfireProcedure {
 											return blockEntity.getPersistentData().getDouble(tag);
 										return -1;
 									}
-								}.getValue(world, BlockPos.containing(x, y, z), "chancesfire") + 80));
+								}.getValue(world, BlockPos.containing(x, y, z), "chancesfire") + 8000));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -237,7 +254,7 @@ public class RandombuildingfireProcedure {
 											return blockEntity.getPersistentData().getDouble(tag);
 										return -1;
 									}
-								}.getValue(world, BlockPos.containing(x, y, z), "chancesfire") + 40));
+								}.getValue(world, BlockPos.containing(x, y, z), "chancesfire") + 4000));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -338,7 +355,7 @@ public class RandombuildingfireProcedure {
 											return blockEntity.getPersistentData().getDouble(tag);
 										return -1;
 									}
-								}.getValue(world, BlockPos.containing(x, y, z), "chancesfire") + 20));
+								}.getValue(world, BlockPos.containing(x, y, z), "chancesfire") + 2000));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -383,7 +400,7 @@ public class RandombuildingfireProcedure {
 											return blockEntity.getPersistentData().getDouble(tag);
 										return -1;
 									}
-								}.getValue(world, BlockPos.containing(x, y, z), "chancesfire") + 10));
+								}.getValue(world, BlockPos.containing(x, y, z), "chancesfire") + 1000));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -396,7 +413,7 @@ public class RandombuildingfireProcedure {
 									return blockEntity.getPersistentData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, BlockPos.containing(x, y, z), "chancesfire") >= 1000) {
+						}.getValue(world, BlockPos.containing(x, y, z), "chancesfire") >= 100000) {
 							if (world instanceof ServerLevel _level)
 								_level.sendParticles(ParticleTypes.EXPLOSION, (x + 0.5), (y + 0.5), (z + 0.5), 5, 0.1, 0.1, 0.1, 0.1);
 							if (world instanceof Level _level) {
@@ -450,7 +467,7 @@ public class RandombuildingfireProcedure {
 									return blockEntity.getPersistentData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, BlockPos.containing(x, y, z), "chancesfire") >= 990) {
+						}.getValue(world, BlockPos.containing(x, y, z), "chancesfire") >= 99990) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);

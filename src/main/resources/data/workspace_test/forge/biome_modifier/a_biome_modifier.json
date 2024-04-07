@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "workspace_test:b",
-  "features": "workspace_test:a",
-  "step": "surface_structures"
-}
