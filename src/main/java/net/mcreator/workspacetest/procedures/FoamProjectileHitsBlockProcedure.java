@@ -14,7 +14,7 @@ import net.mcreator.workspacetest.init.WorkspaceTestModParticleTypes;
 public class FoamProjectileHitsBlockProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles((SimpleParticleType) (WorkspaceTestModParticleTypes.FOAMS.get()), x, y, z, 5, 0.5, 0.5, 0.5, 1);
+			_level.sendParticles((SimpleParticleType) (WorkspaceTestModParticleTypes.FOAMS.get()), x, y, z, 5, 0.5, 0.5, 0.5, 0.1);
 		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.FIRE) {
 			world.destroyBlock(BlockPos.containing(x, y, z), false);
 		}
