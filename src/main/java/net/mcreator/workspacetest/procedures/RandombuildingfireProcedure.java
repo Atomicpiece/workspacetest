@@ -87,14 +87,14 @@ public class RandombuildingfireProcedure {
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 				WorkspaceTestMod.queueServerWork(5, () -> {
-					if (new Object() {
+					if (true == (new Object() {
 						public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 							BlockEntity blockEntity = world.getBlockEntity(pos);
 							if (blockEntity != null)
 								return blockEntity.getPersistentData().getBoolean(tag);
 							return false;
 						}
-					}.getValue(world, BlockPos.containing(x, y, z), "hasfire")) {
+					}.getValue(world, BlockPos.containing(x, y, z), "hasfire"))) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
