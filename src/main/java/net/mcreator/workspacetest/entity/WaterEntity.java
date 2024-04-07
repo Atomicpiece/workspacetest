@@ -1,6 +1,32 @@
 
 package net.mcreator.workspacetest.entity;
 
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.network.PlayMessages;
+import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.projectile.ItemSupplier;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.util.RandomSource;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.Packet;
+
+import net.mcreator.workspacetest.procedures.WaterWhileProjectileFlyingTickProcedure;
+import net.mcreator.workspacetest.procedures.WaterProjectileHitsLivingEntityProcedure;
+import net.mcreator.workspacetest.procedures.WaterProjectileHitsBlockProcedure;
+import net.mcreator.workspacetest.init.WorkspaceTestModEntities;
+
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class WaterEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Items.WATER_BUCKET);
@@ -46,19 +72,19 @@ public class WaterEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		WaterProjectileHitsLivingEntityProcedure.execute();
+		WaterProjectileHitsLivingEntityProcedure.execute(entityHitResult.getEntity());
 	}
 
 	@Override
 	public void onHitBlock(BlockHitResult blockHitResult) {
 		super.onHitBlock(blockHitResult);
-		WaterProjectileHitsBlockProcedure.execute();
+		WaterProjectileHitsBlockProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
 	}
 
 	@Override
 	public void tick() {
 		super.tick();
-		WaterWhileProjectileFlyingTickProcedure.execute();
+		WaterWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 		if (this.inGround)
 			this.discard();
 	}
