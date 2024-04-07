@@ -76,7 +76,7 @@ public class RandombuildingfireProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			WorkspaceTestMod.queueServerWork(20, () -> {
+			WorkspaceTestMod.queueServerWork(1180, () -> {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -459,6 +459,10 @@ public class RandombuildingfireProcedure {
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
+							if (world instanceof ServerLevel _level)
+								_level.sendParticles(ParticleTypes.FLAME, (x + 0.5), (y + 0.5), (z + 0.5), 100, 0.7, 0.7, 0.7, 0.1);
+							if (world instanceof ServerLevel _level)
+								_level.sendParticles(ParticleTypes.LAVA, (x + 0.5), (y + 0.5), (z + 0.5), 10, 0.1, 0.1, 0.1, 0.01);
 							world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 						} else if (new Object() {
 							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
