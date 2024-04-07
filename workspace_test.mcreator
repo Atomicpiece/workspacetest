@@ -3896,6 +3896,321 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "Water",
+      "type": "projectile",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/renderer/WaterRenderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/WaterEntity.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "FoamWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 148,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "foam_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/FoamWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Firehose",
+      "type": "item",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firehose",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/firehose.json",
+          "src/main/java/net/mcreator/workspacetest/item/FirehoseItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "WaterWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/WaterWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "FoamProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "foam_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/FoamProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Fireoff",
+      "type": "item",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fireoff",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/FireoffItem.java",
+          "src/main/resources/assets/workspace_test/models/item/fireoff.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Foams",
+      "type": "particle",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "foams",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/particle/FoamsParticle.java",
+          "src/main/resources/assets/workspace_test/particles/foams.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "WaterProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/WaterProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "FireoffItemInHandTick",
+      "type": "procedure",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fireoff_item_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/FireoffItemInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "WaterProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/WaterProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Foam",
+      "type": "projectile",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "foam",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/FoamEntity.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/FoamRenderer.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Pipehand",
+      "type": "procedure",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipehand",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/PipehandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "FoamProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "foam_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/FoamProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [],
@@ -3924,10 +4239,8 @@
       "entity.workspace_test.submarine": "Submarine",
       "item.workspace_test.submarine_spawn_egg": "Submarine Spawn Egg",
       "entity.workspace_test.rocket_launcher": "Rocket Launcher",
-      "biome.workspace_test.smolderinglands": "Volcanic lands",
       "item.workspace_test.tinchunk": "Tin chunk",
       "item.workspace_test.rocket_launcher_spawn_egg": "Rocket Launcher Spawn Egg",
-      "biome.workspace_test.b": "Stone lands",
       "block.workspace_test.coalde": "Coal deposit",
       "gui.workspace_test.smelterygui.label_smeltery": "Smeltery",
       "item.workspace_test.crudeoil_bucket": "Crude oil Bucket",
