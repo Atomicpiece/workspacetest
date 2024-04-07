@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "workspace_test:transporter",
+    "workspace_test:smeltery",
+    "workspace_test:ccc"
+  ]
+}

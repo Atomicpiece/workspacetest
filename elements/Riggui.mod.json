@@ -1,0 +1,271 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 214,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_mine",
+          "text": {
+            "fixedValue": "Oil derrick:"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 112,
+          "y": 41
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "monitor.png",
+          "use1Xscale": true,
+          "x": 114,
+          "y": 54
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "monitor.png",
+          "use1Xscale": true,
+          "x": 114,
+          "y": 68
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "monitor.png",
+          "use1Xscale": true,
+          "x": 114,
+          "y": 82
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_resource",
+          "text": {
+            "fixedValue": "Resource:"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 125,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_mining_rate",
+          "text": {
+            "fixedValue": "Pump rate:"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 125,
+          "y": 81
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_status",
+          "text": {
+            "fixedValue": "Status:"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 125,
+          "y": 67
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_start",
+          "text": "Start mining",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Pumpstart"
+          },
+          "width": 77,
+          "height": 20,
+          "x": 111,
+          "y": 93
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_output",
+          "text": {
+            "fixedValue": "Output:"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 257,
+          "y": 97
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_power_usage",
+          "text": {
+            "fixedValue": "Power usage:"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 188,
+          "y": 110
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "name": "minespend",
+          "width": 23,
+          "height": 20,
+          "x": 285,
+          "y": 43
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_mining_speed",
+          "text": {
+            "fixedValue": "Mining speed:"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 214,
+          "y": 43
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_minepowerusage",
+          "text": {
+            "fixedValue": "",
+            "name": "Minepowerusage"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 257,
+          "y": 110
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_minigrate",
+          "text": {
+            "fixedValue": "",
+            "name": "Miningrate"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 191,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_coalpro",
+          "text": {
+            "fixedValue": "",
+            "name": "Oilpro"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 177,
+          "y": 53
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_save",
+          "text": "SAVE",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Save"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 223,
+          "y": 54
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_mineprocces",
+          "text": {
+            "fixedValue": "",
+            "name": "Run"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 165,
+          "y": 66
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 294,
+          "y": 92
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

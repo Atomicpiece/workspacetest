@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "workspace_test:block/tungstende",
+    "up": "workspace_test:block/tungstende",
+    "north": "workspace_test:block/tungstende",
+    "east": "workspace_test:block/tungstende",
+    "south": "workspace_test:block/tungstende",
+    "west": "workspace_test:block/tungstende",
+    "particle": "workspace_test:block/tungstende"
+  },
+  "render_type": "solid"
+}

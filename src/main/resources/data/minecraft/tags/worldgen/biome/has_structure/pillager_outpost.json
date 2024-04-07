@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "workspace_test:smolderinglands"
+    "workspace_test:smolderinglands",
+    "workspace_test:lost_lands"
   ]
 }

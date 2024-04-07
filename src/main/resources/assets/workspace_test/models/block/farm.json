@@ -1,0 +1,9 @@
+{
+  "parent": "workspace_test:custom/farm",
+  "textures": {
+    "all": "workspace_test:block/farm",
+    "particle": "workspace_test:block/farm",
+    "0": "workspace_test:block/farm"
+  },
+  "render_type": "solid"
+}

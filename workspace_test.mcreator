@@ -277,8 +277,8 @@
       "registry_name": "percentage_checker",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/PercentageCheckerItem.java",
-          "src/main/resources/assets/workspace_test/models/item/percentage_checker.json"
+          "src/main/resources/assets/workspace_test/models/item/percentage_checker.json",
+          "src/main/java/net/mcreator/workspacetest/item/PercentageCheckerItem.java"
         ]
       },
       "path": "~/Defence"
@@ -535,8 +535,8 @@
       "registry_name": "bot_menu",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/client/gui/BotMenuScreen.java",
-          "src/main/java/net/mcreator/workspacetest/world/inventory/BotMenuMenu.java"
+          "src/main/java/net/mcreator/workspacetest/world/inventory/BotMenuMenu.java",
+          "src/main/java/net/mcreator/workspacetest/client/gui/BotMenuScreen.java"
         ]
       },
       "path": "~/Defence"
@@ -3020,6 +3020,826 @@
         ]
       },
       "path": "~/martin mod"
+    },
+    {
+      "name": "Niterde",
+      "type": "block",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "niterde",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/niterde.json",
+          "src/main/java/net/mcreator/workspacetest/block/NiterdeBlock.java",
+          "src/main/resources/assets/workspace_test/blockstates/niterde.json",
+          "src/main/resources/assets/workspace_test/models/block/niterde.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Matches",
+      "type": "item",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "matches",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/MatchesItem.java",
+          "src/main/resources/assets/workspace_test/models/item/matches.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Crudeoilbarrel",
+      "type": "item",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crudeoilbarrel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/CrudeoilbarrelItem.java",
+          "src/main/resources/assets/workspace_test/models/item/crudeoilbarrel.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Battlefields",
+      "type": "structure",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battlefields",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/workspace_test/worldgen/structure/battlefields.json",
+          "src/main/resources/data/workspace_test/worldgen/structure_set/battlefields.json",
+          "src/main/resources/data/workspace_test/worldgen/template_pool/battlefields.json"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "AncientSpawnerUpdateTick",
+      "type": "procedure",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ancient_spawner_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/AncientSpawnerUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "ExtinguisherPlayerFinishesUsingItem",
+      "type": "procedure",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extinguisher_player_finishes_using_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/ExtinguisherPlayerFinishesUsingItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Oilproccers",
+      "type": "procedure",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oilproccers",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/OilproccersProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Smeltery",
+      "type": "block",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smeltery",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/smeltery.json",
+          "src/main/resources/assets/workspace_test/blockstates/smeltery.json",
+          "src/main/java/net/mcreator/workspacetest/block/entity/SmelteryBlockEntity.java",
+          "src/main/java/net/mcreator/workspacetest/block/SmelteryBlock.java",
+          "src/main/resources/assets/workspace_test/models/block/smeltery.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Electricity",
+      "type": "tab",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electricity",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Smelterygui",
+      "type": "gui",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smelterygui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/gui/SmelteryguiScreen.java",
+          "src/main/java/net/mcreator/workspacetest/world/inventory/SmelteryguiMenu.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Uranchunk",
+      "type": "item",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "uranchunk",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/uranchunk.json",
+          "src/main/java/net/mcreator/workspacetest/item/UranchunkItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Oilrig",
+      "type": "block",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oilrig",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/block/OilrigBlock.java",
+          "src/main/resources/assets/workspace_test/models/item/oilrig.json",
+          "src/main/resources/assets/workspace_test/models/block/oilrig.json",
+          "src/main/resources/assets/workspace_test/blockstates/oilrig.json",
+          "src/main/java/net/mcreator/workspacetest/block/entity/OilrigBlockEntity.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "CrudeoilUpdateTick",
+      "type": "procedure",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crudeoil_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/CrudeoilUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Smeltinp1",
+      "type": "procedure",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smeltinp_1",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/Smeltinp1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Crudeoilde",
+      "type": "block",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crudeoilde",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/crudeoilde.json",
+          "src/main/resources/assets/workspace_test/blockstates/crudeoilde.json",
+          "src/main/java/net/mcreator/workspacetest/block/CrudeoildeBlock.java",
+          "src/main/resources/assets/workspace_test/models/block/crudeoilde.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Pumprate",
+      "type": "procedure",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pumprate",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/PumprateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "MatchesOnPlayerStoppedUsing",
+      "type": "procedure",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "matches_on_player_stopped_using",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MatchesOnPlayerStoppedUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Extinguisher",
+      "type": "item",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extinguisher",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/extinguisher.json",
+          "src/main/java/net/mcreator/workspacetest/item/ExtinguisherItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Coalplant",
+      "type": "block",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coalplant",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/block/entity/CoalplantBlockEntity.java",
+          "src/main/resources/assets/workspace_test/models/item/coalplant.json",
+          "src/main/resources/assets/workspace_test/blockstates/coalplant.json",
+          "src/main/resources/assets/workspace_test/models/block/coalplant.json",
+          "src/main/java/net/mcreator/workspacetest/block/CoalplantBlock.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Buildings",
+      "type": "tag",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buildings",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/tags/items/buildings.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Derrickpowerusage",
+      "type": "procedure",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "derrickpowerusage",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/DerrickpowerusageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Randombuildingfire",
+      "type": "procedure",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "randombuildingfire",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/RandombuildingfireProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Pumpstart",
+      "type": "procedure",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pumpstart",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/PumpstartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Lithchunk",
+      "type": "item",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lithchunk",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/lithchunk.json",
+          "src/main/java/net/mcreator/workspacetest/item/LithchunkItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Crudeoil",
+      "type": "fluid",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crudeoil",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/block/crudeoil.json",
+          "src/main/java/net/mcreator/workspacetest/item/CrudeoilItem.java",
+          "src/main/java/net/mcreator/workspacetest/fluid/CrudeoilFluid.java",
+          "src/main/resources/assets/workspace_test/models/item/crudeoil_bucket.json",
+          "src/main/java/net/mcreator/workspacetest/fluid/types/CrudeoilFluidType.java",
+          "src/main/resources/assets/workspace_test/blockstates/crudeoil.json",
+          "src/main/java/net/mcreator/workspacetest/block/CrudeoilBlock.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "AncientSpawner",
+      "type": "block",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ancient_spawner",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/block/AncientSpawnerBlock.java",
+          "src/main/resources/assets/workspace_test/models/block/ancient_spawner.json",
+          "src/main/resources/assets/workspace_test/blockstates/ancient_spawner.json",
+          "src/main/java/net/mcreator/workspacetest/block/entity/AncientSpawnerBlockEntity.java",
+          "src/main/resources/assets/workspace_test/models/item/ancient_spawner.json"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "LostLands",
+      "type": "biome",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lost_lands",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/workspace_test/worldgen/placed_feature/lost_lands_tree.json",
+          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/LostLandsLeaveDecorator.java",
+          "src/main/resources/data/workspace_test/worldgen/biome/lost_lands.json",
+          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/LostLandsFruitDecorator.java",
+          "src/main/java/net/mcreator/workspacetest/world/features/treedecorators/LostLandsTrunkDecorator.java",
+          "src/main/resources/data/workspace_test/worldgen/configured_feature/lost_lands_tree.json"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "Urande",
+      "type": "block",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "urande",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/urande.json",
+          "src/main/resources/assets/workspace_test/blockstates/urande.json",
+          "src/main/java/net/mcreator/workspacetest/block/UrandeBlock.java",
+          "src/main/resources/assets/workspace_test/models/block/urande.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Riggui",
+      "type": "gui",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "riggui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/network/RigguiButtonMessage.java",
+          "src/main/java/net/mcreator/workspacetest/client/gui/RigguiScreen.java",
+          "src/main/java/net/mcreator/workspacetest/world/inventory/RigguiMenu.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Oilpro",
+      "type": "procedure",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oilpro",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/OilproProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Tungstende",
+      "type": "block",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tungstende",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/blockstates/tungstende.json",
+          "src/main/resources/assets/workspace_test/models/block/tungstende.json",
+          "src/main/java/net/mcreator/workspacetest/block/TungstendeBlock.java",
+          "src/main/resources/assets/workspace_test/models/item/tungstende.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Crudedrip",
+      "type": "particle",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crudedrip",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/particles/crudedrip.json",
+          "src/main/java/net/mcreator/workspacetest/client/particle/CrudedripParticle.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Farm",
+      "type": "block",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "farm",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/block/FarmBlock.java",
+          "src/main/java/net/mcreator/workspacetest/block/entity/FarmBlockEntity.java",
+          "src/main/resources/assets/workspace_test/models/block/farm.json",
+          "src/main/resources/assets/workspace_test/models/item/farm.json",
+          "src/main/resources/assets/workspace_test/blockstates/farm.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Thorchunk",
+      "type": "item",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thorchunk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/ThorchunkItem.java",
+          "src/main/resources/assets/workspace_test/models/item/thorchunk.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Forest",
+      "type": "block",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forest",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/blockstates/forest.json",
+          "src/main/resources/assets/workspace_test/models/item/forest.json",
+          "src/main/resources/assets/workspace_test/models/block/forest.json",
+          "src/main/java/net/mcreator/workspacetest/block/ForestBlock.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Niterchunk",
+      "type": "item",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "niterchunk",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/niterchunk.json",
+          "src/main/java/net/mcreator/workspacetest/item/NiterchunkItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Thorde",
+      "type": "block",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thorde",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/thorde.json",
+          "src/main/java/net/mcreator/workspacetest/block/ThordeBlock.java",
+          "src/main/resources/assets/workspace_test/models/block/thorde.json",
+          "src/main/resources/assets/workspace_test/blockstates/thorde.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Lithde",
+      "type": "block",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lithde",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/blockstates/lithde.json",
+          "src/main/resources/assets/workspace_test/models/block/lithde.json",
+          "src/main/resources/assets/workspace_test/models/item/lithde.json",
+          "src/main/java/net/mcreator/workspacetest/block/LithdeBlock.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Tungstenchunk",
+      "type": "item",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tungstenchunk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/TungstenchunkItem.java",
+          "src/main/resources/assets/workspace_test/models/item/tungstenchunk.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Battlefield",
+      "type": "feature",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battlefield",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/workspace_test/worldgen/configured_feature/battlefield.json",
+          "src/main/resources/data/workspace_test/forge/biome_modifier/battlefield_biome_modifier.json",
+          "src/main/resources/data/workspace_test/worldgen/placed_feature/battlefield.json"
+        ]
+      },
+      "path": "~/Defence"
     }
   ],
   "variable_elements": [],

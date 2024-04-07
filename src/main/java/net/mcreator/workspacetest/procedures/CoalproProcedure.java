@@ -44,6 +44,21 @@ public class CoalproProcedure {
 		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.TINDE.get()) {
 			return "tin";
 		}
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.TUNGSTENDE.get()) {
+			return "tungsten";
+		}
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.NITERDE.get()) {
+			return "niter";
+		}
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.URANDE.get()) {
+			return "uranium";
+		}
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.THORDE.get()) {
+			return "thorium";
+		}
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.LITHDE.get()) {
+			return "lithium";
+		}
 		return "";
 	}
 }

@@ -1,0 +1,9 @@
+{
+  "parent": "workspace_test:custom/forest",
+  "textures": {
+    "all": "workspace_test:block/foresttexture",
+    "particle": "workspace_test:block/foresttexture",
+    "0": "workspace_test:block/foresttexture"
+  },
+  "render_type": "solid"
+}

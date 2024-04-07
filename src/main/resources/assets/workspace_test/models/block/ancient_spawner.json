@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "workspace_test:block/spawn",
+    "up": "workspace_test:block/spawn",
+    "north": "workspace_test:block/spawn",
+    "east": "workspace_test:block/spawn",
+    "south": "workspace_test:block/spawn",
+    "west": "workspace_test:block/spawn",
+    "particle": "workspace_test:block/spawn"
+  },
+  "render_type": "cutout"
+}

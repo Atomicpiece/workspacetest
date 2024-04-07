@@ -35,7 +35,7 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onItemInUseTick": {
+    "onRightClickedOnBlock": {
       "name": "MultimeterPlayerFinishesUsingItem"
     },
     "onFinishUsingItem": {

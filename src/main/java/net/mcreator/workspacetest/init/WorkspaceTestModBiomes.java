@@ -55,6 +55,10 @@ public class WorkspaceTestModBiomes {
 							Climate.Parameter.span(-0.5f, 0.5f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, new ResourceLocation("workspace_test", "b")))));
 					parameters.add(new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.1f, 0.1f), Climate.Parameter.span(-0.1f, 0.1f), Climate.Parameter.span(0.1f, 0.5f), Climate.Parameter.span(-0.1f, 0.1f), Climate.Parameter.point(1.0f),
 							Climate.Parameter.span(-0.5f, 0.5f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, new ResourceLocation("workspace_test", "b")))));
+					parameters.add(new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.5f, 0.5f), Climate.Parameter.span(-0.25f, 0.25f), Climate.Parameter.span(0.3f, 1f), Climate.Parameter.span(0f, 0.25f), Climate.Parameter.point(0.0f),
+							Climate.Parameter.span(-1f, 0.5f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, new ResourceLocation("workspace_test", "lost_lands")))));
+					parameters.add(new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.5f, 0.5f), Climate.Parameter.span(-0.25f, 0.25f), Climate.Parameter.span(0.3f, 1f), Climate.Parameter.span(0f, 0.25f), Climate.Parameter.point(1.0f),
+							Climate.Parameter.span(-1f, 0.5f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, new ResourceLocation("workspace_test", "lost_lands")))));
 					chunkGenerator.biomeSource = MultiNoiseBiomeSource.createFromList(new Climate.ParameterList<>(parameters));
 					chunkGenerator.featuresPerStep = Suppliers
 							.memoize(() -> FeatureSorter.buildFeaturesPerStep(List.copyOf(chunkGenerator.biomeSource.possibleBiomes()), biome -> chunkGenerator.generationSettingsGetter.apply(biome).features(), true));
@@ -67,6 +71,8 @@ public class WorkspaceTestModBiomes {
 						List<SurfaceRules.RuleSource> surfaceRules = new ArrayList<>(sequenceRuleSource.sequence());
 						surfaceRules.add(1, preliminarySurfaceRule(ResourceKey.create(Registries.BIOME, new ResourceLocation("workspace_test", "b")), Blocks.STONE.defaultBlockState(), Blocks.POLISHED_ANDESITE.defaultBlockState(),
 								Blocks.SMOOTH_STONE.defaultBlockState()));
+						surfaceRules.add(1, preliminarySurfaceRule(ResourceKey.create(Registries.BIOME, new ResourceLocation("workspace_test", "lost_lands")), Blocks.COARSE_DIRT.defaultBlockState(), Blocks.STONE.defaultBlockState(),
+								Blocks.SUSPICIOUS_GRAVEL.defaultBlockState()));
 						NoiseGeneratorSettings moddedNoiseGeneratorSettings = new NoiseGeneratorSettings(noiseGeneratorSettings.noiseSettings(), noiseGeneratorSettings.defaultBlock(), noiseGeneratorSettings.defaultFluid(),
 								noiseGeneratorSettings.noiseRouter(), SurfaceRules.sequence(surfaceRules.toArray(SurfaceRules.RuleSource[]::new)), noiseGeneratorSettings.spawnTarget(), noiseGeneratorSettings.seaLevel(),
 								noiseGeneratorSettings.disableMobGeneration(), noiseGeneratorSettings.aquifersEnabled(), noiseGeneratorSettings.oreVeinsEnabled(), noiseGeneratorSettings.useLegacyRandomSource());
