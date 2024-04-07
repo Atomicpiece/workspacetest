@@ -700,8 +700,8 @@
       "registry_name": "firebolt",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/client/renderer/FireboltRenderer.java",
-          "src/main/java/net/mcreator/workspacetest/entity/FireboltEntity.java"
+          "src/main/java/net/mcreator/workspacetest/entity/FireboltEntity.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/FireboltRenderer.java"
         ]
       },
       "path": "~/Defence"
@@ -715,8 +715,8 @@
       "registry_name": "iron_sword",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/entity/IronSwordEntity.java",
-          "src/main/java/net/mcreator/workspacetest/client/renderer/IronSwordRenderer.java"
+          "src/main/java/net/mcreator/workspacetest/client/renderer/IronSwordRenderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/IronSwordEntity.java"
         ]
       },
       "path": "~/Defence"
@@ -766,8 +766,8 @@
       "registry_name": "ion_sword",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/ion_sword.json",
-          "src/main/java/net/mcreator/workspacetest/item/IonSwordItem.java"
+          "src/main/java/net/mcreator/workspacetest/item/IonSwordItem.java",
+          "src/main/resources/assets/workspace_test/models/item/ion_sword.json"
         ]
       },
       "path": "~/Defence"
@@ -1615,10 +1615,10 @@
       "registry_name": "defender",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/client/renderer/DefenderRenderer.java",
           "src/main/java/net/mcreator/workspacetest/entity/model/DefenderModel.java",
-          "src/main/java/net/mcreator/workspacetest/entity/DefenderEntity.java",
-          "src/main/resources/assets/workspace_test/models/item/defender_spawn_egg.json"
+          "src/main/java/net/mcreator/workspacetest/client/renderer/DefenderRenderer.java",
+          "src/main/resources/assets/workspace_test/models/item/defender_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/entity/DefenderEntity.java"
         ]
       },
       "path": "~/Defence"
@@ -2850,8 +2850,8 @@
       "registry_name": "sulfur",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/SulfurItem.java",
-          "src/main/resources/assets/workspace_test/models/item/sulfur.json"
+          "src/main/resources/assets/workspace_test/models/item/sulfur.json",
+          "src/main/java/net/mcreator/workspacetest/item/SulfurItem.java"
         ]
       },
       "path": "~/assembly machines"
@@ -3078,8 +3078,8 @@
       "registry_name": "tungstenchunk",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/TungstenchunkItem.java",
-          "src/main/resources/assets/workspace_test/models/item/tungstenchunk.json"
+          "src/main/resources/assets/workspace_test/models/item/tungstenchunk.json",
+          "src/main/java/net/mcreator/workspacetest/item/TungstenchunkItem.java"
         ]
       },
       "path": "~/assembly machines"
@@ -3965,8 +3965,8 @@
       "registry_name": "foams",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/particles/foams.json",
-          "src/main/java/net/mcreator/workspacetest/client/particle/FoamsParticle.java"
+          "src/main/java/net/mcreator/workspacetest/client/particle/FoamsParticle.java",
+          "src/main/resources/assets/workspace_test/particles/foams.json"
         ]
       },
       "path": "~/assembly machines"
@@ -4068,8 +4068,8 @@
       "registry_name": "foam",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/client/renderer/FoamRenderer.java",
-          "src/main/java/net/mcreator/workspacetest/entity/FoamEntity.java"
+          "src/main/java/net/mcreator/workspacetest/entity/FoamEntity.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/FoamRenderer.java"
         ]
       },
       "path": "~/assembly machines"
@@ -4147,8 +4147,8 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "block.workspace_test.coalplant": "Coalplant",
       "item.workspace_test.bombs": "Bombs",
+      "block.workspace_test.coalplant": "Coalplant",
       "block.workspace_test.diamondde": "Diamond deposit",
       "item.workspace_test.fireoff": "Fireoff",
       "item.workspace_test.leadchunk": "Lead chunk",
@@ -4158,8 +4158,8 @@
       "block.workspace_test.sulfurde": "Sulfur deposit",
       "gui.workspace_test.riggui.label_resource": "Resource:",
       "item.workspace_test.zincchunk": "Zinc chunk",
-      "gui.workspace_test.riggui.label_output": "Output:",
       "item.workspace_test.battleship_spawn_egg": "Battleship Spawn Egg",
+      "gui.workspace_test.riggui.label_output": "Output:",
       "entity.workspace_test.spiderbot": "Spiderbot",
       "item.workspace_test.firebelt": "Firebelt",
       "item_group.workspace_test.electricity": "Electricity",
@@ -4170,10 +4170,12 @@
       "entity.workspace_test.submarine": "Submarine",
       "item.workspace_test.submarine_spawn_egg": "Submarine Spawn Egg",
       "entity.workspace_test.rocket_launcher": "Rocket Launcher",
+      "biome.workspace_test.smolderinglands": "Volcanic lands",
       "item.workspace_test.tinchunk": "Tin chunk",
       "item.workspace_test.rocket_launcher_spawn_egg": "Rocket Launcher Spawn Egg",
-      "gui.workspace_test.smelterygui.label_smeltery": "Smeltery",
+      "biome.workspace_test.b": "Stone lands",
       "block.workspace_test.coalde": "Coal deposit",
+      "gui.workspace_test.smelterygui.label_smeltery": "Smeltery",
       "item.workspace_test.crudeoil_bucket": "Crude oil Bucket",
       "block.workspace_test.crudeoil": "Crude oil",
       "entity.workspace_test.great_chicken": "Great Chicken",

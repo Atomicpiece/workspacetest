@@ -1,17 +1,6 @@
 
 package net.mcreator.workspacetest.fluid.types;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fluids.FluidType;
-import net.minecraftforge.common.SoundActions;
-import net.minecraftforge.client.extensions.common.IClientFluidTypeExtensions;
-
-import net.minecraft.world.item.Rarity;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.resources.ResourceLocation;
-
-import java.util.function.Consumer;
-
 public class CrudeoilFluidType extends FluidType {
 	public CrudeoilFluidType() {
 		super(FluidType.Properties.create().fallDistanceModifier(0F).canExtinguish(true).supportsBoating(true).canHydrate(true).motionScale(0.035D).density(900).viscosity(200).temperature(313).rarity(Rarity.UNCOMMON)
