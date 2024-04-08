@@ -25,6 +25,18 @@ public class FoamProjectileHitsBlockProcedure {
 		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == Blocks.FIRE) {
 			world.destroyBlock(BlockPos.containing(x, y - 1, z), false);
 		}
+		if ((world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock() == Blocks.FIRE) {
+			world.destroyBlock(BlockPos.containing(x, y, z + 1), false);
+		}
+		if ((world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == Blocks.FIRE) {
+			world.destroyBlock(BlockPos.containing(x, y, z - 1), false);
+		}
+		if ((world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock() == Blocks.FIRE) {
+			world.destroyBlock(BlockPos.containing(x + 1, y, z), false);
+		}
+		if ((world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == Blocks.FIRE) {
+			world.destroyBlock(BlockPos.containing(x - 1, y, z), false);
+		}
 		if ((new Object() {
 			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
