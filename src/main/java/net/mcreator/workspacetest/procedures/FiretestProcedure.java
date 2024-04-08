@@ -1,8 +1,22 @@
 package net.mcreator.workspacetest.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.registries.ForgeRegistries;
 
-import javax.annotation.Nullable;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.workspacetest.init.WorkspaceTestModGameRules;
+import net.mcreator.workspacetest.init.WorkspaceTestModBlocks;
+import net.mcreator.workspacetest.WorkspaceTestMod;
 
 public class FiretestProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
@@ -450,7 +464,7 @@ public class FiretestProcedure {
 								_level.sendParticles(ParticleTypes.FLAME, (x + 0.5), (y + 0.6), (z + 0.5), 50, 0.7, 0.7, 0.7, 0.1);
 							if (world instanceof ServerLevel _level)
 								_level.sendParticles(ParticleTypes.LAVA, (x + 0.5), (y + 0.6), (z + 0.5), 10, 0.1, 0.1, 0.1, 0.01);
-							world.setBlock(BlockPos.containing(x, y, z), WorkspaceTestModItems.DELETED_MOD_ELEMENT.get().defaultBlockState(), 3);
+							world.setBlock(BlockPos.containing(x, y, z), WorkspaceTestModBlocks.FIRETESTER_0.get().defaultBlockState(), 3);
 						} else if (new Object() {
 							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 								BlockEntity blockEntity = world.getBlockEntity(pos);
