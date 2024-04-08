@@ -1,0 +1,25 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Items.COAL#0"
+    },
+    "showParticles": true,
+    "actionSound": {
+      "value": "block.smoker.smoke"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 0.0,
+    "knockback": 0,
+    "entityModel": "Modelmissile",
+    "customModelTexture": "missiled.png",
+    "onHitsBlock": {
+      "name": "Co2ProjectileHitsBlock"
+    },
+    "onFlyingTick": {
+      "name": "Co2WhileProjectileFlyingTick"
+    }
+  }
+}

@@ -21,6 +21,7 @@ import net.mcreator.workspacetest.item.TitanchunkItem;
 import net.mcreator.workspacetest.item.TinchunkItem;
 import net.mcreator.workspacetest.item.ThorchunkItem;
 import net.mcreator.workspacetest.item.SulfurItem;
+import net.mcreator.workspacetest.item.SmokerItem;
 import net.mcreator.workspacetest.item.RedstroneBlasterItem;
 import net.mcreator.workspacetest.item.PercentageCheckerItem;
 import net.mcreator.workspacetest.item.NiterchunkItem;
@@ -44,6 +45,7 @@ import net.mcreator.workspacetest.item.CrudeoilbarrelItem;
 import net.mcreator.workspacetest.item.CrudeoilItem;
 import net.mcreator.workspacetest.item.CopperchunkItem;
 import net.mcreator.workspacetest.item.CoalchunkItem;
+import net.mcreator.workspacetest.item.ChemicalextinguisherItem;
 import net.mcreator.workspacetest.item.BombsItem;
 import net.mcreator.workspacetest.item.BasookaItem;
 import net.mcreator.workspacetest.WorkspaceTestMod;
@@ -140,6 +142,8 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> FIREFIGHTER_SUIT_BOOTS = REGISTRY.register("firefighter_suit_boots", () -> new FirefighterSuitItem.Boots());
 	public static final RegistryObject<Item> FIRETESTER = block(WorkspaceTestModBlocks.FIRETESTER);
 	public static final RegistryObject<Item> FIRETESTER_0 = block(WorkspaceTestModBlocks.FIRETESTER_0);
+	public static final RegistryObject<Item> CHEMICALEXTINGUISHER = REGISTRY.register("chemicalextinguisher", () -> new ChemicalextinguisherItem());
+	public static final RegistryObject<Item> SMOKER = REGISTRY.register("smoker", () -> new SmokerItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

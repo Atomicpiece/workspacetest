@@ -3,14 +3,14 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "pipe",
+    "texture": "smoke",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Firehose",
-    "rarity": "EPIC",
+    "name": "Smoker",
+    "rarity": "RARE",
     "creativeTab": {
-      "value": "CUSTOM:Tools"
+      "value": "CUSTOM:Test"
     },
     "stackSize": 64,
     "enchantability": 0,
@@ -36,7 +36,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onItemInUseTick": {
-      "name": "Pipehand"
+      "name": "Smokeproc"
     },
     "enableRanged": false,
     "shootConstantly": false,

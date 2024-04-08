@@ -1,0 +1,22 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Items.BLAZE_POWDER"
+    },
+    "showParticles": true,
+    "actionSound": {
+      "value": "weather.rain.above"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 0.0,
+    "knockback": 0,
+    "entityModel": "Modelmissile",
+    "customModelTexture": "missiled.png",
+    "onFlyingTick": {
+      "name": "Chemtick"
+    }
+  }
+}
