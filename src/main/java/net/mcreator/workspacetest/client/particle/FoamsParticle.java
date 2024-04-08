@@ -4,6 +4,7 @@ package net.mcreator.workspacetest.client.particle;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.level.Level;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.client.particle.TextureSheetParticle;
 import net.minecraft.client.particle.SpriteSet;
@@ -11,6 +12,8 @@ import net.minecraft.client.particle.ParticleRenderType;
 import net.minecraft.client.particle.ParticleProvider;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.multiplayer.ClientLevel;
+
+import net.mcreator.workspacetest.procedures.FoamsAdditionalParticleExpiryConditionProcedure;
 
 @OnlyIn(Dist.CLIENT)
 public class FoamsParticle extends TextureSheetParticle {
@@ -53,5 +56,8 @@ public class FoamsParticle extends TextureSheetParticle {
 	@Override
 	public void tick() {
 		super.tick();
+		Level world = this.level;
+		if (FoamsAdditionalParticleExpiryConditionProcedure.execute(world, x, y, z))
+			this.remove();
 	}
 }

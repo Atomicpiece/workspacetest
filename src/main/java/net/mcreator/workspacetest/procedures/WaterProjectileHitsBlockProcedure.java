@@ -25,6 +25,9 @@ public class WaterProjectileHitsBlockProcedure {
 		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.FIRE) {
 			world.destroyBlock(BlockPos.containing(x, y, z), false);
 		}
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == Blocks.FIRE) {
+			world.destroyBlock(BlockPos.containing(x, y - 1, z), false);
+		}
 		if ((new Object() {
 			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);

@@ -16,6 +16,9 @@
     "angularAcceleration": 0.0,
     "canCollide": true,
     "alwaysShow": true,
-    "renderType": "TRANSLUCENT"
+    "renderType": "TRANSLUCENT",
+    "additionalExpiryCondition": {
+      "name": "FoamsAdditionalParticleExpiryCondition"
+    }
   }
 }
