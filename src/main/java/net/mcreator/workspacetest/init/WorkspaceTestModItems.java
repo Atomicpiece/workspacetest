@@ -35,6 +35,7 @@ import net.mcreator.workspacetest.item.HealtIndicatorItem;
 import net.mcreator.workspacetest.item.GoldchunkItem;
 import net.mcreator.workspacetest.item.FireoffItem;
 import net.mcreator.workspacetest.item.FirehoseItem;
+import net.mcreator.workspacetest.item.FirefighterSuitItem;
 import net.mcreator.workspacetest.item.FirebeltItem;
 import net.mcreator.workspacetest.item.FireCircleCreatorItem;
 import net.mcreator.workspacetest.item.ExtinguisherItem;
@@ -133,6 +134,10 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> EXTINGUISHER = REGISTRY.register("extinguisher", () -> new ExtinguisherItem());
 	public static final RegistryObject<Item> FIREOFF = REGISTRY.register("fireoff", () -> new FireoffItem());
 	public static final RegistryObject<Item> FIREHOSE = REGISTRY.register("firehose", () -> new FirehoseItem());
+	public static final RegistryObject<Item> FIREFIGHTER_SUIT_HELMET = REGISTRY.register("firefighter_suit_helmet", () -> new FirefighterSuitItem.Helmet());
+	public static final RegistryObject<Item> FIREFIGHTER_SUIT_CHESTPLATE = REGISTRY.register("firefighter_suit_chestplate", () -> new FirefighterSuitItem.Chestplate());
+	public static final RegistryObject<Item> FIREFIGHTER_SUIT_LEGGINGS = REGISTRY.register("firefighter_suit_leggings", () -> new FirefighterSuitItem.Leggings());
+	public static final RegistryObject<Item> FIREFIGHTER_SUIT_BOOTS = REGISTRY.register("firefighter_suit_boots", () -> new FirefighterSuitItem.Boots());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

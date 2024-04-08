@@ -4141,6 +4141,24 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "FirefighterSuit",
+      "type": "armor",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firefighter_suit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/FirefighterSuitItem.java",
+          "src/main/resources/assets/workspace_test/models/item/firefighter_suit_helmet.json",
+          "src/main/resources/assets/workspace_test/models/item/firefighter_suit_chestplate.json",
+          "src/main/resources/assets/workspace_test/models/item/firefighter_suit_leggings.json",
+          "src/main/resources/assets/workspace_test/models/item/firefighter_suit_boots.json"
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [],
@@ -4167,8 +4185,10 @@
       "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
       "item.workspace_test.fire_circle_creator": "Fire Circle Creator",
       "item.workspace_test.great_chicken_spawn_egg": "Great Chicken Spawn Egg",
+      "item.workspace_test.firefighter_suit_leggings": "Firefighter Leggings",
       "entity.workspace_test.submarine": "Submarine",
       "item.workspace_test.submarine_spawn_egg": "Submarine Spawn Egg",
+      "item.workspace_test.firefighter_suit_boots": "Firefighter Boots",
       "entity.workspace_test.rocket_launcher": "Rocket Launcher",
       "biome.workspace_test.smolderinglands": "Volcanic lands",
       "item.workspace_test.tinchunk": "Tin chunk",
@@ -4211,6 +4231,7 @@
       "biome.workspace_test.lost_lands": "Lost Lands",
       "gui.workspace_test.minegui.button_start": "Start mining",
       "block.workspace_test.tungstende": "Tungsten deposit",
+      "item.workspace_test.firefighter_suit_chestplate": "Firefighter Chestplate",
       "item.workspace_test.multimeter": "Tablet",
       "item.workspace_test.redstrone_blaster": "Redstrone Blaster",
       "entity.workspace_test.mossy_golem": "Mossy Golem",
@@ -4242,6 +4263,7 @@
       "item.workspace_test.uranchunk": "Uranium chunk",
       "gui.workspace_test.riggui.label_mine": "Oil derrick:",
       "block.workspace_test.landmine": "Landmine",
+      "item.workspace_test.firefighter_suit_helmet": "FirefighterHelmet",
       "gui.workspace_test.smelterygui.label_speed": "Speed:",
       "entity.workspace_test.skeleter": "Skeleter",
       "entity.workspace_test.turret": "Turret",
