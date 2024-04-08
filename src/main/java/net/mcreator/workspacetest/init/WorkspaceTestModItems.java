@@ -134,6 +134,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> FIREOFF = REGISTRY.register("fireoff", () -> new FireoffItem());
 	public static final RegistryObject<Item> FIREHOSE = REGISTRY.register("firehose", () -> new FirehoseItem());
 	public static final RegistryObject<Item> FIRETESTER = block(WorkspaceTestModBlocks.FIRETESTER);
+	public static final RegistryObject<Item> FIRETESTER_0 = block(WorkspaceTestModBlocks.FIRETESTER_0);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

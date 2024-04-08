@@ -1,0 +1,9 @@
+{
+  "parent": "workspace_test:custom/firetester0",
+  "textures": {
+    "all": "workspace_test:block/firetester0",
+    "particle": "workspace_test:block/firetester0",
+    "0": "workspace_test:block/firetester0"
+  },
+  "render_type": "solid"
+}

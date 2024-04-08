@@ -124,6 +124,7 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.FIREOFF.get());
 				tabData.accept(WorkspaceTestModItems.FIREHOSE.get());
 				tabData.accept(WorkspaceTestModBlocks.FIRETESTER.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.FIRETESTER_0.get().asItem());
 			})
 
 					.build());
