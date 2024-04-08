@@ -123,6 +123,7 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.EXTINGUISHER.get());
 				tabData.accept(WorkspaceTestModItems.FIREOFF.get());
 				tabData.accept(WorkspaceTestModItems.FIREHOSE.get());
+				tabData.accept(WorkspaceTestModBlocks.FIRETESTER.get().asItem());
 			})
 
 					.build());

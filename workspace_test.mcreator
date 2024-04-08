@@ -4141,6 +4141,69 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "Firetest",
+      "type": "procedure",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firetest",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/FiretestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Firetester",
+      "type": "block",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firetester",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/block/FiretesterBlock.java",
+          "src/main/resources/assets/workspace_test/models/item/firetester.json",
+          "src/main/java/net/mcreator/workspacetest/block/entity/FiretesterBlockEntity.java",
+          "src/main/resources/assets/workspace_test/models/block/firetester.json",
+          "src/main/resources/assets/workspace_test/blockstates/firetester.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Firetestspeed",
+      "type": "gamerule",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firetestspeed",
+      "metadata": {
+        "files": [],
+        "type": "number"
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [],
@@ -4170,6 +4233,7 @@
       "entity.workspace_test.submarine": "Submarine",
       "item.workspace_test.submarine_spawn_egg": "Submarine Spawn Egg",
       "entity.workspace_test.rocket_launcher": "Rocket Launcher",
+      "block.workspace_test.firetester": "Fire test building",
       "item.workspace_test.tinchunk": "Tin chunk",
       "item.workspace_test.rocket_launcher_spawn_egg": "Rocket Launcher Spawn Egg",
       "gui.workspace_test.smelterygui.label_smeltery": "Smeltery",
@@ -4207,6 +4271,7 @@
       "item.workspace_test.lithchunk": "Lithium chunk",
       "gui.workspace_test.riggui.button_start": "Start mining",
       "biome.workspace_test.lost_lands": "Lost Lands",
+      "gamerule.firetestspeed": "firetestspeed",
       "gui.workspace_test.minegui.button_start": "Start mining",
       "block.workspace_test.tungstende": "Tungsten deposit",
       "item.workspace_test.multimeter": "Tablet",
@@ -4225,6 +4290,7 @@
       "item_group.workspace_test.tools": "Tools",
       "item.workspace_test.coalchunk": "Coal chunk",
       "gui.workspace_test.minegui.button_save": "SAVE",
+      "gamerule.firetestspeed.description": "Sets speed of spreading fire",
       "item.workspace_test.thorchunk": "Thorium chunk",
       "item.workspace_test.ion_sword": "Ion Sword",
       "gui.workspace_test.minegui.label_resource": "Resource:",
