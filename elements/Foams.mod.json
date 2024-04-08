@@ -2,7 +2,7 @@
   "_fv": 57,
   "_type": "particle",
   "definition": {
-    "texture": "ext.png",
+    "texture": "foams.png",
     "animate": false,
     "frameDuration": 1,
     "width": 0.2,

@@ -46,7 +46,7 @@ public class FireoffItemInHandTickProcedure {
 						}
 					}.getArrow(projectileLevel, entity, 0, 0);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 0.75, 30);
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 0.75, 20);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}

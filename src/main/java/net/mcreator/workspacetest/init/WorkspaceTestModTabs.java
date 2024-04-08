@@ -123,6 +123,10 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.EXTINGUISHER.get());
 				tabData.accept(WorkspaceTestModItems.FIREOFF.get());
 				tabData.accept(WorkspaceTestModItems.FIREHOSE.get());
+				tabData.accept(WorkspaceTestModItems.FIREFIGHTER_SUIT_HELMET.get());
+				tabData.accept(WorkspaceTestModItems.FIREFIGHTER_SUIT_CHESTPLATE.get());
+				tabData.accept(WorkspaceTestModItems.FIREFIGHTER_SUIT_LEGGINGS.get());
+				tabData.accept(WorkspaceTestModItems.FIREFIGHTER_SUIT_BOOTS.get());
 				tabData.accept(WorkspaceTestModBlocks.FIRETESTER.get().asItem());
 				tabData.accept(WorkspaceTestModBlocks.FIRETESTER_0.get().asItem());
 			})

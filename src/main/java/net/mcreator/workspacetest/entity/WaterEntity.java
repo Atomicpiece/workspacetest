@@ -72,7 +72,7 @@ public class WaterEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		WaterProjectileHitsLivingEntityProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), entityHitResult.getEntity());
+		WaterProjectileHitsLivingEntityProcedure.execute(entityHitResult.getEntity());
 	}
 
 	@Override
