@@ -1,6 +1,6 @@
 {
-  "block.workspace_test.coalplant": "Coalplant",
   "item.workspace_test.bombs": "Bombs",
+  "block.workspace_test.coalplant": "Coalplant",
   "block.workspace_test.diamondde": "Diamond deposit",
   "item.workspace_test.fireoff": "Fireoff",
   "item.workspace_test.leadchunk": "Lead chunk",
@@ -111,6 +111,7 @@
   "item.workspace_test.sulfur": "Sulfur crystal",
   "item.workspace_test.healt_indicator": "Healt Indicator",
   "block.workspace_test.thorde": "Thorium deposit",
+  "block.workspace_test.firetester_0": "Empty firetester",
   "fluid.workspace_test.crudeoil": "Crude oil",
   "item.workspace_test.diamonds": "Diamonds",
   "block.workspace_test.farm": "Farm",
