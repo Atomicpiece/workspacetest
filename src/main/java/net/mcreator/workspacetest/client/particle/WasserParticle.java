@@ -1,0 +1,47 @@
+
+package net.mcreator.workspacetest.client.particle;
+
+@OnlyIn(Dist.CLIENT)
+public class WasserParticle extends TextureSheetParticle {
+	public static WasserParticleProvider provider(SpriteSet spriteSet) {
+		return new WasserParticleProvider(spriteSet);
+	}
+
+	public static class WasserParticleProvider implements ParticleProvider<SimpleParticleType> {
+		private final SpriteSet spriteSet;
+
+		public WasserParticleProvider(SpriteSet spriteSet) {
+			this.spriteSet = spriteSet;
+		}
+
+		public Particle createParticle(SimpleParticleType typeIn, ClientLevel worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
+			return new WasserParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
+		}
+	}
+
+	private final SpriteSet spriteSet;
+
+	protected WasserParticle(ClientLevel world, double x, double y, double z, double vx, double vy, double vz, SpriteSet spriteSet) {
+		super(world, x, y, z);
+		this.spriteSet = spriteSet;
+		this.setSize(0.2f, 0.2f);
+		this.quadSize *= 0.75f;
+		this.lifetime = 5;
+		this.gravity = 0.75f;
+		this.hasPhysics = true;
+		this.xd = vx * 1;
+		this.yd = vy * 1;
+		this.zd = vz * 1;
+		this.pickSprite(spriteSet);
+	}
+
+	@Override
+	public ParticleRenderType getRenderType() {
+		return ParticleRenderType.PARTICLE_SHEET_TRANSLUCENT;
+	}
+
+	@Override
+	public void tick() {
+		super.tick();
+	}
+}

@@ -26,6 +26,11 @@ public class FirehoseItem extends Item {
 	}
 
 	@Override
+	public int getUseDuration(ItemStack itemstack) {
+		return 50000;
+	}
+
+	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
 	}

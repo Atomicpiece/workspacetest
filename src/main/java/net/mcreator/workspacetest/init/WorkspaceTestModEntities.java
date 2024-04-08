@@ -47,8 +47,10 @@ import net.mcreator.workspacetest.entity.DestroyerEntity;
 import net.mcreator.workspacetest.entity.DefenderEntity;
 import net.mcreator.workspacetest.entity.DPSOrbEntity;
 import net.mcreator.workspacetest.entity.CreeperbotEntity;
+import net.mcreator.workspacetest.entity.Co2Entity;
 import net.mcreator.workspacetest.entity.BombEntity;
 import net.mcreator.workspacetest.entity.BattleshipEntity;
+import net.mcreator.workspacetest.entity.AntichemEntity;
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -160,6 +162,10 @@ public class WorkspaceTestModEntities {
 			EntityType.Builder.<WaterEntity>of(WaterEntity::new, MobCategory.MISC).setCustomClientFactory(WaterEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<FoamEntity>> FOAM = register("projectile_foam",
 			EntityType.Builder.<FoamEntity>of(FoamEntity::new, MobCategory.MISC).setCustomClientFactory(FoamEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<AntichemEntity>> ANTICHEM = register("projectile_antichem",
+			EntityType.Builder.<AntichemEntity>of(AntichemEntity::new, MobCategory.MISC).setCustomClientFactory(AntichemEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<Co2Entity>> CO_2 = register("projectile_co_2",
+			EntityType.Builder.<Co2Entity>of(Co2Entity::new, MobCategory.MISC).setCustomClientFactory(Co2Entity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

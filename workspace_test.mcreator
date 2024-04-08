@@ -4342,6 +4342,279 @@
       "path": "~/assembly machines"
     },
     {
+      "name": "Chemicalextinguisher",
+      "type": "item",
+      "sortid": 158,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chemicalextinguisher",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/chemicalextinguisher.json",
+          "src/main/java/net/mcreator/workspacetest/item/ChemicalextinguisherItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Wasser",
+      "type": "particle",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wasser",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/particles/wasser.json",
+          "src/main/java/net/mcreator/workspacetest/client/particle/WasserParticle.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Smoker",
+      "type": "item",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoker",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/SmokerItem.java",
+          "src/main/resources/assets/workspace_test/models/item/smoker.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Co2WhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "co_2_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/Co2WhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Co2",
+      "type": "projectile",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "co_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/Co2Entity.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/Co2Renderer.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Co2ProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "co_2_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/Co2ProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Smoke",
+      "type": "particle",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/particle/SmokeParticle.java",
+          "src/main/resources/assets/workspace_test/particles/smoke.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Smokeproc",
+      "type": "procedure",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smokeproc",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/SmokeprocProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Chemicalproc",
+      "type": "procedure",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chemicalproc",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/ChemicalprocProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Chemtick",
+      "type": "procedure",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chemtick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/ChemtickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Antichem",
+      "type": "projectile",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "antichem",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/AntichemEntity.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/AntichemRenderer.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Metafire",
+      "type": "particle",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metafire",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/particle/MetafireParticle.java",
+          "src/main/resources/assets/workspace_test/particles/metafire.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
       "name": "Creafire",
       "type": "particle",
       "sortid": 157,
@@ -4357,36 +4630,6 @@
       "path": "~/assembly machines"
     },
     {
-      "name": "Radfire",
-      "type": "particle",
-      "sortid": 159,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "radfire",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/workspace_test/particles/radfire.json",
-          "src/main/java/net/mcreator/workspacetest/client/particle/RadfireParticle.java"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
-      "name": "Metafire",
-      "type": "particle",
-      "sortid": 160,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "metafire",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/workspace_test/particles/metafire.json",
-          "src/main/java/net/mcreator/workspacetest/client/particle/MetafireParticle.java"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
       "name": "Gasfire",
       "type": "particle",
       "sortid": 161,
@@ -4395,8 +4638,23 @@
       "registry_name": "gasfire",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/client/particle/GasfireParticle.java",
-          "src/main/resources/assets/workspace_test/particles/gasfire.json"
+          "src/main/resources/assets/workspace_test/particles/gasfire.json",
+          "src/main/java/net/mcreator/workspacetest/client/particle/GasfireParticle.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Radfire",
+      "type": "particle",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "radfire",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/particle/RadfireParticle.java",
+          "src/main/resources/assets/workspace_test/particles/radfire.json"
         ]
       },
       "path": "~/assembly machines"
