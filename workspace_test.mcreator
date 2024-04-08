@@ -4340,6 +4340,66 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "Creafire",
+      "type": "particle",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "creafire",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/particles/creafire.json",
+          "src/main/java/net/mcreator/workspacetest/client/particle/CreafireParticle.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Radfire",
+      "type": "particle",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "radfire",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/particles/radfire.json",
+          "src/main/java/net/mcreator/workspacetest/client/particle/RadfireParticle.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Metafire",
+      "type": "particle",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metafire",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/particles/metafire.json",
+          "src/main/java/net/mcreator/workspacetest/client/particle/MetafireParticle.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Gasfire",
+      "type": "particle",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gasfire",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/particle/GasfireParticle.java",
+          "src/main/resources/assets/workspace_test/particles/gasfire.json"
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [],
