@@ -14,11 +14,13 @@ public class Firetester0OnBlockRightClickedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (Items.COAL == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
+		if (Items.COAL == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() && (entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) == false) {
 			if (entity instanceof Player _player) {
 				ItemStack _stktoremove = new ItemStack(Items.COAL);
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
+			world.setBlock(BlockPos.containing(x, y, z), WorkspaceTestModBlocks.FIRETESTER.get().defaultBlockState(), 3);
+		} else if (Items.COAL == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
 			world.setBlock(BlockPos.containing(x, y, z), WorkspaceTestModBlocks.FIRETESTER.get().defaultBlockState(), 3);
 		}
 	}
