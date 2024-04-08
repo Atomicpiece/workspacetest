@@ -1,8 +1,22 @@
 package net.mcreator.workspacetest.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.registries.ForgeRegistries;
 
-import javax.annotation.Nullable;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.workspacetest.init.WorkspaceTestModGameRules;
+import net.mcreator.workspacetest.WorkspaceTestMod;
 
 public class FiretestProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
@@ -63,7 +77,7 @@ public class FiretestProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			WorkspaceTestMod.queueServerWork((world.getLevelData().getGameRules().getInt(WorkspaceTestModGameRules.DELETED_MOD_ELEMENT)), () -> {
+			WorkspaceTestMod.queueServerWork((world.getLevelData().getGameRules().getInt(WorkspaceTestModGameRules.FIRETESTSPEED)), () -> {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
