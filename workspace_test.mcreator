@@ -4340,14 +4340,74 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "Creafire",
+      "type": "particle",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "creafire",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/particles/creafire.json",
+          "src/main/java/net/mcreator/workspacetest/client/particle/CreafireParticle.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Radfire",
+      "type": "particle",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "radfire",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/particles/radfire.json",
+          "src/main/java/net/mcreator/workspacetest/client/particle/RadfireParticle.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Metafire",
+      "type": "particle",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metafire",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/particles/metafire.json",
+          "src/main/java/net/mcreator/workspacetest/client/particle/MetafireParticle.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Gasfire",
+      "type": "particle",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gasfire",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/particle/GasfireParticle.java",
+          "src/main/resources/assets/workspace_test/particles/gasfire.json"
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "block.workspace_test.coalplant": "Coalplant",
       "item.workspace_test.bombs": "Bombs",
+      "block.workspace_test.coalplant": "Coalplant",
       "block.workspace_test.diamondde": "Diamond deposit",
       "item.workspace_test.fireoff": "Fireoff",
       "item.workspace_test.leadchunk": "Lead chunk",
@@ -4360,9 +4420,9 @@
       "item.workspace_test.battleship_spawn_egg": "Battleship Spawn Egg",
       "gui.workspace_test.riggui.label_output": "Output:",
       "entity.workspace_test.spiderbot": "Spiderbot",
-      "gui.workspace_test.riggui.button_save": "SAVE",
-      "item_group.workspace_test.electricity": "Electricity",
       "item.workspace_test.firebelt": "Firebelt",
+      "item_group.workspace_test.electricity": "Electricity",
+      "gui.workspace_test.riggui.button_save": "SAVE",
       "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
       "item.workspace_test.fire_circle_creator": "Fire Circle Creator",
       "item.workspace_test.great_chicken_spawn_egg": "Great Chicken Spawn Egg",
