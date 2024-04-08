@@ -139,6 +139,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> FIREFIGHTER_SUIT_LEGGINGS = REGISTRY.register("firefighter_suit_leggings", () -> new FirefighterSuitItem.Leggings());
 	public static final RegistryObject<Item> FIREFIGHTER_SUIT_BOOTS = REGISTRY.register("firefighter_suit_boots", () -> new FirefighterSuitItem.Boots());
 	public static final RegistryObject<Item> FIRETESTER = block(WorkspaceTestModBlocks.FIRETESTER);
+	public static final RegistryObject<Item> FIRETESTER_0 = block(WorkspaceTestModBlocks.FIRETESTER_0);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

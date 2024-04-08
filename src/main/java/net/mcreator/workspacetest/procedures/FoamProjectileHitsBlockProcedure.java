@@ -10,6 +10,7 @@ import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.workspacetest.init.WorkspaceTestModParticleTypes;
+import net.mcreator.workspacetest.init.WorkspaceTestModBlocks;
 
 public class FoamProjectileHitsBlockProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
@@ -22,6 +23,24 @@ public class FoamProjectileHitsBlockProcedure {
 			world.destroyBlock(BlockPos.containing(x, y + 1, z), false);
 		}
 		if ((new Object() {
+			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+				BlockEntity blockEntity = world.getBlockEntity(pos);
+				if (blockEntity != null)
+					return blockEntity.getPersistentData().getBoolean(tag);
+				return false;
+			}
+		}.getValue(world, BlockPos.containing(x, y, z), "hasfire")) == true && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == WorkspaceTestModBlocks.FIRETESTER.get()) {
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putBoolean("hasfire", false);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			FiretestProcedure.execute(world, x, y, z);
+		} else if ((new Object() {
 			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
 				if (blockEntity != null)

@@ -7,6 +7,6 @@
     "description": "Sets speed of spreading fire",
     "category": "UPDATES",
     "defaultValueLogic": false,
-    "defaultValueNumber": 0
+    "defaultValueNumber": 1
   }
 }

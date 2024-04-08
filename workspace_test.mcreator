@@ -4287,6 +4287,59 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "Firetester0",
+      "type": "block",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firetester_0",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/firetester_0.json",
+          "src/main/resources/assets/workspace_test/models/block/firetester_0.json",
+          "src/main/java/net/mcreator/workspacetest/block/Firetester0Block.java",
+          "src/main/resources/assets/workspace_test/blockstates/firetester_0.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Firetester0OnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firetester_0_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/Firetester0OnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [],

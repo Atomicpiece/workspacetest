@@ -10,5 +10,5 @@ import net.minecraft.world.level.GameRules;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class WorkspaceTestModGameRules {
-	public static final GameRules.Key<GameRules.IntegerValue> FIRETESTSPEED = GameRules.register("firetestspeed", GameRules.Category.UPDATES, GameRules.IntegerValue.create(0));
+	public static final GameRules.Key<GameRules.IntegerValue> FIRETESTSPEED = GameRules.register("firetestspeed", GameRules.Category.UPDATES, GameRules.IntegerValue.create(1));
 }

@@ -1,22 +1,8 @@
 package net.mcreator.workspacetest.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.util.RandomSource;
-import net.minecraft.util.Mth;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.workspacetest.init.WorkspaceTestModGameRules;
-import net.mcreator.workspacetest.WorkspaceTestMod;
+import javax.annotation.Nullable;
 
 public class FiretestProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
@@ -56,9 +42,9 @@ public class FiretestProcedure {
 			}
 		}.getValue(world, BlockPos.containing(x, y, z), "hasfire")) == true) {
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.FLAME, (x + 0.5), (y + 0.4), (z + 0.5), 2, 0.1, 0.2, 0.1, 0.01);
+				_level.sendParticles(ParticleTypes.FLAME, (x + 0.5), (y + 0.6), (z + 0.5), 2, 0.1, 0.1, 0.1, 0.01);
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.LARGE_SMOKE, (x + 0.5), (y + 0.4), (z + 0.5), 1, 0.1, 0.2, 0.1, 0.01);
+				_level.sendParticles(ParticleTypes.LARGE_SMOKE, (x + 0.5), (y + 0.6), (z + 0.5), 1, 0.1, 0.1, 0.1, 0.01);
 		}
 		if ((new Object() {
 			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
@@ -416,7 +402,7 @@ public class FiretestProcedure {
 							}
 						}.getValue(world, BlockPos.containing(x, y, z), "chancesfire") >= 100000) {
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles(ParticleTypes.EXPLOSION, (x + 0.5), (y + 0.5), (z + 0.5), 5, 0.1, 0.1, 0.1, 0.1);
+								_level.sendParticles(ParticleTypes.SMALL_FLAME, (x + 0.5), (y + 0.6), (z + 0.5), 50, 0.7, 0.1, 0.7, 0.1);
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
 									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.MASTER, 1, (float) 0.5);
@@ -461,10 +447,10 @@ public class FiretestProcedure {
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles(ParticleTypes.FLAME, (x + 0.5), (y + 0.5), (z + 0.5), 100, 0.7, 0.7, 0.7, 0.1);
+								_level.sendParticles(ParticleTypes.FLAME, (x + 0.5), (y + 0.6), (z + 0.5), 50, 0.7, 0.7, 0.7, 0.1);
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles(ParticleTypes.LAVA, (x + 0.5), (y + 0.5), (z + 0.5), 10, 0.1, 0.1, 0.1, 0.01);
-							world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
+								_level.sendParticles(ParticleTypes.LAVA, (x + 0.5), (y + 0.6), (z + 0.5), 10, 0.1, 0.1, 0.1, 0.01);
+							world.setBlock(BlockPos.containing(x, y, z), WorkspaceTestModItems.DELETED_MOD_ELEMENT.get().defaultBlockState(), 3);
 						} else if (new Object() {
 							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 								BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -494,7 +480,7 @@ public class FiretestProcedure {
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
 							WorkspaceTestMod.queueServerWork(5, () -> {
-								RandombuildingfireProcedure.execute(world, x, y, z);
+								FiretestProcedure.execute(world, x, y, z);
 							});
 						});
 					});

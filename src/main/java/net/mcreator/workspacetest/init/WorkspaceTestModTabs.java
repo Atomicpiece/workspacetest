@@ -128,6 +128,7 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.FIREFIGHTER_SUIT_LEGGINGS.get());
 				tabData.accept(WorkspaceTestModItems.FIREFIGHTER_SUIT_BOOTS.get());
 				tabData.accept(WorkspaceTestModBlocks.FIRETESTER.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.FIRETESTER_0.get().asItem());
 			})
 
 					.build());
