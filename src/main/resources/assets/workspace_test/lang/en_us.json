@@ -1,6 +1,6 @@
 {
-  "block.workspace_test.coalplant": "Coalplant",
   "item.workspace_test.bombs": "Bombs",
+  "block.workspace_test.coalplant": "Coalplant",
   "block.workspace_test.diamondde": "Diamond deposit",
   "item.workspace_test.fireoff": "Fireoff",
   "item.workspace_test.leadchunk": "Lead chunk",
