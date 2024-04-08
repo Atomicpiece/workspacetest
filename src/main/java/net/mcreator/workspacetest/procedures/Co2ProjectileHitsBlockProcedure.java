@@ -1,14 +1,12 @@
 package net.mcreator.workspacetest.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.workspacetest.init.WorkspaceTestModParticleTypes;
+import javax.annotation.Nullable;
 
 public class Co2ProjectileHitsBlockProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles((SimpleParticleType) (WorkspaceTestModParticleTypes.SMOKE.get()), x, y, z, 10, 0.5, 0.5, 0.5, 0.1);
+			_level.sendParticles((SimpleParticleType) (WorkspaceTestModParticleTypes.DELETED_MOD_ELEMENT.get()), x, y, z, 10, 0.5, 0.5, 0.5, 0.1);
 	}
 }

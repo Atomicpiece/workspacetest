@@ -1,19 +1,8 @@
 
 package net.mcreator.workspacetest.item;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.UseAnim;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.Component;
-
-import net.mcreator.workspacetest.procedures.SmokeprocProcedure;
-
-import java.util.List;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import javax.annotation.Nullable;
 
 public class SmokerItem extends Item {
 	public SmokerItem() {
@@ -39,6 +28,6 @@ public class SmokerItem extends Item {
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
 		if (selected)
-			SmokeprocProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
+			SmokeprocProcedure.execute();
 	}
 }

@@ -1,21 +1,8 @@
 package net.mcreator.workspacetest.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.workspacetest.init.WorkspaceTestModItems;
-import net.mcreator.workspacetest.init.WorkspaceTestModEntities;
-import net.mcreator.workspacetest.entity.AntichemEntity;
+import javax.annotation.Nullable;
 
 public class ChemicalprocProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -35,7 +22,7 @@ public class ChemicalprocProcedure {
 				if (!projectileLevel.isClientSide()) {
 					Projectile _entityToSpawn = new Object() {
 						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-							AbstractArrow entityToSpawn = new AntichemEntity(WorkspaceTestModEntities.ANTICHEM.get(), level);
+							AbstractArrow entityToSpawn = new AntichemEntity(WorkspaceTestModEntities.DELETED_MOD_ELEMENT.get(), level);
 							entityToSpawn.setOwner(shooter);
 							entityToSpawn.setBaseDamage(damage);
 							entityToSpawn.setKnockback(knockback);

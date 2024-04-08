@@ -11,9 +11,11 @@ import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.workspacetest.init.WorkspaceTestModParticleTypes;
 import net.mcreator.workspacetest.init.WorkspaceTestModGameRules;
 import net.mcreator.workspacetest.init.WorkspaceTestModBlocks;
 import net.mcreator.workspacetest.WorkspaceTestMod;
@@ -55,10 +57,84 @@ public class FiretestProcedure {
 				return false;
 			}
 		}.getValue(world, BlockPos.containing(x, y, z), "hasfire")) == true) {
-			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.FLAME, (x + 0.5), (y + 0.6), (z + 0.5), 2, 0.1, 0.1, 0.1, 0.01);
-			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.LARGE_SMOKE, (x + 0.5), (y + 0.6), (z + 0.5), 1, 0.1, 0.1, 0.1, 0.01);
+			if ((world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock() == WorkspaceTestModBlocks.CRUDEOIL.get() || (world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock() == WorkspaceTestModBlocks.CRUDEOIL.get()
+					|| (world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == WorkspaceTestModBlocks.CRUDEOIL.get() || (world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == WorkspaceTestModBlocks.CRUDEOIL.get()) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("gasfire", true);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			}
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "creafire")) == true) {
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (WorkspaceTestModParticleTypes.CREAFIRE.get()), (x + 0.5), (y + 0.6), (z + 0.5), 2, 0.1, 0.1, 0.1, 0.01);
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles(ParticleTypes.LARGE_SMOKE, (x + 0.5), (y + 0.6), (z + 0.5), 1, 0.1, 0.1, 0.1, 0.01);
+			} else if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "radfire")) == true) {
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (WorkspaceTestModParticleTypes.RADFIRE.get()), (x + 0.5), (y + 0.6), (z + 0.5), 2, 0.1, 0.1, 0.1, 0.01);
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles(ParticleTypes.LARGE_SMOKE, (x + 0.5), (y + 0.6), (z + 0.5), 1, 0.1, 0.1, 0.1, 0.01);
+			} else if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "metafire")) == true) {
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (WorkspaceTestModParticleTypes.METAFIRE.get()), (x + 0.5), (y + 0.6), (z + 0.5), 2, 0.1, 0.1, 0.1, 0.01);
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles(ParticleTypes.LARGE_SMOKE, (x + 0.5), (y + 0.6), (z + 0.5), 1, 0.1, 0.1, 0.1, 0.01);
+			} else if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "chemfire")) == true) {
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles(ParticleTypes.SOUL_FIRE_FLAME, (x + 0.5), (y + 0.6), (z + 0.5), 2, 0.1, 0.1, 0.1, 0.01);
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles(ParticleTypes.LARGE_SMOKE, (x + 0.5), (y + 0.6), (z + 0.5), 1, 0.1, 0.1, 0.1, 0.01);
+			} else if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "gasfire")) == true) {
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (WorkspaceTestModParticleTypes.GASFIRE.get()), (x + 0.5), (y + 0.6), (z + 0.5), 2, 0.1, 0.1, 0.1, 0.01);
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles(ParticleTypes.LARGE_SMOKE, (x + 0.5), (y + 0.6), (z + 0.5), 1, 0.1, 0.1, 0.1, 0.01);
+			} else {
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles(ParticleTypes.FLAME, (x + 0.5), (y + 0.6), (z + 0.5), 2, 0.1, 0.1, 0.1, 0.01);
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles(ParticleTypes.LARGE_SMOKE, (x + 0.5), (y + 0.6), (z + 0.5), 1, 0.1, 0.1, 0.1, 0.01);
+			}
 		}
 		if ((new Object() {
 			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
@@ -96,6 +172,31 @@ public class FiretestProcedure {
 							return false;
 						}
 					}.getValue(world, BlockPos.containing(x, y, z), "hasfire"))) {
+						if (!world.isClientSide()) {
+							BlockPos _bp = BlockPos.containing(x, y, z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getPersistentData().putDouble("chancesfire", (new Object() {
+									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+										BlockEntity blockEntity = world.getBlockEntity(pos);
+										if (blockEntity != null)
+											return blockEntity.getPersistentData().getDouble(tag);
+										return -1;
+									}
+								}.getValue(world, BlockPos.containing(x, y, z), "chancesfire") + 10000));
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
+					}
+					if ((new Object() {
+						public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+							BlockEntity blockEntity = world.getBlockEntity(pos);
+							if (blockEntity != null)
+								return blockEntity.getPersistentData().getBoolean(tag);
+							return false;
+						}
+					}.getValue(world, BlockPos.containing(x, y, z), "gasfire")) == true) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -422,6 +523,141 @@ public class FiretestProcedure {
 									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.flintandsteel.use")), SoundSource.MASTER, 1, (float) 0.5);
 								} else {
 									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.flintandsteel.use")), SoundSource.MASTER, 1, (float) 0.5, false);
+								}
+							}
+							if ((new Object() {
+								public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+									BlockEntity blockEntity = world.getBlockEntity(pos);
+									if (blockEntity != null)
+										return blockEntity.getPersistentData().getBoolean(tag);
+									return false;
+								}
+							}.getValue(world, BlockPos.containing(x, y, z), "chemfire")) == true) {
+								if (!world.isClientSide()) {
+									BlockPos _bp = BlockPos.containing(x, y, z + 1);
+									BlockEntity _blockEntity = world.getBlockEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_blockEntity != null)
+										_blockEntity.getPersistentData().putBoolean("chemfire", true);
+									if (world instanceof Level _level)
+										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+								}
+								if (!world.isClientSide()) {
+									BlockPos _bp = BlockPos.containing(x + 1, y, z);
+									BlockEntity _blockEntity = world.getBlockEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_blockEntity != null)
+										_blockEntity.getPersistentData().putBoolean("chemfire", true);
+									if (world instanceof Level _level)
+										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+								}
+								if (!world.isClientSide()) {
+									BlockPos _bp = BlockPos.containing(x, y, z - 1);
+									BlockEntity _blockEntity = world.getBlockEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_blockEntity != null)
+										_blockEntity.getPersistentData().putBoolean("chemfire", true);
+									if (world instanceof Level _level)
+										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+								}
+								if (!world.isClientSide()) {
+									BlockPos _bp = BlockPos.containing(x - 1, y, z);
+									BlockEntity _blockEntity = world.getBlockEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_blockEntity != null)
+										_blockEntity.getPersistentData().putBoolean("chemfire", true);
+									if (world instanceof Level _level)
+										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+								}
+							}
+							if ((new Object() {
+								public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+									BlockEntity blockEntity = world.getBlockEntity(pos);
+									if (blockEntity != null)
+										return blockEntity.getPersistentData().getBoolean(tag);
+									return false;
+								}
+							}.getValue(world, BlockPos.containing(x, y, z), "gasfire")) == true) {
+								if (!world.isClientSide()) {
+									BlockPos _bp = BlockPos.containing(x, y, z + 1);
+									BlockEntity _blockEntity = world.getBlockEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_blockEntity != null)
+										_blockEntity.getPersistentData().putBoolean("gasfire", true);
+									if (world instanceof Level _level)
+										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+								}
+								if (!world.isClientSide()) {
+									BlockPos _bp = BlockPos.containing(x + 1, y, z);
+									BlockEntity _blockEntity = world.getBlockEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_blockEntity != null)
+										_blockEntity.getPersistentData().putBoolean("gasfire", true);
+									if (world instanceof Level _level)
+										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+								}
+								if (!world.isClientSide()) {
+									BlockPos _bp = BlockPos.containing(x, y, z - 1);
+									BlockEntity _blockEntity = world.getBlockEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_blockEntity != null)
+										_blockEntity.getPersistentData().putBoolean("gasfire", true);
+									if (world instanceof Level _level)
+										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+								}
+								if (!world.isClientSide()) {
+									BlockPos _bp = BlockPos.containing(x - 1, y, z);
+									BlockEntity _blockEntity = world.getBlockEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_blockEntity != null)
+										_blockEntity.getPersistentData().putBoolean("gasfire", true);
+									if (world instanceof Level _level)
+										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+								}
+							}
+							if ((new Object() {
+								public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+									BlockEntity blockEntity = world.getBlockEntity(pos);
+									if (blockEntity != null)
+										return blockEntity.getPersistentData().getBoolean(tag);
+									return false;
+								}
+							}.getValue(world, BlockPos.containing(x, y, z), "metafire")) == true) {
+								if (!world.isClientSide()) {
+									BlockPos _bp = BlockPos.containing(x, y, z + 1);
+									BlockEntity _blockEntity = world.getBlockEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_blockEntity != null)
+										_blockEntity.getPersistentData().putBoolean("metafire", true);
+									if (world instanceof Level _level)
+										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+								}
+								if (!world.isClientSide()) {
+									BlockPos _bp = BlockPos.containing(x + 1, y, z);
+									BlockEntity _blockEntity = world.getBlockEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_blockEntity != null)
+										_blockEntity.getPersistentData().putBoolean("metafire", true);
+									if (world instanceof Level _level)
+										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+								}
+								if (!world.isClientSide()) {
+									BlockPos _bp = BlockPos.containing(x, y, z - 1);
+									BlockEntity _blockEntity = world.getBlockEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_blockEntity != null)
+										_blockEntity.getPersistentData().putBoolean("metafire", true);
+									if (world instanceof Level _level)
+										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+								}
+								if (!world.isClientSide()) {
+									BlockPos _bp = BlockPos.containing(x - 1, y, z);
+									BlockEntity _blockEntity = world.getBlockEntity(_bp);
+									BlockState _bs = world.getBlockState(_bp);
+									if (_blockEntity != null)
+										_blockEntity.getPersistentData().putBoolean("metafire", true);
+									if (world instanceof Level _level)
+										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
 							if (!world.isClientSide()) {
