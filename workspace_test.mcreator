@@ -4159,14 +4159,77 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "Firetest",
+      "type": "procedure",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firetest",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/FiretestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Firetester",
+      "type": "block",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firetester",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/block/entity/FiretesterBlockEntity.java",
+          "src/main/resources/assets/workspace_test/models/block/firetester.json",
+          "src/main/resources/assets/workspace_test/blockstates/firetester.json",
+          "src/main/java/net/mcreator/workspacetest/block/FiretesterBlock.java",
+          "src/main/resources/assets/workspace_test/models/item/firetester.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Firetestspeed",
+      "type": "gamerule",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firetestspeed",
+      "metadata": {
+        "files": [],
+        "type": "number"
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.workspace_test.bombs": "Bombs",
       "block.workspace_test.coalplant": "Coalplant",
+      "item.workspace_test.bombs": "Bombs",
       "block.workspace_test.diamondde": "Diamond deposit",
       "item.workspace_test.fireoff": "Fireoff",
       "item.workspace_test.leadchunk": "Lead chunk",
@@ -4176,8 +4239,8 @@
       "block.workspace_test.sulfurde": "Sulfur deposit",
       "gui.workspace_test.riggui.label_resource": "Resource:",
       "item.workspace_test.zincchunk": "Zinc chunk",
-      "item.workspace_test.battleship_spawn_egg": "Battleship Spawn Egg",
       "gui.workspace_test.riggui.label_output": "Output:",
+      "item.workspace_test.battleship_spawn_egg": "Battleship Spawn Egg",
       "entity.workspace_test.spiderbot": "Spiderbot",
       "item.workspace_test.firebelt": "Firebelt",
       "item_group.workspace_test.electricity": "Electricity",
@@ -4185,17 +4248,15 @@
       "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
       "item.workspace_test.fire_circle_creator": "Fire Circle Creator",
       "item.workspace_test.great_chicken_spawn_egg": "Great Chicken Spawn Egg",
-      "item.workspace_test.firefighter_suit_leggings": "Firefighter Leggings",
       "entity.workspace_test.submarine": "Submarine",
       "item.workspace_test.submarine_spawn_egg": "Submarine Spawn Egg",
-      "item.workspace_test.firefighter_suit_boots": "Firefighter Boots",
       "entity.workspace_test.rocket_launcher": "Rocket Launcher",
       "biome.workspace_test.smolderinglands": "Volcanic lands",
       "item.workspace_test.tinchunk": "Tin chunk",
       "item.workspace_test.rocket_launcher_spawn_egg": "Rocket Launcher Spawn Egg",
       "biome.workspace_test.b": "Stone lands",
-      "block.workspace_test.coalde": "Coal deposit",
       "gui.workspace_test.smelterygui.label_smeltery": "Smeltery",
+      "block.workspace_test.coalde": "Coal deposit",
       "item.workspace_test.crudeoil_bucket": "Crude oil Bucket",
       "block.workspace_test.crudeoil": "Crude oil",
       "entity.workspace_test.great_chicken": "Great Chicken",
@@ -4231,7 +4292,6 @@
       "biome.workspace_test.lost_lands": "Lost Lands",
       "gui.workspace_test.minegui.button_start": "Start mining",
       "block.workspace_test.tungstende": "Tungsten deposit",
-      "item.workspace_test.firefighter_suit_chestplate": "Firefighter Chestplate",
       "item.workspace_test.multimeter": "Tablet",
       "item.workspace_test.redstrone_blaster": "Redstrone Blaster",
       "entity.workspace_test.mossy_golem": "Mossy Golem",
@@ -4263,7 +4323,6 @@
       "item.workspace_test.uranchunk": "Uranium chunk",
       "gui.workspace_test.riggui.label_mine": "Oil derrick:",
       "block.workspace_test.landmine": "Landmine",
-      "item.workspace_test.firefighter_suit_helmet": "FirefighterHelmet",
       "gui.workspace_test.smelterygui.label_speed": "Speed:",
       "entity.workspace_test.skeleter": "Skeleter",
       "entity.workspace_test.turret": "Turret",

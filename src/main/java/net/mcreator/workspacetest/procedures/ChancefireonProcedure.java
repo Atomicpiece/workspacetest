@@ -34,5 +34,6 @@ public class ChancefireonProcedure {
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}
+		RandombuildingfireProcedure.execute(world, x, y, z);
 	}
 }
