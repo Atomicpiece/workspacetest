@@ -4365,8 +4365,8 @@
       "registry_name": "radfire",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/particles/radfire.json",
-          "src/main/java/net/mcreator/workspacetest/client/particle/RadfireParticle.java"
+          "src/main/java/net/mcreator/workspacetest/client/particle/RadfireParticle.java",
+          "src/main/resources/assets/workspace_test/particles/radfire.json"
         ]
       },
       "path": "~/assembly machines"
@@ -4380,8 +4380,8 @@
       "registry_name": "metafire",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/particles/metafire.json",
-          "src/main/java/net/mcreator/workspacetest/client/particle/MetafireParticle.java"
+          "src/main/java/net/mcreator/workspacetest/client/particle/MetafireParticle.java",
+          "src/main/resources/assets/workspace_test/particles/metafire.json"
         ]
       },
       "path": "~/assembly machines"
