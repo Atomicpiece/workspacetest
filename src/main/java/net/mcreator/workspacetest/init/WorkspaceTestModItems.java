@@ -15,6 +15,7 @@ import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.workspacetest.item.ZincchunkItem;
 import net.mcreator.workspacetest.item.WandItem;
+import net.mcreator.workspacetest.item.UraniumRodItem;
 import net.mcreator.workspacetest.item.UranchunkItem;
 import net.mcreator.workspacetest.item.TungstenchunkItem;
 import net.mcreator.workspacetest.item.TitanchunkItem;
@@ -26,6 +27,7 @@ import net.mcreator.workspacetest.item.RedstroneBlasterItem;
 import net.mcreator.workspacetest.item.PercentageCheckerItem;
 import net.mcreator.workspacetest.item.NiterchunkItem;
 import net.mcreator.workspacetest.item.MultimeterItem;
+import net.mcreator.workspacetest.item.MetalscrapItem;
 import net.mcreator.workspacetest.item.MatchesItem;
 import net.mcreator.workspacetest.item.LithchunkItem;
 import net.mcreator.workspacetest.item.LeadchunkItem;
@@ -40,6 +42,7 @@ import net.mcreator.workspacetest.item.FirefighterSuitItem;
 import net.mcreator.workspacetest.item.FirebeltItem;
 import net.mcreator.workspacetest.item.FireCircleCreatorItem;
 import net.mcreator.workspacetest.item.ExtinguisherItem;
+import net.mcreator.workspacetest.item.EmptyRodItem;
 import net.mcreator.workspacetest.item.DiamondsItem;
 import net.mcreator.workspacetest.item.DetoxificatorItem;
 import net.mcreator.workspacetest.item.CrudeoilbarrelItem;
@@ -148,6 +151,10 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> REACTOR = block(WorkspaceTestModBlocks.REACTOR);
 	public static final RegistryObject<Item> DETOXIFICATOR = REGISTRY.register("detoxificator", () -> new DetoxificatorItem());
 	public static final RegistryObject<Item> FIREENGINE_SPAWN_EGG = REGISTRY.register("fireengine_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.FIREENGINE, -65536, -3355444, new Item.Properties()));
+	public static final RegistryObject<Item> METALSCRAP = REGISTRY.register("metalscrap", () -> new MetalscrapItem());
+	public static final RegistryObject<Item> URANIUM_ROD = REGISTRY.register("uranium_rod", () -> new UraniumRodItem());
+	public static final RegistryObject<Item> DESTROYEDMINE = block(WorkspaceTestModBlocks.DESTROYEDMINE);
+	public static final RegistryObject<Item> EMPTY_ROD = REGISTRY.register("empty_rod", () -> new EmptyRodItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

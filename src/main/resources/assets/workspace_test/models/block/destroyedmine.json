@@ -1,0 +1,9 @@
+{
+  "parent": "workspace_test:custom/destroyedmine",
+  "textures": {
+    "all": "workspace_test:block/destroyedmine",
+    "particle": "workspace_test:block/destroyedmine",
+    "0": "workspace_test:block/destroyedmine"
+  },
+  "render_type": "solid"
+}
