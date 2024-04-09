@@ -4808,427 +4808,16 @@
       "path": "~/assembly machines"
     },
     {
-      "name": "MyTab",
-      "type": "tab",
-      "sortid": 173,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "my_tab",
-      "metadata": {
-        "files": []
-      },
-      "path": "~/martin mod"
-    },
-    {
-      "name": "UraniumRodPlayerFinishesUsingItem",
+      "name": "FluidType",
       "type": "procedure",
-      "sortid": 174,
+      "sortid": 201,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "uranium_rod_player_finishes_using_item",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/UraniumRodPlayerFinishesUsingItemProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/martin mod"
-    },
-    {
-      "name": "UraniumRod",
-      "type": "item",
-      "sortid": 175,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "uranium_rod",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/item/UraniumRodItem.java",
-          "src/main/resources/assets/workspace_test/models/item/uranium_rod.json"
-        ]
-      },
-      "path": "~/martin mod"
-    },
-    {
-      "name": "EmptyRod",
-      "type": "item",
-      "sortid": 176,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "empty_rod",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/workspace_test/models/item/empty_rod.json",
-          "src/main/java/net/mcreator/workspacetest/item/EmptyRodItem.java"
-        ]
-      },
-      "path": "~/martin mod"
-    },
-    {
-      "name": "ReactorGUI",
-      "type": "gui",
-      "sortid": 177,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "reactor_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/world/inventory/ReactorGUIMenu.java",
-          "src/main/java/net/mcreator/workspacetest/client/gui/ReactorGUIScreen.java"
-        ]
-      },
-      "path": "~/martin mod"
-    },
-    {
-      "name": "EnergyProc",
-      "type": "procedure",
-      "sortid": 178,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "energy_proc",
+      "registry_name": "fluid_type",
       "metadata": {
         "return_type": "string",
         "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/EnergyProcProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/martin mod"
-    },
-    {
-      "name": "HeatProc",
-      "type": "procedure",
-      "sortid": 179,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "heat_proc",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/HeatProcProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/martin mod"
-    },
-    {
-      "name": "FluidP1",
-      "type": "procedure",
-      "sortid": 180,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fluid_p_1",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/FluidP1Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/martin mod"
-    },
-    {
-      "name": "FluidP2",
-      "type": "procedure",
-      "sortid": 181,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fluid_p_2",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/FluidP2Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/martin mod"
-    },
-    {
-      "name": "FluidP3",
-      "type": "procedure",
-      "sortid": 182,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fluid_p_3",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/FluidP3Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/martin mod"
-    },
-    {
-      "name": "FluidP4",
-      "type": "procedure",
-      "sortid": 183,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fluid_p_4",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/FluidP4Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/martin mod"
-    },
-    {
-      "name": "FluidP5",
-      "type": "procedure",
-      "sortid": 184,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fluid_p_5",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/FluidP5Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/martin mod"
-    },
-    {
-      "name": "FluidP6",
-      "type": "procedure",
-      "sortid": 185,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fluid_p_6",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/FluidP6Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/martin mod"
-    },
-    {
-      "name": "FluidP7",
-      "type": "procedure",
-      "sortid": 186,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fluid_p_7",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/FluidP7Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/martin mod"
-    },
-    {
-      "name": "FluidP8",
-      "type": "procedure",
-      "sortid": 187,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fluid_p_8",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/FluidP8Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/martin mod"
-    },
-    {
-      "name": "FluidP9",
-      "type": "procedure",
-      "sortid": 188,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fluid_p_9",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/FluidP9Procedure.java"
+          "src/main/java/net/mcreator/workspacetest/procedures/FluidTypeProcedure.java"
         ],
         "dependencies": [
           {
@@ -5450,6 +5039,21 @@
       "path": "~/martin mod"
     },
     {
+      "name": "UraniumRod",
+      "type": "item",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "uranium_rod",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/UraniumRodItem.java",
+          "src/main/resources/assets/workspace_test/models/item/uranium_rod.json"
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
       "name": "FluidP16",
       "type": "procedure",
       "sortid": 195,
@@ -5479,6 +5083,18 @@
             "type": "world"
           }
         ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "MyTab",
+      "type": "tab",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "my_tab",
+      "metadata": {
+        "files": []
       },
       "path": "~/martin mod"
     },
@@ -5582,16 +5198,55 @@
       "path": "~/martin mod"
     },
     {
-      "name": "FluidP20",
+      "name": "UraniumRodPlayerFinishesUsingItem",
       "type": "procedure",
-      "sortid": 199,
+      "sortid": 174,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "fluid_p_20",
+      "registry_name": "uranium_rod_player_finishes_using_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/UraniumRodPlayerFinishesUsingItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "EmptyRod",
+      "type": "item",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "empty_rod",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/empty_rod.json",
+          "src/main/java/net/mcreator/workspacetest/item/EmptyRodItem.java"
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "FluidP1",
+      "type": "procedure",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fluid_p_1",
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/FluidP20Procedure.java"
+          "src/main/java/net/mcreator/workspacetest/procedures/FluidP1Procedure.java"
         ],
         "dependencies": [
           {
@@ -5648,16 +5303,16 @@
       "path": "~/martin mod"
     },
     {
-      "name": "FluidType",
+      "name": "FluidP3",
       "type": "procedure",
-      "sortid": 201,
+      "sortid": 182,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "fluid_type",
+      "registry_name": "fluid_p_3",
       "metadata": {
-        "return_type": "string",
+        "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/FluidTypeProcedure.java"
+          "src/main/java/net/mcreator/workspacetest/procedures/FluidP3Procedure.java"
         ],
         "dependencies": [
           {
@@ -5679,6 +5334,388 @@
         ]
       },
       "path": "~/martin mod"
+    },
+    {
+      "name": "FluidP2",
+      "type": "procedure",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fluid_p_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/FluidP2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "FluidP5",
+      "type": "procedure",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fluid_p_5",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/FluidP5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "FluidP4",
+      "type": "procedure",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fluid_p_4",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/FluidP4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "FluidP7",
+      "type": "procedure",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fluid_p_7",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/FluidP7Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "FluidP6",
+      "type": "procedure",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fluid_p_6",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/FluidP6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "FluidP9",
+      "type": "procedure",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fluid_p_9",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/FluidP9Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "FluidP8",
+      "type": "procedure",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fluid_p_8",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/FluidP8Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "FluidP20",
+      "type": "procedure",
+      "sortid": 199,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fluid_p_20",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/FluidP20Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "EnergyProc",
+      "type": "procedure",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_proc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/EnergyProcProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "ReactorGUI",
+      "type": "gui",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reactor_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/world/inventory/ReactorGUIMenu.java",
+          "src/main/java/net/mcreator/workspacetest/client/gui/ReactorGUIScreen.java"
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "HeatProc",
+      "type": "procedure",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_proc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/HeatProcProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "Fireengine",
+      "type": "animatedentity",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fireengine",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/model/FireengineModel.java",
+          "src/main/resources/assets/workspace_test/models/item/fireengine_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/entity/FireengineEntity.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/FireengineRenderer.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "ForwardOnKeyPressed",
+      "type": "procedure",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forward_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/ForwardOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [
@@ -5692,29 +5729,28 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.workspace_test.bombs": "Bombs",
       "block.workspace_test.coalplant": "Coalplant",
+      "item.workspace_test.bombs": "Bombs",
       "block.workspace_test.diamondde": "Diamond deposit",
       "item.workspace_test.fireoff": "Fireoff",
       "item.workspace_test.leadchunk": "Lead chunk",
       "block.workspace_test.ancient_spawner": "Ancient Spawner",
       "item.workspace_test.bomb_spawn_egg": "Bomb Spawn Egg",
       "gui.workspace_test.riggui.label_mining_speed": "Mining speed:",
-      "gui.workspace_test.riggui.label_resource": "Resource:",
       "block.workspace_test.sulfurde": "Sulfur deposit",
+      "gui.workspace_test.riggui.label_resource": "Resource:",
       "item.workspace_test.zincchunk": "Zinc chunk",
       "item.workspace_test.battleship_spawn_egg": "Battleship Spawn Egg",
       "gui.workspace_test.riggui.label_output": "Output:",
       "entity.workspace_test.spiderbot": "Spiderbot",
       "block.workspace_test.reactor": "Reactor",
-      "item.workspace_test.firebelt": "Firebelt",
-      "item_group.workspace_test.electricity": "Electricity",
       "gui.workspace_test.riggui.button_save": "SAVE",
+      "item_group.workspace_test.electricity": "Electricity",
+      "item.workspace_test.firebelt": "Firebelt",
       "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
       "item.workspace_test.fire_circle_creator": "Fire Circle Creator",
       "item.workspace_test.great_chicken_spawn_egg": "Great Chicken Spawn Egg",
       "item.workspace_test.firefighter_suit_leggings": "Firefighter Leggings",
-      "item.workspace_test.empty_rod": "Empty Rod",
       "entity.workspace_test.submarine": "Submarine",
       "item.workspace_test.submarine_spawn_egg": "Submarine Spawn Egg",
       "item.workspace_test.firefighter_suit_boots": "Firefighter Boots",
@@ -5740,7 +5776,6 @@
       "gui.workspace_test.smelterygui.label_recipe": "Recipe:",
       "item_group.workspace_test.finanbuild": "Financial buildings",
       "block.workspace_test.forest": "Forest",
-      "item_group.workspace_test.my_tab": "Other",
       "item.workspace_test.ironchunk": "Iron chunk",
       "gui.workspace_test.transportgui.label_fluid": "fluid:",
       "block.workspace_test.lithde": "Lithium deposit",
@@ -5749,7 +5784,6 @@
       "item.workspace_test.defender_spawn_egg": "Defender Spawn Egg",
       "item.workspace_test.robotic_phantom_spawn_egg": "Robotic Phantom Spawn Egg",
       "item.workspace_test.percentage_checker": "Percentage Checker",
-      "gui.workspace_test.reactor_gui.label_output_rod": "Output rod:",
       "entity.workspace_test.destroyer": "Destroyer",
       "entity.workspace_test.microbot": "Microbot",
       "block.workspace_test.oilrig": "Oil derrick",
@@ -5758,11 +5792,9 @@
       "entity.workspace_test.battleship": "Battleship",
       "item.workspace_test.spiderbot_spawn_egg": "Spiderbot Spawn Egg",
       "item.workspace_test.niterchunk": "Niter chunk",
-      "gui.workspace_test.reactor_gui.label_reactor": "Reactor",
       "item.workspace_test.lithchunk": "Lithium chunk",
       "gui.workspace_test.riggui.button_start": "Start mining",
       "biome.workspace_test.lost_lands": "Lost Lands",
-      "gui.workspace_test.reactor_gui.label_energy": "Energy:",
       "gamerule.firetestspeed": "firetestspeed",
       "gui.workspace_test.minegui.button_start": "Start mining",
       "block.workspace_test.tungstende": "Tungsten deposit",
@@ -5783,9 +5815,7 @@
       "item_group.workspace_test.tools": "Tools",
       "item.workspace_test.coalchunk": "Coal chunk",
       "gui.workspace_test.minegui.button_save": "SAVE",
-      "gui.workspace_test.reactor_gui.label_heat": "Heat:",
       "gamerule.firetestspeed.description": "Sets speed of spreading fire",
-      "gui.workspace_test.reactor_gui.label_water": "Fluid:",
       "item.workspace_test.thorchunk": "Thorium chunk",
       "item.workspace_test.ion_sword": "Ion Sword",
       "gui.workspace_test.minegui.label_resource": "Resource:",
@@ -5805,7 +5835,6 @@
       "gui.workspace_test.smelterygui.label_speed": "Speed:",
       "entity.workspace_test.skeleter": "Skeleter",
       "entity.workspace_test.turret": "Turret",
-      "gui.workspace_test.reactor_gui.label_rod": "Rod:",
       "item_group.workspace_test.resources": "Resources",
       "block.workspace_test.urande": "Uranium deposit",
       "block.workspace_test.tower": "Tower",
@@ -5832,7 +5861,6 @@
       "gui.workspace_test.smelterygui.label_product": "Product:",
       "gui.workspace_test.minegui.label_mine": "Mine:",
       "item.workspace_test.detoxificator": "Decontaminator",
-      "gui.workspace_test.reactor_gui.label_fluid_type": "Fluid type:",
       "entity.workspace_test.dps_orb": "DPS Orb",
       "item.workspace_test.titanchunk": "Titanium chunk",
       "item.workspace_test.wand": "Wand",
@@ -5853,7 +5881,6 @@
       "block.workspace_test.minese": "Minese",
       "item.workspace_test.levitation_robot_spawn_egg": "Levitation Robot Spawn Egg",
       "item_group.workspace_test.test": "Test",
-      "item.workspace_test.uranium_rod": "Uranium Rod",
       "item.workspace_test.tinybot_spawn_egg": "Tinybot Spawn Egg",
       "item.workspace_test.furnace_powered_golem_spawn_egg": "Furnace Powered Golem Spawn Egg",
       "item.workspace_test.matches": "Matche",

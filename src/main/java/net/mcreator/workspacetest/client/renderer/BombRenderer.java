@@ -1,21 +1,6 @@
 
 package net.mcreator.workspacetest.client.renderer;
 
-import software.bernie.geckolib.renderer.GeoEntityRenderer;
-import software.bernie.geckolib.cache.object.BakedGeoModel;
-
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.MultiBufferSource;
-
-import net.mcreator.workspacetest.entity.model.BombModel;
-import net.mcreator.workspacetest.entity.layer.BombLayer;
-import net.mcreator.workspacetest.entity.BombEntity;
-
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 public class BombRenderer extends GeoEntityRenderer<BombEntity> {
 	public BombRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new BombModel());

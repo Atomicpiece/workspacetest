@@ -40,6 +40,7 @@ import net.mcreator.workspacetest.entity.FurnacePoweredGolemEntity;
 import net.mcreator.workspacetest.entity.FrostBlazeEntityProjectile;
 import net.mcreator.workspacetest.entity.FrostBlazeEntity;
 import net.mcreator.workspacetest.entity.FoamEntity;
+import net.mcreator.workspacetest.entity.FireengineEntity;
 import net.mcreator.workspacetest.entity.FireboltEntity;
 import net.mcreator.workspacetest.entity.FallingbombEntity;
 import net.mcreator.workspacetest.entity.DroneEntity;
@@ -169,6 +170,10 @@ public class WorkspaceTestModEntities {
 			EntityType.Builder.<Co2Entity>of(Co2Entity::new, MobCategory.MISC).setCustomClientFactory(Co2Entity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<AntioxidEntity>> ANTIOXID = register("projectile_antioxid",
 			EntityType.Builder.<AntioxidEntity>of(AntioxidEntity::new, MobCategory.MISC).setCustomClientFactory(AntioxidEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<FireengineEntity>> FIREENGINE = register("fireengine",
+			EntityType.Builder.<FireengineEntity>of(FireengineEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3).setCustomClientFactory(FireengineEntity::new)
+
+					.sized(3f, 2f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -199,6 +204,7 @@ public class WorkspaceTestModEntities {
 			SubmarineEntity.init();
 			RocketLauncherEntity.init();
 			DPSOrbEntity.init();
+			FireengineEntity.init();
 		});
 	}
 
@@ -226,5 +232,6 @@ public class WorkspaceTestModEntities {
 		event.put(SUBMARINE.get(), SubmarineEntity.createAttributes().build());
 		event.put(ROCKET_LAUNCHER.get(), RocketLauncherEntity.createAttributes().build());
 		event.put(DPS_ORB.get(), DPSOrbEntity.createAttributes().build());
+		event.put(FIREENGINE.get(), FireengineEntity.createAttributes().build());
 	}
 }
