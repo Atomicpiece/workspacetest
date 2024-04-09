@@ -22,7 +22,6 @@ public class WorkspaceTestModTabs {
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.test")).icon(() -> new ItemStack(Blocks.GILDED_BLACKSTONE)).displayItems((parameters, tabData) -> {
 				tabData.accept(WorkspaceTestModItems.BOMBS.get());
 				tabData.accept(WorkspaceTestModItems.HEALT_INDICATOR.get());
-				tabData.accept(WorkspaceTestModBlocks.REACTOR.get().asItem());
 			})
 
 					.build());
@@ -139,6 +138,14 @@ public class WorkspaceTestModTabs {
 	public static final RegistryObject<CreativeModeTab> ELECTRICITY = REGISTRY.register("electricity",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.electricity")).icon(() -> new ItemStack(Blocks.LIGHT)).displayItems((parameters, tabData) -> {
 				tabData.accept(WorkspaceTestModBlocks.COALPLANT.get().asItem());
+			})
+
+					.build());
+	public static final RegistryObject<CreativeModeTab> MY_TAB = REGISTRY.register("my_tab",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.my_tab")).icon(() -> new ItemStack(WorkspaceTestModBlocks.REACTOR.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(WorkspaceTestModBlocks.REACTOR.get().asItem());
+				tabData.accept(WorkspaceTestModItems.URANIUM_ROD.get());
+				tabData.accept(WorkspaceTestModItems.EMPTY_ROD.get());
 			})
 
 					.build());
