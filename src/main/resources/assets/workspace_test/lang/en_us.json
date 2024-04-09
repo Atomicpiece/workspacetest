@@ -130,6 +130,7 @@
   "item.workspace_test.chemicalextinguisher": "Chemical extinguisher",
   "gui.workspace_test.smelterygui.label_product": "Product:",
   "gui.workspace_test.minegui.label_mine": "Mine:",
+  "item.workspace_test.detoxificator": "Decontaminator",
   "entity.workspace_test.dps_orb": "DPS Orb",
   "item.workspace_test.titanchunk": "Titanium chunk",
   "item.workspace_test.wand": "Wand",
