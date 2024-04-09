@@ -22,7 +22,7 @@ public class WorkspaceTestModTabs {
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.test")).icon(() -> new ItemStack(Blocks.GILDED_BLACKSTONE)).displayItems((parameters, tabData) -> {
 				tabData.accept(WorkspaceTestModItems.BOMBS.get());
 				tabData.accept(WorkspaceTestModItems.HEALT_INDICATOR.get());
-				tabData.accept(WorkspaceTestModItems.SMOKER.get());
+				tabData.accept(WorkspaceTestModBlocks.REACTOR.get().asItem());
 			})
 
 					.build());
@@ -106,6 +106,8 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModBlocks.CRUDEOILDE.get().asItem());
 				tabData.accept(WorkspaceTestModItems.CRUDEOIL_BUCKET.get());
 				tabData.accept(WorkspaceTestModItems.CRUDEOILBARREL.get());
+				tabData.accept(WorkspaceTestModItems.METALSCRAP.get());
+				tabData.accept(WorkspaceTestModBlocks.DESTROYEDMINE.get().asItem());
 			})
 
 					.build());
@@ -131,6 +133,8 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModBlocks.FIRETESTER.get().asItem());
 				tabData.accept(WorkspaceTestModBlocks.FIRETESTER_0.get().asItem());
 				tabData.accept(WorkspaceTestModItems.CHEMICALEXTINGUISHER.get());
+				tabData.accept(WorkspaceTestModItems.SMOKER.get());
+				tabData.accept(WorkspaceTestModItems.DETOXIFICATOR.get());
 			})
 
 					.build());

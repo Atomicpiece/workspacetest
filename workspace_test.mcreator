@@ -4350,8 +4350,8 @@
       "registry_name": "chemicalextinguisher",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/ChemicalextinguisherItem.java",
-          "src/main/resources/assets/workspace_test/models/item/chemicalextinguisher.json"
+          "src/main/resources/assets/workspace_test/models/item/chemicalextinguisher.json",
+          "src/main/java/net/mcreator/workspacetest/item/ChemicalextinguisherItem.java"
         ]
       },
       "path": "~/assembly machines"
@@ -4365,8 +4365,8 @@
       "registry_name": "wasser",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/client/particle/WasserParticle.java",
-          "src/main/resources/assets/workspace_test/particles/wasser.json"
+          "src/main/resources/assets/workspace_test/particles/wasser.json",
+          "src/main/java/net/mcreator/workspacetest/client/particle/WasserParticle.java"
         ]
       },
       "path": "~/assembly machines"
@@ -4380,8 +4380,8 @@
       "registry_name": "smoker",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/smoker.json",
-          "src/main/java/net/mcreator/workspacetest/item/SmokerItem.java"
+          "src/main/java/net/mcreator/workspacetest/item/SmokerItem.java",
+          "src/main/resources/assets/workspace_test/models/item/smoker.json"
         ]
       },
       "path": "~/assembly machines"
@@ -4427,8 +4427,8 @@
       "registry_name": "co_2",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/client/renderer/Co2Renderer.java",
-          "src/main/java/net/mcreator/workspacetest/entity/Co2Entity.java"
+          "src/main/java/net/mcreator/workspacetest/entity/Co2Entity.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/Co2Renderer.java"
         ]
       },
       "path": "~/assembly machines"
@@ -4668,10 +4668,10 @@
       "registry_name": "reactor",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/block/entity/ReactorBlockEntity.java",
-          "src/main/resources/assets/workspace_test/blockstates/reactor.json",
-          "src/main/resources/assets/workspace_test/models/block/reactor.json",
           "src/main/java/net/mcreator/workspacetest/block/ReactorBlock.java",
+          "src/main/resources/assets/workspace_test/blockstates/reactor.json",
+          "src/main/java/net/mcreator/workspacetest/block/entity/ReactorBlockEntity.java",
+          "src/main/resources/assets/workspace_test/models/block/reactor.json",
           "src/main/resources/assets/workspace_test/models/item/reactor.json"
         ]
       },
@@ -4765,8 +4765,8 @@
       "registry_name": "detoxificator",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/DetoxificatorItem.java",
-          "src/main/resources/assets/workspace_test/models/item/detoxificator.json"
+          "src/main/resources/assets/workspace_test/models/item/detoxificator.json",
+          "src/main/java/net/mcreator/workspacetest/item/DetoxificatorItem.java"
         ]
       },
       "path": "~/assembly machines"
@@ -4806,6 +4806,71 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "Minefire",
+      "type": "procedure",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minefire",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/MinefireProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Metalscrap",
+      "type": "item",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metalscrap",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/MetalscrapItem.java",
+          "src/main/resources/assets/workspace_test/models/item/metalscrap.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Destroyedmine",
+      "type": "block",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destroyedmine",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/block/DestroyedmineBlock.java",
+          "src/main/resources/assets/workspace_test/blockstates/destroyedmine.json",
+          "src/main/resources/assets/workspace_test/models/item/destroyedmine.json",
+          "src/main/java/net/mcreator/workspacetest/block/entity/DestroyedmineBlockEntity.java",
+          "src/main/resources/assets/workspace_test/models/block/destroyedmine.json"
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [
@@ -4819,24 +4884,24 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.workspace_test.bombs": "Bombs",
       "block.workspace_test.coalplant": "Coalplant",
+      "item.workspace_test.bombs": "Bombs",
       "block.workspace_test.diamondde": "Diamond deposit",
       "item.workspace_test.fireoff": "Fireoff",
       "item.workspace_test.leadchunk": "Lead chunk",
       "block.workspace_test.ancient_spawner": "Ancient Spawner",
       "item.workspace_test.bomb_spawn_egg": "Bomb Spawn Egg",
       "gui.workspace_test.riggui.label_mining_speed": "Mining speed:",
-      "gui.workspace_test.riggui.label_resource": "Resource:",
       "block.workspace_test.sulfurde": "Sulfur deposit",
+      "gui.workspace_test.riggui.label_resource": "Resource:",
       "item.workspace_test.zincchunk": "Zinc chunk",
       "item.workspace_test.battleship_spawn_egg": "Battleship Spawn Egg",
       "gui.workspace_test.riggui.label_output": "Output:",
       "entity.workspace_test.spiderbot": "Spiderbot",
       "block.workspace_test.reactor": "Reactor",
-      "item.workspace_test.firebelt": "Firebelt",
-      "item_group.workspace_test.electricity": "Electricity",
       "gui.workspace_test.riggui.button_save": "SAVE",
+      "item_group.workspace_test.electricity": "Electricity",
+      "item.workspace_test.firebelt": "Firebelt",
       "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
       "item.workspace_test.fire_circle_creator": "Fire Circle Creator",
       "item.workspace_test.great_chicken_spawn_egg": "Great Chicken Spawn Egg",
@@ -4870,6 +4935,7 @@
       "gui.workspace_test.transportgui.label_fluid": "fluid:",
       "block.workspace_test.lithde": "Lithium deposit",
       "gui.workspace_test.minegui.label_output": "Output:",
+      "block.workspace_test.destroyedmine": "Destroyed mine",
       "item.workspace_test.tungstenchunk": "Tungsten chunk",
       "item.workspace_test.defender_spawn_egg": "Defender Spawn Egg",
       "item.workspace_test.robotic_phantom_spawn_egg": "Robotic Phantom Spawn Egg",
@@ -4935,6 +5001,7 @@
       "block.workspace_test.firetester_0": "Empty firetester",
       "item.workspace_test.smoker": "Smoker",
       "fluid.workspace_test.crudeoil": "Crude oil",
+      "item.workspace_test.metalscrap": "Metal scrap",
       "item.workspace_test.diamonds": "Diamonds",
       "block.workspace_test.farm": "Farm",
       "gui.workspace_test.riggui.label_power_usage": "Power usage:",
