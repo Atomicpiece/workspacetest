@@ -11,12 +11,12 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 
-import net.mcreator.workspacetest.procedures.SmokeprocProcedure;
+import net.mcreator.workspacetest.procedures.DetoxicProcedure;
 
 import java.util.List;
 
-public class SmokerItem extends Item {
-	public SmokerItem() {
+public class DetoxificatorItem extends Item {
+	public DetoxificatorItem() {
 		super(new Item.Properties().stacksTo(64).rarity(Rarity.RARE).food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.3f).build()));
 	}
 
@@ -39,6 +39,6 @@ public class SmokerItem extends Item {
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
 		if (selected)
-			SmokeprocProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
+			DetoxicProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 }

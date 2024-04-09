@@ -42,6 +42,7 @@ import net.mcreator.workspacetest.client.renderer.CreeperbotRenderer;
 import net.mcreator.workspacetest.client.renderer.Co2Renderer;
 import net.mcreator.workspacetest.client.renderer.BombRenderer;
 import net.mcreator.workspacetest.client.renderer.BattleshipRenderer;
+import net.mcreator.workspacetest.client.renderer.AntioxidRenderer;
 import net.mcreator.workspacetest.client.renderer.AntichemRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -83,5 +84,6 @@ public class WorkspaceTestModEntityRenderers {
 		event.registerEntityRenderer(WorkspaceTestModEntities.FOAM.get(), FoamRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.ANTICHEM.get(), AntichemRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.CO_2.get(), Co2Renderer::new);
+		event.registerEntityRenderer(WorkspaceTestModEntities.ANTIOXID.get(), AntioxidRenderer::new);
 	}
 }

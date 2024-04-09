@@ -3,11 +3,11 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "smoke",
+    "texture": "detoxic",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Smoker",
+    "name": "Decontaminator",
     "rarity": "RARE",
     "creativeTab": {
       "value": "CUSTOM:Tools"
@@ -36,7 +36,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onItemInUseTick": {
-      "name": "Smokeproc"
+      "name": "Detoxic"
     },
     "enableRanged": false,
     "shootConstantly": false,

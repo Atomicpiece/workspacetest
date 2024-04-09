@@ -8,24 +8,24 @@ import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
-import net.mcreator.workspacetest.entity.Co2Entity;
+import net.mcreator.workspacetest.entity.AntioxidEntity;
 import net.mcreator.workspacetest.client.model.Modelmissile;
 
 import com.mojang.math.Axis;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-public class Co2Renderer extends EntityRenderer<Co2Entity> {
+public class AntioxidRenderer extends EntityRenderer<AntioxidEntity> {
 	private static final ResourceLocation texture = new ResourceLocation("workspace_test:textures/entities/missiled.png");
 	private final Modelmissile model;
 
-	public Co2Renderer(EntityRendererProvider.Context context) {
+	public AntioxidRenderer(EntityRendererProvider.Context context) {
 		super(context);
 		model = new Modelmissile(context.bakeLayer(Modelmissile.LAYER_LOCATION));
 	}
 
 	@Override
-	public void render(Co2Entity entityIn, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource bufferIn, int packedLightIn) {
+	public void render(AntioxidEntity entityIn, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource bufferIn, int packedLightIn) {
 		VertexConsumer vb = bufferIn.getBuffer(RenderType.entityCutout(this.getTextureLocation(entityIn)));
 		poseStack.pushPose();
 		poseStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partialTicks, entityIn.yRotO, entityIn.getYRot()) - 90));
@@ -36,7 +36,7 @@ public class Co2Renderer extends EntityRenderer<Co2Entity> {
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(Co2Entity entity) {
+	public ResourceLocation getTextureLocation(AntioxidEntity entity) {
 		return texture;
 	}
 }
