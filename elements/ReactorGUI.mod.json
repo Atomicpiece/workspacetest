@@ -1,0 +1,457 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 208,
+    "height": 180,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_reactor",
+          "text": {
+            "fixedValue": "Reactor"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 195,
+          "y": 35
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_energy",
+          "text": {
+            "fixedValue": "Energy:"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 114,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_water",
+          "text": {
+            "fixedValue": "Fluid:"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 249,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_rod",
+          "text": {
+            "fixedValue": "Rod:"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 114,
+          "y": 107
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 141,
+          "y": 98
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 294,
+          "y": 98
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_output_rod",
+          "text": {
+            "fixedValue": "Output rod:"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 231,
+          "y": 107
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_heat",
+          "text": {
+            "fixedValue": "Heat:"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 114,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_energy_proc",
+          "text": {
+            "fixedValue": "",
+            "name": "EnergyProc"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 150,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_heat_proc",
+          "text": {
+            "fixedValue": "",
+            "name": "HeatProc"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 141,
+          "y": 71
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tank0.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "FluidP0"
+          },
+          "x": 285,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tank1.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "FluidP1"
+          },
+          "x": 285,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tank2.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "FluidP2"
+          },
+          "x": 285,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tank3.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "FluidP3"
+          },
+          "x": 285,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tank4.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "FluidP4"
+          },
+          "x": 285,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tank5.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "FluidP5"
+          },
+          "x": 285,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tank6.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "FluidP6"
+          },
+          "x": 285,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tank7.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "FluidP7"
+          },
+          "x": 285,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tank8.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "FluidP8"
+          },
+          "x": 285,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tank9.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "FluidP9"
+          },
+          "x": 285,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tank10.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "FluidP10"
+          },
+          "x": 285,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tank11.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "FluidP11"
+          },
+          "x": 285,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tank12.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "FluidP12"
+          },
+          "x": 285,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tank13.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "FluidP13"
+          },
+          "x": 285,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tank14.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "FluidP14"
+          },
+          "x": 285,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tank15.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "FluidP15"
+          },
+          "x": 285,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tank16.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "FluidP16"
+          },
+          "x": 285,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tank17.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "FluidP17"
+          },
+          "x": 285,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tank18.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "FluidP18"
+          },
+          "x": 285,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tank19.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "FluidP19"
+          },
+          "x": 285,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tank20.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "FluidP20"
+          },
+          "x": 285,
+          "y": 35
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_fluid_type",
+          "text": {
+            "fixedValue": "Fluid type:"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 168,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_fluid_type",
+          "text": {
+            "fixedValue": "",
+            "name": "FluidType"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 231,
+          "y": 89
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

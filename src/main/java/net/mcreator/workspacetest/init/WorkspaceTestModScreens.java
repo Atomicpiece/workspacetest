@@ -14,6 +14,7 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.mcreator.workspacetest.client.gui.TransportguiScreen;
 import net.mcreator.workspacetest.client.gui.SmelteryguiScreen;
 import net.mcreator.workspacetest.client.gui.RigguiScreen;
+import net.mcreator.workspacetest.client.gui.ReactorGUIScreen;
 import net.mcreator.workspacetest.client.gui.MineguiScreen;
 import net.mcreator.workspacetest.client.gui.BotMenuScreen;
 
@@ -27,6 +28,7 @@ public class WorkspaceTestModScreens {
 			MenuScreens.register(WorkspaceTestModMenus.TRANSPORTGUI.get(), TransportguiScreen::new);
 			MenuScreens.register(WorkspaceTestModMenus.SMELTERYGUI.get(), SmelteryguiScreen::new);
 			MenuScreens.register(WorkspaceTestModMenus.RIGGUI.get(), RigguiScreen::new);
+			MenuScreens.register(WorkspaceTestModMenus.REACTOR_GUI.get(), ReactorGUIScreen::new);
 		});
 	}
 }
