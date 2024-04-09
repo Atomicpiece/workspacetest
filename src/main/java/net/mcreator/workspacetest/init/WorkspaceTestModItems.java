@@ -147,6 +147,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> SMOKER = REGISTRY.register("smoker", () -> new SmokerItem());
 	public static final RegistryObject<Item> REACTOR = block(WorkspaceTestModBlocks.REACTOR);
 	public static final RegistryObject<Item> DETOXIFICATOR = REGISTRY.register("detoxificator", () -> new DetoxificatorItem());
+	public static final RegistryObject<Item> FIREENGINE_SPAWN_EGG = REGISTRY.register("fireengine_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.FIREENGINE, -65536, -3355444, new Item.Properties()));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

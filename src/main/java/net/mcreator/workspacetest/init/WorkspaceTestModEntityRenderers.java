@@ -32,6 +32,7 @@ import net.mcreator.workspacetest.client.renderer.GreatChickenRenderer;
 import net.mcreator.workspacetest.client.renderer.FurnacePoweredGolemRenderer;
 import net.mcreator.workspacetest.client.renderer.FrostBlazeRenderer;
 import net.mcreator.workspacetest.client.renderer.FoamRenderer;
+import net.mcreator.workspacetest.client.renderer.FireengineRenderer;
 import net.mcreator.workspacetest.client.renderer.FireboltRenderer;
 import net.mcreator.workspacetest.client.renderer.FallingbombRenderer;
 import net.mcreator.workspacetest.client.renderer.DroneRenderer;
@@ -85,5 +86,6 @@ public class WorkspaceTestModEntityRenderers {
 		event.registerEntityRenderer(WorkspaceTestModEntities.ANTICHEM.get(), AntichemRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.CO_2.get(), Co2Renderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.ANTIOXID.get(), AntioxidRenderer::new);
+		event.registerEntityRenderer(WorkspaceTestModEntities.FIREENGINE.get(), FireengineRenderer::new);
 	}
 }

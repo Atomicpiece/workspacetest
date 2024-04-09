@@ -18,6 +18,7 @@ import net.mcreator.workspacetest.entity.MicrobotEntity;
 import net.mcreator.workspacetest.entity.LevitationRobotEntity;
 import net.mcreator.workspacetest.entity.GreatChickenEntity;
 import net.mcreator.workspacetest.entity.FrostBlazeEntity;
+import net.mcreator.workspacetest.entity.FireengineEntity;
 import net.mcreator.workspacetest.entity.DestroyerEntity;
 import net.mcreator.workspacetest.entity.DefenderEntity;
 import net.mcreator.workspacetest.entity.CreeperbotEntity;
@@ -156,6 +157,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof RocketLauncherEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof FireengineEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");
