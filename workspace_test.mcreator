@@ -4676,6 +4676,136 @@
         ]
       },
       "path": "~/martin mod"
+    },
+    {
+      "name": "Antioxid",
+      "type": "projectile",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "antioxid",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/AntioxidEntity.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/AntioxidRenderer.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "AntioxidProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "antioxid_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/AntioxidProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "AntioxidWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "antioxid_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/AntioxidWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Detoxificator",
+      "type": "item",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "detoxificator",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/DetoxificatorItem.java",
+          "src/main/resources/assets/workspace_test/models/item/detoxificator.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Detoxic",
+      "type": "procedure",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "detoxic",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/DetoxicProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [

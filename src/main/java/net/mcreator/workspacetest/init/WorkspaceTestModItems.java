@@ -41,6 +41,7 @@ import net.mcreator.workspacetest.item.FirebeltItem;
 import net.mcreator.workspacetest.item.FireCircleCreatorItem;
 import net.mcreator.workspacetest.item.ExtinguisherItem;
 import net.mcreator.workspacetest.item.DiamondsItem;
+import net.mcreator.workspacetest.item.DetoxificatorItem;
 import net.mcreator.workspacetest.item.CrudeoilbarrelItem;
 import net.mcreator.workspacetest.item.CrudeoilItem;
 import net.mcreator.workspacetest.item.CopperchunkItem;
@@ -145,6 +146,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> CHEMICALEXTINGUISHER = REGISTRY.register("chemicalextinguisher", () -> new ChemicalextinguisherItem());
 	public static final RegistryObject<Item> SMOKER = REGISTRY.register("smoker", () -> new SmokerItem());
 	public static final RegistryObject<Item> REACTOR = block(WorkspaceTestModBlocks.REACTOR);
+	public static final RegistryObject<Item> DETOXIFICATOR = REGISTRY.register("detoxificator", () -> new DetoxificatorItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
