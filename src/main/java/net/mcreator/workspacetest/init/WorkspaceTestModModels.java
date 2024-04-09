@@ -24,12 +24,12 @@ public class WorkspaceTestModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
 		event.registerLayerDefinition(Modelfirebolt.LAYER_LOCATION, Modelfirebolt::createBodyLayer);
-		event.registerLayerDefinition(Modelfallbomb.LAYER_LOCATION, Modelfallbomb::createBodyLayer);
-		event.registerLayerDefinition(Modelmagicalbolt_Converted.LAYER_LOCATION, Modelmagicalbolt_Converted::createBodyLayer);
 		event.registerLayerDefinition(Modelmissile.LAYER_LOCATION, Modelmissile::createBodyLayer);
 		event.registerLayerDefinition(Modelironsword.LAYER_LOCATION, Modelironsword::createBodyLayer);
 		event.registerLayerDefinition(Modelfurnacegolem.LAYER_LOCATION, Modelfurnacegolem::createBodyLayer);
 		event.registerLayerDefinition(ModelOrb.LAYER_LOCATION, ModelOrb::createBodyLayer);
+		event.registerLayerDefinition(Modelfallbomb.LAYER_LOCATION, Modelfallbomb::createBodyLayer);
+		event.registerLayerDefinition(Modelmagicalbolt_Converted.LAYER_LOCATION, Modelmagicalbolt_Converted::createBodyLayer);
 		event.registerLayerDefinition(Modelredstonevolt.LAYER_LOCATION, Modelredstonevolt::createBodyLayer);
 		event.registerLayerDefinition(ModelDrone.LAYER_LOCATION, ModelDrone::createBodyLayer);
 	}

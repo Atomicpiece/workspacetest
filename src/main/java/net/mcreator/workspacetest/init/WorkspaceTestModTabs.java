@@ -22,6 +22,7 @@ public class WorkspaceTestModTabs {
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.test")).icon(() -> new ItemStack(Blocks.GILDED_BLACKSTONE)).displayItems((parameters, tabData) -> {
 				tabData.accept(WorkspaceTestModItems.BOMBS.get());
 				tabData.accept(WorkspaceTestModItems.HEALT_INDICATOR.get());
+				tabData.accept(WorkspaceTestModBlocks.REACTOR.get().asItem());
 			})
 
 					.build());
