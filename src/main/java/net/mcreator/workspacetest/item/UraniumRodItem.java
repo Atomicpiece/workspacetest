@@ -1,8 +1,21 @@
 
 package net.mcreator.workspacetest.item;
 
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import javax.annotation.Nullable;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.network.chat.Component;
+
+import net.mcreator.workspacetest.procedures.UraniumRodPlayerFinishesUsingItemProcedure;
+import net.mcreator.workspacetest.procedures.UraniumRodItemIsCraftedsmeltedProcedure;
+import net.mcreator.workspacetest.init.WorkspaceTestModItems;
+
+import java.util.List;
 
 public class UraniumRodItem extends Item {
 	public UraniumRodItem() {
@@ -16,12 +29,12 @@ public class UraniumRodItem extends Item {
 
 	@Override
 	public ItemStack finishUsingItem(ItemStack itemstack, Level world, LivingEntity entity) {
-		ItemStack retval = new ItemStack(WorkspaceTestModItems.DELETED_MOD_ELEMENT.get());
+		ItemStack retval = new ItemStack(WorkspaceTestModItems.EMPTY_ROD.get());
 		super.finishUsingItem(itemstack, world, entity);
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		UraniumRodPlayerFinishesUsingItemProcedure.execute();
+		UraniumRodPlayerFinishesUsingItemProcedure.execute(world, entity);
 		if (itemstack.isEmpty()) {
 			return retval;
 		} else {
@@ -31,5 +44,11 @@ public class UraniumRodItem extends Item {
 			}
 			return itemstack;
 		}
+	}
+
+	@Override
+	public void onCraftedBy(ItemStack itemstack, Level world, Player entity) {
+		super.onCraftedBy(itemstack, world, entity);
+		UraniumRodItemIsCraftedsmeltedProcedure.execute(itemstack);
 	}
 }

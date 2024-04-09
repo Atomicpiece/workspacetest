@@ -4,7 +4,7 @@
   "definition": {
     "type": 1,
     "width": 208,
-    "height": 180,
+    "height": 186,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
@@ -142,7 +142,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 150,
+          "x": 159,
           "y": 53
         }
       },
@@ -152,7 +152,7 @@
           "name": "label_proc_heat_proc",
           "text": {
             "fixedValue": "",
-            "name": "HeatProc"
+            "name": "HeatProced"
           },
           "color": {
             "value": -12829636,
@@ -441,8 +441,39 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 231,
+          "x": 222,
           "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_function",
+          "text": {
+            "fixedValue": "Function:"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 168,
+          "y": 197
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_function_proc",
+          "text": {
+            "fixedValue": "",
+            "name": "FunctionProc"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 213,
+          "y": 197
         }
       }
     ],

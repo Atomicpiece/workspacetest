@@ -143,7 +143,7 @@ public class WorkspaceTestModTabs {
 
 					.build());
 	public static final RegistryObject<CreativeModeTab> MY_TAB = REGISTRY.register("my_tab",
-			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.my_tab")).icon(() -> new ItemStack(WorkspaceTestModBlocks.REACTOR.get())).displayItems((parameters, tabData) -> {
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.my_tab")).icon(() -> new ItemStack(WorkspaceTestModItems.URANIUM_ROD.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(WorkspaceTestModBlocks.REACTOR.get().asItem());
 				tabData.accept(WorkspaceTestModItems.URANIUM_ROD.get());
 				tabData.accept(WorkspaceTestModItems.EMPTY_ROD.get());

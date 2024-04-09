@@ -1,6 +1,14 @@
 package net.mcreator.workspacetest.procedures;
 
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.entity.living.LivingEvent;
+
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.entity.Entity;
+
+import net.mcreator.workspacetest.entity.FireengineEntity;
 
 import javax.annotation.Nullable;
 
