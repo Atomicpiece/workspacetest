@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "workspace_test:block/recycldown",
+    "up": "workspace_test:block/recycltop",
+    "north": "workspace_test:block/recycleside",
+    "east": "workspace_test:block/recycleside",
+    "south": "workspace_test:block/recycleside",
+    "west": "workspace_test:block/recycleside",
+    "particle": "workspace_test:block/recycldown"
+  },
+  "render_type": "solid"
+}

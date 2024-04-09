@@ -107,6 +107,7 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.CRUDEOILBARREL.get());
 				tabData.accept(WorkspaceTestModItems.METALSCRAP.get());
 				tabData.accept(WorkspaceTestModBlocks.DESTROYEDMINE.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.RECYCLER.get().asItem());
 			})
 
 					.build());
