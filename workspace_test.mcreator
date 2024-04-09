@@ -4350,8 +4350,8 @@
       "registry_name": "chemicalextinguisher",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/chemicalextinguisher.json",
-          "src/main/java/net/mcreator/workspacetest/item/ChemicalextinguisherItem.java"
+          "src/main/java/net/mcreator/workspacetest/item/ChemicalextinguisherItem.java",
+          "src/main/resources/assets/workspace_test/models/item/chemicalextinguisher.json"
         ]
       },
       "path": "~/assembly machines"
@@ -4365,8 +4365,8 @@
       "registry_name": "wasser",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/particles/wasser.json",
-          "src/main/java/net/mcreator/workspacetest/client/particle/WasserParticle.java"
+          "src/main/java/net/mcreator/workspacetest/client/particle/WasserParticle.java",
+          "src/main/resources/assets/workspace_test/particles/wasser.json"
         ]
       },
       "path": "~/assembly machines"
@@ -4380,8 +4380,8 @@
       "registry_name": "smoker",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/SmokerItem.java",
-          "src/main/resources/assets/workspace_test/models/item/smoker.json"
+          "src/main/resources/assets/workspace_test/models/item/smoker.json",
+          "src/main/java/net/mcreator/workspacetest/item/SmokerItem.java"
         ]
       },
       "path": "~/assembly machines"
@@ -4427,8 +4427,8 @@
       "registry_name": "co_2",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/entity/Co2Entity.java",
-          "src/main/java/net/mcreator/workspacetest/client/renderer/Co2Renderer.java"
+          "src/main/java/net/mcreator/workspacetest/client/renderer/Co2Renderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/Co2Entity.java"
         ]
       },
       "path": "~/assembly machines"
@@ -4638,8 +4638,8 @@
       "registry_name": "gasfire",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/particles/gasfire.json",
-          "src/main/java/net/mcreator/workspacetest/client/particle/GasfireParticle.java"
+          "src/main/java/net/mcreator/workspacetest/client/particle/GasfireParticle.java",
+          "src/main/resources/assets/workspace_test/particles/gasfire.json"
         ]
       },
       "path": "~/assembly machines"
@@ -4658,6 +4658,23 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "Reactor",
+      "type": "block",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reactor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/blockstates/reactor.json",
+          "src/main/resources/assets/workspace_test/models/block/reactor.json",
+          "src/main/java/net/mcreator/workspacetest/block/ReactorBlock.java",
+          "src/main/resources/assets/workspace_test/models/item/reactor.json"
+        ]
+      },
+      "path": "~/martin mod"
     }
   ],
   "variable_elements": [],
@@ -4678,6 +4695,7 @@
       "item.workspace_test.battleship_spawn_egg": "Battleship Spawn Egg",
       "gui.workspace_test.riggui.label_output": "Output:",
       "entity.workspace_test.spiderbot": "Spiderbot",
+      "block.workspace_test.reactor": "Reactor",
       "gui.workspace_test.riggui.button_save": "SAVE",
       "item_group.workspace_test.electricity": "Electricity",
       "item.workspace_test.firebelt": "Firebelt",
@@ -4777,6 +4795,7 @@
       "item.workspace_test.healt_indicator": "Healt Indicator",
       "block.workspace_test.thorde": "Thorium deposit",
       "block.workspace_test.firetester_0": "Empty firetester",
+      "item.workspace_test.smoker": "Smoker",
       "fluid.workspace_test.crudeoil": "Crude oil",
       "item.workspace_test.diamonds": "Diamonds",
       "block.workspace_test.farm": "Farm",
@@ -4790,6 +4809,7 @@
       "item.workspace_test.creeperbot_spawn_egg": "Creeperbot Spawn Egg",
       "entity.workspace_test.tinybot": "Tinybot",
       "block.workspace_test.titande": "Titanium deposit",
+      "item.workspace_test.chemicalextinguisher": "Chemical extinguisher",
       "gui.workspace_test.smelterygui.label_product": "Product:",
       "gui.workspace_test.minegui.label_mine": "Mine:",
       "entity.workspace_test.dps_orb": "DPS Orb",

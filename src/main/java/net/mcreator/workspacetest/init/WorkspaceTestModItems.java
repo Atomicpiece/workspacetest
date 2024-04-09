@@ -144,6 +144,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> FIRETESTER_0 = block(WorkspaceTestModBlocks.FIRETESTER_0);
 	public static final RegistryObject<Item> CHEMICALEXTINGUISHER = REGISTRY.register("chemicalextinguisher", () -> new ChemicalextinguisherItem());
 	public static final RegistryObject<Item> SMOKER = REGISTRY.register("smoker", () -> new SmokerItem());
+	public static final RegistryObject<Item> REACTOR = block(WorkspaceTestModBlocks.REACTOR);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

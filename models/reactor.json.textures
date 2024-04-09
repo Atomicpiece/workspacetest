@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "reactor_texture",
+        "1": "reactor_block_texture",
+        "2": "reactor_other_texture"
+      },
+      "name": "default"
+    }
+  }
+}

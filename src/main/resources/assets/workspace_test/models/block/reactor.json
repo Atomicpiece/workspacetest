@@ -1,0 +1,11 @@
+{
+  "parent": "workspace_test:custom/reactor",
+  "textures": {
+    "all": "workspace_test:block/reactor_other_texture",
+    "particle": "workspace_test:block/reactor_other_texture",
+    "0": "workspace_test:block/reactor_texture",
+    "1": "workspace_test:block/reactor_block_texture",
+    "2": "workspace_test:block/reactor_other_texture"
+  },
+  "render_type": "solid"
+}

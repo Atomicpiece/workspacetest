@@ -23,6 +23,7 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.BOMBS.get());
 				tabData.accept(WorkspaceTestModItems.HEALT_INDICATOR.get());
 				tabData.accept(WorkspaceTestModItems.SMOKER.get());
+				tabData.accept(WorkspaceTestModBlocks.REACTOR.get().asItem());
 			})
 
 					.build());
