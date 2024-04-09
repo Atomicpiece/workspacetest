@@ -12,6 +12,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.workspacetest.init.WorkspaceTestModBlocks;
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
 import java.util.Map;
@@ -39,7 +40,7 @@ public class CrudeoilUpdateTickProcedure {
 			sx = sx + 1;
 		}
 		if (found == true) {
-			if (20 <= Mth.nextInt(RandomSource.create(), 1, 20)) {
+			if (50 <= Mth.nextInt(RandomSource.create(), 1, 50)) {
 				WorkspaceTestMod.queueServerWork(5, () -> {
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles(ParticleTypes.FLAME, (x + 0.5), (y + 0.5), (z + 0.5), 1, 0.2, 0.2, 0.2, 0.01);
@@ -74,6 +75,9 @@ public class CrudeoilUpdateTickProcedure {
 					}
 				});
 			}
+		}
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == Blocks.STONE) {
+			world.setBlock(BlockPos.containing(x, y - 1, z), WorkspaceTestModBlocks.CRUDE_OIL_BLOCK.get().defaultBlockState(), 3);
 		}
 	}
 }
