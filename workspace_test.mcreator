@@ -5801,6 +5801,22 @@
       "path": "~/assembly machines"
     },
     {
+      "name": "Recyclgui",
+      "type": "gui",
+      "sortid": 213,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recyclgui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/world/inventory/RecyclguiMenu.java",
+          "src/main/java/net/mcreator/workspacetest/client/gui/RecyclguiScreen.java",
+          "src/main/java/net/mcreator/workspacetest/network/RecyclguiButtonMessage.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
       "name": "Scraps",
       "type": "tag",
       "sortid": 203,
@@ -5810,6 +5826,72 @@
       "metadata": {
         "files": [
           "src/main/resources/data/minecraft/tags/items/scraps.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Process0",
+      "type": "procedure",
+      "sortid": 222,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "process_0",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/Process0Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Process2",
+      "type": "procedure",
+      "sortid": 214,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "process_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/Process2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
         ]
       },
       "path": "~/assembly machines"
@@ -5880,32 +5962,16 @@
       "path": "~/assembly machines"
     },
     {
-      "name": "Recyclgui",
-      "type": "gui",
-      "sortid": 213,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "recyclgui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/world/inventory/RecyclguiMenu.java",
-          "src/main/java/net/mcreator/workspacetest/client/gui/RecyclguiScreen.java",
-          "src/main/java/net/mcreator/workspacetest/network/RecyclguiButtonMessage.java"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
-      "name": "Process2",
+      "name": "Process4",
       "type": "procedure",
-      "sortid": 214,
+      "sortid": 216,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "process_2",
+      "registry_name": "process_4",
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/Process2Procedure.java"
+          "src/main/java/net/mcreator/workspacetest/procedures/Process4Procedure.java"
         ],
         "dependencies": [
           {
@@ -5962,16 +6028,16 @@
       "path": "~/assembly machines"
     },
     {
-      "name": "Process4",
+      "name": "Process6",
       "type": "procedure",
-      "sortid": 216,
+      "sortid": 218,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "process_4",
+      "registry_name": "process_6",
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/Process4Procedure.java"
+          "src/main/java/net/mcreator/workspacetest/procedures/Process6Procedure.java"
         ],
         "dependencies": [
           {
@@ -6028,49 +6094,16 @@
       "path": "~/assembly machines"
     },
     {
-      "name": "Process6",
+      "name": "Processend",
       "type": "procedure",
-      "sortid": 218,
+      "sortid": 221,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "process_6",
+      "registry_name": "processend",
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/Process6Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
-      "name": "Process7",
-      "type": "procedure",
-      "sortid": 219,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "process_7",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/Process7Procedure.java"
+          "src/main/java/net/mcreator/workspacetest/procedures/ProcessendProcedure.java"
         ],
         "dependencies": [
           {
@@ -6127,16 +6160,16 @@
       "path": "~/assembly machines"
     },
     {
-      "name": "Processend",
+      "name": "Process7",
       "type": "procedure",
-      "sortid": 221,
+      "sortid": 219,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "processend",
+      "registry_name": "process_7",
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/ProcessendProcedure.java"
+          "src/main/java/net/mcreator/workspacetest/procedures/Process7Procedure.java"
         ],
         "dependencies": [
           {
@@ -6160,33 +6193,20 @@
       "path": "~/assembly machines"
     },
     {
-      "name": "Process0",
+      "name": "FireengineOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 222,
+      "sortid": 174,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "process_0",
+      "registry_name": "fireengine_on_entity_tick_update",
       "metadata": {
-        "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/Process0Procedure.java"
+          "src/main/java/net/mcreator/workspacetest/procedures/FireengineOnEntityTickUpdateProcedure.java"
         ],
         "dependencies": [
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
+            "name": "entity",
+            "type": "entity"
           }
         ]
       },
@@ -6251,7 +6271,6 @@
       "entity.workspace_test.bomb": "Bomb",
       "gui.workspace_test.smelterygui.label_recipe": "Recipe:",
       "item_group.workspace_test.finanbuild": "Financial buildings",
-      "gui.workspace_test.recyclgui.label_recycler": "Recycler:",
       "block.workspace_test.forest": "Forest",
       "item_group.workspace_test.my_tab": "Other",
       "item.workspace_test.ironchunk": "Iron chunk",
@@ -6283,7 +6302,6 @@
       "block.workspace_test.tungstende": "Tungsten deposit",
       "item.workspace_test.firefighter_suit_chestplate": "Firefighter Chestplate",
       "item.workspace_test.multimeter": "Tablet",
-      "block.workspace_test.recycler": "Recycler",
       "item.workspace_test.redstrone_blaster": "Redstrone Blaster",
       "entity.workspace_test.mossy_golem": "Mossy Golem",
       "block.workspace_test.smeltery": "Smeltery",
@@ -6291,7 +6309,6 @@
       "block.workspace_test.niterde": "Niterde",
       "block.workspace_test.crudeoilde": "Crude oil deposit",
       "block.workspace_test.zincde": "Zinc deposit",
-      "gui.workspace_test.recyclgui.button_process": "Process",
       "item_group.workspace_test.machines": "Machines",
       "item.workspace_test.extinguisher": "Extinguisher",
       "entity.workspace_test.robotic_phantom": "Robotic Phantom",
@@ -6320,6 +6337,7 @@
       "gui.workspace_test.riggui.label_mine": "Oil derrick:",
       "block.workspace_test.landmine": "Landmine",
       "item.workspace_test.firefighter_suit_helmet": "FirefighterHelmet",
+      "key.categories.mod": "Mod",
       "gui.workspace_test.smelterygui.label_speed": "Speed:",
       "entity.workspace_test.skeleter": "Skeleter",
       "entity.workspace_test.turret": "Turret",

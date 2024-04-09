@@ -1,38 +1,15 @@
 package net.mcreator.workspacetest.client.gui;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.ImageButton;
-import net.minecraft.client.gui.components.Button;
-import net.minecraft.client.gui.GuiGraphics;
-
-import net.mcreator.workspacetest.world.inventory.RecyclguiMenu;
-import net.mcreator.workspacetest.procedures.Process8Procedure;
-import net.mcreator.workspacetest.procedures.Process7Procedure;
-import net.mcreator.workspacetest.procedures.Process6Procedure;
-import net.mcreator.workspacetest.procedures.Process5Procedure;
-import net.mcreator.workspacetest.procedures.Process4Procedure;
-import net.mcreator.workspacetest.procedures.Process3Procedure;
-import net.mcreator.workspacetest.procedures.Process2Procedure;
-import net.mcreator.workspacetest.procedures.Process1Procedure;
-import net.mcreator.workspacetest.procedures.Process0Procedure;
-import net.mcreator.workspacetest.network.RecyclguiButtonMessage;
-import net.mcreator.workspacetest.WorkspaceTestMod;
-
-import java.util.HashMap;
-
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class RecyclguiScreen extends AbstractContainerScreen<RecyclguiMenu> {
+
 	private final static HashMap<String, Object> guistate = RecyclguiMenu.guistate;
+
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+
 	Button button_process;
+
 	ImageButton imagebutton_preocess1;
 
 	public RecyclguiScreen(RecyclguiMenu container, Inventory inventory, Component text) {
@@ -51,8 +28,11 @@ public class RecyclguiScreen extends AbstractContainerScreen<RecyclguiMenu> {
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
+
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+
 	}
 
 	@Override
@@ -60,31 +40,66 @@ public class RecyclguiScreen extends AbstractContainerScreen<RecyclguiMenu> {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
+
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-		if (Process2Procedure.execute(world, x, y, z)) {
+
+		if (
+
+		Process2Procedure.execute()
+
+		) {
 			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/process2.png"), this.leftPos + 41, this.topPos + 43, 0, 0, 16, 16, 16, 16);
 		}
-		if (Process3Procedure.execute(world, x, y, z)) {
+		if (
+
+		Process3Procedure.execute()
+
+		) {
 			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/process3.png"), this.leftPos + 41, this.topPos + 43, 0, 0, 16, 16, 16, 16);
 		}
-		if (Process4Procedure.execute(world, x, y, z)) {
+		if (
+
+		Process4Procedure.execute()
+
+		) {
 			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/process4.png"), this.leftPos + 41, this.topPos + 43, 0, 0, 16, 16, 16, 16);
 		}
-		if (Process5Procedure.execute(world, x, y, z)) {
+		if (
+
+		Process5Procedure.execute()
+
+		) {
 			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/process5.png"), this.leftPos + 41, this.topPos + 43, 0, 0, 16, 16, 16, 16);
 		}
-		if (Process6Procedure.execute(world, x, y, z)) {
+		if (
+
+		Process6Procedure.execute()
+
+		) {
 			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/process6.png"), this.leftPos + 41, this.topPos + 43, 0, 0, 16, 16, 16, 16);
 		}
-		if (Process7Procedure.execute(world, x, y, z)) {
+		if (
+
+		Process7Procedure.execute()
+
+		) {
 			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/process7.png"), this.leftPos + 41, this.topPos + 43, 0, 0, 16, 16, 16, 16);
 		}
-		if (Process8Procedure.execute(world, x, y, z)) {
+		if (
+
+		Process8Procedure.execute()
+
+		) {
 			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/process8.png"), this.leftPos + 41, this.topPos + 43, 0, 0, 16, 16, 16, 16);
 		}
-		if (Process0Procedure.execute(world, x, y, z)) {
+		if (
+
+		Process0Procedure.execute()
+
+		) {
 			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/preocess1.png"), this.leftPos + 41, this.topPos + 43, 0, 0, 16, 16, 16, 16);
 		}
+
 		RenderSystem.disableBlend();
 	}
 
@@ -94,6 +109,7 @@ public class RecyclguiScreen extends AbstractContainerScreen<RecyclguiMenu> {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+
 		return super.keyPressed(key, b, c);
 	}
 
@@ -115,23 +131,33 @@ public class RecyclguiScreen extends AbstractContainerScreen<RecyclguiMenu> {
 	@Override
 	public void init() {
 		super.init();
+
 		button_process = Button.builder(Component.translatable("gui.workspace_test.recyclgui.button_process"), e -> {
 			if (true) {
 				WorkspaceTestMod.PACKET_HANDLER.sendToServer(new RecyclguiButtonMessage(0, x, y, z));
 				RecyclguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 13, this.topPos + 17, 41, 20).build();
+
 		guistate.put("button:button_process", button_process);
 		this.addRenderableWidget(button_process);
+
 		imagebutton_preocess1 = new ImageButton(this.leftPos + 41, this.topPos + 43, 16, 16, 0, 0, 16, new ResourceLocation("workspace_test:textures/screens/atlas/imagebutton_preocess1.png"), 16, 32, e -> {
 		}) {
 			@Override
 			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (Process1Procedure.execute(world, x, y, z))
+				if (
+
+				Process1Procedure.execute()
+
+				)
 					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};
+
 		guistate.put("button:imagebutton_preocess1", imagebutton_preocess1);
 		this.addRenderableWidget(imagebutton_preocess1);
+
 	}
+
 }
