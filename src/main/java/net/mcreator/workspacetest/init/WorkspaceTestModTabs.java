@@ -135,6 +135,7 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.SMOKER.get());
 				tabData.accept(WorkspaceTestModItems.DETOXIFICATOR.get());
 				tabData.accept(WorkspaceTestModItems.FIREENGINE_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModBlocks.CRUDE_OIL_BLOCK.get().asItem());
 			})
 
 					.build());

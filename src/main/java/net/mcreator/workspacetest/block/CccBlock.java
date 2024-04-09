@@ -32,13 +32,16 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.Containers;
+import net.minecraft.util.RandomSource;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.workspacetest.world.inventory.MineguiMenu;
+import net.mcreator.workspacetest.procedures.MinefireProcedure;
 import net.mcreator.workspacetest.block.entity.CccBlockEntity;
 
 import java.util.List;

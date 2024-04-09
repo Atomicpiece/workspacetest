@@ -155,6 +155,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> URANIUM_ROD = REGISTRY.register("uranium_rod", () -> new UraniumRodItem());
 	public static final RegistryObject<Item> DESTROYEDMINE = block(WorkspaceTestModBlocks.DESTROYEDMINE);
 	public static final RegistryObject<Item> EMPTY_ROD = REGISTRY.register("empty_rod", () -> new EmptyRodItem());
+	public static final RegistryObject<Item> CRUDE_OIL_BLOCK = block(WorkspaceTestModBlocks.CRUDE_OIL_BLOCK);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
