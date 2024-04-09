@@ -102,7 +102,7 @@
     "unbreakable": false,
     "breakHarvestLevel": 1,
     "isBonemealable": false,
-    "hasInventory": false,
+    "hasInventory": true,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
     "inventorySize": 9,
@@ -111,14 +111,18 @@
     "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
-    "hasEnergyStorage": false,
+    "hasEnergyStorage": true,
     "energyInitial": 0,
-    "energyCapacity": 400000,
-    "energyMaxReceive": 200,
-    "energyMaxExtract": 200,
-    "isFluidTank": false,
-    "fluidCapacity": 8000,
-    "fluidRestrictions": [],
+    "energyCapacity": 1000000,
+    "energyMaxReceive": 0,
+    "energyMaxExtract": 1000,
+    "isFluidTank": true,
+    "fluidCapacity": 16000,
+    "fluidRestrictions": [
+      {
+        "value": "WATER"
+      }
+    ],
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
