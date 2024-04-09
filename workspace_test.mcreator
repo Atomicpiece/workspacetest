@@ -4350,8 +4350,8 @@
       "registry_name": "chemicalextinguisher",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/ChemicalextinguisherItem.java",
-          "src/main/resources/assets/workspace_test/models/item/chemicalextinguisher.json"
+          "src/main/resources/assets/workspace_test/models/item/chemicalextinguisher.json",
+          "src/main/java/net/mcreator/workspacetest/item/ChemicalextinguisherItem.java"
         ]
       },
       "path": "~/assembly machines"
@@ -4365,8 +4365,8 @@
       "registry_name": "wasser",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/client/particle/WasserParticle.java",
-          "src/main/resources/assets/workspace_test/particles/wasser.json"
+          "src/main/resources/assets/workspace_test/particles/wasser.json",
+          "src/main/java/net/mcreator/workspacetest/client/particle/WasserParticle.java"
         ]
       },
       "path": "~/assembly machines"
@@ -4380,8 +4380,8 @@
       "registry_name": "smoker",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/smoker.json",
-          "src/main/java/net/mcreator/workspacetest/item/SmokerItem.java"
+          "src/main/java/net/mcreator/workspacetest/item/SmokerItem.java",
+          "src/main/resources/assets/workspace_test/models/item/smoker.json"
         ]
       },
       "path": "~/assembly machines"
@@ -4427,8 +4427,8 @@
       "registry_name": "co_2",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/client/renderer/Co2Renderer.java",
-          "src/main/java/net/mcreator/workspacetest/entity/Co2Entity.java"
+          "src/main/java/net/mcreator/workspacetest/entity/Co2Entity.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/Co2Renderer.java"
         ]
       },
       "path": "~/assembly machines"
@@ -4638,8 +4638,8 @@
       "registry_name": "gasfire",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/client/particle/GasfireParticle.java",
-          "src/main/resources/assets/workspace_test/particles/gasfire.json"
+          "src/main/resources/assets/workspace_test/particles/gasfire.json",
+          "src/main/java/net/mcreator/workspacetest/client/particle/GasfireParticle.java"
         ]
       },
       "path": "~/assembly machines"
@@ -4677,12 +4677,19 @@
       "path": "~/martin mod"
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "chancefire",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    }
+  ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "block.workspace_test.coalplant": "Coalplant",
       "item.workspace_test.bombs": "Bombs",
+      "block.workspace_test.coalplant": "Coalplant",
       "block.workspace_test.diamondde": "Diamond deposit",
       "item.workspace_test.fireoff": "Fireoff",
       "item.workspace_test.leadchunk": "Lead chunk",
@@ -4695,10 +4702,9 @@
       "item.workspace_test.battleship_spawn_egg": "Battleship Spawn Egg",
       "gui.workspace_test.riggui.label_output": "Output:",
       "entity.workspace_test.spiderbot": "Spiderbot",
-      "block.workspace_test.reactor": "Reactor",
-      "gui.workspace_test.riggui.button_save": "SAVE",
-      "item_group.workspace_test.electricity": "Electricity",
       "item.workspace_test.firebelt": "Firebelt",
+      "item_group.workspace_test.electricity": "Electricity",
+      "gui.workspace_test.riggui.button_save": "SAVE",
       "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
       "item.workspace_test.fire_circle_creator": "Fire Circle Creator",
       "item.workspace_test.great_chicken_spawn_egg": "Great Chicken Spawn Egg",
