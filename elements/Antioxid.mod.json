@@ -1,0 +1,25 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.CRYING_OBSIDIAN"
+    },
+    "showParticles": true,
+    "actionSound": {
+      "value": "block.wart_block.break"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 0.0,
+    "knockback": 0,
+    "entityModel": "Modelmissile",
+    "customModelTexture": "missiled.png",
+    "onHitsBlock": {
+      "name": "AntioxidProjectileHitsBlock"
+    },
+    "onFlyingTick": {
+      "name": "AntioxidWhileProjectileFlyingTick"
+    }
+  }
+}

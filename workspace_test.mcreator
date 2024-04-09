@@ -4350,8 +4350,8 @@
       "registry_name": "chemicalextinguisher",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/chemicalextinguisher.json",
-          "src/main/java/net/mcreator/workspacetest/item/ChemicalextinguisherItem.java"
+          "src/main/java/net/mcreator/workspacetest/item/ChemicalextinguisherItem.java",
+          "src/main/resources/assets/workspace_test/models/item/chemicalextinguisher.json"
         ]
       },
       "path": "~/assembly machines"
@@ -4365,8 +4365,8 @@
       "registry_name": "wasser",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/particles/wasser.json",
-          "src/main/java/net/mcreator/workspacetest/client/particle/WasserParticle.java"
+          "src/main/java/net/mcreator/workspacetest/client/particle/WasserParticle.java",
+          "src/main/resources/assets/workspace_test/particles/wasser.json"
         ]
       },
       "path": "~/assembly machines"
@@ -4380,8 +4380,8 @@
       "registry_name": "smoker",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/SmokerItem.java",
-          "src/main/resources/assets/workspace_test/models/item/smoker.json"
+          "src/main/resources/assets/workspace_test/models/item/smoker.json",
+          "src/main/java/net/mcreator/workspacetest/item/SmokerItem.java"
         ]
       },
       "path": "~/assembly machines"
@@ -4427,8 +4427,8 @@
       "registry_name": "co_2",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/entity/Co2Entity.java",
-          "src/main/java/net/mcreator/workspacetest/client/renderer/Co2Renderer.java"
+          "src/main/java/net/mcreator/workspacetest/client/renderer/Co2Renderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/Co2Entity.java"
         ]
       },
       "path": "~/assembly machines"
@@ -4658,6 +4658,154 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "Reactor",
+      "type": "block",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reactor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/block/entity/ReactorBlockEntity.java",
+          "src/main/resources/assets/workspace_test/blockstates/reactor.json",
+          "src/main/resources/assets/workspace_test/models/block/reactor.json",
+          "src/main/java/net/mcreator/workspacetest/block/ReactorBlock.java",
+          "src/main/resources/assets/workspace_test/models/item/reactor.json"
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "Antioxid",
+      "type": "projectile",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "antioxid",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/AntioxidEntity.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/AntioxidRenderer.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "AntioxidProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "antioxid_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/AntioxidProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "AntioxidWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "antioxid_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/AntioxidWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Detoxificator",
+      "type": "item",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "detoxificator",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/DetoxificatorItem.java",
+          "src/main/resources/assets/workspace_test/models/item/detoxificator.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Detoxic",
+      "type": "procedure",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "detoxic",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/DetoxicProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [
@@ -4679,12 +4827,13 @@
       "block.workspace_test.ancient_spawner": "Ancient Spawner",
       "item.workspace_test.bomb_spawn_egg": "Bomb Spawn Egg",
       "gui.workspace_test.riggui.label_mining_speed": "Mining speed:",
-      "block.workspace_test.sulfurde": "Sulfur deposit",
       "gui.workspace_test.riggui.label_resource": "Resource:",
+      "block.workspace_test.sulfurde": "Sulfur deposit",
       "item.workspace_test.zincchunk": "Zinc chunk",
       "item.workspace_test.battleship_spawn_egg": "Battleship Spawn Egg",
       "gui.workspace_test.riggui.label_output": "Output:",
       "entity.workspace_test.spiderbot": "Spiderbot",
+      "block.workspace_test.reactor": "Reactor",
       "item.workspace_test.firebelt": "Firebelt",
       "item_group.workspace_test.electricity": "Electricity",
       "gui.workspace_test.riggui.button_save": "SAVE",
@@ -4801,6 +4950,7 @@
       "item.workspace_test.chemicalextinguisher": "Chemical extinguisher",
       "gui.workspace_test.smelterygui.label_product": "Product:",
       "gui.workspace_test.minegui.label_mine": "Mine:",
+      "item.workspace_test.detoxificator": "Decontaminator",
       "entity.workspace_test.dps_orb": "DPS Orb",
       "item.workspace_test.titanchunk": "Titanium chunk",
       "item.workspace_test.wand": "Wand",

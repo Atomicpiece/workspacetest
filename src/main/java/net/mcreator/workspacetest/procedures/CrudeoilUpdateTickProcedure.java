@@ -39,7 +39,7 @@ public class CrudeoilUpdateTickProcedure {
 			sx = sx + 1;
 		}
 		if (found == true) {
-			if (10 <= Mth.nextInt(RandomSource.create(), 1, 10)) {
+			if (20 <= Mth.nextInt(RandomSource.create(), 1, 20)) {
 				WorkspaceTestMod.queueServerWork(5, () -> {
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles(ParticleTypes.FLAME, (x + 0.5), (y + 0.5), (z + 0.5), 1, 0.2, 0.2, 0.2, 0.01);
