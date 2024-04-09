@@ -22,6 +22,7 @@ import net.mcreator.workspacetest.block.ThordeBlock;
 import net.mcreator.workspacetest.block.SulfurdeBlock;
 import net.mcreator.workspacetest.block.SmelteryBlock;
 import net.mcreator.workspacetest.block.RoboticAssemblerBlock;
+import net.mcreator.workspacetest.block.RecyclerBlock;
 import net.mcreator.workspacetest.block.ReactorBlock;
 import net.mcreator.workspacetest.block.OilrigBlock;
 import net.mcreator.workspacetest.block.NukeBlock;
@@ -86,4 +87,5 @@ public class WorkspaceTestModBlocks {
 	public static final RegistryObject<Block> REACTOR = REGISTRY.register("reactor", () -> new ReactorBlock());
 	public static final RegistryObject<Block> DESTROYEDMINE = REGISTRY.register("destroyedmine", () -> new DestroyedmineBlock());
 	public static final RegistryObject<Block> CRUDE_OIL_BLOCK = REGISTRY.register("crude_oil_block", () -> new CrudeOilBlockBlock());
+	public static final RegistryObject<Block> RECYCLER = REGISTRY.register("recycler", () -> new RecyclerBlock());
 }
