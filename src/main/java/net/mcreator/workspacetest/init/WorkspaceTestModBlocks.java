@@ -22,6 +22,7 @@ import net.mcreator.workspacetest.block.ThordeBlock;
 import net.mcreator.workspacetest.block.SulfurdeBlock;
 import net.mcreator.workspacetest.block.SmelteryBlock;
 import net.mcreator.workspacetest.block.RoboticAssemblerBlock;
+import net.mcreator.workspacetest.block.RecyclerBlock;
 import net.mcreator.workspacetest.block.ReactorBlock;
 import net.mcreator.workspacetest.block.OilrigBlock;
 import net.mcreator.workspacetest.block.NukeBlock;
@@ -37,8 +38,10 @@ import net.mcreator.workspacetest.block.FiretesterBlock;
 import net.mcreator.workspacetest.block.Firetester0Block;
 import net.mcreator.workspacetest.block.FarmBlock;
 import net.mcreator.workspacetest.block.DiamonddeBlock;
+import net.mcreator.workspacetest.block.DestroyedmineBlock;
 import net.mcreator.workspacetest.block.CrudeoildeBlock;
 import net.mcreator.workspacetest.block.CrudeoilBlock;
+import net.mcreator.workspacetest.block.CrudeOilBlockBlock;
 import net.mcreator.workspacetest.block.CopperdeBlock;
 import net.mcreator.workspacetest.block.CoalplantBlock;
 import net.mcreator.workspacetest.block.CoaldeBlock;
@@ -82,4 +85,7 @@ public class WorkspaceTestModBlocks {
 	public static final RegistryObject<Block> FIRETESTER = REGISTRY.register("firetester", () -> new FiretesterBlock());
 	public static final RegistryObject<Block> FIRETESTER_0 = REGISTRY.register("firetester_0", () -> new Firetester0Block());
 	public static final RegistryObject<Block> REACTOR = REGISTRY.register("reactor", () -> new ReactorBlock());
+	public static final RegistryObject<Block> DESTROYEDMINE = REGISTRY.register("destroyedmine", () -> new DestroyedmineBlock());
+	public static final RegistryObject<Block> CRUDE_OIL_BLOCK = REGISTRY.register("crude_oil_block", () -> new CrudeOilBlockBlock());
+	public static final RegistryObject<Block> RECYCLER = REGISTRY.register("recycler", () -> new RecyclerBlock());
 }

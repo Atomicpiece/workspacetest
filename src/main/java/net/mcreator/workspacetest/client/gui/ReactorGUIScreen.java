@@ -9,7 +9,7 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.workspacetest.world.inventory.ReactorGUIMenu;
-import net.mcreator.workspacetest.procedures.HeatProcedProcedure;
+import net.mcreator.workspacetest.procedures.HeatProcedTestProcedure;
 import net.mcreator.workspacetest.procedures.FunctionProcProcedure;
 import net.mcreator.workspacetest.procedures.FluidTypeProcedure;
 import net.mcreator.workspacetest.procedures.FluidP9Procedure;
@@ -164,7 +164,7 @@ public class ReactorGUIScreen extends AbstractContainerScreen<ReactorGUIMenu> {
 				EnergyProcProcedure.execute(world, x, y, z), 49, 26, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				HeatProcedProcedure.execute(world, x, y, z), 31, 44, -12829636, false);
+				HeatProcedTestProcedure.execute(world, x, y, z), 31, 44, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.workspace_test.reactor_gui.label_fluid_type"), 58, 62, -12829636, false);
 		guiGraphics.drawString(this.font,
 

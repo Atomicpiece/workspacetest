@@ -27,6 +27,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
@@ -41,6 +42,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.workspacetest.world.inventory.ReactorGUIMenu;
 import net.mcreator.workspacetest.procedures.ReactorUpdateTickProcedure;
+import net.mcreator.workspacetest.procedures.ReactorBlockIsPlacedByProcedure;
 import net.mcreator.workspacetest.block.entity.ReactorBlockEntity;
 
 import java.util.List;
@@ -116,6 +118,12 @@ public class ReactorBlock extends Block implements EntityBlock {
 		int z = pos.getZ();
 		ReactorUpdateTickProcedure.execute(world, x, y, z);
 		world.scheduleTick(pos, this, 1);
+	}
+
+	@Override
+	public void setPlacedBy(Level world, BlockPos pos, BlockState blockstate, LivingEntity entity, ItemStack itemstack) {
+		super.setPlacedBy(world, pos, blockstate, entity, itemstack);
+		ReactorBlockIsPlacedByProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override

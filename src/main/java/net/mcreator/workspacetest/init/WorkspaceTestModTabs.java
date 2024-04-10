@@ -105,6 +105,9 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModBlocks.CRUDEOILDE.get().asItem());
 				tabData.accept(WorkspaceTestModItems.CRUDEOIL_BUCKET.get());
 				tabData.accept(WorkspaceTestModItems.CRUDEOILBARREL.get());
+				tabData.accept(WorkspaceTestModItems.METALSCRAP.get());
+				tabData.accept(WorkspaceTestModBlocks.DESTROYEDMINE.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.RECYCLER.get().asItem());
 			})
 
 					.build());
@@ -133,6 +136,7 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.SMOKER.get());
 				tabData.accept(WorkspaceTestModItems.DETOXIFICATOR.get());
 				tabData.accept(WorkspaceTestModItems.FIREENGINE_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModBlocks.CRUDE_OIL_BLOCK.get().asItem());
 			})
 
 					.build());

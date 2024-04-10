@@ -19,6 +19,6 @@ public class FunctionProcProcedure {
 					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 				return _retval.get();
 			}
-		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getOrCreateTag().getString("function");
+		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getOrCreateTag().getString("item_function");
 	}
 }
