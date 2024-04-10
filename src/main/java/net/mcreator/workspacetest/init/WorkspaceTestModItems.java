@@ -50,6 +50,7 @@ import net.mcreator.workspacetest.item.IgniterItem;
 import net.mcreator.workspacetest.item.HealtIndicatorItem;
 import net.mcreator.workspacetest.item.GoldcubeItem;
 import net.mcreator.workspacetest.item.GoldchunkItem;
+import net.mcreator.workspacetest.item.GlasspaneItem;
 import net.mcreator.workspacetest.item.FireoffItem;
 import net.mcreator.workspacetest.item.FirehoseItem;
 import net.mcreator.workspacetest.item.FirefighterSuitItem;
@@ -59,6 +60,7 @@ import net.mcreator.workspacetest.item.ExtinguisherItem;
 import net.mcreator.workspacetest.item.EmptyRodItem;
 import net.mcreator.workspacetest.item.DiamondsItem;
 import net.mcreator.workspacetest.item.DetoxificatorItem;
+import net.mcreator.workspacetest.item.CuttersItem;
 import net.mcreator.workspacetest.item.CrudeoilbarrelItem;
 import net.mcreator.workspacetest.item.CrudeoilItem;
 import net.mcreator.workspacetest.item.CoppercubeItem;
@@ -192,6 +194,8 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> SULPHUR = REGISTRY.register("sulphur", () -> new SulphurItem());
 	public static final RegistryObject<Item> NITER = REGISTRY.register("niter", () -> new NiterItem());
 	public static final RegistryObject<Item> LITHIUM = REGISTRY.register("lithium", () -> new LithiumItem());
+	public static final RegistryObject<Item> CUTTERS = REGISTRY.register("cutters", () -> new CuttersItem());
+	public static final RegistryObject<Item> GLASSPANE = REGISTRY.register("glasspane", () -> new GlasspaneItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

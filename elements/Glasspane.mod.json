@@ -3,11 +3,11 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "lithium_cube",
+    "texture": "glasspane",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Lithium cube",
+    "name": "Glass pane",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:Products"
