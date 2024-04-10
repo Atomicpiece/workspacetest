@@ -3,14 +3,14 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "lithium_cube",
+    "texture": "cutters",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Lithium cube",
-    "rarity": "COMMON",
+    "name": "Cutters",
+    "rarity": "UNCOMMON",
     "creativeTab": {
-      "value": "CUSTOM:Products"
+      "value": "CUSTOM:Tools"
     },
     "stackSize": 64,
     "enchantability": 0,
