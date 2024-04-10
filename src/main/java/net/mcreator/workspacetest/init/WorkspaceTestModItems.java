@@ -26,6 +26,7 @@ import net.mcreator.workspacetest.item.TitanchunkItem;
 import net.mcreator.workspacetest.item.TiningotItem;
 import net.mcreator.workspacetest.item.TinchunkItem;
 import net.mcreator.workspacetest.item.ThoriumingotItem;
+import net.mcreator.workspacetest.item.ThoriumRodItem;
 import net.mcreator.workspacetest.item.ThorchunkItem;
 import net.mcreator.workspacetest.item.SulphurItem;
 import net.mcreator.workspacetest.item.SulfurItem;
@@ -192,6 +193,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> SULPHUR = REGISTRY.register("sulphur", () -> new SulphurItem());
 	public static final RegistryObject<Item> NITER = REGISTRY.register("niter", () -> new NiterItem());
 	public static final RegistryObject<Item> LITHIUM = REGISTRY.register("lithium", () -> new LithiumItem());
+	public static final RegistryObject<Item> THORIUM_ROD = REGISTRY.register("thorium_rod", () -> new ThoriumRodItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

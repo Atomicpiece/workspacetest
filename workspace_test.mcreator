@@ -6670,6 +6670,55 @@
         ]
       },
       "path": "~/assembly machines/Ingots"
+    },
+    {
+      "name": "ThoriumRod",
+      "type": "item",
+      "sortid": 244,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thorium_rod",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/ThoriumRodItem.java",
+          "src/main/resources/assets/workspace_test/models/item/thorium_rod.json"
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "ThoriumRodItemIsCraftedsmelted",
+      "type": "procedure",
+      "sortid": 245,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thorium_rod_item_is_craftedsmelted",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/ThoriumRodItemIsCraftedsmeltedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "Trod",
+      "type": "recipe",
+      "sortid": 246,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trod",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/workspace_test/recipes/trod.json"
+        ]
+      },
+      "path": "~/martin mod"
     }
   ],
   "variable_elements": [
@@ -6779,6 +6828,7 @@
       "item.workspace_test.wand": "Wand",
       "block.workspace_test.robotic_assembler": "Robotic Assembler",
       "item.workspace_test.tiningot": "Tin ingot",
+      "item.workspace_test.thorium_rod": "Thorium Rod",
       "item.workspace_test.dps_orb_spawn_egg": "DPS Orb Spawn Egg",
       "item.workspace_test.microbot_spawn_egg": "Microbot Spawn Egg",
       "entity.workspace_test.tank": "Tank",
