@@ -2,15 +2,15 @@
   "_fv": 57,
   "_type": "block",
   "definition": {
-    "texture": "reactor_other_texture",
-    "textureTop": "",
-    "textureLeft": "",
-    "textureFront": "",
-    "textureRight": "",
-    "textureBack": "",
-    "renderType": 2,
-    "customModelName": "reactor:default",
-    "rotationMode": 1,
+    "texture": "infwstor_bottom",
+    "textureTop": "infwstor_top",
+    "textureLeft": "infwstor_side",
+    "textureFront": "infwstor_side",
+    "textureRight": "infwstor_side",
+    "textureBack": "infwstor_side",
+    "renderType": 10,
+    "customModelName": "Normal",
+    "rotationMode": 0,
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
@@ -18,7 +18,7 @@
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
-    "hasTransparency": true,
+    "hasTransparency": false,
     "connectedSides": false,
     "transparencyType": "SOLID",
     "disableOffset": false,
@@ -33,7 +33,7 @@
         "subtract": false
       }
     ],
-    "name": "Reactor",
+    "name": "Infinite Water Storage",
     "specialInformation": {
       "fixedValue": []
     },
@@ -54,11 +54,11 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
-    "lightOpacity": 0,
+    "lightOpacity": 15,
     "material": {
-      "value": "FROGLIGHT"
+      "value": "IRON"
     },
-    "tickRate": 1,
+    "tickRate": 0,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -81,7 +81,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "CHAIN"
+      "value": "METAL"
     },
     "breakSound": {
       "value": ""
@@ -102,28 +102,25 @@
     "unbreakable": false,
     "breakHarvestLevel": 1,
     "isBonemealable": false,
-    "hasInventory": true,
-    "guiBoundTo": "ReactorGUI",
-    "openGUIOnRightClick": true,
+    "hasInventory": false,
+    "guiBoundTo": "<NONE>",
+    "openGUIOnRightClick": false,
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
-    "hasEnergyStorage": true,
+    "hasEnergyStorage": false,
     "energyInitial": 0,
-    "energyCapacity": 1000000,
-    "energyMaxReceive": 1000,
-    "energyMaxExtract": 1000,
-    "isFluidTank": true,
-    "fluidCapacity": 16000,
+    "energyCapacity": 400000,
+    "energyMaxReceive": 200,
+    "energyMaxExtract": 200,
+    "isFluidTank": false,
+    "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onTickUpdate": {
-      "name": "ReactorUpdateTick"
-    },
-    "onBlockPlayedBy": {
-      "name": "ReactorBlockIsPlacedBy"
+      "name": "InfWatStorUpdateTick"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

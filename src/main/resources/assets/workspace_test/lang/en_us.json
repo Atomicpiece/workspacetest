@@ -25,6 +25,7 @@
   "block.workspace_test.walls": "Walls",
   "item.workspace_test.warplane_spawn_egg": "Warplane Spawn Egg",
   "entity.workspace_test.furnace_powered_golem": "Furnace Powered Golem",
+  "block.workspace_test.inf_wat_stor": "Infinite Water Storage",
   "gui.workspace_test.recyclgui.label_recycler": "Recycler:",
   "gui.workspace_test.transportgui.label_fluid": "fluid:",
   "block.workspace_test.lithde": "Lithium deposit",

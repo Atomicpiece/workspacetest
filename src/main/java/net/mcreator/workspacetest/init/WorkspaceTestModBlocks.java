@@ -35,6 +35,7 @@ import net.mcreator.workspacetest.block.LeaddeBlock;
 import net.mcreator.workspacetest.block.LandmineBlock;
 import net.mcreator.workspacetest.block.IrondeBlock;
 import net.mcreator.workspacetest.block.InfbatBlock;
+import net.mcreator.workspacetest.block.InfWatStorBlock;
 import net.mcreator.workspacetest.block.GolddeBlock;
 import net.mcreator.workspacetest.block.ForestBlock;
 import net.mcreator.workspacetest.block.FiretesterBlock;
@@ -98,4 +99,5 @@ public class WorkspaceTestModBlocks {
 	public static final RegistryObject<Block> OILCOBBLE = REGISTRY.register("oilcobble", () -> new OilcobbleBlock());
 	public static final RegistryObject<Block> OILPLANKS = REGISTRY.register("oilplanks", () -> new OilplanksBlock());
 	public static final RegistryObject<Block> APATITEDE = REGISTRY.register("apatitede", () -> new ApatitedeBlock());
+	public static final RegistryObject<Block> INF_WAT_STOR = REGISTRY.register("inf_wat_stor", () -> new InfWatStorBlock());
 }

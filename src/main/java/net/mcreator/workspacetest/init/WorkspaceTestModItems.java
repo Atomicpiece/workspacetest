@@ -206,6 +206,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> APATITEDE = block(WorkspaceTestModBlocks.APATITEDE);
 	public static final RegistryObject<Item> WHITEPHOSPORUS = REGISTRY.register("whitephosporus", () -> new WhitephosporusItem());
 	public static final RegistryObject<Item> REDPHOSPORUS = REGISTRY.register("redphosporus", () -> new RedphosporusItem());
+	public static final RegistryObject<Item> INF_WAT_STOR = block(WorkspaceTestModBlocks.INF_WAT_STOR);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

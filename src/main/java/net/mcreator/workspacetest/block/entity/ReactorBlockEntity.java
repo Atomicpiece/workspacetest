@@ -8,7 +8,6 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.capabilities.Capability;
 
-import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.item.ItemStack;
@@ -158,11 +157,7 @@ public class ReactorBlockEntity extends RandomizableContainerBlockEntity impleme
 			return retval;
 		}
 	};
-	private final FluidTank fluidTank = new FluidTank(16000, fs -> {
-		if (fs.getFluid() == Fluids.WATER)
-			return true;
-		return false;
-	}) {
+	private final FluidTank fluidTank = new FluidTank(16000) {
 		@Override
 		protected void onContentsChanged() {
 			super.onContentsChanged();

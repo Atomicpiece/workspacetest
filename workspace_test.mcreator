@@ -6962,6 +6962,69 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "InfWatStor",
+      "type": "block",
+      "sortid": 249,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inf_wat_stor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/block/inf_wat_stor.json",
+          "src/main/resources/assets/workspace_test/models/item/inf_wat_stor.json",
+          "src/main/resources/assets/workspace_test/blockstates/inf_wat_stor.json",
+          "src/main/java/net/mcreator/workspacetest/block/InfWatStorBlock.java"
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "WaterAcceptable",
+      "type": "tag",
+      "sortid": 250,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_acceptable",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forge/tags/blocks/water_storage.json"
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "InfWatStorUpdateTick",
+      "type": "procedure",
+      "sortid": 251,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inf_wat_stor_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/InfWatStorUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/martin mod"
     }
   ],
   "variable_elements": [
@@ -7001,6 +7064,7 @@
       "block.workspace_test.walls": "Walls",
       "item.workspace_test.warplane_spawn_egg": "Warplane Spawn Egg",
       "entity.workspace_test.furnace_powered_golem": "Furnace Powered Golem",
+      "block.workspace_test.inf_wat_stor": "Infinite Water Storage",
       "gui.workspace_test.recyclgui.label_recycler": "Recycler:",
       "gui.workspace_test.transportgui.label_fluid": "fluid:",
       "block.workspace_test.lithde": "Lithium deposit",

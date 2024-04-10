@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "workspace_test:block/infwstor_bottom",
+    "up": "workspace_test:block/infwstor_top",
+    "north": "workspace_test:block/infwstor_side",
+    "east": "workspace_test:block/infwstor_side",
+    "south": "workspace_test:block/infwstor_side",
+    "west": "workspace_test:block/infwstor_side",
+    "particle": "workspace_test:block/infwstor_bottom"
+  },
+  "render_type": "solid"
+}
