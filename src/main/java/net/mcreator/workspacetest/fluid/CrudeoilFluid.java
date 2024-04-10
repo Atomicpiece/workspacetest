@@ -18,7 +18,7 @@ import net.mcreator.workspacetest.init.WorkspaceTestModBlocks;
 
 public abstract class CrudeoilFluid extends ForgeFlowingFluid {
 	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(() -> WorkspaceTestModFluidTypes.CRUDEOIL_TYPE.get(), () -> WorkspaceTestModFluids.CRUDEOIL.get(), () -> WorkspaceTestModFluids.FLOWING_CRUDEOIL.get())
-			.explosionResistance(1500f).slopeFindDistance(1).bucket(() -> WorkspaceTestModItems.CRUDEOIL_BUCKET.get()).block(() -> (LiquidBlock) WorkspaceTestModBlocks.CRUDEOIL.get());
+			.explosionResistance(1500f).levelDecreasePerBlock(2).slopeFindDistance(1).bucket(() -> WorkspaceTestModItems.CRUDEOIL_BUCKET.get()).block(() -> (LiquidBlock) WorkspaceTestModBlocks.CRUDEOIL.get());
 
 	private CrudeoilFluid() {
 		super(PROPERTIES);

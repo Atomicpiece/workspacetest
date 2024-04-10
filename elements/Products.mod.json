@@ -1,0 +1,11 @@
+{
+  "_fv": 57,
+  "_type": "tab",
+  "definition": {
+    "name": "Products",
+    "icon": {
+      "value": "CUSTOM:Zincingot"
+    },
+    "showSearch": false
+  }
+}

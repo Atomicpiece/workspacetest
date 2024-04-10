@@ -6353,6 +6353,323 @@
         ]
       },
       "path": "~/martin mod"
+    },
+    {
+      "name": "Lithiumcube",
+      "type": "item",
+      "sortid": 235,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lithiumcube",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/lithiumcube.json",
+          "src/main/java/net/mcreator/workspacetest/item/LithiumcubeItem.java"
+        ]
+      },
+      "path": "~/assembly machines/Ingots"
+    },
+    {
+      "name": "Zincingot",
+      "type": "item",
+      "sortid": 227,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zincingot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/zincingot.json",
+          "src/main/java/net/mcreator/workspacetest/item/ZincingotItem.java"
+        ]
+      },
+      "path": "~/assembly machines/Ingots"
+    },
+    {
+      "name": "Products",
+      "type": "tab",
+      "sortid": 228,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "products",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Oildirt",
+      "type": "block",
+      "sortid": 223,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oildirt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/block/OildirtBlock.java",
+          "src/main/resources/assets/workspace_test/blockstates/oildirt.json",
+          "src/main/resources/assets/workspace_test/models/item/oildirt.json",
+          "src/main/resources/assets/workspace_test/models/block/oildirt.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Oilcobble",
+      "type": "block",
+      "sortid": 224,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oilcobble",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/oilcobble.json",
+          "src/main/resources/assets/workspace_test/blockstates/oilcobble.json",
+          "src/main/java/net/mcreator/workspacetest/block/OilcobbleBlock.java",
+          "src/main/resources/assets/workspace_test/models/block/oilcobble.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Dirt",
+      "type": "tag",
+      "sortid": 226,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dirt",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forge/tags/blocks/dirt.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Leadingot",
+      "type": "item",
+      "sortid": 230,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "leadingot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/LeadingotItem.java",
+          "src/main/resources/assets/workspace_test/models/item/leadingot.json"
+        ]
+      },
+      "path": "~/assembly machines/Ingots"
+    },
+    {
+      "name": "Tungsteningot",
+      "type": "item",
+      "sortid": 232,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tungsteningot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/tungsteningot.json",
+          "src/main/java/net/mcreator/workspacetest/item/TungsteningotItem.java"
+        ]
+      },
+      "path": "~/assembly machines/Ingots"
+    },
+    {
+      "name": "Thoriumingot",
+      "type": "item",
+      "sortid": 236,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thoriumingot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/ThoriumingotItem.java",
+          "src/main/resources/assets/workspace_test/models/item/thoriumingot.json"
+        ]
+      },
+      "path": "~/assembly machines/Ingots"
+    },
+    {
+      "name": "Bronzeingot",
+      "type": "item",
+      "sortid": 237,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bronzeingot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/BronzeingotItem.java",
+          "src/main/resources/assets/workspace_test/models/item/bronzeingot.json"
+        ]
+      },
+      "path": "~/assembly machines/Ingots"
+    },
+    {
+      "name": "Lithium",
+      "type": "item",
+      "sortid": 243,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lithium",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/LithiumItem.java",
+          "src/main/resources/assets/workspace_test/models/item/lithium.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Sulphur",
+      "type": "item",
+      "sortid": 241,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sulphur",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/SulphurItem.java",
+          "src/main/resources/assets/workspace_test/models/item/sulphur.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Tiningot",
+      "type": "item",
+      "sortid": 231,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tiningot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/TiningotItem.java",
+          "src/main/resources/assets/workspace_test/models/item/tiningot.json"
+        ]
+      },
+      "path": "~/assembly machines/Ingots"
+    },
+    {
+      "name": "Ironingot",
+      "type": "item",
+      "sortid": 233,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ironingot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/IroningotItem.java",
+          "src/main/resources/assets/workspace_test/models/item/ironingot.json"
+        ]
+      },
+      "path": "~/assembly machines/Ingots"
+    },
+    {
+      "name": "Titaniumingot",
+      "type": "item",
+      "sortid": 229,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titaniumingot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/titaniumingot.json",
+          "src/main/java/net/mcreator/workspacetest/item/TitaniumingotItem.java"
+        ]
+      },
+      "path": "~/assembly machines/Ingots"
+    },
+    {
+      "name": "Uraningot",
+      "type": "item",
+      "sortid": 234,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "uraningot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/uraningot.json",
+          "src/main/java/net/mcreator/workspacetest/item/UraningotItem.java"
+        ]
+      },
+      "path": "~/assembly machines/Ingots"
+    },
+    {
+      "name": "Goldcube",
+      "type": "item",
+      "sortid": 239,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goldcube",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/GoldcubeItem.java",
+          "src/main/resources/assets/workspace_test/models/item/goldcube.json"
+        ]
+      },
+      "path": "~/assembly machines/Ingots"
+    },
+    {
+      "name": "Steelingot",
+      "type": "item",
+      "sortid": 238,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steelingot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/steelingot.json",
+          "src/main/java/net/mcreator/workspacetest/item/SteelingotItem.java"
+        ]
+      },
+      "path": "~/assembly machines/Ingots"
+    },
+    {
+      "name": "Oilplanks",
+      "type": "block",
+      "sortid": 225,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oilplanks",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/oilplanks.json",
+          "src/main/resources/assets/workspace_test/blockstates/oilplanks.json",
+          "src/main/java/net/mcreator/workspacetest/block/OilplanksBlock.java",
+          "src/main/resources/assets/workspace_test/models/block/oilplanks.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Niter",
+      "type": "item",
+      "sortid": 242,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "niter",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/niter.json",
+          "src/main/java/net/mcreator/workspacetest/item/NiterItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Coppercube",
+      "type": "item",
+      "sortid": 240,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coppercube",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/CoppercubeItem.java",
+          "src/main/resources/assets/workspace_test/models/item/coppercube.json"
+        ]
+      },
+      "path": "~/assembly machines/Ingots"
     }
   ],
   "variable_elements": [
@@ -6366,81 +6683,43 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.workspace_test.bombs": "Bombs",
       "block.workspace_test.coalplant": "Coalplant",
-      "block.workspace_test.diamondde": "Diamond deposit",
-      "item.workspace_test.fireoff": "Fireoff",
       "item.workspace_test.leadchunk": "Lead chunk",
-      "block.workspace_test.ancient_spawner": "Ancient Spawner",
-      "item.workspace_test.bomb_spawn_egg": "Bomb Spawn Egg",
       "gui.workspace_test.riggui.label_mining_speed": "Mining speed:",
-      "gui.workspace_test.riggui.label_resource": "Resource:",
       "block.workspace_test.sulfurde": "Sulfur deposit",
       "item.workspace_test.zincchunk": "Zinc chunk",
       "item.workspace_test.battleship_spawn_egg": "Battleship Spawn Egg",
-      "gui.workspace_test.riggui.label_output": "Output:",
       "entity.workspace_test.spiderbot": "Spiderbot",
-      "block.workspace_test.reactor": "Reactor",
-      "item.workspace_test.firebelt": "Firebelt",
-      "item_group.workspace_test.electricity": "Electricity",
-      "gui.workspace_test.riggui.button_save": "SAVE",
       "gui.workspace_test.minegui.label_mining_rate": "Mining rate:",
       "item.workspace_test.fire_circle_creator": "Fire Circle Creator",
       "item.workspace_test.great_chicken_spawn_egg": "Great Chicken Spawn Egg",
-      "item.workspace_test.firefighter_suit_leggings": "Firefighter Leggings",
       "item.workspace_test.empty_rod": "Empty Rod",
-      "entity.workspace_test.submarine": "Submarine",
       "item.workspace_test.submarine_spawn_egg": "Submarine Spawn Egg",
       "item.workspace_test.firefighter_suit_boots": "Firefighter Boots",
       "entity.workspace_test.rocket_launcher": "Rocket Launcher",
       "block.workspace_test.firetester": "Fire test building",
-      "gui.workspace_test.reactor_gui.label_function": "Function:",
-      "biome.workspace_test.smolderinglands": "Volcanic lands",
-      "item.workspace_test.tinchunk": "Tin chunk",
-      "item.workspace_test.rocket_launcher_spawn_egg": "Rocket Launcher Spawn Egg",
-      "biome.workspace_test.b": "Stone lands",
       "block.workspace_test.coalde": "Coal deposit",
       "gui.workspace_test.smelterygui.label_smeltery": "Smeltery",
       "item.workspace_test.crudeoil_bucket": "Crude oil Bucket",
       "block.workspace_test.crudeoil": "Crude oil",
-      "entity.workspace_test.great_chicken": "Great Chicken",
-      "item.workspace_test.destroyer_spawn_egg": "Destroyer Spawn Egg",
       "item.workspace_test.skeleter_spawn_egg": "Skeleter Spawn Egg",
       "block.workspace_test.walls": "Walls",
       "item.workspace_test.warplane_spawn_egg": "Warplane Spawn Egg",
-      "entity.workspace_test.creeperbot": "Creeperbot",
       "entity.workspace_test.furnace_powered_golem": "Furnace Powered Golem",
-      "gui.workspace_test.smelterygui.label_requirements": "Requirements:",
-      "entity.workspace_test.bomb": "Bomb",
-      "gui.workspace_test.smelterygui.label_recipe": "Recipe:",
-      "item_group.workspace_test.finanbuild": "Financial buildings",
       "gui.workspace_test.recyclgui.label_recycler": "Recycler:",
-      "block.workspace_test.forest": "Forest",
-      "item_group.workspace_test.my_tab": "Other",
-      "item.workspace_test.ironchunk": "Iron chunk",
-      "item.workspace_test.fireengine_spawn_egg": "Fire engine Spawn Egg",
       "gui.workspace_test.transportgui.label_fluid": "fluid:",
       "block.workspace_test.lithde": "Lithium deposit",
-      "gui.workspace_test.minegui.label_output": "Output:",
       "block.workspace_test.destroyedmine": "Destroyed mine",
-      "block.workspace_test.crude_oil_block": "Crude Oil Block",
       "item.workspace_test.tungstenchunk": "Tungsten chunk",
       "item.workspace_test.defender_spawn_egg": "Defender Spawn Egg",
       "item.workspace_test.robotic_phantom_spawn_egg": "Robotic Phantom Spawn Egg",
-      "item.workspace_test.percentage_checker": "Percentage Checker",
-      "gui.workspace_test.reactor_gui.label_output_rod": "Output rod:",
-      "entity.workspace_test.destroyer": "Destroyer",
-      "entity.workspace_test.microbot": "Microbot",
       "block.workspace_test.oilrig": "Oil derrick",
-      "item.workspace_test.frost_blaze_spawn_egg": "Frost Blaze Spawn Egg",
-      "item.workspace_test.tank_spawn_egg": "Tank Spawn Egg",
       "entity.workspace_test.battleship": "Battleship",
       "item.workspace_test.spiderbot_spawn_egg": "Spiderbot Spawn Egg",
       "item.workspace_test.niterchunk": "Niter chunk",
       "gui.workspace_test.reactor_gui.label_reactor": "Reactor",
       "item.workspace_test.lithchunk": "Lithium chunk",
       "gui.workspace_test.riggui.button_start": "Start mining",
-      "biome.workspace_test.lost_lands": "Lost Lands",
       "gui.workspace_test.reactor_gui.label_energy": "Energy:",
       "gamerule.firetestspeed": "firetestspeed",
       "gui.workspace_test.minegui.button_start": "Start mining",
@@ -6449,103 +6728,140 @@
       "item.workspace_test.multimeter": "Tablet",
       "block.workspace_test.recycler": "Recycler",
       "item.workspace_test.redstrone_blaster": "Redstrone Blaster",
-      "entity.workspace_test.mossy_golem": "Mossy Golem",
       "block.workspace_test.smeltery": "Smeltery",
       "entity.workspace_test.warplane": "Warplane",
-      "block.workspace_test.niterde": "Niterde",
       "block.workspace_test.crudeoilde": "Crude oil deposit",
       "block.workspace_test.zincde": "Zinc deposit",
       "gui.workspace_test.recyclgui.button_process": "Process",
-      "item_group.workspace_test.machines": "Machines",
       "item.workspace_test.extinguisher": "Extinguisher",
-      "entity.workspace_test.robotic_phantom": "Robotic Phantom",
       "item.workspace_test.crudeoilbarrel": "Crude oil barrel",
       "entity.workspace_test.fireengine": "Fire engine",
-      "entity.workspace_test.drone": "Drone",
       "item_group.workspace_test.tools": "Tools",
-      "item.workspace_test.coalchunk": "Coal chunk",
       "gui.workspace_test.minegui.button_save": "SAVE",
       "gui.workspace_test.reactor_gui.label_heat": "Heat:",
       "gamerule.firetestspeed.description": "Sets speed of spreading fire",
+      "block.workspace_test.transporter": "Transporter",
+      "entity.workspace_test.defender": "Defender",
+      "gui.workspace_test.smelterygui.label_status": "Status:",
+      "entity.workspace_test.frost_blaze": "Frost Blaze",
+      "block.workspace_test.landmine": "Landmine",
+      "key.categories.mod": "Mod",
+      "gui.workspace_test.smelterygui.label_speed": "Speed:",
+      "entity.workspace_test.turret": "Turret",
+      "item_group.workspace_test.resources": "Resources",
+      "block.workspace_test.tower": "Tower",
+      "gui.workspace_test.transportgui.label_transporter": "Transporter:",
+      "item.workspace_test.sulfur": "Sulfur crystal",
+      "item.workspace_test.healt_indicator": "Healt Indicator",
+      "fluid.workspace_test.crudeoil": "Crude oil",
+      "item.workspace_test.metalscrap": "Metal scrap",
+      "block.workspace_test.farm": "Farm",
+      "gui.workspace_test.riggui.label_power_usage": "Power usage:",
+      "block.workspace_test.copperde": "Copper deposit",
+      "block.workspace_test.tinde": "Tin deposit",
+      "entity.workspace_test.levitation_robot": "Levitation Robot",
+      "item.workspace_test.creeperbot_spawn_egg": "Creeperbot Spawn Egg",
+      "entity.workspace_test.tinybot": "Tinybot",
+      "item.workspace_test.chemicalextinguisher": "Chemical extinguisher",
+      "gui.workspace_test.smelterygui.label_product": "Product:",
+      "gui.workspace_test.minegui.label_mine": "Mine:",
+      "gui.workspace_test.reactor_gui.label_fluid_type": "Fluid type:",
+      "item.workspace_test.wand": "Wand",
+      "block.workspace_test.robotic_assembler": "Robotic Assembler",
+      "item.workspace_test.dps_orb_spawn_egg": "DPS Orb Spawn Egg",
+      "item.workspace_test.microbot_spawn_egg": "Microbot Spawn Egg",
+      "entity.workspace_test.tank": "Tank",
+      "gui.workspace_test.minegui.label_power_usage": "Power usage:",
+      "block.workspace_test.ironde": "Iron deposit",
+      "gui.workspace_test.minesgui.label_mine": "Mine",
+      "block.workspace_test.goldde": "Gold deposit",
+      "item.workspace_test.tinybot_spawn_egg": "Tinybot Spawn Egg",
+      "item.workspace_test.furnace_powered_golem_spawn_egg": "Furnace Powered Golem Spawn Egg",
+      "item.workspace_test.matches": "Matche",
+      "block.workspace_test.leadde": "Lead deposit",
+      "gui.workspace_test.riggui.label_status": "Status:",
+      "item.workspace_test.drone_spawn_egg": "Drone Spawn Egg",
+      "gui.workspace_test.minegui.label_status": "Status:",
+      "item.workspace_test.bombs": "Bombs",
+      "block.workspace_test.diamondde": "Diamond deposit",
+      "item.workspace_test.fireoff": "Fireoff",
+      "block.workspace_test.ancient_spawner": "Ancient Spawner",
+      "item.workspace_test.bomb_spawn_egg": "Bomb Spawn Egg",
+      "gui.workspace_test.riggui.label_resource": "Resource:",
+      "gui.workspace_test.riggui.label_output": "Output:",
+      "block.workspace_test.reactor": "Reactor",
+      "item.workspace_test.firebelt": "Firebelt",
+      "item_group.workspace_test.electricity": "Electricity",
+      "gui.workspace_test.riggui.button_save": "SAVE",
+      "item.workspace_test.firefighter_suit_leggings": "Firefighter Leggings",
+      "entity.workspace_test.submarine": "Submarine",
+      "biome.workspace_test.smolderinglands": "Volcanic lands",
+      "item.workspace_test.tinchunk": "Tin chunk",
+      "item.workspace_test.rocket_launcher_spawn_egg": "Rocket Launcher Spawn Egg",
+      "biome.workspace_test.b": "Stone lands",
+      "entity.workspace_test.great_chicken": "Great Chicken",
+      "item.workspace_test.destroyer_spawn_egg": "Destroyer Spawn Egg",
+      "entity.workspace_test.creeperbot": "Creeperbot",
+      "gui.workspace_test.smelterygui.label_requirements": "Requirements:",
+      "entity.workspace_test.bomb": "Bomb",
+      "gui.workspace_test.smelterygui.label_recipe": "Recipe:",
+      "item_group.workspace_test.finanbuild": "Financial buildings",
+      "block.workspace_test.forest": "Forest",
+      "item_group.workspace_test.my_tab": "Other",
+      "item.workspace_test.ironchunk": "Iron chunk",
+      "item.workspace_test.fireengine_spawn_egg": "Fire engine Spawn Egg",
+      "gui.workspace_test.minegui.label_output": "Output:",
+      "block.workspace_test.crude_oil_block": "Crude Oil Block",
+      "item.workspace_test.percentage_checker": "Percentage Checker",
+      "gui.workspace_test.reactor_gui.label_output_rod": "Output rod:",
+      "entity.workspace_test.destroyer": "Destroyer",
+      "entity.workspace_test.microbot": "Microbot",
+      "item.workspace_test.frost_blaze_spawn_egg": "Frost Blaze Spawn Egg",
+      "item.workspace_test.tank_spawn_egg": "Tank Spawn Egg",
+      "biome.workspace_test.lost_lands": "Lost Lands",
+      "entity.workspace_test.mossy_golem": "Mossy Golem",
+      "block.workspace_test.niterde": "Niterde",
+      "item_group.workspace_test.machines": "Machines",
+      "entity.workspace_test.robotic_phantom": "Robotic Phantom",
+      "entity.workspace_test.drone": "Drone",
+      "item.workspace_test.coalchunk": "Coal chunk",
       "gui.workspace_test.reactor_gui.label_water": "Fluid:",
       "item.workspace_test.thorchunk": "Thorium chunk",
       "item.workspace_test.ion_sword": "Ion Sword",
       "gui.workspace_test.minegui.label_resource": "Resource:",
       "gui.workspace_test.minegui.label_mining_speed": "Mining speed:",
       "item.workspace_test.mossy_golem_spawn_egg": "Mossy Golem Spawn Egg",
-      "block.workspace_test.transporter": "Transporter",
-      "entity.workspace_test.defender": "Defender",
       "block.workspace_test.ccc": "mine",
       "item.workspace_test.igniter": "Igniter",
-      "gui.workspace_test.smelterygui.label_status": "Status:",
-      "entity.workspace_test.frost_blaze": "Frost Blaze",
       "item.workspace_test.firehose": "Firehose",
       "item.workspace_test.uranchunk": "Uranium chunk",
       "gui.workspace_test.riggui.label_mine": "Oil derrick:",
-      "block.workspace_test.landmine": "Landmine",
       "item.workspace_test.firefighter_suit_helmet": "FirefighterHelmet",
-      "key.categories.mod": "Mod",
-      "gui.workspace_test.smelterygui.label_speed": "Speed:",
       "entity.workspace_test.skeleter": "Skeleter",
-      "entity.workspace_test.turret": "Turret",
       "gui.workspace_test.reactor_gui.label_rod": "Rod:",
-      "item_group.workspace_test.resources": "Resources",
       "block.workspace_test.urande": "Uranium deposit",
-      "block.workspace_test.tower": "Tower",
-      "gui.workspace_test.transportgui.label_transporter": "Transporter:",
-      "item.workspace_test.sulfur": "Sulfur crystal",
-      "item.workspace_test.healt_indicator": "Healt Indicator",
       "block.workspace_test.thorde": "Thorium deposit",
       "block.workspace_test.firetester_0": "Empty firetester",
       "item.workspace_test.smoker": "Smoker",
-      "fluid.workspace_test.crudeoil": "Crude oil",
-      "item.workspace_test.metalscrap": "Metal scrap",
       "item.workspace_test.diamonds": "Diamonds",
-      "block.workspace_test.farm": "Farm",
-      "gui.workspace_test.riggui.label_power_usage": "Power usage:",
-      "block.workspace_test.copperde": "Copper deposit",
-      "block.workspace_test.tinde": "Tin deposit",
-      "entity.workspace_test.levitation_robot": "Levitation Robot",
       "item_group.workspace_test.defence": "Defence",
       "block.workspace_test.infbat": "Infinite battery",
       "gui.workspace_test.riggui.minespend": "",
-      "item.workspace_test.creeperbot_spawn_egg": "Creeperbot Spawn Egg",
-      "entity.workspace_test.tinybot": "Tinybot",
       "block.workspace_test.titande": "Titanium deposit",
-      "item.workspace_test.chemicalextinguisher": "Chemical extinguisher",
-      "gui.workspace_test.smelterygui.label_product": "Product:",
-      "gui.workspace_test.minegui.label_mine": "Mine:",
       "item.workspace_test.detoxificator": "Decontaminator",
-      "gui.workspace_test.reactor_gui.label_fluid_type": "Fluid type:",
       "entity.workspace_test.dps_orb": "DPS Orb",
       "item.workspace_test.titanchunk": "Titanium chunk",
-      "item.workspace_test.wand": "Wand",
       "block.workspace_test.nuke": "Nuke",
-      "block.workspace_test.robotic_assembler": "Robotic Assembler",
       "item.workspace_test.bazooka": "Bazooka",
-      "item.workspace_test.dps_orb_spawn_egg": "DPS Orb Spawn Egg",
-      "item.workspace_test.microbot_spawn_egg": "Microbot Spawn Egg",
       "gui.workspace_test.minegui.minespend": "",
-      "entity.workspace_test.tank": "Tank",
-      "gui.workspace_test.minegui.label_power_usage": "Power usage:",
       "item.workspace_test.turret_spawn_egg": "Turret Spawn Egg",
-      "block.workspace_test.ironde": "Iron deposit",
-      "gui.workspace_test.minesgui.label_mine": "Mine",
-      "block.workspace_test.goldde": "Gold deposit",
       "item.workspace_test.goldchunk": "Gold chunk",
       "item.workspace_test.copperchunk": "Copper chunk",
       "block.workspace_test.minese": "Minese",
       "item.workspace_test.levitation_robot_spawn_egg": "Levitation Robot Spawn Egg",
       "item_group.workspace_test.test": "Test",
       "item.workspace_test.uranium_rod": "Uranium Rod",
-      "item.workspace_test.tinybot_spawn_egg": "Tinybot Spawn Egg",
-      "item.workspace_test.furnace_powered_golem_spawn_egg": "Furnace Powered Golem Spawn Egg",
-      "item.workspace_test.matches": "Matche",
-      "block.workspace_test.leadde": "Lead deposit",
-      "gui.workspace_test.riggui.label_status": "Status:",
-      "gui.workspace_test.riggui.label_mining_rate": "Pump rate:",
-      "item.workspace_test.drone_spawn_egg": "Drone Spawn Egg",
-      "gui.workspace_test.minegui.label_status": "Status:"
+      "gui.workspace_test.riggui.label_mining_rate": "Pump rate:"
     }
   },
   "foldersRoot": {
@@ -6561,7 +6877,12 @@
       },
       {
         "name": "assembly machines",
-        "children": []
+        "children": [
+          {
+            "name": "Ingots",
+            "children": []
+          }
+        ]
       }
     ]
   },
