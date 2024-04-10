@@ -73,6 +73,7 @@ import net.mcreator.workspacetest.item.ChemicalextinguisherItem;
 import net.mcreator.workspacetest.item.BronzeingotItem;
 import net.mcreator.workspacetest.item.BombsItem;
 import net.mcreator.workspacetest.item.BasookaItem;
+import net.mcreator.workspacetest.item.AshItem;
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
 public class WorkspaceTestModItems {
@@ -179,8 +180,10 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> CRUDE_OIL_BLOCK = block(WorkspaceTestModBlocks.CRUDE_OIL_BLOCK);
 	public static final RegistryObject<Item> RECYCLER = block(WorkspaceTestModBlocks.RECYCLER);
 	public static final RegistryObject<Item> OILDIRT = block(WorkspaceTestModBlocks.OILDIRT);
+	public static final RegistryObject<Item> COALPOWER = block(WorkspaceTestModBlocks.COALPOWER);
 	public static final RegistryObject<Item> OILCOBBLE = block(WorkspaceTestModBlocks.OILCOBBLE);
 	public static final RegistryObject<Item> OILPLANKS = block(WorkspaceTestModBlocks.OILPLANKS);
+	public static final RegistryObject<Item> ASH = REGISTRY.register("ash", () -> new AshItem());
 	public static final RegistryObject<Item> ZINCINGOT = REGISTRY.register("zincingot", () -> new ZincingotItem());
 	public static final RegistryObject<Item> TITANIUMINGOT = REGISTRY.register("titaniumingot", () -> new TitaniumingotItem());
 	public static final RegistryObject<Item> LEADINGOT = REGISTRY.register("leadingot", () -> new LeadingotItem());
