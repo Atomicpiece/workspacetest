@@ -604,9 +604,9 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/workspacetest/client/renderer/LevitationRobotRenderer.java",
-          "src/main/java/net/mcreator/workspacetest/entity/LevitationRobotEntity.java",
           "src/main/resources/assets/workspace_test/models/item/levitation_robot_spawn_egg.json",
-          "src/main/java/net/mcreator/workspacetest/entity/model/LevitationRobotModel.java"
+          "src/main/java/net/mcreator/workspacetest/entity/model/LevitationRobotModel.java",
+          "src/main/java/net/mcreator/workspacetest/entity/LevitationRobotEntity.java"
         ]
       },
       "path": "~/Defence"
@@ -620,8 +620,8 @@
       "registry_name": "firebelt",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/FirebeltItem.java",
-          "src/main/resources/assets/workspace_test/models/item/firebelt.json"
+          "src/main/resources/assets/workspace_test/models/item/firebelt.json",
+          "src/main/java/net/mcreator/workspacetest/item/FirebeltItem.java"
         ]
       },
       "path": "~/Defence"
@@ -1002,9 +1002,9 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/workspacetest/client/renderer/WarplaneRenderer.java",
-          "src/main/java/net/mcreator/workspacetest/entity/WarplaneEntity.java",
+          "src/main/resources/assets/workspace_test/models/item/warplane_spawn_egg.json",
           "src/main/java/net/mcreator/workspacetest/entity/model/WarplaneModel.java",
-          "src/main/resources/assets/workspace_test/models/item/warplane_spawn_egg.json"
+          "src/main/java/net/mcreator/workspacetest/entity/WarplaneEntity.java"
         ]
       },
       "path": "~/Defence"
@@ -1400,8 +1400,8 @@
       "registry_name": "wand",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/WandItem.java",
-          "src/main/resources/assets/workspace_test/models/item/wand.json"
+          "src/main/resources/assets/workspace_test/models/item/wand.json",
+          "src/main/java/net/mcreator/workspacetest/item/WandItem.java"
         ]
       },
       "path": "~/Defence"
@@ -1664,8 +1664,8 @@
       "registry_name": "fire_circle_creator",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/fire_circle_creator.json",
-          "src/main/java/net/mcreator/workspacetest/item/FireCircleCreatorItem.java"
+          "src/main/java/net/mcreator/workspacetest/item/FireCircleCreatorItem.java",
+          "src/main/resources/assets/workspace_test/models/item/fire_circle_creator.json"
         ]
       },
       "path": "~/Defence"
@@ -1786,10 +1786,10 @@
       "registry_name": "ironde",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/ironde.json",
-          "src/main/resources/assets/workspace_test/models/block/ironde.json",
+          "src/main/resources/assets/workspace_test/blockstates/ironde.json",
           "src/main/java/net/mcreator/workspacetest/block/IrondeBlock.java",
-          "src/main/resources/assets/workspace_test/blockstates/ironde.json"
+          "src/main/resources/assets/workspace_test/models/block/ironde.json",
+          "src/main/resources/assets/workspace_test/models/item/ironde.json"
         ]
       },
       "path": "~/assembly machines"
@@ -1891,8 +1891,8 @@
       "registry_name": "copperde",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/block/CopperdeBlock.java",
           "src/main/resources/assets/workspace_test/models/block/copperde.json",
+          "src/main/java/net/mcreator/workspacetest/block/CopperdeBlock.java",
           "src/main/resources/assets/workspace_test/models/item/copperde.json",
           "src/main/resources/assets/workspace_test/blockstates/copperde.json"
         ]
@@ -2126,8 +2126,8 @@
       "registry_name": "bazooka",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/bazooka.json",
-          "src/main/java/net/mcreator/workspacetest/item/BasookaItem.java"
+          "src/main/java/net/mcreator/workspacetest/item/BasookaItem.java",
+          "src/main/resources/assets/workspace_test/models/item/bazooka.json"
         ]
       },
       "path": "~/Defence"
@@ -2945,8 +2945,8 @@
       "registry_name": "tinchunk",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/tinchunk.json",
-          "src/main/java/net/mcreator/workspacetest/item/TinchunkItem.java"
+          "src/main/java/net/mcreator/workspacetest/item/TinchunkItem.java",
+          "src/main/resources/assets/workspace_test/models/item/tinchunk.json"
         ]
       },
       "path": "~/assembly machines"
@@ -2960,9 +2960,9 @@
       "registry_name": "battlefields",
       "metadata": {
         "files": [
-          "src/main/resources/data/workspace_test/worldgen/structure_set/battlefields.json",
           "src/main/resources/data/workspace_test/worldgen/template_pool/battlefields.json",
-          "src/main/resources/data/workspace_test/worldgen/structure/battlefields.json"
+          "src/main/resources/data/workspace_test/worldgen/structure/battlefields.json",
+          "src/main/resources/data/workspace_test/worldgen/structure_set/battlefields.json"
         ]
       },
       "path": "~/Defence"
@@ -3045,9 +3045,9 @@
       "registry_name": "battlefield",
       "metadata": {
         "files": [
-          "src/main/resources/data/workspace_test/worldgen/configured_feature/battlefield.json",
+          "src/main/resources/data/workspace_test/forge/biome_modifier/battlefield_biome_modifier.json",
           "src/main/resources/data/workspace_test/worldgen/placed_feature/battlefield.json",
-          "src/main/resources/data/workspace_test/forge/biome_modifier/battlefield_biome_modifier.json"
+          "src/main/resources/data/workspace_test/worldgen/configured_feature/battlefield.json"
         ]
       },
       "path": "~/Defence"
@@ -3111,8 +3111,8 @@
       "registry_name": "smelterygui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/world/inventory/SmelteryguiMenu.java",
-          "src/main/java/net/mcreator/workspacetest/client/gui/SmelteryguiScreen.java"
+          "src/main/java/net/mcreator/workspacetest/client/gui/SmelteryguiScreen.java",
+          "src/main/java/net/mcreator/workspacetest/world/inventory/SmelteryguiMenu.java"
         ]
       },
       "path": "~/assembly machines"
@@ -3299,8 +3299,8 @@
       "registry_name": "niterchunk",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/NiterchunkItem.java",
-          "src/main/resources/assets/workspace_test/models/item/niterchunk.json"
+          "src/main/resources/assets/workspace_test/models/item/niterchunk.json",
+          "src/main/java/net/mcreator/workspacetest/item/NiterchunkItem.java"
         ]
       },
       "path": "~/assembly machines"
@@ -3331,9 +3331,9 @@
       "registry_name": "lithde",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/lithde.json",
-          "src/main/resources/assets/workspace_test/models/block/lithde.json",
           "src/main/resources/assets/workspace_test/blockstates/lithde.json",
+          "src/main/resources/assets/workspace_test/models/block/lithde.json",
+          "src/main/resources/assets/workspace_test/models/item/lithde.json",
           "src/main/java/net/mcreator/workspacetest/block/LithdeBlock.java"
         ]
       },
@@ -3681,8 +3681,8 @@
       "registry_name": "matches",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/matches.json",
-          "src/main/java/net/mcreator/workspacetest/item/MatchesItem.java"
+          "src/main/java/net/mcreator/workspacetest/item/MatchesItem.java",
+          "src/main/resources/assets/workspace_test/models/item/matches.json"
         ]
       },
       "path": "~/assembly machines"
@@ -5750,39 +5750,6 @@
       "path": "~/martin mod"
     },
     {
-      "name": "HeatProc",
-      "type": "procedure",
-      "sortid": 179,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "heat_proc",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/HeatProcProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/martin mod"
-    },
-    {
       "name": "CrudeOilBlock",
       "type": "block",
       "sortid": 202,
@@ -6210,6 +6177,48 @@
       "path": "~/assembly machines"
     },
     {
+      "name": "Lithiumcube",
+      "type": "item",
+      "sortid": 235,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lithiumcube",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/lithiumcube.json",
+          "src/main/java/net/mcreator/workspacetest/item/LithiumcubeItem.java"
+        ]
+      },
+      "path": "~/assembly machines/Ingots"
+    },
+    {
+      "name": "Zincingot",
+      "type": "item",
+      "sortid": 227,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zincingot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/zincingot.json",
+          "src/main/java/net/mcreator/workspacetest/item/ZincingotItem.java"
+        ]
+      },
+      "path": "~/assembly machines/Ingots"
+    },
+    {
+      "name": "Products",
+      "type": "tab",
+      "sortid": 228,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "products",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/assembly machines"
+    },
+    {
       "name": "Oildirt",
       "type": "block",
       "sortid": 223,
@@ -6244,23 +6253,6 @@
       "path": "~/assembly machines"
     },
     {
-      "name": "Oilplanks",
-      "type": "block",
-      "sortid": 225,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oilplanks",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/block/OilplanksBlock.java",
-          "src/main/resources/assets/workspace_test/models/item/oilplanks.json",
-          "src/main/resources/assets/workspace_test/models/block/oilplanks.json",
-          "src/main/resources/assets/workspace_test/blockstates/oilplanks.json"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
       "name": "Dirt",
       "type": "tag",
       "sortid": 226,
@@ -6273,48 +6265,6 @@
         ]
       },
       "path": "~/assembly machines"
-    },
-    {
-      "name": "Zincingot",
-      "type": "item",
-      "sortid": 227,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "zincingot",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/workspace_test/models/item/zincingot.json",
-          "src/main/java/net/mcreator/workspacetest/item/ZincingotItem.java"
-        ]
-      },
-      "path": "~/assembly machines/Ingots"
-    },
-    {
-      "name": "Products",
-      "type": "tab",
-      "sortid": 228,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "products",
-      "metadata": {
-        "files": []
-      },
-      "path": "~/assembly machines"
-    },
-    {
-      "name": "Titaniumingot",
-      "type": "item",
-      "sortid": 229,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "titaniumingot",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/workspace_test/models/item/titaniumingot.json",
-          "src/main/java/net/mcreator/workspacetest/item/TitaniumingotItem.java"
-        ]
-      },
-      "path": "~/assembly machines/Ingots"
     },
     {
       "name": "Leadingot",
@@ -6332,21 +6282,6 @@
       "path": "~/assembly machines/Ingots"
     },
     {
-      "name": "Tiningot",
-      "type": "item",
-      "sortid": 231,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "tiningot",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/workspace_test/models/item/tiningot.json",
-          "src/main/java/net/mcreator/workspacetest/item/TiningotItem.java"
-        ]
-      },
-      "path": "~/assembly machines/Ingots"
-    },
-    {
       "name": "Tungsteningot",
       "type": "item",
       "sortid": 232,
@@ -6357,51 +6292,6 @@
         "files": [
           "src/main/java/net/mcreator/workspacetest/item/TungsteningotItem.java",
           "src/main/resources/assets/workspace_test/models/item/tungsteningot.json"
-        ]
-      },
-      "path": "~/assembly machines/Ingots"
-    },
-    {
-      "name": "Ironingot",
-      "type": "item",
-      "sortid": 233,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ironingot",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/workspace_test/models/item/ironingot.json",
-          "src/main/java/net/mcreator/workspacetest/item/IroningotItem.java"
-        ]
-      },
-      "path": "~/assembly machines/Ingots"
-    },
-    {
-      "name": "Uraningot",
-      "type": "item",
-      "sortid": 234,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "uraningot",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/item/UraningotItem.java",
-          "src/main/resources/assets/workspace_test/models/item/uraningot.json"
-        ]
-      },
-      "path": "~/assembly machines/Ingots"
-    },
-    {
-      "name": "Lithiumcube",
-      "type": "item",
-      "sortid": 235,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lithiumcube",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/workspace_test/models/item/lithiumcube.json",
-          "src/main/java/net/mcreator/workspacetest/item/LithiumcubeItem.java"
         ]
       },
       "path": "~/assembly machines/Ingots"
@@ -6437,16 +6327,91 @@
       "path": "~/assembly machines/Ingots"
     },
     {
-      "name": "Steelingot",
+      "name": "Lithium",
       "type": "item",
-      "sortid": 238,
+      "sortid": 243,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "steelingot",
+      "registry_name": "lithium",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/SteelingotItem.java",
-          "src/main/resources/assets/workspace_test/models/item/steelingot.json"
+          "src/main/resources/assets/workspace_test/models/item/lithium.json",
+          "src/main/java/net/mcreator/workspacetest/item/LithiumItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Sulphur",
+      "type": "item",
+      "sortid": 241,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sulphur",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/sulphur.json",
+          "src/main/java/net/mcreator/workspacetest/item/SulphurItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Tiningot",
+      "type": "item",
+      "sortid": 231,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tiningot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/tiningot.json",
+          "src/main/java/net/mcreator/workspacetest/item/TiningotItem.java"
+        ]
+      },
+      "path": "~/assembly machines/Ingots"
+    },
+    {
+      "name": "Ironingot",
+      "type": "item",
+      "sortid": 233,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ironingot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/ironingot.json",
+          "src/main/java/net/mcreator/workspacetest/item/IroningotItem.java"
+        ]
+      },
+      "path": "~/assembly machines/Ingots"
+    },
+    {
+      "name": "Titaniumingot",
+      "type": "item",
+      "sortid": 229,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titaniumingot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/titaniumingot.json",
+          "src/main/java/net/mcreator/workspacetest/item/TitaniumingotItem.java"
+        ]
+      },
+      "path": "~/assembly machines/Ingots"
+    },
+    {
+      "name": "Uraningot",
+      "type": "item",
+      "sortid": 234,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "uraningot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/UraningotItem.java",
+          "src/main/resources/assets/workspace_test/models/item/uraningot.json"
         ]
       },
       "path": "~/assembly machines/Ingots"
@@ -6467,31 +6432,33 @@
       "path": "~/assembly machines/Ingots"
     },
     {
-      "name": "Coppercube",
+      "name": "Steelingot",
       "type": "item",
-      "sortid": 240,
+      "sortid": 238,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "coppercube",
+      "registry_name": "steelingot",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/CoppercubeItem.java",
-          "src/main/resources/assets/workspace_test/models/item/coppercube.json"
+          "src/main/java/net/mcreator/workspacetest/item/SteelingotItem.java",
+          "src/main/resources/assets/workspace_test/models/item/steelingot.json"
         ]
       },
       "path": "~/assembly machines/Ingots"
     },
     {
-      "name": "Sulphur",
-      "type": "item",
-      "sortid": 241,
+      "name": "Oilplanks",
+      "type": "block",
+      "sortid": 225,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "sulphur",
+      "registry_name": "oilplanks",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/sulphur.json",
-          "src/main/java/net/mcreator/workspacetest/item/SulphurItem.java"
+          "src/main/java/net/mcreator/workspacetest/block/OilplanksBlock.java",
+          "src/main/resources/assets/workspace_test/models/item/oilplanks.json",
+          "src/main/resources/assets/workspace_test/models/block/oilplanks.json",
+          "src/main/resources/assets/workspace_test/blockstates/oilplanks.json"
         ]
       },
       "path": "~/assembly machines"
@@ -6512,19 +6479,197 @@
       "path": "~/assembly machines"
     },
     {
-      "name": "Lithium",
+      "name": "Coppercube",
       "type": "item",
-      "sortid": 243,
+      "sortid": 240,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "lithium",
+      "registry_name": "coppercube",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/lithium.json",
-          "src/main/java/net/mcreator/workspacetest/item/LithiumItem.java"
+          "src/main/java/net/mcreator/workspacetest/item/CoppercubeItem.java",
+          "src/main/resources/assets/workspace_test/models/item/coppercube.json"
         ]
       },
-      "path": "~/assembly machines"
+      "path": "~/assembly machines/Ingots"
+    },
+    {
+      "name": "ReactorUpdateTick",
+      "type": "procedure",
+      "sortid": 202,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reactor_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/ReactorUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "ReactorBlockIsPlacedBy",
+      "type": "procedure",
+      "sortid": 224,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reactor_block_is_placed_by",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/ReactorBlockIsPlacedByProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "UraniumRodItemIsCraftedsmelted",
+      "type": "procedure",
+      "sortid": 204,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "uranium_rod_item_is_craftedsmelted",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/UraniumRodItemIsCraftedsmeltedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "Rods",
+      "type": "tag",
+      "sortid": 203,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rods",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forge/tags/items/rods.json"
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "Urod",
+      "type": "recipe",
+      "sortid": 206,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "urod",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/workspace_test/recipes/urod.json"
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "HeatProcedTest",
+      "type": "procedure",
+      "sortid": 223,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_proced_test",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/HeatProcedTestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "FunctionProc",
+      "type": "procedure",
+      "sortid": 207,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "function_proc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/FunctionProcProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/martin mod"
     }
   ],
   "variable_elements": [

@@ -77,10 +77,10 @@ public class ReactorGUIMenu extends AbstractContainerMenu implements Supplier<Ma
 					});
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 32, 69) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 32, 72) {
 			private final int slot = 0;
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 185, 69) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 185, 72) {
 			private final int slot = 1;
 
 			@Override
@@ -90,9 +90,9 @@ public class ReactorGUIMenu extends AbstractContainerMenu implements Supplier<Ma
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
-				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 16 + 8 + sj * 18, 7 + 84 + si * 18));
+				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 16 + 8 + sj * 18, 10 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
-			this.addSlot(new Slot(inv, si, 16 + 8 + si * 18, 7 + 142));
+			this.addSlot(new Slot(inv, si, 16 + 8 + si * 18, 10 + 142));
 	}
 
 	@Override

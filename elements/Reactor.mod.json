@@ -10,7 +10,7 @@
     "textureBack": "",
     "renderType": 2,
     "customModelName": "reactor:default",
-    "rotationMode": 0,
+    "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
@@ -58,7 +58,7 @@
     "material": {
       "value": "FROGLIGHT"
     },
-    "tickRate": 0,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -114,7 +114,7 @@
     "hasEnergyStorage": true,
     "energyInitial": 0,
     "energyCapacity": 1000000,
-    "energyMaxReceive": 0,
+    "energyMaxReceive": 1000,
     "energyMaxExtract": 1000,
     "isFluidTank": true,
     "fluidCapacity": 16000,
@@ -123,6 +123,12 @@
         "value": "WATER"
       }
     ],
+    "onTickUpdate": {
+      "name": "ReactorUpdateTick"
+    },
+    "onBlockPlayedBy": {
+      "name": "ReactorBlockIsPlacedBy"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
