@@ -4,6 +4,6 @@ import net.minecraft.world.item.ItemStack;
 
 public class UraniumRodItemIsCraftedsmeltedProcedure {
 	public static void execute(ItemStack itemstack) {
-		itemstack.getOrCreateTag().putString("item_function", "stable");
+		itemstack.getOrCreateTag().putString("item_function", "easy");
 	}
 }

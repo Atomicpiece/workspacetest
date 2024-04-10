@@ -74,7 +74,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": ""
+            "value": "TAG:forge:rods"
           },
           "disablePlacement": {
             "fixedValue": false

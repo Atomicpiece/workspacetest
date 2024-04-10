@@ -6,6 +6,9 @@
     "items": [
       {
         "value": "CUSTOM:UraniumRod"
+      },
+      {
+        "value": "CUSTOM:ThoriumRod"
       }
     ],
     "blocks": [],
