@@ -22,6 +22,10 @@ public class WorkspaceTestModTabs {
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.test")).icon(() -> new ItemStack(Blocks.GILDED_BLACKSTONE)).displayItems((parameters, tabData) -> {
 				tabData.accept(WorkspaceTestModItems.BOMBS.get());
 				tabData.accept(WorkspaceTestModItems.HEALT_INDICATOR.get());
+				tabData.accept(WorkspaceTestModBlocks.OILDIRT.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.OILCOBBLE.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.OILPLANKS.get().asItem());
+				tabData.accept(WorkspaceTestModItems.LITHIUMCUBE.get());
 			})
 
 					.build());
@@ -108,6 +112,9 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.METALSCRAP.get());
 				tabData.accept(WorkspaceTestModBlocks.DESTROYEDMINE.get().asItem());
 				tabData.accept(WorkspaceTestModBlocks.RECYCLER.get().asItem());
+				tabData.accept(WorkspaceTestModItems.SULPHUR.get());
+				tabData.accept(WorkspaceTestModItems.NITER.get());
+				tabData.accept(WorkspaceTestModItems.LITHIUM.get());
 			})
 
 					.build());
@@ -151,6 +158,23 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModBlocks.REACTOR.get().asItem());
 				tabData.accept(WorkspaceTestModItems.URANIUM_ROD.get());
 				tabData.accept(WorkspaceTestModItems.EMPTY_ROD.get());
+			})
+
+					.build());
+	public static final RegistryObject<CreativeModeTab> PRODUCTS = REGISTRY.register("products",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.products")).icon(() -> new ItemStack(WorkspaceTestModItems.ZINCINGOT.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(WorkspaceTestModItems.ZINCINGOT.get());
+				tabData.accept(WorkspaceTestModItems.TITANIUMINGOT.get());
+				tabData.accept(WorkspaceTestModItems.LEADINGOT.get());
+				tabData.accept(WorkspaceTestModItems.TININGOT.get());
+				tabData.accept(WorkspaceTestModItems.TUNGSTENINGOT.get());
+				tabData.accept(WorkspaceTestModItems.IRONINGOT.get());
+				tabData.accept(WorkspaceTestModItems.URANINGOT.get());
+				tabData.accept(WorkspaceTestModItems.THORIUMINGOT.get());
+				tabData.accept(WorkspaceTestModItems.BRONZEINGOT.get());
+				tabData.accept(WorkspaceTestModItems.STEELINGOT.get());
+				tabData.accept(WorkspaceTestModItems.GOLDCUBE.get());
+				tabData.accept(WorkspaceTestModItems.COPPERCUBE.get());
 			})
 
 					.build());

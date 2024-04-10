@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "workspace_test:block/oils2",
+    "up": "workspace_test:block/oils2",
+    "north": "workspace_test:block/oils2",
+    "east": "workspace_test:block/oils2",
+    "south": "workspace_test:block/oils2",
+    "west": "workspace_test:block/oils2",
+    "particle": "workspace_test:block/oils2"
+  },
+  "render_type": "solid"
+}
