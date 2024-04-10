@@ -108,6 +108,7 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.METALSCRAP.get());
 				tabData.accept(WorkspaceTestModBlocks.DESTROYEDMINE.get().asItem());
 				tabData.accept(WorkspaceTestModBlocks.RECYCLER.get().asItem());
+				tabData.accept(WorkspaceTestModItems.ASH.get());
 			})
 
 					.build());
@@ -142,6 +143,7 @@ public class WorkspaceTestModTabs {
 	public static final RegistryObject<CreativeModeTab> ELECTRICITY = REGISTRY.register("electricity",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.electricity")).icon(() -> new ItemStack(Blocks.LIGHT)).displayItems((parameters, tabData) -> {
 				tabData.accept(WorkspaceTestModBlocks.COALPLANT.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.COALPOWER.get().asItem());
 			})
 
 					.build());

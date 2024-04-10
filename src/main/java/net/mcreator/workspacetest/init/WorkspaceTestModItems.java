@@ -52,6 +52,7 @@ import net.mcreator.workspacetest.item.CoalchunkItem;
 import net.mcreator.workspacetest.item.ChemicalextinguisherItem;
 import net.mcreator.workspacetest.item.BombsItem;
 import net.mcreator.workspacetest.item.BasookaItem;
+import net.mcreator.workspacetest.item.AshItem;
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
 public class WorkspaceTestModItems {
@@ -156,6 +157,8 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> URANIUM_ROD = REGISTRY.register("uranium_rod", () -> new UraniumRodItem());
 	public static final RegistryObject<Item> EMPTY_ROD = REGISTRY.register("empty_rod", () -> new EmptyRodItem());
 	public static final RegistryObject<Item> RECYCLER = block(WorkspaceTestModBlocks.RECYCLER);
+	public static final RegistryObject<Item> COALPOWER = block(WorkspaceTestModBlocks.COALPOWER);
+	public static final RegistryObject<Item> ASH = REGISTRY.register("ash", () -> new AshItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

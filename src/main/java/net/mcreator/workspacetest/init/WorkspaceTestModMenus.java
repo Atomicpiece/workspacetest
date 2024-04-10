@@ -17,6 +17,7 @@ import net.mcreator.workspacetest.world.inventory.RigguiMenu;
 import net.mcreator.workspacetest.world.inventory.RecyclguiMenu;
 import net.mcreator.workspacetest.world.inventory.ReactorGUIMenu;
 import net.mcreator.workspacetest.world.inventory.MineguiMenu;
+import net.mcreator.workspacetest.world.inventory.CoalguiMenu;
 import net.mcreator.workspacetest.world.inventory.BotMenuMenu;
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
@@ -29,4 +30,5 @@ public class WorkspaceTestModMenus {
 	public static final RegistryObject<MenuType<RigguiMenu>> RIGGUI = REGISTRY.register("riggui", () -> IForgeMenuType.create(RigguiMenu::new));
 	public static final RegistryObject<MenuType<ReactorGUIMenu>> REACTOR_GUI = REGISTRY.register("reactor_gui", () -> IForgeMenuType.create(ReactorGUIMenu::new));
 	public static final RegistryObject<MenuType<RecyclguiMenu>> RECYCLGUI = REGISTRY.register("recyclgui", () -> IForgeMenuType.create(RecyclguiMenu::new));
+	public static final RegistryObject<MenuType<CoalguiMenu>> COALGUI = REGISTRY.register("coalgui", () -> IForgeMenuType.create(CoalguiMenu::new));
 }

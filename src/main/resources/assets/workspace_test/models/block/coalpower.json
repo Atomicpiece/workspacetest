@@ -1,0 +1,10 @@
+{
+  "parent": "workspace_test:custom/powerplantwork",
+  "textures": {
+    "all": "workspace_test:block/powerplantwork",
+    "particle": "workspace_test:block/powerplantwork",
+    "0": "workspace_test:block/powerplantwork",
+    "missing": "workspace_test:block/destroyedmine"
+  },
+  "render_type": "solid"
+}

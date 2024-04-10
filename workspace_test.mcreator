@@ -6191,6 +6191,186 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "Coalpower",
+      "type": "block",
+      "sortid": 223,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coalpower",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/blockstates/coalpower.json",
+          "src/main/resources/assets/workspace_test/models/item/coalpower.json",
+          "src/main/java/net/mcreator/workspacetest/block/entity/CoalpowerBlockEntity.java",
+          "src/main/java/net/mcreator/workspacetest/block/CoalpowerBlock.java",
+          "src/main/resources/assets/workspace_test/models/block/coalpower.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Coalgui",
+      "type": "gui",
+      "sortid": 224,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coalgui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/world/inventory/CoalguiMenu.java",
+          "src/main/java/net/mcreator/workspacetest/network/CoalguiSlotMessage.java",
+          "src/main/java/net/mcreator/workspacetest/client/gui/CoalguiScreen.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Coalpow",
+      "type": "procedure",
+      "sortid": 225,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coalpow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/CoalpowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Ash",
+      "type": "item",
+      "sortid": 226,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ash",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/ash.json",
+          "src/main/java/net/mcreator/workspacetest/item/AshItem.java"
+        ]
+      },
+      "path": "~/assembly machines/scraps"
+    },
+    {
+      "name": "Ran",
+      "type": "procedure",
+      "sortid": 227,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ran",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/RanProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Remaincoal",
+      "type": "procedure",
+      "sortid": 228,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remaincoal",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/RemaincoalProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Coalen",
+      "type": "procedure",
+      "sortid": 229,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coalen",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/CoalenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [
@@ -6233,7 +6413,9 @@
       "entity.workspace_test.rocket_launcher": "Rocket Launcher",
       "block.workspace_test.firetester": "Fire test building",
       "biome.workspace_test.smolderinglands": "Volcanic lands",
+      "gui.workspace_test.coalgui.label_status": "Status:",
       "item.workspace_test.tinchunk": "Tin chunk",
+      "gui.workspace_test.coalgui.label_coal_powerplant": "Coal powerplant:",
       "item.workspace_test.rocket_launcher_spawn_egg": "Rocket Launcher Spawn Egg",
       "biome.workspace_test.b": "Stone lands",
       "block.workspace_test.coalde": "Coal deposit",
@@ -6284,6 +6466,7 @@
       "item.workspace_test.firefighter_suit_chestplate": "Firefighter Chestplate",
       "item.workspace_test.multimeter": "Tablet",
       "block.workspace_test.recycler": "Recycler",
+      "gui.workspace_test.coalgui.label_energy": "Energy:",
       "item.workspace_test.redstrone_blaster": "Redstrone Blaster",
       "entity.workspace_test.mossy_golem": "Mossy Golem",
       "block.workspace_test.smeltery": "Smeltery",
@@ -6305,6 +6488,7 @@
       "gamerule.firetestspeed.description": "Sets speed of spreading fire",
       "gui.workspace_test.reactor_gui.label_water": "Fluid:",
       "item.workspace_test.thorchunk": "Thorium chunk",
+      "block.workspace_test.coalpower": "coal powerplant",
       "item.workspace_test.ion_sword": "Ion Sword",
       "gui.workspace_test.minegui.label_resource": "Resource:",
       "gui.workspace_test.minegui.label_mining_speed": "Mining speed:",
@@ -6312,6 +6496,7 @@
       "block.workspace_test.transporter": "Transporter",
       "entity.workspace_test.defender": "Defender",
       "block.workspace_test.ccc": "mine",
+      "item.workspace_test.ash": "Ash",
       "item.workspace_test.igniter": "Igniter",
       "gui.workspace_test.smelterygui.label_status": "Status:",
       "entity.workspace_test.frost_blaze": "Frost Blaze",
@@ -6370,6 +6555,7 @@
       "block.workspace_test.goldde": "Gold deposit",
       "item.workspace_test.goldchunk": "Gold chunk",
       "item.workspace_test.copperchunk": "Copper chunk",
+      "gui.workspace_test.coalgui.label_time_remaining": "Time remaining:",
       "block.workspace_test.minese": "Minese",
       "item.workspace_test.levitation_robot_spawn_egg": "Levitation Robot Spawn Egg",
       "item_group.workspace_test.test": "Test",
@@ -6397,7 +6583,12 @@
       },
       {
         "name": "assembly machines",
-        "children": []
+        "children": [
+          {
+            "name": "scraps",
+            "children": []
+          }
+        ]
       }
     ]
   },

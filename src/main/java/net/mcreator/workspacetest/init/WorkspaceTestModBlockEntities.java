@@ -25,6 +25,7 @@ import net.mcreator.workspacetest.block.entity.InfbatBlockEntity;
 import net.mcreator.workspacetest.block.entity.FiretesterBlockEntity;
 import net.mcreator.workspacetest.block.entity.FarmBlockEntity;
 import net.mcreator.workspacetest.block.entity.DestroyedmineBlockEntity;
+import net.mcreator.workspacetest.block.entity.CoalpowerBlockEntity;
 import net.mcreator.workspacetest.block.entity.CoalplantBlockEntity;
 import net.mcreator.workspacetest.block.entity.CccBlockEntity;
 import net.mcreator.workspacetest.block.entity.AncientSpawnerBlockEntity;
@@ -49,6 +50,7 @@ public class WorkspaceTestModBlockEntities {
 	public static final RegistryObject<BlockEntityType<?>> REACTOR = register("reactor", WorkspaceTestModBlocks.REACTOR, ReactorBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> DESTROYEDMINE = register("destroyedmine", WorkspaceTestModBlocks.DESTROYEDMINE, DestroyedmineBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> RECYCLER = register("recycler", WorkspaceTestModBlocks.RECYCLER, RecyclerBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> COALPOWER = register("coalpower", WorkspaceTestModBlocks.COALPOWER, CoalpowerBlockEntity::new);
 
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));

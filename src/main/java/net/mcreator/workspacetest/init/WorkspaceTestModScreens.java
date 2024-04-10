@@ -17,6 +17,7 @@ import net.mcreator.workspacetest.client.gui.RigguiScreen;
 import net.mcreator.workspacetest.client.gui.RecyclguiScreen;
 import net.mcreator.workspacetest.client.gui.ReactorGUIScreen;
 import net.mcreator.workspacetest.client.gui.MineguiScreen;
+import net.mcreator.workspacetest.client.gui.CoalguiScreen;
 import net.mcreator.workspacetest.client.gui.BotMenuScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -31,6 +32,7 @@ public class WorkspaceTestModScreens {
 			MenuScreens.register(WorkspaceTestModMenus.RIGGUI.get(), RigguiScreen::new);
 			MenuScreens.register(WorkspaceTestModMenus.REACTOR_GUI.get(), ReactorGUIScreen::new);
 			MenuScreens.register(WorkspaceTestModMenus.RECYCLGUI.get(), RecyclguiScreen::new);
+			MenuScreens.register(WorkspaceTestModMenus.COALGUI.get(), CoalguiScreen::new);
 		});
 	}
 }
