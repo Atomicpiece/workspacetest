@@ -6702,19 +6702,51 @@
       "path": "~/assembly machines/Ingots"
     },
     {
-      "name": "ThoriumRod",
+      "name": "Whitephosporus",
       "type": "item",
-      "sortid": 244,
+      "sortid": 247,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "thorium_rod",
+      "registry_name": "whitephosporus",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/ThoriumRodItem.java",
-          "src/main/resources/assets/workspace_test/models/item/thorium_rod.json"
+          "src/main/java/net/mcreator/workspacetest/item/WhitephosporusItem.java",
+          "src/main/resources/assets/workspace_test/models/item/whitephosporus.json"
         ]
       },
-      "path": "~/martin mod"
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Apatitede",
+      "type": "block",
+      "sortid": 246,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "apatitede",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/blockstates/apatitede.json",
+          "src/main/resources/assets/workspace_test/models/item/apatitede.json",
+          "src/main/resources/assets/workspace_test/models/block/apatitede.json",
+          "src/main/java/net/mcreator/workspacetest/block/ApatitedeBlock.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Redphosporus",
+      "type": "item",
+      "sortid": 248,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "redphosporus",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/RedphosporusItem.java",
+          "src/main/resources/assets/workspace_test/models/item/redphosporus.json"
+        ]
+      },
+      "path": "~/assembly machines"
     },
     {
       "name": "ThoriumRodItemIsCraftedsmelted",
@@ -6732,6 +6764,21 @@
             "name": "itemstack",
             "type": "itemstack"
           }
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "ThoriumRod",
+      "type": "item",
+      "sortid": 244,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thorium_rod",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/ThoriumRodItem.java",
+          "src/main/resources/assets/workspace_test/models/item/thorium_rod.json"
         ]
       },
       "path": "~/martin mod"
@@ -6859,7 +6906,6 @@
       "item.workspace_test.wand": "Wand",
       "block.workspace_test.robotic_assembler": "Robotic Assembler",
       "item.workspace_test.tiningot": "Tin ingot",
-      "item.workspace_test.thorium_rod": "Thorium Rod",
       "item.workspace_test.dps_orb_spawn_egg": "DPS Orb Spawn Egg",
       "item.workspace_test.microbot_spawn_egg": "Microbot Spawn Egg",
       "entity.workspace_test.tank": "Tank",
