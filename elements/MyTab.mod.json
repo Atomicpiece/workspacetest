@@ -4,7 +4,7 @@
   "definition": {
     "name": "Other",
     "icon": {
-      "value": "CUSTOM:Reactor"
+      "value": "CUSTOM:ThoriumRod"
     },
     "showSearch": false
   }

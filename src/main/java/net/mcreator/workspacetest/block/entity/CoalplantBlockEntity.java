@@ -91,7 +91,7 @@ public class CoalplantBlockEntity extends RandomizableContainerBlockEntity imple
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Coalplant");
+		return Component.literal("Nuclear powerplant");
 	}
 
 	@Override

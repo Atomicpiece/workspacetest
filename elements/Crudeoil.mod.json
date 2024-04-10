@@ -9,7 +9,7 @@
     "tintType": "No tint",
     "canMultiply": false,
     "flowRate": 5,
-    "levelDecrease": 1,
+    "levelDecrease": 2,
     "slopeFindDistance": 1,
     "spawnParticles": true,
     "dripParticle": {

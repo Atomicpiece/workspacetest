@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "workspace_test:block/aparite",
+    "up": "workspace_test:block/aparite",
+    "north": "workspace_test:block/aparite",
+    "east": "workspace_test:block/aparite",
+    "south": "workspace_test:block/aparite",
+    "west": "workspace_test:block/aparite",
+    "particle": "workspace_test:block/aparite"
+  },
+  "render_type": "solid"
+}

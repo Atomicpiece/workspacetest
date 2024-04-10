@@ -22,6 +22,9 @@ public class WorkspaceTestModTabs {
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.test")).icon(() -> new ItemStack(Blocks.GILDED_BLACKSTONE)).displayItems((parameters, tabData) -> {
 				tabData.accept(WorkspaceTestModItems.BOMBS.get());
 				tabData.accept(WorkspaceTestModItems.HEALT_INDICATOR.get());
+				tabData.accept(WorkspaceTestModBlocks.OILDIRT.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.OILCOBBLE.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.OILPLANKS.get().asItem());
 			})
 
 					.build());
@@ -109,6 +112,12 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModBlocks.DESTROYEDMINE.get().asItem());
 				tabData.accept(WorkspaceTestModBlocks.RECYCLER.get().asItem());
 				tabData.accept(WorkspaceTestModItems.ASH.get());
+				tabData.accept(WorkspaceTestModItems.SULPHUR.get());
+				tabData.accept(WorkspaceTestModItems.NITER.get());
+				tabData.accept(WorkspaceTestModItems.LITHIUM.get());
+				tabData.accept(WorkspaceTestModBlocks.APATITEDE.get().asItem());
+				tabData.accept(WorkspaceTestModItems.WHITEPHOSPORUS.get());
+				tabData.accept(WorkspaceTestModItems.REDPHOSPORUS.get());
 			})
 
 					.build());
@@ -137,6 +146,8 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.SMOKER.get());
 				tabData.accept(WorkspaceTestModItems.DETOXIFICATOR.get());
 				tabData.accept(WorkspaceTestModItems.FIREENGINE_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModBlocks.CRUDE_OIL_BLOCK.get().asItem());
+				tabData.accept(WorkspaceTestModItems.CUTTERS.get());
 			})
 
 					.build());
@@ -148,10 +159,30 @@ public class WorkspaceTestModTabs {
 
 					.build());
 	public static final RegistryObject<CreativeModeTab> MY_TAB = REGISTRY.register("my_tab",
-			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.my_tab")).icon(() -> new ItemStack(WorkspaceTestModBlocks.REACTOR.get())).displayItems((parameters, tabData) -> {
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.my_tab")).icon(() -> new ItemStack(WorkspaceTestModItems.THORIUM_ROD.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(WorkspaceTestModBlocks.REACTOR.get().asItem());
 				tabData.accept(WorkspaceTestModItems.URANIUM_ROD.get());
 				tabData.accept(WorkspaceTestModItems.EMPTY_ROD.get());
+				tabData.accept(WorkspaceTestModItems.THORIUM_ROD.get());
+			})
+
+					.build());
+	public static final RegistryObject<CreativeModeTab> PRODUCTS = REGISTRY.register("products",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.products")).icon(() -> new ItemStack(WorkspaceTestModItems.ZINCINGOT.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(WorkspaceTestModItems.ZINCINGOT.get());
+				tabData.accept(WorkspaceTestModItems.TITANIUMINGOT.get());
+				tabData.accept(WorkspaceTestModItems.LEADINGOT.get());
+				tabData.accept(WorkspaceTestModItems.TININGOT.get());
+				tabData.accept(WorkspaceTestModItems.TUNGSTENINGOT.get());
+				tabData.accept(WorkspaceTestModItems.IRONINGOT.get());
+				tabData.accept(WorkspaceTestModItems.URANINGOT.get());
+				tabData.accept(WorkspaceTestModItems.LITHIUMCUBE.get());
+				tabData.accept(WorkspaceTestModItems.THORIUMINGOT.get());
+				tabData.accept(WorkspaceTestModItems.BRONZEINGOT.get());
+				tabData.accept(WorkspaceTestModItems.STEELINGOT.get());
+				tabData.accept(WorkspaceTestModItems.GOLDCUBE.get());
+				tabData.accept(WorkspaceTestModItems.COPPERCUBE.get());
+				tabData.accept(WorkspaceTestModItems.GLASSPANE.get());
 			})
 
 					.build());

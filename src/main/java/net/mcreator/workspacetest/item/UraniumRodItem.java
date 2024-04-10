@@ -12,6 +12,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.network.chat.Component;
 
 import net.mcreator.workspacetest.procedures.UraniumRodPlayerFinishesUsingItemProcedure;
+import net.mcreator.workspacetest.procedures.UraniumRodItemIsCraftedsmeltedProcedure;
 import net.mcreator.workspacetest.init.WorkspaceTestModItems;
 
 import java.util.List;
@@ -43,5 +44,11 @@ public class UraniumRodItem extends Item {
 			}
 			return itemstack;
 		}
+	}
+
+	@Override
+	public void onCraftedBy(ItemStack itemstack, Level world, Player entity) {
+		super.onCraftedBy(itemstack, world, entity);
+		UraniumRodItemIsCraftedsmeltedProcedure.execute(itemstack);
 	}
 }

@@ -1,5 +1,7 @@
 package net.mcreator.workspacetest.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
+
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -7,11 +9,14 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.workspacetest.init.WorkspaceTestModBlocks;
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
 import java.util.Map;
@@ -39,7 +44,7 @@ public class CrudeoilUpdateTickProcedure {
 			sx = sx + 1;
 		}
 		if (found == true) {
-			if (20 <= Mth.nextInt(RandomSource.create(), 1, 20)) {
+			if (50 <= Mth.nextInt(RandomSource.create(), 1, 50)) {
 				WorkspaceTestMod.queueServerWork(5, () -> {
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles(ParticleTypes.FLAME, (x + 0.5), (y + 0.5), (z + 0.5), 1, 0.2, 0.2, 0.2, 0.01);
@@ -74,6 +79,18 @@ public class CrudeoilUpdateTickProcedure {
 					}
 				});
 			}
+		}
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == Blocks.STONE) {
+			world.setBlock(BlockPos.containing(x, y - 1, z), WorkspaceTestModBlocks.CRUDE_OIL_BLOCK.get().defaultBlockState(), 3);
+		}
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == Blocks.OAK_PLANKS) {
+			world.setBlock(BlockPos.containing(x, y - 1, z), WorkspaceTestModBlocks.OILPLANKS.get().defaultBlockState(), 3);
+		}
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == Blocks.COBBLESTONE) {
+			world.setBlock(BlockPos.containing(x, y - 1, z), WorkspaceTestModBlocks.OILCOBBLE.get().defaultBlockState(), 3);
+		}
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == (ForgeRegistries.BLOCKS.tags().getTag(BlockTags.create(new ResourceLocation("forge:dirt"))).getRandomElement(RandomSource.create()).orElseGet(() -> Blocks.AIR))) {
+			world.setBlock(BlockPos.containing(x, y - 1, z), WorkspaceTestModBlocks.OILDIRT.get().defaultBlockState(), 3);
 		}
 	}
 }

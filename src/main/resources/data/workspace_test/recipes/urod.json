@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "abc"
+  ],
+  "key": {
+    "a": {
+      "item": "workspace_test:thoriumingot"
+    },
+    "b": {
+      "item": "workspace_test:empty_rod"
+    },
+    "c": {
+      "item": "workspace_test:uraningot"
+    }
+  },
+  "result": {
+    "item": "workspace_test:uranium_rod",
+    "count": 1
+  }
+}

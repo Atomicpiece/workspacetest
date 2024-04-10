@@ -15,7 +15,9 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
@@ -77,10 +79,15 @@ public class ReactorGUIMenu extends AbstractContainerMenu implements Supplier<Ma
 					});
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 32, 69) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 32, 72) {
 			private final int slot = 0;
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return stack.is(ItemTags.create(new ResourceLocation("forge:rods")));
+			}
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 185, 69) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 185, 72) {
 			private final int slot = 1;
 
 			@Override
@@ -90,9 +97,9 @@ public class ReactorGUIMenu extends AbstractContainerMenu implements Supplier<Ma
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
-				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 16 + 8 + sj * 18, 7 + 84 + si * 18));
+				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 16 + 8 + sj * 18, 10 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
-			this.addSlot(new Slot(inv, si, 16 + 8 + si * 18, 7 + 142));
+			this.addSlot(new Slot(inv, si, 16 + 8 + si * 18, 10 + 142));
 	}
 
 	@Override
