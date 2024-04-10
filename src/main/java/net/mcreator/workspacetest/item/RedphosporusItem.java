@@ -10,8 +10,8 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
-public class GlasspaneItem extends Item {
-	public GlasspaneItem() {
+public class RedphosporusItem extends Item {
+	public RedphosporusItem() {
 		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
 	}
 

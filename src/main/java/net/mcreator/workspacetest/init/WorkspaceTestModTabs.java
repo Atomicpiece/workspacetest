@@ -114,6 +114,9 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.SULPHUR.get());
 				tabData.accept(WorkspaceTestModItems.NITER.get());
 				tabData.accept(WorkspaceTestModItems.LITHIUM.get());
+				tabData.accept(WorkspaceTestModBlocks.APATITEDE.get().asItem());
+				tabData.accept(WorkspaceTestModItems.WHITEPHOSPORUS.get());
+				tabData.accept(WorkspaceTestModItems.REDPHOSPORUS.get());
 			})
 
 					.build());
