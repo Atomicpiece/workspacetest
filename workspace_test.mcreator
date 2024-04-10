@@ -604,9 +604,9 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/workspacetest/client/renderer/LevitationRobotRenderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/LevitationRobotEntity.java",
           "src/main/resources/assets/workspace_test/models/item/levitation_robot_spawn_egg.json",
-          "src/main/java/net/mcreator/workspacetest/entity/model/LevitationRobotModel.java",
-          "src/main/java/net/mcreator/workspacetest/entity/LevitationRobotEntity.java"
+          "src/main/java/net/mcreator/workspacetest/entity/model/LevitationRobotModel.java"
         ]
       },
       "path": "~/Defence"
@@ -620,8 +620,8 @@
       "registry_name": "firebelt",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/firebelt.json",
-          "src/main/java/net/mcreator/workspacetest/item/FirebeltItem.java"
+          "src/main/java/net/mcreator/workspacetest/item/FirebeltItem.java",
+          "src/main/resources/assets/workspace_test/models/item/firebelt.json"
         ]
       },
       "path": "~/Defence"
@@ -1002,9 +1002,9 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/workspacetest/client/renderer/WarplaneRenderer.java",
-          "src/main/resources/assets/workspace_test/models/item/warplane_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/entity/WarplaneEntity.java",
           "src/main/java/net/mcreator/workspacetest/entity/model/WarplaneModel.java",
-          "src/main/java/net/mcreator/workspacetest/entity/WarplaneEntity.java"
+          "src/main/resources/assets/workspace_test/models/item/warplane_spawn_egg.json"
         ]
       },
       "path": "~/Defence"
@@ -1400,8 +1400,8 @@
       "registry_name": "wand",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/wand.json",
-          "src/main/java/net/mcreator/workspacetest/item/WandItem.java"
+          "src/main/java/net/mcreator/workspacetest/item/WandItem.java",
+          "src/main/resources/assets/workspace_test/models/item/wand.json"
         ]
       },
       "path": "~/Defence"
@@ -1664,8 +1664,8 @@
       "registry_name": "fire_circle_creator",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/FireCircleCreatorItem.java",
-          "src/main/resources/assets/workspace_test/models/item/fire_circle_creator.json"
+          "src/main/resources/assets/workspace_test/models/item/fire_circle_creator.json",
+          "src/main/java/net/mcreator/workspacetest/item/FireCircleCreatorItem.java"
         ]
       },
       "path": "~/Defence"
@@ -1786,10 +1786,10 @@
       "registry_name": "ironde",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/blockstates/ironde.json",
-          "src/main/java/net/mcreator/workspacetest/block/IrondeBlock.java",
+          "src/main/resources/assets/workspace_test/models/item/ironde.json",
           "src/main/resources/assets/workspace_test/models/block/ironde.json",
-          "src/main/resources/assets/workspace_test/models/item/ironde.json"
+          "src/main/java/net/mcreator/workspacetest/block/IrondeBlock.java",
+          "src/main/resources/assets/workspace_test/blockstates/ironde.json"
         ]
       },
       "path": "~/assembly machines"
@@ -1891,8 +1891,8 @@
       "registry_name": "copperde",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/block/copperde.json",
           "src/main/java/net/mcreator/workspacetest/block/CopperdeBlock.java",
+          "src/main/resources/assets/workspace_test/models/block/copperde.json",
           "src/main/resources/assets/workspace_test/models/item/copperde.json",
           "src/main/resources/assets/workspace_test/blockstates/copperde.json"
         ]
@@ -2126,8 +2126,8 @@
       "registry_name": "bazooka",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/BasookaItem.java",
-          "src/main/resources/assets/workspace_test/models/item/bazooka.json"
+          "src/main/resources/assets/workspace_test/models/item/bazooka.json",
+          "src/main/java/net/mcreator/workspacetest/item/BasookaItem.java"
         ]
       },
       "path": "~/Defence"
@@ -2945,8 +2945,8 @@
       "registry_name": "tinchunk",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/TinchunkItem.java",
-          "src/main/resources/assets/workspace_test/models/item/tinchunk.json"
+          "src/main/resources/assets/workspace_test/models/item/tinchunk.json",
+          "src/main/java/net/mcreator/workspacetest/item/TinchunkItem.java"
         ]
       },
       "path": "~/assembly machines"
@@ -2960,9 +2960,9 @@
       "registry_name": "battlefields",
       "metadata": {
         "files": [
+          "src/main/resources/data/workspace_test/worldgen/structure_set/battlefields.json",
           "src/main/resources/data/workspace_test/worldgen/template_pool/battlefields.json",
-          "src/main/resources/data/workspace_test/worldgen/structure/battlefields.json",
-          "src/main/resources/data/workspace_test/worldgen/structure_set/battlefields.json"
+          "src/main/resources/data/workspace_test/worldgen/structure/battlefields.json"
         ]
       },
       "path": "~/Defence"
@@ -3045,9 +3045,9 @@
       "registry_name": "battlefield",
       "metadata": {
         "files": [
-          "src/main/resources/data/workspace_test/forge/biome_modifier/battlefield_biome_modifier.json",
+          "src/main/resources/data/workspace_test/worldgen/configured_feature/battlefield.json",
           "src/main/resources/data/workspace_test/worldgen/placed_feature/battlefield.json",
-          "src/main/resources/data/workspace_test/worldgen/configured_feature/battlefield.json"
+          "src/main/resources/data/workspace_test/forge/biome_modifier/battlefield_biome_modifier.json"
         ]
       },
       "path": "~/Defence"
@@ -3111,8 +3111,8 @@
       "registry_name": "smelterygui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/client/gui/SmelteryguiScreen.java",
-          "src/main/java/net/mcreator/workspacetest/world/inventory/SmelteryguiMenu.java"
+          "src/main/java/net/mcreator/workspacetest/world/inventory/SmelteryguiMenu.java",
+          "src/main/java/net/mcreator/workspacetest/client/gui/SmelteryguiScreen.java"
         ]
       },
       "path": "~/assembly machines"
@@ -3299,8 +3299,8 @@
       "registry_name": "niterchunk",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/niterchunk.json",
-          "src/main/java/net/mcreator/workspacetest/item/NiterchunkItem.java"
+          "src/main/java/net/mcreator/workspacetest/item/NiterchunkItem.java",
+          "src/main/resources/assets/workspace_test/models/item/niterchunk.json"
         ]
       },
       "path": "~/assembly machines"
@@ -3331,9 +3331,9 @@
       "registry_name": "lithde",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/blockstates/lithde.json",
-          "src/main/resources/assets/workspace_test/models/block/lithde.json",
           "src/main/resources/assets/workspace_test/models/item/lithde.json",
+          "src/main/resources/assets/workspace_test/models/block/lithde.json",
+          "src/main/resources/assets/workspace_test/blockstates/lithde.json",
           "src/main/java/net/mcreator/workspacetest/block/LithdeBlock.java"
         ]
       },
@@ -3681,8 +3681,8 @@
       "registry_name": "matches",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/MatchesItem.java",
-          "src/main/resources/assets/workspace_test/models/item/matches.json"
+          "src/main/resources/assets/workspace_test/models/item/matches.json",
+          "src/main/java/net/mcreator/workspacetest/item/MatchesItem.java"
         ]
       },
       "path": "~/assembly machines"
@@ -6826,18 +6826,19 @@
       "entity.workspace_test.rocket_launcher": "Rocket Launcher",
       "block.workspace_test.firetester": "Fire test building",
       "gui.workspace_test.reactor_gui.label_function": "Function:",
-      "gui.workspace_test.smelterygui.label_smeltery": "Smeltery",
       "block.workspace_test.coalde": "Coal deposit",
+      "gui.workspace_test.smelterygui.label_smeltery": "Smeltery",
       "item.workspace_test.crudeoil_bucket": "Crude oil Bucket",
       "block.workspace_test.crudeoil": "Crude oil",
-      "item.workspace_test.skeleter_spawn_egg": "Skeleter Spawn Egg",
       "block.workspace_test.walls": "Walls",
+      "item.workspace_test.skeleter_spawn_egg": "Skeleter Spawn Egg",
       "item.workspace_test.warplane_spawn_egg": "Warplane Spawn Egg",
       "entity.workspace_test.furnace_powered_golem": "Furnace Powered Golem",
       "gui.workspace_test.recyclgui.label_recycler": "Recycler:",
       "gui.workspace_test.transportgui.label_fluid": "fluid:",
       "block.workspace_test.lithde": "Lithium deposit",
       "block.workspace_test.destroyedmine": "Destroyed mine",
+      "item.workspace_test.whitephosporus": "White phosporus",
       "item.workspace_test.steelingot": "Steel ingot",
       "item.workspace_test.tungstenchunk": "Tungsten chunk",
       "item.workspace_test.defender_spawn_egg": "Defender Spawn Egg",
@@ -6862,8 +6863,8 @@
       "entity.workspace_test.warplane": "Warplane",
       "item.workspace_test.lithiumcube": "Lithium cube",
       "block.workspace_test.crudeoilde": "Crude oil deposit",
-      "item.workspace_test.titaniumingot": "Titanium ingot",
       "block.workspace_test.zincde": "Zinc deposit",
+      "item.workspace_test.titaniumingot": "Titanium ingot",
       "gui.workspace_test.recyclgui.button_process": "Process",
       "item.workspace_test.sulphur": "Sulphur",
       "item.workspace_test.extinguisher": "Extinguisher",
@@ -6879,6 +6880,7 @@
       "item_group.workspace_test.products": "Products",
       "gui.workspace_test.smelterygui.label_status": "Status:",
       "entity.workspace_test.frost_blaze": "Frost Blaze",
+      "block.workspace_test.apatitede": "Apatite deposit",
       "block.workspace_test.landmine": "Landmine",
       "key.categories.mod": "Mod",
       "gui.workspace_test.smelterygui.label_speed": "Speed:",
@@ -6906,6 +6908,7 @@
       "item.workspace_test.wand": "Wand",
       "block.workspace_test.robotic_assembler": "Robotic Assembler",
       "item.workspace_test.tiningot": "Tin ingot",
+      "item.workspace_test.thorium_rod": "Thorium Rod",
       "item.workspace_test.dps_orb_spawn_egg": "DPS Orb Spawn Egg",
       "item.workspace_test.microbot_spawn_egg": "Microbot Spawn Egg",
       "entity.workspace_test.tank": "Tank",
@@ -6926,6 +6929,7 @@
       "item.workspace_test.fireoff": "Fireoff",
       "block.workspace_test.ancient_spawner": "Ancient Spawner",
       "item.workspace_test.bomb_spawn_egg": "Bomb Spawn Egg",
+      "item.workspace_test.redphosporus": "Red phosporus",
       "gui.workspace_test.riggui.label_resource": "Resource:",
       "gui.workspace_test.riggui.label_output": "Output:",
       "block.workspace_test.reactor": "Reactor",
