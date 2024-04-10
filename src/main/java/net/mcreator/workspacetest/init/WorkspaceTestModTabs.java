@@ -25,7 +25,6 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModBlocks.OILDIRT.get().asItem());
 				tabData.accept(WorkspaceTestModBlocks.OILCOBBLE.get().asItem());
 				tabData.accept(WorkspaceTestModBlocks.OILPLANKS.get().asItem());
-				tabData.accept(WorkspaceTestModItems.LITHIUMCUBE.get());
 			})
 
 					.build());
@@ -144,6 +143,7 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.DETOXIFICATOR.get());
 				tabData.accept(WorkspaceTestModItems.FIREENGINE_SPAWN_EGG.get());
 				tabData.accept(WorkspaceTestModBlocks.CRUDE_OIL_BLOCK.get().asItem());
+				tabData.accept(WorkspaceTestModItems.CUTTERS.get());
 			})
 
 					.build());
@@ -171,11 +171,13 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.TUNGSTENINGOT.get());
 				tabData.accept(WorkspaceTestModItems.IRONINGOT.get());
 				tabData.accept(WorkspaceTestModItems.URANINGOT.get());
+				tabData.accept(WorkspaceTestModItems.LITHIUMCUBE.get());
 				tabData.accept(WorkspaceTestModItems.THORIUMINGOT.get());
 				tabData.accept(WorkspaceTestModItems.BRONZEINGOT.get());
 				tabData.accept(WorkspaceTestModItems.STEELINGOT.get());
 				tabData.accept(WorkspaceTestModItems.GOLDCUBE.get());
 				tabData.accept(WorkspaceTestModItems.COPPERCUBE.get());
+				tabData.accept(WorkspaceTestModItems.GLASSPANE.get());
 			})
 
 					.build());
