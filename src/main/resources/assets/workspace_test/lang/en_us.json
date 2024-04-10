@@ -14,6 +14,7 @@
   "item.workspace_test.firefighter_suit_boots": "Firefighter Boots",
   "entity.workspace_test.rocket_launcher": "Rocket Launcher",
   "block.workspace_test.firetester": "Fire test building",
+  "gui.workspace_test.reactor_gui.label_function": "Function:",
   "gui.workspace_test.smelterygui.label_smeltery": "Smeltery",
   "block.workspace_test.coalde": "Coal deposit",
   "item.workspace_test.crudeoil_bucket": "Crude oil Bucket",
