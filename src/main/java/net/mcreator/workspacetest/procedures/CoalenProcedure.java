@@ -1,8 +1,12 @@
 package net.mcreator.workspacetest.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 
-import javax.annotation.Nullable;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.core.BlockPos;
+
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class CoalenProcedure {
 	public static String execute(LevelAccessor world, double x, double y, double z) {

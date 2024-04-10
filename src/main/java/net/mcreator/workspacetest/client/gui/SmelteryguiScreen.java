@@ -1,9 +1,22 @@
 package net.mcreator.workspacetest.client.gui;
 
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.GuiGraphics;
+
+import net.mcreator.workspacetest.world.inventory.SmelteryguiMenu;
+import net.mcreator.workspacetest.procedures.Smeltinp1Procedure;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class SmelteryguiScreen extends AbstractContainerScreen<SmelteryguiMenu> {
-
 	private final static HashMap<String, Object> guistate = SmelteryguiMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -24,11 +37,8 @@ public class SmelteryguiScreen extends AbstractContainerScreen<SmelteryguiMenu> 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
-
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-
 	}
 
 	@Override
@@ -36,7 +46,6 @@ public class SmelteryguiScreen extends AbstractContainerScreen<SmelteryguiMenu> 
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
 		guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/x.png"), this.leftPos + 20, this.topPos + 29, 0, 0, 16, 16, 16, 16);
@@ -50,7 +59,6 @@ public class SmelteryguiScreen extends AbstractContainerScreen<SmelteryguiMenu> 
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -80,7 +88,5 @@ public class SmelteryguiScreen extends AbstractContainerScreen<SmelteryguiMenu> 
 	@Override
 	public void init() {
 		super.init();
-
 	}
-
 }

@@ -1,9 +1,24 @@
 package net.mcreator.workspacetest.client.gui;
 
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.GuiGraphics;
+
+import net.mcreator.workspacetest.world.inventory.CoalguiMenu;
+import net.mcreator.workspacetest.procedures.RemaincoalProcedure;
+import net.mcreator.workspacetest.procedures.RanProcedure;
+import net.mcreator.workspacetest.procedures.CoalenProcedure;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class CoalguiScreen extends AbstractContainerScreen<CoalguiMenu> {
-
 	private final static HashMap<String, Object> guistate = CoalguiMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -24,11 +39,8 @@ public class CoalguiScreen extends AbstractContainerScreen<CoalguiMenu> {
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
-
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-
 	}
 
 	@Override
@@ -36,9 +48,7 @@ public class CoalguiScreen extends AbstractContainerScreen<CoalguiMenu> {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -48,7 +58,6 @@ public class CoalguiScreen extends AbstractContainerScreen<CoalguiMenu> {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -65,13 +74,13 @@ public class CoalguiScreen extends AbstractContainerScreen<CoalguiMenu> {
 		guiGraphics.drawString(this.font, Component.translatable("gui.workspace_test.coalgui.label_energy"), 18, 63, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				RanProcedure.execute(), 57, 55, -12829636, false);
+				RanProcedure.execute(world, x, y, z), 57, 55, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				RemaincoalProcedure.execute(), 99, 45, -12829636, false);
+				RemaincoalProcedure.execute(world, x, y, z), 99, 45, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				CoalenProcedure.execute(), 57, 64, -12829636, false);
+				CoalenProcedure.execute(world, x, y, z), 57, 64, -12829636, false);
 	}
 
 	@Override
@@ -82,7 +91,5 @@ public class CoalguiScreen extends AbstractContainerScreen<CoalguiMenu> {
 	@Override
 	public void init() {
 		super.init();
-
 	}
-
 }
