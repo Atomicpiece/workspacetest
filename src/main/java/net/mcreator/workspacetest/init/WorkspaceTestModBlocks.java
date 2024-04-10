@@ -49,6 +49,7 @@ import net.mcreator.workspacetest.block.CopperdeBlock;
 import net.mcreator.workspacetest.block.CoalplantBlock;
 import net.mcreator.workspacetest.block.CoaldeBlock;
 import net.mcreator.workspacetest.block.CccBlock;
+import net.mcreator.workspacetest.block.ApatitedeBlock;
 import net.mcreator.workspacetest.block.AncientSpawnerBlock;
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
@@ -94,4 +95,5 @@ public class WorkspaceTestModBlocks {
 	public static final RegistryObject<Block> OILDIRT = REGISTRY.register("oildirt", () -> new OildirtBlock());
 	public static final RegistryObject<Block> OILCOBBLE = REGISTRY.register("oilcobble", () -> new OilcobbleBlock());
 	public static final RegistryObject<Block> OILPLANKS = REGISTRY.register("oilplanks", () -> new OilplanksBlock());
+	public static final RegistryObject<Block> APATITEDE = REGISTRY.register("apatitede", () -> new ApatitedeBlock());
 }

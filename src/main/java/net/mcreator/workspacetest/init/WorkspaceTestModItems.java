@@ -15,6 +15,7 @@ import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.workspacetest.item.ZincingotItem;
 import net.mcreator.workspacetest.item.ZincchunkItem;
+import net.mcreator.workspacetest.item.WhitephosporusItem;
 import net.mcreator.workspacetest.item.WandItem;
 import net.mcreator.workspacetest.item.UraniumRodItem;
 import net.mcreator.workspacetest.item.UraningotItem;
@@ -33,6 +34,7 @@ import net.mcreator.workspacetest.item.SulfurItem;
 import net.mcreator.workspacetest.item.SteelingotItem;
 import net.mcreator.workspacetest.item.SmokerItem;
 import net.mcreator.workspacetest.item.RedstroneBlasterItem;
+import net.mcreator.workspacetest.item.RedphosporusItem;
 import net.mcreator.workspacetest.item.PercentageCheckerItem;
 import net.mcreator.workspacetest.item.NiterchunkItem;
 import net.mcreator.workspacetest.item.NiterItem;
@@ -198,6 +200,9 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> CUTTERS = REGISTRY.register("cutters", () -> new CuttersItem());
 	public static final RegistryObject<Item> THORIUM_ROD = REGISTRY.register("thorium_rod", () -> new ThoriumRodItem());
 	public static final RegistryObject<Item> GLASSPANE = REGISTRY.register("glasspane", () -> new GlasspaneItem());
+	public static final RegistryObject<Item> APATITEDE = block(WorkspaceTestModBlocks.APATITEDE);
+	public static final RegistryObject<Item> WHITEPHOSPORUS = REGISTRY.register("whitephosporus", () -> new WhitephosporusItem());
+	public static final RegistryObject<Item> REDPHOSPORUS = REGISTRY.register("redphosporus", () -> new RedphosporusItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
