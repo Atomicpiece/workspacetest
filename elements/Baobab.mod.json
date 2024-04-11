@@ -1,0 +1,90 @@
+{
+  "_fv": 57,
+  "_type": "plant",
+  "definition": {
+    "renderType": 120,
+    "texture": "oat",
+    "textureBottom": "",
+    "customModelName": "Cross model",
+    "itemTexture": "",
+    "particleTexture": "oat",
+    "tintType": "Grass",
+    "isItemTinted": true,
+    "plantType": "growapable",
+    "suspiciousStewEffect": "SPEED",
+    "suspiciousStewDuration": 100,
+    "growapableSpawnType": "Plains",
+    "growapableMaxHeight": 9,
+    "customBoundingBox": false,
+    "disableOffset": false,
+    "boundingBoxes": [
+      {
+        "mx": 0.0,
+        "my": 0.0,
+        "mz": 0.0,
+        "Mx": 16.0,
+        "My": 16.0,
+        "Mz": 16.0,
+        "subtract": false
+      }
+    ],
+    "name": "Oat plant",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Test"
+    },
+    "hardness": 0.0,
+    "resistance": 50000.0,
+    "luminance": 3,
+    "unbreakable": false,
+    "isSolid": false,
+    "isCustomSoundType": false,
+    "soundOnStep": {
+      "value": "PLANT"
+    },
+    "breakSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
+    },
+    "useLootTableForDrops": false,
+    "customDrop": {
+      "value": "CUSTOM:Oat"
+    },
+    "dropAmount": 2,
+    "forceTicking": true,
+    "emissiveRendering": true,
+    "hasTileEntity": true,
+    "isReplaceable": false,
+    "colorOnMap": "DEFAULT",
+    "creativePickItem": {
+      "value": ""
+    },
+    "offsetType": "XZ",
+    "aiPathNodeType": "WALKABLE",
+    "flammability": 1000,
+    "fireSpreadSpeed": 1000,
+    "jumpFactor": 2.0,
+    "speedFactor": 0.9,
+    "canBePlacedOn": [],
+    "isBonemealable": true,
+    "frequencyOnChunks": 5,
+    "generateFeature": true,
+    "restrictionBiomes": [],
+    "generationType": "Flower",
+    "patchSize": 6,
+    "generateAtAnyHeight": true
+  }
+}

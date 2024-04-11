@@ -36,6 +36,7 @@ import net.mcreator.workspacetest.item.SmokerItem;
 import net.mcreator.workspacetest.item.RedstroneBlasterItem;
 import net.mcreator.workspacetest.item.RedphosporusItem;
 import net.mcreator.workspacetest.item.PercentageCheckerItem;
+import net.mcreator.workspacetest.item.OatItem;
 import net.mcreator.workspacetest.item.NiterchunkItem;
 import net.mcreator.workspacetest.item.NiterItem;
 import net.mcreator.workspacetest.item.MultimeterItem;
@@ -64,6 +65,7 @@ import net.mcreator.workspacetest.item.EmptyRodItem;
 import net.mcreator.workspacetest.item.DiamondsItem;
 import net.mcreator.workspacetest.item.DetoxificatorItem;
 import net.mcreator.workspacetest.item.CuttersItem;
+import net.mcreator.workspacetest.item.CryomatterItem;
 import net.mcreator.workspacetest.item.CrudeoilbarrelItem;
 import net.mcreator.workspacetest.item.CrudeoilItem;
 import net.mcreator.workspacetest.item.CoppercubeItem;
@@ -207,6 +209,9 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> WHITEPHOSPORUS = REGISTRY.register("whitephosporus", () -> new WhitephosporusItem());
 	public static final RegistryObject<Item> REDPHOSPORUS = REGISTRY.register("redphosporus", () -> new RedphosporusItem());
 	public static final RegistryObject<Item> INF_WAT_STOR = block(WorkspaceTestModBlocks.INF_WAT_STOR);
+	public static final RegistryObject<Item> OAT = REGISTRY.register("oat", () -> new OatItem());
+	public static final RegistryObject<Item> BAOBAB = block(WorkspaceTestModBlocks.BAOBAB);
+	public static final RegistryObject<Item> CRYOMATTER = REGISTRY.register("cryomatter", () -> new CryomatterItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
