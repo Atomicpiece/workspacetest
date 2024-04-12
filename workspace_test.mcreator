@@ -7244,6 +7244,206 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "CoalTest",
+      "type": "procedure",
+      "sortid": 259,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coal_test",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/CoalTestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "TestItem",
+      "type": "item",
+      "sortid": 260,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_item",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/test_item.json",
+          "src/main/java/net/mcreator/workspacetest/item/TestItemItem.java"
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "CoalTest2",
+      "type": "procedure",
+      "sortid": 261,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coal_test_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/CoalTest2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "TestItemItemIsCraftedsmelted",
+      "type": "procedure",
+      "sortid": 262,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_item_item_is_craftedsmelted",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/TestItemItemIsCraftedsmeltedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "TestItem2",
+      "type": "item",
+      "sortid": 264,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_item_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/TestItem2Item.java",
+          "src/main/resources/assets/workspace_test/models/item/test_item_2.json"
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "TestItem3",
+      "type": "item",
+      "sortid": 265,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_item_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/TestItem3Item.java",
+          "src/main/resources/assets/workspace_test/models/item/test_item_3.json"
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "TestItem4",
+      "type": "item",
+      "sortid": 266,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_item_4",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/test_item_4.json",
+          "src/main/java/net/mcreator/workspacetest/item/TestItem4Item.java"
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "CoalTestStart",
+      "type": "procedure",
+      "sortid": 267,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coal_test_start",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/CoalTestStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/martin mod"
     }
   ],
   "variable_elements": [
@@ -7291,7 +7491,10 @@
       "item.workspace_test.warplane_spawn_egg": "Warplane Spawn Egg",
       "entity.workspace_test.furnace_powered_golem": "Furnace Powered Golem",
       "block.workspace_test.inf_wat_stor": "Infinite Water Storage",
+      "item.workspace_test.test_item_4": "Test Item",
+      "item.workspace_test.test_item_3": "Test Item",
       "gui.workspace_test.recyclgui.label_recycler": "Recycler:",
+      "item.workspace_test.test_item_2": "Test Item",
       "gui.workspace_test.transportgui.label_fluid": "fluid:",
       "block.workspace_test.lithde": "Lithium deposit",
       "block.workspace_test.destroyedmine": "Destroyed mine",
@@ -7333,6 +7536,7 @@
       "item.workspace_test.zincingot": "Zinc ingot",
       "gamerule.firetestspeed.description": "Sets speed of spreading fire",
       "block.workspace_test.coalpower": "coal powerplant",
+      "item.workspace_test.test_item": "Test Item",
       "block.workspace_test.transporter": "Transporter",
       "entity.workspace_test.defender": "Defender",
       "item_group.workspace_test.products": "Products",

@@ -168,6 +168,10 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.EMPTY_ROD.get());
 				tabData.accept(WorkspaceTestModItems.THORIUM_ROD.get());
 				tabData.accept(WorkspaceTestModBlocks.INF_WAT_STOR.get().asItem());
+				tabData.accept(WorkspaceTestModItems.TEST_ITEM.get());
+				tabData.accept(WorkspaceTestModItems.TEST_ITEM_2.get());
+				tabData.accept(WorkspaceTestModItems.TEST_ITEM_3.get());
+				tabData.accept(WorkspaceTestModItems.TEST_ITEM_4.get());
 			})
 
 					.build());
