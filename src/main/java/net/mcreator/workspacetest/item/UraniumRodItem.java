@@ -9,6 +9,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 
 import net.mcreator.workspacetest.procedures.UraniumRodPlayerFinishesUsingItemProcedure;
@@ -47,8 +48,8 @@ public class UraniumRodItem extends Item {
 	}
 
 	@Override
-	public void onCraftedBy(ItemStack itemstack, Level world, Player entity) {
-		super.onCraftedBy(itemstack, world, entity);
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
 		UraniumRodItemIsCraftedsmeltedProcedure.execute(itemstack);
 	}
 }
