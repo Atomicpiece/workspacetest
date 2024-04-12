@@ -7078,6 +7078,172 @@
         ]
       },
       "path": "~/martin mod"
+    },
+    {
+      "name": "SnowProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 257,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snow_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/SnowProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Oat",
+      "type": "item",
+      "sortid": 252,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oat",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/oat.json",
+          "src/main/java/net/mcreator/workspacetest/item/OatItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Snow",
+      "type": "projectile",
+      "sortid": 258,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/entity/SnowEntity.java",
+          "src/main/java/net/mcreator/workspacetest/client/renderer/SnowRenderer.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Cryomatter",
+      "type": "item",
+      "sortid": 254,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cryomatter",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/cryomatter.json",
+          "src/main/java/net/mcreator/workspacetest/item/CryomatterItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Baobab",
+      "type": "plant",
+      "sortid": 253,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baobab",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/block/baobab.json",
+          "src/main/resources/data/workspace_test/forge/biome_modifier/baobab_biome_modifier.json",
+          "src/main/resources/assets/workspace_test/models/item/baobab.json",
+          "src/main/java/net/mcreator/workspacetest/block/entity/BaobabBlockEntity.java",
+          "src/main/java/net/mcreator/workspacetest/block/BaobabBlock.java",
+          "src/main/resources/data/workspace_test/worldgen/configured_feature/baobab.json",
+          "src/main/resources/assets/workspace_test/blockstates/baobab.json",
+          "src/main/resources/data/workspace_test/worldgen/placed_feature/baobab.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Cryolizing",
+      "type": "procedure",
+      "sortid": 255,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cryolizing",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/CryolizingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "SnowWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 256,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snow_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/SnowWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [
@@ -7119,8 +7285,8 @@
       "gui.workspace_test.smelterygui.label_smeltery": "Smeltery",
       "item.workspace_test.crudeoil_bucket": "Crude oil Bucket",
       "block.workspace_test.crudeoil": "Crude oil",
-      "item.workspace_test.skeleter_spawn_egg": "Skeleter Spawn Egg",
       "block.workspace_test.walls": "Walls",
+      "item.workspace_test.skeleter_spawn_egg": "Skeleter Spawn Egg",
       "item.workspace_test.warplane_spawn_egg": "Warplane Spawn Egg",
       "entity.workspace_test.furnace_powered_golem": "Furnace Powered Golem",
       "block.workspace_test.inf_wat_stor": "Infinite Water Storage",
@@ -7153,8 +7319,8 @@
       "entity.workspace_test.warplane": "Warplane",
       "item.workspace_test.lithiumcube": "Lithium cube",
       "block.workspace_test.crudeoilde": "Crude oil deposit",
-      "block.workspace_test.zincde": "Zinc deposit",
       "item.workspace_test.titaniumingot": "Titanium ingot",
+      "block.workspace_test.zincde": "Zinc deposit",
       "gui.workspace_test.recyclgui.button_process": "Process",
       "item.workspace_test.sulphur": "Sulphur",
       "item.workspace_test.extinguisher": "Extinguisher",
@@ -7315,6 +7481,10 @@
   "foldersRoot": {
     "name": "~",
     "children": [
+      {
+        "name": "ingots",
+        "children": []
+      },
       {
         "name": "Defence",
         "children": []

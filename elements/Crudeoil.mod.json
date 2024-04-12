@@ -39,7 +39,7 @@
     "emissiveRendering": false,
     "tickRate": 1,
     "flammability": 1000,
-    "fireSpreadSpeed": 600,
+    "fireSpreadSpeed": 1000,
     "colorOnMap": "DEFAULT",
     "onTickUpdate": {
       "name": "CrudeoilUpdateTick"

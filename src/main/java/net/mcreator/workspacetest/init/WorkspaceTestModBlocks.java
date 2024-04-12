@@ -7,6 +7,10 @@ package net.mcreator.workspacetest.init;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
 
@@ -51,6 +55,7 @@ import net.mcreator.workspacetest.block.CoalpowerBlock;
 import net.mcreator.workspacetest.block.CoalplantBlock;
 import net.mcreator.workspacetest.block.CoaldeBlock;
 import net.mcreator.workspacetest.block.CccBlock;
+import net.mcreator.workspacetest.block.BaobabBlock;
 import net.mcreator.workspacetest.block.ApatitedeBlock;
 import net.mcreator.workspacetest.block.AncientSpawnerBlock;
 import net.mcreator.workspacetest.WorkspaceTestMod;
@@ -100,4 +105,18 @@ public class WorkspaceTestModBlocks {
 	public static final RegistryObject<Block> OILPLANKS = REGISTRY.register("oilplanks", () -> new OilplanksBlock());
 	public static final RegistryObject<Block> APATITEDE = REGISTRY.register("apatitede", () -> new ApatitedeBlock());
 	public static final RegistryObject<Block> INF_WAT_STOR = REGISTRY.register("inf_wat_stor", () -> new InfWatStorBlock());
+	public static final RegistryObject<Block> BAOBAB = REGISTRY.register("baobab", () -> new BaobabBlock());
+
+	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+	public static class ClientSideHandler {
+		@SubscribeEvent
+		public static void blockColorLoad(RegisterColorHandlersEvent.Block event) {
+			BaobabBlock.blockColorLoad(event);
+		}
+
+		@SubscribeEvent
+		public static void itemColorLoad(RegisterColorHandlersEvent.Item event) {
+			BaobabBlock.itemColorLoad(event);
+		}
+	}
 }

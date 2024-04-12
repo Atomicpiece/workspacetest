@@ -29,7 +29,7 @@ public class CrudeoilBlock extends LiquidBlock {
 
 	@Override
 	public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-		return 600;
+		return 1000;
 	}
 
 	@Override

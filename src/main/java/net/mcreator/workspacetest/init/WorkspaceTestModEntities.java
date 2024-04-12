@@ -25,6 +25,7 @@ import net.mcreator.workspacetest.entity.TankEntityProjectile;
 import net.mcreator.workspacetest.entity.TankEntity;
 import net.mcreator.workspacetest.entity.SubmarineEntity;
 import net.mcreator.workspacetest.entity.SpiderbotEntity;
+import net.mcreator.workspacetest.entity.SnowEntity;
 import net.mcreator.workspacetest.entity.SkeleterEntity;
 import net.mcreator.workspacetest.entity.RocketLauncherEntity;
 import net.mcreator.workspacetest.entity.RoboticPhantomEntity;
@@ -174,6 +175,8 @@ public class WorkspaceTestModEntities {
 			EntityType.Builder.<FireengineEntity>of(FireengineEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3).setCustomClientFactory(FireengineEntity::new)
 
 					.sized(3f, 2f));
+	public static final RegistryObject<EntityType<SnowEntity>> SNOW = register("projectile_snow",
+			EntityType.Builder.<SnowEntity>of(SnowEntity::new, MobCategory.MISC).setCustomClientFactory(SnowEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

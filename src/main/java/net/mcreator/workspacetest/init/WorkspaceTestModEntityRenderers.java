@@ -18,6 +18,7 @@ import net.mcreator.workspacetest.client.renderer.TinybotRenderer;
 import net.mcreator.workspacetest.client.renderer.TankRenderer;
 import net.mcreator.workspacetest.client.renderer.SubmarineRenderer;
 import net.mcreator.workspacetest.client.renderer.SpiderbotRenderer;
+import net.mcreator.workspacetest.client.renderer.SnowRenderer;
 import net.mcreator.workspacetest.client.renderer.SkeleterRenderer;
 import net.mcreator.workspacetest.client.renderer.RocketLauncherRenderer;
 import net.mcreator.workspacetest.client.renderer.RoboticPhantomRenderer;
@@ -87,5 +88,6 @@ public class WorkspaceTestModEntityRenderers {
 		event.registerEntityRenderer(WorkspaceTestModEntities.CO_2.get(), Co2Renderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.ANTIOXID.get(), AntioxidRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.FIREENGINE.get(), FireengineRenderer::new);
+		event.registerEntityRenderer(WorkspaceTestModEntities.SNOW.get(), SnowRenderer::new);
 	}
 }

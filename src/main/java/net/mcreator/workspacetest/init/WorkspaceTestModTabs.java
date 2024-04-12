@@ -25,6 +25,8 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModBlocks.OILDIRT.get().asItem());
 				tabData.accept(WorkspaceTestModBlocks.OILCOBBLE.get().asItem());
 				tabData.accept(WorkspaceTestModBlocks.OILPLANKS.get().asItem());
+				tabData.accept(WorkspaceTestModItems.OAT.get());
+				tabData.accept(WorkspaceTestModBlocks.BAOBAB.get().asItem());
 			})
 
 					.build());
@@ -148,6 +150,7 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.FIREENGINE_SPAWN_EGG.get());
 				tabData.accept(WorkspaceTestModBlocks.CRUDE_OIL_BLOCK.get().asItem());
 				tabData.accept(WorkspaceTestModItems.CUTTERS.get());
+				tabData.accept(WorkspaceTestModItems.CRYOMATTER.get());
 			})
 
 					.build());
