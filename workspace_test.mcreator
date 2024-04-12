@@ -6975,7 +6975,8 @@
           "src/main/resources/assets/workspace_test/models/block/inf_wat_stor.json",
           "src/main/resources/assets/workspace_test/models/item/inf_wat_stor.json",
           "src/main/resources/assets/workspace_test/blockstates/inf_wat_stor.json",
-          "src/main/java/net/mcreator/workspacetest/block/InfWatStorBlock.java"
+          "src/main/java/net/mcreator/workspacetest/block/InfWatStorBlock.java",
+          "src/main/java/net/mcreator/workspacetest/block/entity/InfWatStorBlockEntity.java"
         ]
       },
       "path": "~/martin mod"
@@ -7025,11 +7026,69 @@
         ]
       },
       "path": "~/martin mod"
+    },
+    {
+      "name": "NBTRestartProc",
+      "type": "procedure",
+      "sortid": 252,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nbt_restart_proc",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/NBTRestartProcProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/martin mod"
+    },
+    {
+      "name": "InfWatStorBlockIsPlacedBy",
+      "type": "procedure",
+      "sortid": 253,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inf_wat_stor_block_is_placed_by",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/InfWatStorBlockIsPlacedByProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/martin mod"
     }
   ],
   "variable_elements": [
     {
       "name": "chancefire",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "NbtRestart",
       "type": "logic",
       "scope": "map",
       "value": "false"

@@ -58,7 +58,7 @@
     "material": {
       "value": "IRON"
     },
-    "tickRate": 0,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -102,7 +102,7 @@
     "unbreakable": false,
     "breakHarvestLevel": 1,
     "isBonemealable": false,
-    "hasInventory": false,
+    "hasInventory": true,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
     "inventorySize": 9,
@@ -121,6 +121,9 @@
     "fluidRestrictions": [],
     "onTickUpdate": {
       "name": "InfWatStorUpdateTick"
+    },
+    "onBlockPlayedBy": {
+      "name": "InfWatStorBlockIsPlacedBy"
     },
     "generateFeature": false,
     "restrictionBiomes": [],
