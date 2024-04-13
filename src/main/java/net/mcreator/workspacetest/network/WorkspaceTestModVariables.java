@@ -88,7 +88,6 @@ public class WorkspaceTestModVariables {
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "workspace_test_mapvars";
 		public boolean chancefire = false;
-		public boolean NbtRestart = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -98,13 +97,11 @@ public class WorkspaceTestModVariables {
 
 		public void read(CompoundTag nbt) {
 			chancefire = nbt.getBoolean("chancefire");
-			NbtRestart = nbt.getBoolean("NbtRestart");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
 			nbt.putBoolean("chancefire", chancefire);
-			nbt.putBoolean("NbtRestart", NbtRestart);
 			return nbt;
 		}
 

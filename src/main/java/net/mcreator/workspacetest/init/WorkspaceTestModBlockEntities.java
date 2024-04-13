@@ -22,7 +22,6 @@ import net.mcreator.workspacetest.block.entity.OilrigBlockEntity;
 import net.mcreator.workspacetest.block.entity.NukeBlockEntity;
 import net.mcreator.workspacetest.block.entity.LandmineBlockEntity;
 import net.mcreator.workspacetest.block.entity.InfbatBlockEntity;
-import net.mcreator.workspacetest.block.entity.InfWatStorBlockEntity;
 import net.mcreator.workspacetest.block.entity.FiretesterBlockEntity;
 import net.mcreator.workspacetest.block.entity.FarmBlockEntity;
 import net.mcreator.workspacetest.block.entity.DestroyedmineBlockEntity;
@@ -53,7 +52,6 @@ public class WorkspaceTestModBlockEntities {
 	public static final RegistryObject<BlockEntityType<?>> DESTROYEDMINE = register("destroyedmine", WorkspaceTestModBlocks.DESTROYEDMINE, DestroyedmineBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> RECYCLER = register("recycler", WorkspaceTestModBlocks.RECYCLER, RecyclerBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> COALPOWER = register("coalpower", WorkspaceTestModBlocks.COALPOWER, CoalpowerBlockEntity::new);
-	public static final RegistryObject<BlockEntityType<?>> INF_WAT_STOR = register("inf_wat_stor", WorkspaceTestModBlocks.INF_WAT_STOR, InfWatStorBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> BAOBAB = register("baobab", WorkspaceTestModBlocks.BAOBAB, BaobabBlockEntity::new);
 
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
