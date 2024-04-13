@@ -27,5 +27,10 @@ public class HazmatsuitHelmetTickEventProcedure {
 				world.setBlock(BlockPos.containing(x, y + 1, z), Blocks.LIGHT.defaultBlockState(), 3);
 			}
 		}
+		WorkspaceTestMod.queueServerWork(10, () -> {
+			if ((world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.LIGHT) {
+				world.setBlock(BlockPos.containing(x, y + 1, z), Blocks.AIR.defaultBlockState(), 3);
+			}
+		});
 	}
 }
