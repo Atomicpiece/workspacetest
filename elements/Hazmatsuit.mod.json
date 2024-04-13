@@ -10,6 +10,9 @@
     "textureLeggings": "hazmat_leggings",
     "enableBoots": true,
     "textureBoots": "hazmat_boots",
+    "onHelmetTick": {
+      "name": "HazmatsuitHelmetTickEvent"
+    },
     "creativeTab": {
       "value": "CUSTOM:Tools"
     },

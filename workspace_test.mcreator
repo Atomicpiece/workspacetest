@@ -7525,6 +7525,42 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "HazmatsuitHelmetTickEvent",
+      "type": "procedure",
+      "sortid": 272,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hazmatsuit_helmet_tick_event",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/HazmatsuitHelmetTickEventProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [
