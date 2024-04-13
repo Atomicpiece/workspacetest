@@ -19,7 +19,7 @@ public class SnowProjectileHitsBlockProcedure {
 		if ((world.getFluidState(BlockPos.containing(x, y, z)).createLegacyBlock()).getBlock() == Blocks.LAVA || (world.getFluidState(BlockPos.containing(x, y, z)).createLegacyBlock()).getBlock() == Blocks.LAVA) {
 			{
 				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
+				BlockState _bs = Blocks.COBBLESTONE.defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -34,7 +34,7 @@ public class SnowProjectileHitsBlockProcedure {
 		} else if ((world.getFluidState(BlockPos.containing(x, y + 1, z)).createLegacyBlock()).getBlock() == Blocks.LAVA || (world.getFluidState(BlockPos.containing(x, y + 1, z)).createLegacyBlock()).getBlock() == Blocks.LAVA) {
 			{
 				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
+				BlockState _bs = Blocks.COBBLESTONE.defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -49,7 +49,7 @@ public class SnowProjectileHitsBlockProcedure {
 		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.LAVA || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.LAVA) {
 			{
 				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
+				BlockState _bs = Blocks.COBBLESTONE.defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -64,7 +64,7 @@ public class SnowProjectileHitsBlockProcedure {
 		} else if ((world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.LAVA || (world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.LAVA) {
 			{
 				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
+				BlockState _bs = Blocks.COBBLESTONE.defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -79,7 +79,7 @@ public class SnowProjectileHitsBlockProcedure {
 		} else if ((world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock() == Blocks.LAVA || (world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock() == Blocks.LAVA) {
 			{
 				BlockPos _bp = BlockPos.containing(x + 1, y, z);
-				BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
+				BlockState _bs = Blocks.COBBLESTONE.defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -94,7 +94,7 @@ public class SnowProjectileHitsBlockProcedure {
 		} else if ((world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == Blocks.LAVA || (world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == Blocks.LAVA) {
 			{
 				BlockPos _bp = BlockPos.containing(x - 1, y, z);
-				BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
+				BlockState _bs = Blocks.COBBLESTONE.defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -109,7 +109,7 @@ public class SnowProjectileHitsBlockProcedure {
 		} else if ((world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock() == Blocks.LAVA || (world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock() == Blocks.LAVA) {
 			{
 				BlockPos _bp = BlockPos.containing(x, y, z + 1);
-				BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
+				BlockState _bs = Blocks.COBBLESTONE.defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
@@ -124,7 +124,7 @@ public class SnowProjectileHitsBlockProcedure {
 		} else if ((world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == Blocks.LAVA || (world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == Blocks.LAVA) {
 			{
 				BlockPos _bp = BlockPos.containing(x, y, z - 1);
-				BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
+				BlockState _bs = Blocks.COBBLESTONE.defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());

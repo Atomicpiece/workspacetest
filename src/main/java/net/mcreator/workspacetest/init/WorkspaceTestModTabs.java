@@ -27,6 +27,7 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModBlocks.OILPLANKS.get().asItem());
 				tabData.accept(WorkspaceTestModItems.OAT.get());
 				tabData.accept(WorkspaceTestModBlocks.BAOBAB.get().asItem());
+				tabData.accept(WorkspaceTestModItems.ROCKETFUELVIAL.get());
 			})
 
 					.build());
@@ -151,6 +152,10 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModBlocks.CRUDE_OIL_BLOCK.get().asItem());
 				tabData.accept(WorkspaceTestModItems.CUTTERS.get());
 				tabData.accept(WorkspaceTestModItems.CRYOMATTER.get());
+				tabData.accept(WorkspaceTestModItems.HAZMATSUIT_HELMET.get());
+				tabData.accept(WorkspaceTestModItems.HAZMATSUIT_CHESTPLATE.get());
+				tabData.accept(WorkspaceTestModItems.HAZMATSUIT_LEGGINGS.get());
+				tabData.accept(WorkspaceTestModItems.HAZMATSUIT_BOOTS.get());
 			})
 
 					.build());
@@ -168,6 +173,10 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.EMPTY_ROD.get());
 				tabData.accept(WorkspaceTestModItems.THORIUM_ROD.get());
 				tabData.accept(WorkspaceTestModBlocks.INF_WAT_STOR.get().asItem());
+				tabData.accept(WorkspaceTestModItems.TEST_ITEM.get());
+				tabData.accept(WorkspaceTestModItems.TEST_ITEM_2.get());
+				tabData.accept(WorkspaceTestModItems.TEST_ITEM_3.get());
+				tabData.accept(WorkspaceTestModItems.TEST_ITEM_4.get());
 			})
 
 					.build());
