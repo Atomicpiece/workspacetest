@@ -13,7 +13,7 @@ public class FluidP1Procedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, BlockPos.containing(x, y, z), "current_fluid_amount") > 0 && new Object() {
+		}.getValue(world, BlockPos.containing(x, y, z), "current_fluid_amount") >= 0 && new Object() {
 			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
 				if (blockEntity != null)

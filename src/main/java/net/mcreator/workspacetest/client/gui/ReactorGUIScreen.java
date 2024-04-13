@@ -72,67 +72,67 @@ public class ReactorGUIScreen extends AbstractContainerScreen<ReactorGUIMenu> {
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 		if (FluidP0Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank0.png"), this.leftPos + 175, this.topPos + 8, 0, 0, 16, 40, 16, 40);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank0.png"), this.leftPos + 184, this.topPos + 26, 0, 0, 16, 40, 16, 40);
 		}
 		if (FluidP1Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank1.png"), this.leftPos + 175, this.topPos + 8, 0, 0, 16, 40, 16, 40);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank1.png"), this.leftPos + 184, this.topPos + 26, 0, 0, 16, 40, 16, 40);
 		}
 		if (FluidP2Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank2.png"), this.leftPos + 175, this.topPos + 8, 0, 0, 16, 40, 16, 40);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank2.png"), this.leftPos + 184, this.topPos + 26, 0, 0, 16, 40, 16, 40);
 		}
 		if (FluidP3Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank3.png"), this.leftPos + 175, this.topPos + 8, 0, 0, 16, 40, 16, 40);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank3.png"), this.leftPos + 184, this.topPos + 26, 0, 0, 16, 40, 16, 40);
 		}
 		if (FluidP4Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank4.png"), this.leftPos + 175, this.topPos + 8, 0, 0, 16, 40, 16, 40);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank4.png"), this.leftPos + 184, this.topPos + 26, 0, 0, 16, 40, 16, 40);
 		}
 		if (FluidP5Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank5.png"), this.leftPos + 175, this.topPos + 8, 0, 0, 16, 40, 16, 40);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank5.png"), this.leftPos + 184, this.topPos + 26, 0, 0, 16, 40, 16, 40);
 		}
 		if (FluidP6Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank6.png"), this.leftPos + 175, this.topPos + 8, 0, 0, 16, 40, 16, 40);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank6.png"), this.leftPos + 184, this.topPos + 26, 0, 0, 16, 40, 16, 40);
 		}
 		if (FluidP7Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank7.png"), this.leftPos + 175, this.topPos + 8, 0, 0, 16, 40, 16, 40);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank7.png"), this.leftPos + 184, this.topPos + 26, 0, 0, 16, 40, 16, 40);
 		}
 		if (FluidP8Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank8.png"), this.leftPos + 175, this.topPos + 8, 0, 0, 16, 40, 16, 40);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank8.png"), this.leftPos + 184, this.topPos + 26, 0, 0, 16, 40, 16, 40);
 		}
 		if (FluidP9Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank9.png"), this.leftPos + 175, this.topPos + 8, 0, 0, 16, 40, 16, 40);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank9.png"), this.leftPos + 184, this.topPos + 26, 0, 0, 16, 40, 16, 40);
 		}
 		if (FluidP10Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank10.png"), this.leftPos + 175, this.topPos + 8, 0, 0, 16, 40, 16, 40);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank10.png"), this.leftPos + 184, this.topPos + 26, 0, 0, 16, 40, 16, 40);
 		}
 		if (FluidP11Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank11.png"), this.leftPos + 175, this.topPos + 8, 0, 0, 16, 40, 16, 40);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank11.png"), this.leftPos + 184, this.topPos + 26, 0, 0, 16, 40, 16, 40);
 		}
 		if (FluidP12Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank12.png"), this.leftPos + 175, this.topPos + 8, 0, 0, 16, 40, 16, 40);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank12.png"), this.leftPos + 184, this.topPos + 26, 0, 0, 16, 40, 16, 40);
 		}
 		if (FluidP13Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank13.png"), this.leftPos + 175, this.topPos + 8, 0, 0, 16, 40, 16, 40);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank13.png"), this.leftPos + 184, this.topPos + 26, 0, 0, 16, 40, 16, 40);
 		}
 		if (FluidP14Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank14.png"), this.leftPos + 175, this.topPos + 8, 0, 0, 16, 40, 16, 40);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank14.png"), this.leftPos + 184, this.topPos + 26, 0, 0, 16, 40, 16, 40);
 		}
 		if (FluidP15Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank15.png"), this.leftPos + 175, this.topPos + 8, 0, 0, 16, 40, 16, 40);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank15.png"), this.leftPos + 184, this.topPos + 26, 0, 0, 16, 40, 16, 40);
 		}
 		if (FluidP16Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank16.png"), this.leftPos + 175, this.topPos + 8, 0, 0, 16, 40, 16, 40);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank16.png"), this.leftPos + 184, this.topPos + 26, 0, 0, 16, 40, 16, 40);
 		}
 		if (FluidP17Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank17.png"), this.leftPos + 175, this.topPos + 8, 0, 0, 16, 40, 16, 40);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank17.png"), this.leftPos + 184, this.topPos + 26, 0, 0, 16, 40, 16, 40);
 		}
 		if (FluidP18Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank18.png"), this.leftPos + 175, this.topPos + 8, 0, 0, 16, 40, 16, 40);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank18.png"), this.leftPos + 184, this.topPos + 26, 0, 0, 16, 40, 16, 40);
 		}
 		if (FluidP19Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank19.png"), this.leftPos + 175, this.topPos + 8, 0, 0, 16, 40, 16, 40);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank19.png"), this.leftPos + 184, this.topPos + 26, 0, 0, 16, 40, 16, 40);
 		}
 		if (FluidP20Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank20.png"), this.leftPos + 175, this.topPos + 8, 0, 0, 16, 40, 16, 40);
+			guiGraphics.blit(new ResourceLocation("workspace_test:textures/screens/tank20.png"), this.leftPos + 184, this.topPos + 26, 0, 0, 16, 40, 16, 40);
 		}
 		RenderSystem.disableBlend();
 	}
@@ -155,7 +155,7 @@ public class ReactorGUIScreen extends AbstractContainerScreen<ReactorGUIMenu> {
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.workspace_test.reactor_gui.label_reactor"), 85, 8, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.workspace_test.reactor_gui.label_energy"), 4, 26, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.workspace_test.reactor_gui.label_water"), 139, 26, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.workspace_test.reactor_gui.label_water"), 148, 44, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.workspace_test.reactor_gui.label_rod"), 4, 80, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.workspace_test.reactor_gui.label_output_rod"), 121, 80, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.workspace_test.reactor_gui.label_heat"), 4, 44, -12829636, false);
@@ -165,14 +165,14 @@ public class ReactorGUIScreen extends AbstractContainerScreen<ReactorGUIMenu> {
 		guiGraphics.drawString(this.font,
 
 				HeatProcedTestProcedure.execute(world, x, y, z), 31, 44, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.workspace_test.reactor_gui.label_fluid_type"), 58, 62, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.workspace_test.reactor_gui.label_fluid_type"), 49, 62, -12829636, false);
 		guiGraphics.drawString(this.font,
 
 				FluidTypeProcedure.execute(world, x, y, z), 112, 62, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.workspace_test.reactor_gui.label_function"), 58, 170, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.workspace_test.reactor_gui.label_function"), 4, 170, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				FunctionProcProcedure.execute(world, x, y, z), 103, 170, -12829636, false);
+				FunctionProcProcedure.execute(world, x, y, z), 49, 170, -12829636, false);
 	}
 
 	@Override

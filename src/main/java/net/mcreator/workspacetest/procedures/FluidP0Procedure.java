@@ -13,7 +13,7 @@ public class FluidP0Procedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, BlockPos.containing(x, y, z), "current_fluid_amount") == 0) {
+		}.getValue(world, BlockPos.containing(x, y, z), "current_fluid_amount") == -1) {
 			return true;
 		}
 		return false;
