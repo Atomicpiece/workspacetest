@@ -14,7 +14,7 @@ public class FluidTypeProcedure {
 				return "";
 			}
 		}.getValue(world, BlockPos.containing(x, y, z), "fluidtype")).equals("Coolant")) {
-			return "Water";
+			return "Coolant";
 		} else if ((new Object() {
 			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -23,7 +23,7 @@ public class FluidTypeProcedure {
 				return "";
 			}
 		}.getValue(world, BlockPos.containing(x, y, z), "fluidtype")).equals("Water")) {
-			return "Coolant";
+			return "Water";
 		} else if (!((new Object() {
 			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
