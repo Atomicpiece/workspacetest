@@ -31,8 +31,7 @@ public class SnowProjectileHitsBlockProcedure {
 				}
 				world.setBlock(_bp, _bs, 3);
 			}
-		}
-		if ((world.getFluidState(BlockPos.containing(x, y + 1, z)).createLegacyBlock()).getBlock() == Blocks.LAVA || (world.getFluidState(BlockPos.containing(x, y + 1, z)).createLegacyBlock()).getBlock() == Blocks.LAVA) {
+		} else if ((world.getFluidState(BlockPos.containing(x, y + 1, z)).createLegacyBlock()).getBlock() == Blocks.LAVA || (world.getFluidState(BlockPos.containing(x, y + 1, z)).createLegacyBlock()).getBlock() == Blocks.LAVA) {
 			{
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
@@ -47,8 +46,7 @@ public class SnowProjectileHitsBlockProcedure {
 				}
 				world.setBlock(_bp, _bs, 3);
 			}
-		}
-		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.LAVA || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.LAVA) {
+		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.LAVA || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.LAVA) {
 			{
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
@@ -63,10 +61,69 @@ public class SnowProjectileHitsBlockProcedure {
 				}
 				world.setBlock(_bp, _bs, 3);
 			}
-		}
-		if ((world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.LAVA || (world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.LAVA) {
+		} else if ((world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.LAVA || (world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.LAVA) {
 			{
 				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
+				BlockState _bso = world.getBlockState(_bp);
+				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+					if (_property != null && _bs.getValue(_property) != null)
+						try {
+							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+						} catch (Exception e) {
+						}
+				}
+				world.setBlock(_bp, _bs, 3);
+			}
+		} else if ((world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock() == Blocks.LAVA || (world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock() == Blocks.LAVA) {
+			{
+				BlockPos _bp = BlockPos.containing(x + 1, y, z);
+				BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
+				BlockState _bso = world.getBlockState(_bp);
+				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+					if (_property != null && _bs.getValue(_property) != null)
+						try {
+							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+						} catch (Exception e) {
+						}
+				}
+				world.setBlock(_bp, _bs, 3);
+			}
+		} else if ((world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == Blocks.LAVA || (world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == Blocks.LAVA) {
+			{
+				BlockPos _bp = BlockPos.containing(x - 1, y, z);
+				BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
+				BlockState _bso = world.getBlockState(_bp);
+				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+					if (_property != null && _bs.getValue(_property) != null)
+						try {
+							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+						} catch (Exception e) {
+						}
+				}
+				world.setBlock(_bp, _bs, 3);
+			}
+		} else if ((world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock() == Blocks.LAVA || (world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock() == Blocks.LAVA) {
+			{
+				BlockPos _bp = BlockPos.containing(x, y, z + 1);
+				BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
+				BlockState _bso = world.getBlockState(_bp);
+				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+					if (_property != null && _bs.getValue(_property) != null)
+						try {
+							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+						} catch (Exception e) {
+						}
+				}
+				world.setBlock(_bp, _bs, 3);
+			}
+		} else if ((world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == Blocks.LAVA || (world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == Blocks.LAVA) {
+			{
+				BlockPos _bp = BlockPos.containing(x, y, z - 1);
 				BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
