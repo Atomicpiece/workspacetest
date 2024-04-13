@@ -3,18 +3,18 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "uranrod",
-    "customModelName": "Tool",
+    "texture": "testitem4",
+    "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Uranium Rod",
-    "rarity": "EPIC",
+    "name": "Test Item",
+    "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:MyTab"
     },
     "stackSize": 1,
     "enchantability": 0,
-    "useDuration": 32,
+    "useDuration": 0,
     "toolType": 1.0,
     "damageCount": 0,
     "recipeRemainder": {
@@ -35,25 +35,25 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onItemInInventoryTick": {
-      "name": "UraniumRodItemIsCraftedsmelted"
+    "onRightClickedInAir": {
+      "name": "CoalTestStart"
     },
-    "onFinishUsingItem": {
-      "name": "UraniumRodPlayerFinishesUsingItem"
+    "onCrafted": {
+      "name": "TestItemItemIsCraftedsmelted"
     },
     "enableRanged": false,
     "shootConstantly": false,
     "projectile": {
       "value": "CUSTOM:Firebolt"
     },
-    "isFood": true,
+    "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,
     "eatResultItem": {
-      "value": "CUSTOM:EmptyRod"
+      "value": ""
     },
     "isMeat": false,
-    "isAlwaysEdible": true,
-    "animation": "eat"
+    "isAlwaysEdible": false,
+    "animation": "none"
   }
 }

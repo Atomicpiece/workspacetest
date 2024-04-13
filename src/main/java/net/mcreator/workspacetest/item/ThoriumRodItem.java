@@ -7,7 +7,7 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 
 import net.mcreator.workspacetest.procedures.ThoriumRodItemIsCraftedsmeltedProcedure;
@@ -30,8 +30,8 @@ public class ThoriumRodItem extends Item {
 	}
 
 	@Override
-	public void onCraftedBy(ItemStack itemstack, Level world, Player entity) {
-		super.onCraftedBy(itemstack, world, entity);
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
 		ThoriumRodItemIsCraftedsmeltedProcedure.execute(itemstack);
 	}
 }

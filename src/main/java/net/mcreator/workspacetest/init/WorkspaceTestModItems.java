@@ -29,6 +29,10 @@ import net.mcreator.workspacetest.item.TinchunkItem;
 import net.mcreator.workspacetest.item.ThoriumingotItem;
 import net.mcreator.workspacetest.item.ThoriumRodItem;
 import net.mcreator.workspacetest.item.ThorchunkItem;
+import net.mcreator.workspacetest.item.TestItemItem;
+import net.mcreator.workspacetest.item.TestItem4Item;
+import net.mcreator.workspacetest.item.TestItem3Item;
+import net.mcreator.workspacetest.item.TestItem2Item;
 import net.mcreator.workspacetest.item.SulphurItem;
 import net.mcreator.workspacetest.item.SulfurItem;
 import net.mcreator.workspacetest.item.SteelingotItem;
@@ -212,6 +216,10 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> OAT = REGISTRY.register("oat", () -> new OatItem());
 	public static final RegistryObject<Item> BAOBAB = block(WorkspaceTestModBlocks.BAOBAB);
 	public static final RegistryObject<Item> CRYOMATTER = REGISTRY.register("cryomatter", () -> new CryomatterItem());
+	public static final RegistryObject<Item> TEST_ITEM = REGISTRY.register("test_item", () -> new TestItemItem());
+	public static final RegistryObject<Item> TEST_ITEM_2 = REGISTRY.register("test_item_2", () -> new TestItem2Item());
+	public static final RegistryObject<Item> TEST_ITEM_3 = REGISTRY.register("test_item_3", () -> new TestItem3Item());
+	public static final RegistryObject<Item> TEST_ITEM_4 = REGISTRY.register("test_item_4", () -> new TestItem4Item());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
