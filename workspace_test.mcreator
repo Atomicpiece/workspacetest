@@ -7498,6 +7498,68 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "Apatite",
+      "type": "item",
+      "sortid": 274,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "apatite",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/ApatiteItem.java",
+          "src/main/resources/assets/workspace_test/models/item/apatite.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Phosde",
+      "type": "block",
+      "sortid": 275,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phosde",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/block/PhosdeBlock.java",
+          "src/main/resources/assets/workspace_test/models/block/phosde.json",
+          "src/main/resources/assets/workspace_test/models/item/phosde.json",
+          "src/main/resources/assets/workspace_test/blockstates/phosde.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Phoschunk",
+      "type": "item",
+      "sortid": 276,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phoschunk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/PhoschunkItem.java",
+          "src/main/resources/assets/workspace_test/models/item/phoschunk.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Oildrop",
+      "type": "item",
+      "sortid": 277,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oildrop",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/OildropItem.java",
+          "src/main/resources/assets/workspace_test/models/item/oildrop.json"
+        ]
+      },
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [
@@ -7536,12 +7598,12 @@
       "block.workspace_test.firetester": "Fire test building",
       "gui.workspace_test.reactor_gui.label_function": "Function:",
       "gui.workspace_test.coalgui.label_status": "Status:",
-      "gui.workspace_test.smelterygui.label_smeltery": "Smeltery",
       "block.workspace_test.coalde": "Coal deposit",
+      "gui.workspace_test.smelterygui.label_smeltery": "Smeltery",
       "item.workspace_test.crudeoil_bucket": "Crude oil Bucket",
       "block.workspace_test.crudeoil": "Crude oil",
-      "block.workspace_test.walls": "Walls",
       "item.workspace_test.skeleter_spawn_egg": "Skeleter Spawn Egg",
+      "block.workspace_test.walls": "Walls",
       "item.workspace_test.warplane_spawn_egg": "Warplane Spawn Egg",
       "entity.workspace_test.furnace_powered_golem": "Furnace Powered Golem",
       "block.workspace_test.inf_wat_stor": "Infinite Water Storage",
@@ -7551,6 +7613,7 @@
       "item.workspace_test.test_item_2": "Test Item",
       "gui.workspace_test.transportgui.label_fluid": "fluid:",
       "block.workspace_test.lithde": "Lithium deposit",
+      "item.workspace_test.apatite": "Apatite",
       "block.workspace_test.destroyedmine": "Destroyed mine",
       "item.workspace_test.whitephosporus": "White phosporus",
       "item.workspace_test.steelingot": "Steel ingot",
@@ -7578,8 +7641,9 @@
       "entity.workspace_test.warplane": "Warplane",
       "item.workspace_test.lithiumcube": "Lithium cube",
       "block.workspace_test.crudeoilde": "Crude oil deposit",
-      "item.workspace_test.titaniumingot": "Titanium ingot",
       "block.workspace_test.zincde": "Zinc deposit",
+      "item.workspace_test.titaniumingot": "Titanium ingot",
+      "item.workspace_test.oildrop": "Oil drop",
       "gui.workspace_test.recyclgui.button_process": "Process",
       "item.workspace_test.sulphur": "Sulphur",
       "item.workspace_test.extinguisher": "Extinguisher",
@@ -7690,6 +7754,7 @@
       "item.workspace_test.tank_spawn_egg": "Tank Spawn Egg",
       "biome.workspace_test.lost_lands": "Lost Lands",
       "gui.workspace_test.coalgui.label_energy": "Energy:",
+      "block.workspace_test.phosde": "Phosphor deposit",
       "entity.workspace_test.mossy_golem": "Mossy Golem",
       "block.workspace_test.niterde": "Niterde",
       "item.workspace_test.leadingot": "Lead ingot",
@@ -7700,6 +7765,7 @@
       "item.workspace_test.coalchunk": "Coal chunk",
       "gui.workspace_test.reactor_gui.label_water": "Fluid:",
       "item.workspace_test.thorchunk": "Thorium chunk",
+      "item.workspace_test.phoschunk": "Phosphorus chunk",
       "item.workspace_test.ion_sword": "Ion Sword",
       "gui.workspace_test.minegui.label_resource": "Resource:",
       "gui.workspace_test.minegui.label_mining_speed": "Mining speed:",

@@ -28,6 +28,7 @@ import net.mcreator.workspacetest.block.SmelteryBlock;
 import net.mcreator.workspacetest.block.RoboticAssemblerBlock;
 import net.mcreator.workspacetest.block.RecyclerBlock;
 import net.mcreator.workspacetest.block.ReactorBlock;
+import net.mcreator.workspacetest.block.PhosdeBlock;
 import net.mcreator.workspacetest.block.OilrigBlock;
 import net.mcreator.workspacetest.block.OilplanksBlock;
 import net.mcreator.workspacetest.block.OildirtBlock;
@@ -106,6 +107,7 @@ public class WorkspaceTestModBlocks {
 	public static final RegistryObject<Block> APATITEDE = REGISTRY.register("apatitede", () -> new ApatitedeBlock());
 	public static final RegistryObject<Block> INF_WAT_STOR = REGISTRY.register("inf_wat_stor", () -> new InfWatStorBlock());
 	public static final RegistryObject<Block> BAOBAB = REGISTRY.register("baobab", () -> new BaobabBlock());
+	public static final RegistryObject<Block> PHOSDE = REGISTRY.register("phosde", () -> new PhosdeBlock());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {

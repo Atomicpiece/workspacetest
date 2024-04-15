@@ -39,7 +39,9 @@ import net.mcreator.workspacetest.item.SteelingotItem;
 import net.mcreator.workspacetest.item.SmokerItem;
 import net.mcreator.workspacetest.item.RedstroneBlasterItem;
 import net.mcreator.workspacetest.item.RedphosporusItem;
+import net.mcreator.workspacetest.item.PhoschunkItem;
 import net.mcreator.workspacetest.item.PercentageCheckerItem;
+import net.mcreator.workspacetest.item.OildropItem;
 import net.mcreator.workspacetest.item.OatItem;
 import net.mcreator.workspacetest.item.NiterchunkItem;
 import net.mcreator.workspacetest.item.NiterItem;
@@ -81,6 +83,7 @@ import net.mcreator.workspacetest.item.BronzeingotItem;
 import net.mcreator.workspacetest.item.BombsItem;
 import net.mcreator.workspacetest.item.BasookaItem;
 import net.mcreator.workspacetest.item.AshItem;
+import net.mcreator.workspacetest.item.ApatiteItem;
 import net.mcreator.workspacetest.WorkspaceTestMod;
 
 public class WorkspaceTestModItems {
@@ -225,6 +228,10 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> HAZMATSUIT_CHESTPLATE = REGISTRY.register("hazmatsuit_chestplate", () -> new HazmatsuitItem.Chestplate());
 	public static final RegistryObject<Item> HAZMATSUIT_LEGGINGS = REGISTRY.register("hazmatsuit_leggings", () -> new HazmatsuitItem.Leggings());
 	public static final RegistryObject<Item> HAZMATSUIT_BOOTS = REGISTRY.register("hazmatsuit_boots", () -> new HazmatsuitItem.Boots());
+	public static final RegistryObject<Item> APATITE = REGISTRY.register("apatite", () -> new ApatiteItem());
+	public static final RegistryObject<Item> PHOSDE = block(WorkspaceTestModBlocks.PHOSDE);
+	public static final RegistryObject<Item> PHOSCHUNK = REGISTRY.register("phoschunk", () -> new PhoschunkItem());
+	public static final RegistryObject<Item> OILDROP = REGISTRY.register("oildrop", () -> new OildropItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

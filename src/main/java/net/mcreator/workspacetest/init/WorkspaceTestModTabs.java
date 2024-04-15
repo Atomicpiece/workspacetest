@@ -120,6 +120,10 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModBlocks.APATITEDE.get().asItem());
 				tabData.accept(WorkspaceTestModItems.WHITEPHOSPORUS.get());
 				tabData.accept(WorkspaceTestModItems.REDPHOSPORUS.get());
+				tabData.accept(WorkspaceTestModItems.APATITE.get());
+				tabData.accept(WorkspaceTestModBlocks.PHOSDE.get().asItem());
+				tabData.accept(WorkspaceTestModItems.PHOSCHUNK.get());
+				tabData.accept(WorkspaceTestModItems.OILDROP.get());
 			})
 
 					.build());
