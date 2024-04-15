@@ -51,6 +51,6 @@ public class ModelOrb<T extends Entity> extends EntityModel<T> {
 	}
 
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-		this.All.yRot = ageInTicks / 20.f;
+		this.All.yRot = ageInTicks;
 	}
 }

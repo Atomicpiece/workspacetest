@@ -1,8 +1,18 @@
 package net.mcreator.workspacetest.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.workspacetest.init.WorkspaceTestModItems;
+import net.mcreator.workspacetest.init.WorkspaceTestModEntities;
+import net.mcreator.workspacetest.entity.WaterEntity;
+import net.mcreator.workspacetest.entity.SnowEntity;
+import net.mcreator.workspacetest.entity.FoamEntity;
+import net.mcreator.workspacetest.entity.AntioxidEntity;
 
 public class WaterCannonOnEntityTickUpdateProcedure {
 	public static void execute(Entity entity) {
@@ -34,15 +44,82 @@ public class WaterCannonOnEntityTickUpdateProcedure {
 				Level projectileLevel = _shootFrom.level();
 				if (!projectileLevel.isClientSide()) {
 					Projectile _entityToSpawn = new Object() {
-						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
 							AbstractArrow entityToSpawn = new WaterEntity(WorkspaceTestModEntities.WATER.get(), level);
 							entityToSpawn.setOwner(shooter);
 							entityToSpawn.setBaseDamage(damage);
 							entityToSpawn.setKnockback(knockback);
 							entityToSpawn.setSilent(true);
+							entityToSpawn.setPierceLevel(piercing);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, 0, 1);
+					}.getArrow(projectileLevel, entity, 0, 1, (byte) 2);
+					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 10);
+					projectileLevel.addFreshEntity(_entityToSpawn);
+				}
+			}
+		}
+		if (entity.isVehicle() && ((entity.getFirstPassenger()) instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == WorkspaceTestModItems.FIREOFF.get()) {
+			{
+				Entity _shootFrom = entity;
+				Level projectileLevel = _shootFrom.level();
+				if (!projectileLevel.isClientSide()) {
+					Projectile _entityToSpawn = new Object() {
+						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
+							AbstractArrow entityToSpawn = new FoamEntity(WorkspaceTestModEntities.FOAM.get(), level);
+							entityToSpawn.setOwner(shooter);
+							entityToSpawn.setBaseDamage(damage);
+							entityToSpawn.setKnockback(knockback);
+							entityToSpawn.setSilent(true);
+							entityToSpawn.setPierceLevel(piercing);
+							return entityToSpawn;
+						}
+					}.getArrow(projectileLevel, entity, 0, 1, (byte) 2);
+					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 20);
+					projectileLevel.addFreshEntity(_entityToSpawn);
+				}
+			}
+		}
+		if (entity.isVehicle() && ((entity.getFirstPassenger()) instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == WorkspaceTestModItems.DETOXIFICATOR.get()) {
+			{
+				Entity _shootFrom = entity;
+				Level projectileLevel = _shootFrom.level();
+				if (!projectileLevel.isClientSide()) {
+					Projectile _entityToSpawn = new Object() {
+						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
+							AbstractArrow entityToSpawn = new AntioxidEntity(WorkspaceTestModEntities.ANTIOXID.get(), level);
+							entityToSpawn.setOwner(shooter);
+							entityToSpawn.setBaseDamage(damage);
+							entityToSpawn.setKnockback(knockback);
+							entityToSpawn.setSilent(true);
+							entityToSpawn.setPierceLevel(piercing);
+							return entityToSpawn;
+						}
+					}.getArrow(projectileLevel, entity, 0, 1, (byte) 2);
+					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 5);
+					projectileLevel.addFreshEntity(_entityToSpawn);
+				}
+			}
+		}
+		if (entity.isVehicle() && ((entity.getFirstPassenger()) instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == WorkspaceTestModItems.CRYOMATTER.get()) {
+			{
+				Entity _shootFrom = entity;
+				Level projectileLevel = _shootFrom.level();
+				if (!projectileLevel.isClientSide()) {
+					Projectile _entityToSpawn = new Object() {
+						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
+							AbstractArrow entityToSpawn = new SnowEntity(WorkspaceTestModEntities.SNOW.get(), level);
+							entityToSpawn.setOwner(shooter);
+							entityToSpawn.setBaseDamage(damage);
+							entityToSpawn.setKnockback(knockback);
+							entityToSpawn.setSilent(true);
+							entityToSpawn.setPierceLevel(piercing);
+							return entityToSpawn;
+						}
+					}.getArrow(projectileLevel, entity, 0, 1, (byte) 2);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 10);
 					projectileLevel.addFreshEntity(_entityToSpawn);
