@@ -38,6 +38,7 @@ import net.mcreator.workspacetest.entity.MagicalBoltEntity;
 import net.mcreator.workspacetest.entity.LevitationRobotEntity;
 import net.mcreator.workspacetest.entity.IronSwordEntity;
 import net.mcreator.workspacetest.entity.GreatChickenEntity;
+import net.mcreator.workspacetest.entity.FurtEntity;
 import net.mcreator.workspacetest.entity.FurnacePoweredGolemEntity;
 import net.mcreator.workspacetest.entity.FrostBlazeEntityProjectile;
 import net.mcreator.workspacetest.entity.FrostBlazeEntity;
@@ -182,6 +183,8 @@ public class WorkspaceTestModEntities {
 			EntityType.Builder.<WaterCannonEntity>of(WaterCannonEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WaterCannonEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FurtEntity>> FURT = register("projectile_furt",
+			EntityType.Builder.<FurtEntity>of(FurtEntity::new, MobCategory.MISC).setCustomClientFactory(FurtEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

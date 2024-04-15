@@ -67,6 +67,7 @@ import net.mcreator.workspacetest.item.FirehoseItem;
 import net.mcreator.workspacetest.item.FirefighterSuitItem;
 import net.mcreator.workspacetest.item.FirebeltItem;
 import net.mcreator.workspacetest.item.FireCircleCreatorItem;
+import net.mcreator.workspacetest.item.FertItem;
 import net.mcreator.workspacetest.item.ExtinguisherItem;
 import net.mcreator.workspacetest.item.EmptyRodItem;
 import net.mcreator.workspacetest.item.DiamondsItem;
@@ -233,6 +234,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> PHOSDE = block(WorkspaceTestModBlocks.PHOSDE);
 	public static final RegistryObject<Item> PHOSCHUNK = REGISTRY.register("phoschunk", () -> new PhoschunkItem());
 	public static final RegistryObject<Item> OILDROP = REGISTRY.register("oildrop", () -> new OildropItem());
+	public static final RegistryObject<Item> FERT = REGISTRY.register("fert", () -> new FertItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

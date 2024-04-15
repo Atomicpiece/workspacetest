@@ -205,6 +205,7 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.HAZMATSUIT_LEGGINGS.get());
 				tabData.accept(WorkspaceTestModItems.HAZMATSUIT_BOOTS.get());
 				tabData.accept(WorkspaceTestModItems.WATER_CANNON_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModItems.FERT.get());
 			})
 
 					.build());

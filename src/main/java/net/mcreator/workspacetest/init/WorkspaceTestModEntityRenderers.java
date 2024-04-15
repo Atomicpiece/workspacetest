@@ -31,6 +31,7 @@ import net.mcreator.workspacetest.client.renderer.MagicalBoltRenderer;
 import net.mcreator.workspacetest.client.renderer.LevitationRobotRenderer;
 import net.mcreator.workspacetest.client.renderer.IronSwordRenderer;
 import net.mcreator.workspacetest.client.renderer.GreatChickenRenderer;
+import net.mcreator.workspacetest.client.renderer.FurtRenderer;
 import net.mcreator.workspacetest.client.renderer.FurnacePoweredGolemRenderer;
 import net.mcreator.workspacetest.client.renderer.FrostBlazeRenderer;
 import net.mcreator.workspacetest.client.renderer.FoamRenderer;
@@ -91,5 +92,6 @@ public class WorkspaceTestModEntityRenderers {
 		event.registerEntityRenderer(WorkspaceTestModEntities.FIREENGINE.get(), FireengineRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.SNOW.get(), SnowRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.WATER_CANNON.get(), WaterCannonRenderer::new);
+		event.registerEntityRenderer(WorkspaceTestModEntities.FURT.get(), FurtRenderer::new);
 	}
 }

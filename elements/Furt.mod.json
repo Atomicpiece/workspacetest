@@ -1,0 +1,25 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Items.DYE#15"
+    },
+    "showParticles": true,
+    "actionSound": {
+      "value": "block.composter.fill"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 1.0,
+    "knockback": 0,
+    "entityModel": "Modelmissile",
+    "customModelTexture": "missiled.png",
+    "onHitsBlock": {
+      "name": "FurtProjectileHitsBlock"
+    },
+    "onFlyingTick": {
+      "name": "FurtWhileProjectileFlyingTick"
+    }
+  }
+}
