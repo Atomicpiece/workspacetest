@@ -160,7 +160,7 @@ public class ReactorUpdateTickProcedure {
 												return blockEntity.getPersistentData().getDouble(tag);
 											return -1;
 										}
-									}.getValue(world, BlockPos.containing(x, y, z), "curth")) / 10 + 1) * (new Object() {
+									}.getValue(world, BlockPos.containing(x, y, z), "curth")) / 1000 + 0.5) * (new Object() {
 										public int getEnergyStored(LevelAccessor level, BlockPos pos) {
 											AtomicInteger _retval = new AtomicInteger(0);
 											BlockEntity _ent = level.getBlockEntity(pos);
@@ -168,7 +168,7 @@ public class ReactorUpdateTickProcedure {
 												_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
 											return _retval.get();
 										}
-									}.getEnergyStored(world, BlockPos.containing(x, y, z)) / 10 + 1)) / 2);
+									}.getEnergyStored(world, BlockPos.containing(x, y, z)) / 1000 + 0.5)) / 5);
 									if (_ent != null)
 										_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 								}
@@ -213,7 +213,7 @@ public class ReactorUpdateTickProcedure {
 												return blockEntity.getPersistentData().getDouble(tag);
 											return -1;
 										}
-									}.getValue(world, BlockPos.containing(x, y, z), "curth")) / 10 + 0.1) * (new Object() {
+									}.getValue(world, BlockPos.containing(x, y, z), "curth")) / 100 + 0.1) * (new Object() {
 										public int getEnergyStored(LevelAccessor level, BlockPos pos) {
 											AtomicInteger _retval = new AtomicInteger(0);
 											BlockEntity _ent = level.getBlockEntity(pos);
@@ -221,7 +221,7 @@ public class ReactorUpdateTickProcedure {
 												_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
 											return _retval.get();
 										}
-									}.getEnergyStored(world, BlockPos.containing(x, y, z)) / 10 + 0.1)) / 2);
+									}.getEnergyStored(world, BlockPos.containing(x, y, z)) / 100 + 0.1)) / 3);
 									if (_ent != null)
 										_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 								}
@@ -439,7 +439,7 @@ public class ReactorUpdateTickProcedure {
 												return blockEntity.getPersistentData().getDouble(tag);
 											return -1;
 										}
-									}.getValue(world, BlockPos.containing(x, y, z), "curth")) / 10 + 1) * (new Object() {
+									}.getValue(world, BlockPos.containing(x, y, z), "curth")) / 1000 + 0.5) * (new Object() {
 										public int getEnergyStored(LevelAccessor level, BlockPos pos) {
 											AtomicInteger _retval = new AtomicInteger(0);
 											BlockEntity _ent = level.getBlockEntity(pos);
@@ -447,7 +447,7 @@ public class ReactorUpdateTickProcedure {
 												_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
 											return _retval.get();
 										}
-									}.getEnergyStored(world, BlockPos.containing(x, y, z)) / 10 + 1)) / 2);
+									}.getEnergyStored(world, BlockPos.containing(x, y, z)) / 1000 + 0.5)) / 5);
 									if (_ent != null)
 										_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 								}
@@ -492,7 +492,7 @@ public class ReactorUpdateTickProcedure {
 												return blockEntity.getPersistentData().getDouble(tag);
 											return -1;
 										}
-									}.getValue(world, BlockPos.containing(x, y, z), "curth")) / 10 + 0.1) * (new Object() {
+									}.getValue(world, BlockPos.containing(x, y, z), "curth")) / 100 + 0.1) * (new Object() {
 										public int getEnergyStored(LevelAccessor level, BlockPos pos) {
 											AtomicInteger _retval = new AtomicInteger(0);
 											BlockEntity _ent = level.getBlockEntity(pos);
@@ -500,7 +500,7 @@ public class ReactorUpdateTickProcedure {
 												_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
 											return _retval.get();
 										}
-									}.getEnergyStored(world, BlockPos.containing(x, y, z)) / 10 + 0.1)) / 2);
+									}.getEnergyStored(world, BlockPos.containing(x, y, z)) / 100 + 0.1)) / 3);
 									if (_ent != null)
 										_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 								}
