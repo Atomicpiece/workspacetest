@@ -37,7 +37,6 @@ import net.mcreator.workspacetest.item.SulphurItem;
 import net.mcreator.workspacetest.item.SulfurItem;
 import net.mcreator.workspacetest.item.SteelingotItem;
 import net.mcreator.workspacetest.item.SmokerItem;
-import net.mcreator.workspacetest.item.RocketfuelvialItem;
 import net.mcreator.workspacetest.item.RedstroneBlasterItem;
 import net.mcreator.workspacetest.item.RedphosporusItem;
 import net.mcreator.workspacetest.item.PercentageCheckerItem;
@@ -222,7 +221,6 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> TEST_ITEM_2 = REGISTRY.register("test_item_2", () -> new TestItem2Item());
 	public static final RegistryObject<Item> TEST_ITEM_3 = REGISTRY.register("test_item_3", () -> new TestItem3Item());
 	public static final RegistryObject<Item> TEST_ITEM_4 = REGISTRY.register("test_item_4", () -> new TestItem4Item());
-	public static final RegistryObject<Item> ROCKETFUELVIAL = REGISTRY.register("rocketfuelvial", () -> new RocketfuelvialItem());
 	public static final RegistryObject<Item> HAZMATSUIT_HELMET = REGISTRY.register("hazmatsuit_helmet", () -> new HazmatsuitItem.Helmet());
 	public static final RegistryObject<Item> HAZMATSUIT_CHESTPLATE = REGISTRY.register("hazmatsuit_chestplate", () -> new HazmatsuitItem.Chestplate());
 	public static final RegistryObject<Item> HAZMATSUIT_LEGGINGS = REGISTRY.register("hazmatsuit_leggings", () -> new HazmatsuitItem.Leggings());

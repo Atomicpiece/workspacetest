@@ -27,7 +27,6 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModBlocks.OILPLANKS.get().asItem());
 				tabData.accept(WorkspaceTestModItems.OAT.get());
 				tabData.accept(WorkspaceTestModBlocks.BAOBAB.get().asItem());
-				tabData.accept(WorkspaceTestModItems.ROCKETFUELVIAL.get());
 			})
 
 					.build());

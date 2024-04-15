@@ -7446,57 +7446,6 @@
       "path": "~/martin mod"
     },
     {
-      "name": "Rocketfuelvial",
-      "type": "item",
-      "sortid": 268,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rocketfuelvial",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/item/RocketfuelvialItem.java",
-          "src/main/resources/assets/workspace_test/models/item/rocketfuelvial.json"
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
-      "name": "RocketfuelvialItemInHandTick",
-      "type": "procedure",
-      "sortid": 269,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rocketfuelvial_item_in_hand_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/RocketfuelvialItemInHandTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/assembly machines"
-    },
-    {
       "name": "Crudefuel",
       "type": "itemextension",
       "sortid": 270,
@@ -7692,7 +7641,6 @@
       "item.workspace_test.tiningot": "Tin ingot",
       "item.workspace_test.thorium_rod": "Thorium Rod",
       "item.workspace_test.dps_orb_spawn_egg": "DPS Orb Spawn Egg",
-      "item.workspace_test.rocketfuelvial": "Vial of rocket fuel",
       "item.workspace_test.microbot_spawn_egg": "Microbot Spawn Egg",
       "entity.workspace_test.tank": "Tank",
       "gui.workspace_test.minegui.label_power_usage": "Power usage:",
