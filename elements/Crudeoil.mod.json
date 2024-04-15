@@ -24,7 +24,7 @@
     "generateBucket": true,
     "textureBucket": "crudebuc",
     "creativeTab": {
-      "value": "CUSTOM:Resources"
+      "value": "CUSTOM:Firefighter"
     },
     "emptySound": {
       "value": "item.bucket.empty_lava"

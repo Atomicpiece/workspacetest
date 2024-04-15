@@ -11,7 +11,7 @@
     "enableBoots": true,
     "textureBoots": "firefighter_boots",
     "creativeTab": {
-      "value": "CUSTOM:Tools"
+      "value": "CUSTOM:Firefighter"
     },
     "armorTextureFile": "firefighter",
     "helmetName": "FirefighterHelmet",

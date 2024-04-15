@@ -17,6 +17,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.workspacetest.entity.WaterEntity;
+import net.mcreator.workspacetest.entity.WaterCannonEntity;
 import net.mcreator.workspacetest.entity.WarplaneEntity;
 import net.mcreator.workspacetest.entity.TurretEntityProjectile;
 import net.mcreator.workspacetest.entity.TurretEntity;
@@ -177,6 +178,10 @@ public class WorkspaceTestModEntities {
 					.sized(3f, 2f));
 	public static final RegistryObject<EntityType<SnowEntity>> SNOW = register("projectile_snow",
 			EntityType.Builder.<SnowEntity>of(SnowEntity::new, MobCategory.MISC).setCustomClientFactory(SnowEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<WaterCannonEntity>> WATER_CANNON = register("water_cannon",
+			EntityType.Builder.<WaterCannonEntity>of(WaterCannonEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WaterCannonEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -208,6 +213,7 @@ public class WorkspaceTestModEntities {
 			RocketLauncherEntity.init();
 			DPSOrbEntity.init();
 			FireengineEntity.init();
+			WaterCannonEntity.init();
 		});
 	}
 
@@ -236,5 +242,6 @@ public class WorkspaceTestModEntities {
 		event.put(ROCKET_LAUNCHER.get(), RocketLauncherEntity.createAttributes().build());
 		event.put(DPS_ORB.get(), DPSOrbEntity.createAttributes().build());
 		event.put(FIREENGINE.get(), FireengineEntity.createAttributes().build());
+		event.put(WATER_CANNON.get(), WaterCannonEntity.createAttributes().build());
 	}
 }

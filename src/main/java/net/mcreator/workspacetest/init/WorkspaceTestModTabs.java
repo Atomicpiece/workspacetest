@@ -22,9 +22,6 @@ public class WorkspaceTestModTabs {
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.test")).icon(() -> new ItemStack(Blocks.GILDED_BLACKSTONE)).displayItems((parameters, tabData) -> {
 				tabData.accept(WorkspaceTestModItems.BOMBS.get());
 				tabData.accept(WorkspaceTestModItems.HEALT_INDICATOR.get());
-				tabData.accept(WorkspaceTestModBlocks.OILDIRT.get().asItem());
-				tabData.accept(WorkspaceTestModBlocks.OILCOBBLE.get().asItem());
-				tabData.accept(WorkspaceTestModBlocks.OILPLANKS.get().asItem());
 				tabData.accept(WorkspaceTestModItems.OAT.get());
 				tabData.accept(WorkspaceTestModBlocks.BAOBAB.get().asItem());
 			})
@@ -108,7 +105,6 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModBlocks.OILRIG.get().asItem());
 				tabData.accept(WorkspaceTestModBlocks.FARM.get().asItem());
 				tabData.accept(WorkspaceTestModBlocks.CRUDEOILDE.get().asItem());
-				tabData.accept(WorkspaceTestModItems.CRUDEOIL_BUCKET.get());
 				tabData.accept(WorkspaceTestModItems.CRUDEOILBARREL.get());
 				tabData.accept(WorkspaceTestModItems.METALSCRAP.get());
 				tabData.accept(WorkspaceTestModBlocks.DESTROYEDMINE.get().asItem());
@@ -136,25 +132,8 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.MULTIMETER.get());
 				tabData.accept(WorkspaceTestModItems.MATCHES.get());
 				tabData.accept(WorkspaceTestModItems.EXTINGUISHER.get());
-				tabData.accept(WorkspaceTestModItems.FIREOFF.get());
-				tabData.accept(WorkspaceTestModItems.FIREHOSE.get());
-				tabData.accept(WorkspaceTestModItems.FIREFIGHTER_SUIT_HELMET.get());
-				tabData.accept(WorkspaceTestModItems.FIREFIGHTER_SUIT_CHESTPLATE.get());
-				tabData.accept(WorkspaceTestModItems.FIREFIGHTER_SUIT_LEGGINGS.get());
-				tabData.accept(WorkspaceTestModItems.FIREFIGHTER_SUIT_BOOTS.get());
 				tabData.accept(WorkspaceTestModBlocks.FIRETESTER.get().asItem());
 				tabData.accept(WorkspaceTestModBlocks.FIRETESTER_0.get().asItem());
-				tabData.accept(WorkspaceTestModItems.CHEMICALEXTINGUISHER.get());
-				tabData.accept(WorkspaceTestModItems.SMOKER.get());
-				tabData.accept(WorkspaceTestModItems.DETOXIFICATOR.get());
-				tabData.accept(WorkspaceTestModItems.FIREENGINE_SPAWN_EGG.get());
-				tabData.accept(WorkspaceTestModBlocks.CRUDE_OIL_BLOCK.get().asItem());
-				tabData.accept(WorkspaceTestModItems.CUTTERS.get());
-				tabData.accept(WorkspaceTestModItems.CRYOMATTER.get());
-				tabData.accept(WorkspaceTestModItems.HAZMATSUIT_HELMET.get());
-				tabData.accept(WorkspaceTestModItems.HAZMATSUIT_CHESTPLATE.get());
-				tabData.accept(WorkspaceTestModItems.HAZMATSUIT_LEGGINGS.get());
-				tabData.accept(WorkspaceTestModItems.HAZMATSUIT_BOOTS.get());
 			})
 
 					.build());
@@ -195,6 +174,33 @@ public class WorkspaceTestModTabs {
 				tabData.accept(WorkspaceTestModItems.GOLDCUBE.get());
 				tabData.accept(WorkspaceTestModItems.COPPERCUBE.get());
 				tabData.accept(WorkspaceTestModItems.GLASSPANE.get());
+			})
+
+					.build());
+	public static final RegistryObject<CreativeModeTab> FIREFIGHTER = REGISTRY.register("firefighter",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.workspace_test.firefighter")).icon(() -> new ItemStack(WorkspaceTestModItems.FIREFIGHTER_SUIT_CHESTPLATE.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(WorkspaceTestModItems.CRUDEOIL_BUCKET.get());
+				tabData.accept(WorkspaceTestModItems.FIREOFF.get());
+				tabData.accept(WorkspaceTestModItems.FIREHOSE.get());
+				tabData.accept(WorkspaceTestModItems.FIREFIGHTER_SUIT_HELMET.get());
+				tabData.accept(WorkspaceTestModItems.FIREFIGHTER_SUIT_CHESTPLATE.get());
+				tabData.accept(WorkspaceTestModItems.FIREFIGHTER_SUIT_LEGGINGS.get());
+				tabData.accept(WorkspaceTestModItems.FIREFIGHTER_SUIT_BOOTS.get());
+				tabData.accept(WorkspaceTestModItems.CHEMICALEXTINGUISHER.get());
+				tabData.accept(WorkspaceTestModItems.SMOKER.get());
+				tabData.accept(WorkspaceTestModItems.DETOXIFICATOR.get());
+				tabData.accept(WorkspaceTestModItems.FIREENGINE_SPAWN_EGG.get());
+				tabData.accept(WorkspaceTestModBlocks.CRUDE_OIL_BLOCK.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.OILDIRT.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.OILCOBBLE.get().asItem());
+				tabData.accept(WorkspaceTestModBlocks.OILPLANKS.get().asItem());
+				tabData.accept(WorkspaceTestModItems.CUTTERS.get());
+				tabData.accept(WorkspaceTestModItems.CRYOMATTER.get());
+				tabData.accept(WorkspaceTestModItems.HAZMATSUIT_HELMET.get());
+				tabData.accept(WorkspaceTestModItems.HAZMATSUIT_CHESTPLATE.get());
+				tabData.accept(WorkspaceTestModItems.HAZMATSUIT_LEGGINGS.get());
+				tabData.accept(WorkspaceTestModItems.HAZMATSUIT_BOOTS.get());
+				tabData.accept(WorkspaceTestModItems.WATER_CANNON_SPAWN_EGG.get());
 			})
 
 					.build());

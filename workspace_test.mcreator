@@ -3414,13 +3414,13 @@
       "registry_name": "crudeoil",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/crudeoil_bucket.json",
-          "src/main/resources/assets/workspace_test/models/block/crudeoil.json",
-          "src/main/java/net/mcreator/workspacetest/fluid/types/CrudeoilFluidType.java",
-          "src/main/resources/assets/workspace_test/blockstates/crudeoil.json",
+          "src/main/java/net/mcreator/workspacetest/block/CrudeoilBlock.java",
           "src/main/java/net/mcreator/workspacetest/fluid/CrudeoilFluid.java",
+          "src/main/resources/assets/workspace_test/blockstates/crudeoil.json",
+          "src/main/java/net/mcreator/workspacetest/fluid/types/CrudeoilFluidType.java",
+          "src/main/resources/assets/workspace_test/models/block/crudeoil.json",
           "src/main/java/net/mcreator/workspacetest/item/CrudeoilItem.java",
-          "src/main/java/net/mcreator/workspacetest/block/CrudeoilBlock.java"
+          "src/main/resources/assets/workspace_test/models/item/crudeoil_bucket.json"
         ]
       },
       "path": "~/assembly machines"
@@ -4183,11 +4183,11 @@
       "registry_name": "firefighter_suit",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/firefighter_suit_helmet.json",
-          "src/main/resources/assets/workspace_test/models/item/firefighter_suit_boots.json",
-          "src/main/resources/assets/workspace_test/models/item/firefighter_suit_chestplate.json",
           "src/main/java/net/mcreator/workspacetest/item/FirefighterSuitItem.java",
-          "src/main/resources/assets/workspace_test/models/item/firefighter_suit_leggings.json"
+          "src/main/resources/assets/workspace_test/models/item/firefighter_suit_helmet.json",
+          "src/main/resources/assets/workspace_test/models/item/firefighter_suit_chestplate.json",
+          "src/main/resources/assets/workspace_test/models/item/firefighter_suit_leggings.json",
+          "src/main/resources/assets/workspace_test/models/item/firefighter_suit_boots.json"
         ]
       },
       "path": "~/assembly machines"
@@ -4350,8 +4350,8 @@
       "registry_name": "chemicalextinguisher",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/ChemicalextinguisherItem.java",
-          "src/main/resources/assets/workspace_test/models/item/chemicalextinguisher.json"
+          "src/main/resources/assets/workspace_test/models/item/chemicalextinguisher.json",
+          "src/main/java/net/mcreator/workspacetest/item/ChemicalextinguisherItem.java"
         ]
       },
       "path": "~/assembly machines"
@@ -4380,8 +4380,8 @@
       "registry_name": "smoker",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/smoker.json",
-          "src/main/java/net/mcreator/workspacetest/item/SmokerItem.java"
+          "src/main/java/net/mcreator/workspacetest/item/SmokerItem.java",
+          "src/main/resources/assets/workspace_test/models/item/smoker.json"
         ]
       },
       "path": "~/assembly machines"
@@ -4747,8 +4747,8 @@
       "registry_name": "detoxificator",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/DetoxificatorItem.java",
-          "src/main/resources/assets/workspace_test/models/item/detoxificator.json"
+          "src/main/resources/assets/workspace_test/models/item/detoxificator.json",
+          "src/main/java/net/mcreator/workspacetest/item/DetoxificatorItem.java"
         ]
       },
       "path": "~/assembly machines"
@@ -4816,10 +4816,10 @@
       "registry_name": "fireengine",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/entity/model/FireengineModel.java",
           "src/main/resources/assets/workspace_test/models/item/fireengine_spawn_egg.json",
           "src/main/java/net/mcreator/workspacetest/entity/FireengineEntity.java",
-          "src/main/java/net/mcreator/workspacetest/client/renderer/FireengineRenderer.java"
+          "src/main/java/net/mcreator/workspacetest/client/renderer/FireengineRenderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/model/FireengineModel.java"
         ]
       },
       "path": "~/assembly machines"
@@ -5758,10 +5758,10 @@
       "registry_name": "crude_oil_block",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/block/crude_oil_block.json",
+          "src/main/resources/assets/workspace_test/models/item/crude_oil_block.json",
           "src/main/resources/assets/workspace_test/blockstates/crude_oil_block.json",
           "src/main/java/net/mcreator/workspacetest/block/CrudeOilBlockBlock.java",
-          "src/main/resources/assets/workspace_test/models/item/crude_oil_block.json"
+          "src/main/resources/assets/workspace_test/models/block/crude_oil_block.json"
         ]
       },
       "path": "~/assembly machines"
@@ -6225,9 +6225,9 @@
       "registry_name": "oildirt",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/block/OildirtBlock.java",
           "src/main/resources/assets/workspace_test/blockstates/oildirt.json",
           "src/main/resources/assets/workspace_test/models/item/oildirt.json",
+          "src/main/java/net/mcreator/workspacetest/block/OildirtBlock.java",
           "src/main/resources/assets/workspace_test/models/block/oildirt.json"
         ]
       },
@@ -6242,10 +6242,10 @@
       "registry_name": "oilcobble",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/oilcobble.json",
-          "src/main/resources/assets/workspace_test/blockstates/oilcobble.json",
           "src/main/java/net/mcreator/workspacetest/block/OilcobbleBlock.java",
-          "src/main/resources/assets/workspace_test/models/block/oilcobble.json"
+          "src/main/resources/assets/workspace_test/blockstates/oilcobble.json",
+          "src/main/resources/assets/workspace_test/models/block/oilcobble.json",
+          "src/main/resources/assets/workspace_test/models/item/oilcobble.json"
         ]
       },
       "path": "~/assembly machines"
@@ -6443,10 +6443,10 @@
       "registry_name": "oilplanks",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/oilplanks.json",
-          "src/main/resources/assets/workspace_test/blockstates/oilplanks.json",
           "src/main/java/net/mcreator/workspacetest/block/OilplanksBlock.java",
-          "src/main/resources/assets/workspace_test/models/block/oilplanks.json"
+          "src/main/resources/assets/workspace_test/models/item/oilplanks.json",
+          "src/main/resources/assets/workspace_test/models/block/oilplanks.json",
+          "src/main/resources/assets/workspace_test/blockstates/oilplanks.json"
         ]
       },
       "path": "~/assembly machines"
@@ -6667,8 +6667,8 @@
       "registry_name": "cutters",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/cutters.json",
-          "src/main/java/net/mcreator/workspacetest/item/CuttersItem.java"
+          "src/main/java/net/mcreator/workspacetest/item/CuttersItem.java",
+          "src/main/resources/assets/workspace_test/models/item/cutters.json"
         ]
       },
       "path": "~/assembly machines"
@@ -7434,11 +7434,11 @@
       "registry_name": "hazmatsuit",
       "metadata": {
         "files": [
-          "src/main/resources/assets/workspace_test/models/item/hazmatsuit_boots.json",
           "src/main/resources/assets/workspace_test/models/item/hazmatsuit_helmet.json",
+          "src/main/java/net/mcreator/workspacetest/item/HazmatsuitItem.java",
+          "src/main/resources/assets/workspace_test/models/item/hazmatsuit_boots.json",
           "src/main/resources/assets/workspace_test/models/item/hazmatsuit_chestplate.json",
-          "src/main/resources/assets/workspace_test/models/item/hazmatsuit_leggings.json",
-          "src/main/java/net/mcreator/workspacetest/item/HazmatsuitItem.java"
+          "src/main/resources/assets/workspace_test/models/item/hazmatsuit_leggings.json"
         ]
       },
       "path": "~/assembly machines"
@@ -7478,6 +7478,55 @@
         ]
       },
       "path": "~/assembly machines"
+    },
+    {
+      "name": "Firefighter",
+      "type": "tab",
+      "sortid": 273,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firefighter",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "WaterCannon",
+      "type": "animatedentity",
+      "sortid": 274,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_cannon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/client/renderer/WaterCannonRenderer.java",
+          "src/main/java/net/mcreator/workspacetest/entity/model/WaterCannonModel.java",
+          "src/main/resources/assets/workspace_test/models/item/water_cannon_spawn_egg.json",
+          "src/main/java/net/mcreator/workspacetest/entity/WaterCannonEntity.java"
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
+      "name": "WaterCannonOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 275,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_cannon_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/WaterCannonOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Defence"
     }
   ],
   "variable_elements": [
@@ -7516,12 +7565,12 @@
       "block.workspace_test.firetester": "Fire test building",
       "gui.workspace_test.reactor_gui.label_function": "Function:",
       "gui.workspace_test.coalgui.label_status": "Status:",
-      "gui.workspace_test.smelterygui.label_smeltery": "Smeltery",
       "block.workspace_test.coalde": "Coal deposit",
+      "gui.workspace_test.smelterygui.label_smeltery": "Smeltery",
       "item.workspace_test.crudeoil_bucket": "Crude oil Bucket",
       "block.workspace_test.crudeoil": "Crude oil",
-      "block.workspace_test.walls": "Walls",
       "item.workspace_test.skeleter_spawn_egg": "Skeleter Spawn Egg",
+      "block.workspace_test.walls": "Walls",
       "item.workspace_test.warplane_spawn_egg": "Warplane Spawn Egg",
       "entity.workspace_test.furnace_powered_golem": "Furnace Powered Golem",
       "block.workspace_test.inf_wat_stor": "Infinite Water Storage",
@@ -7536,6 +7585,7 @@
       "item.workspace_test.steelingot": "Steel ingot",
       "item.workspace_test.tungstenchunk": "Tungsten chunk",
       "item.workspace_test.defender_spawn_egg": "Defender Spawn Egg",
+      "item.workspace_test.water_cannon_spawn_egg": "Water cannon Spawn Egg",
       "item.workspace_test.robotic_phantom_spawn_egg": "Robotic Phantom Spawn Egg",
       "block.workspace_test.oilrig": "Oil derrick",
       "item.workspace_test.hazmatsuit_chestplate": "Hazmat chestplate",
@@ -7558,8 +7608,8 @@
       "entity.workspace_test.warplane": "Warplane",
       "item.workspace_test.lithiumcube": "Lithium cube",
       "block.workspace_test.crudeoilde": "Crude oil deposit",
-      "item.workspace_test.titaniumingot": "Titanium ingot",
       "block.workspace_test.zincde": "Zinc deposit",
+      "item.workspace_test.titaniumingot": "Titanium ingot",
       "gui.workspace_test.recyclgui.button_process": "Process",
       "item.workspace_test.sulphur": "Sulphur",
       "item.workspace_test.extinguisher": "Extinguisher",
@@ -7617,6 +7667,7 @@
       "block.workspace_test.goldde": "Gold deposit",
       "item.workspace_test.lithium": "Lithium",
       "gui.workspace_test.coalgui.label_time_remaining": "Time remaining:",
+      "entity.workspace_test.water_cannon": "Water cannon",
       "item.workspace_test.tinybot_spawn_egg": "Tinybot Spawn Egg",
       "item.workspace_test.furnace_powered_golem_spawn_egg": "Furnace Powered Golem Spawn Egg",
       "item.workspace_test.matches": "Matche",
@@ -7670,6 +7721,7 @@
       "item.workspace_test.tank_spawn_egg": "Tank Spawn Egg",
       "biome.workspace_test.lost_lands": "Lost Lands",
       "gui.workspace_test.coalgui.label_energy": "Energy:",
+      "item_group.workspace_test.firefighter": "Firefighter",
       "entity.workspace_test.mossy_golem": "Mossy Golem",
       "block.workspace_test.niterde": "Niterde",
       "item.workspace_test.leadingot": "Lead ingot",

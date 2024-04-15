@@ -2,9 +2,9 @@
   "_fv": 57,
   "_type": "animatedentity",
   "definition": {
-    "mobName": "Fire engine",
+    "mobName": "Water cannon",
     "mobLabel": "",
-    "mobModelTexture": "fire_engine.png",
+    "mobModelTexture": "water_cannon.png",
     "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.0
@@ -13,9 +13,9 @@
       "fixedValue": 1.0
     },
     "entityDataEntries": [],
-    "modelWidth": 3.0,
-    "modelHeight": 2.0,
-    "modelShadowSize": 1.0,
+    "modelWidth": 0.6,
+    "modelHeight": 1.8,
+    "modelShadowSize": 0.5,
     "mountedYOffset": -1.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
@@ -23,7 +23,7 @@
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -3355444,
+      "value": -16737793,
       "falpha": 0.0
     },
     "creativeTab": {
@@ -51,13 +51,13 @@
       "value": ""
     },
     "mobBehaviourType": "Creature",
-    "mobCreatureType": "UNDEFINED",
+    "mobCreatureType": "WATER",
     "attackStrength": 0,
     "attackKnockback": 0.0,
-    "knockbackResistance": 0.0,
-    "movementSpeed": 0.1,
+    "knockbackResistance": 10.0,
+    "movementSpeed": 0.0,
     "armorBaseValue": 0.0,
-    "trackingRange": 32,
+    "trackingRange": 64,
     "followRange": 16,
     "health": 1,
     "xpAmount": 0,
@@ -66,11 +66,11 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "deathTime": 20,
-    "lerp": 1,
-    "disableCollisions": false,
+    "deathTime": 2,
+    "lerp": 4,
+    "disableCollisions": true,
     "ridable": true,
-    "canControlForward": true,
+    "canControlForward": false,
     "canControlStrafe": false,
     "immuneToFire": false,
     "immuneToArrows": false,
@@ -92,36 +92,36 @@
       "value": ""
     },
     "hurtSound": {
-      "value": "entity.zombie.attack_iron_door"
+      "value": "entity.generic.hurt"
     },
     "deathSound": {
-      "value": "entity.generic.explode"
+      "value": "entity.generic.death"
     },
     "stepSound": {
       "value": ""
     },
     "onMobTickUpdate": {
-      "name": "FireengineOnEntityTickUpdate"
+      "name": "WaterCannonOnEntityTickUpdate"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"></block></xml>",
-    "model": "fire_engine.geo.json",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></xml>",
+    "model": "water_cannon.geo.json",
     "groupName": "head",
     "animation1": "idle",
-    "animation2": "walk",
+    "animation2": "",
     "animation3": "",
-    "animation4": "",
-    "animation5": "",
+    "animation4": "attack",
+    "animation5": "swim",
     "animation6": "",
     "animation7": "",
     "animation8": "",
     "animation9": "",
     "animation10": "",
-    "enable2": true,
+    "enable2": false,
     "enable3": false,
-    "enable4": false,
-    "enable5": false,
+    "enable4": true,
+    "enable5": true,
     "enable6": false,
     "enable7": false,
     "enable8": false,
@@ -129,7 +129,7 @@
     "enable10": false,
     "breedable": false,
     "tameable": false,
-    "disableDeathRotation": false,
+    "disableDeathRotation": true,
     "headMovement": true,
     "eyeHeight": false,
     "breedTriggerItems": [],
@@ -137,9 +137,9 @@
     "rangedAttackItem": {
       "value": ""
     },
-    "rangedItemType": "Water",
-    "rangedAttackInterval": 1,
-    "rangedAttackRadius": 20.0,
+    "rangedItemType": "Default item",
+    "rangedAttackInterval": 20,
+    "rangedAttackRadius": 10.0,
     "height": 1.0,
     "spawnThisMob": false,
     "doesDespawnWhenIdle": false,

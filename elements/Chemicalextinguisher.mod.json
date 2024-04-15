@@ -10,7 +10,7 @@
     "name": "Chemical extinguisher",
     "rarity": "RARE",
     "creativeTab": {
-      "value": "CUSTOM:Tools"
+      "value": "CUSTOM:Firefighter"
     },
     "stackSize": 1,
     "enchantability": 0,

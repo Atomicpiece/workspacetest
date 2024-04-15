@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.workspacetest.client.renderer.WaterRenderer;
+import net.mcreator.workspacetest.client.renderer.WaterCannonRenderer;
 import net.mcreator.workspacetest.client.renderer.WarplaneRenderer;
 import net.mcreator.workspacetest.client.renderer.TurretRenderer;
 import net.mcreator.workspacetest.client.renderer.TinybotRenderer;
@@ -89,5 +90,6 @@ public class WorkspaceTestModEntityRenderers {
 		event.registerEntityRenderer(WorkspaceTestModEntities.ANTIOXID.get(), AntioxidRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.FIREENGINE.get(), FireengineRenderer::new);
 		event.registerEntityRenderer(WorkspaceTestModEntities.SNOW.get(), SnowRenderer::new);
+		event.registerEntityRenderer(WorkspaceTestModEntities.WATER_CANNON.get(), WaterCannonRenderer::new);
 	}
 }

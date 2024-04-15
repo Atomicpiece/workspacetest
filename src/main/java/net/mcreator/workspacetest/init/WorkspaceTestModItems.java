@@ -225,6 +225,7 @@ public class WorkspaceTestModItems {
 	public static final RegistryObject<Item> HAZMATSUIT_CHESTPLATE = REGISTRY.register("hazmatsuit_chestplate", () -> new HazmatsuitItem.Chestplate());
 	public static final RegistryObject<Item> HAZMATSUIT_LEGGINGS = REGISTRY.register("hazmatsuit_leggings", () -> new HazmatsuitItem.Leggings());
 	public static final RegistryObject<Item> HAZMATSUIT_BOOTS = REGISTRY.register("hazmatsuit_boots", () -> new HazmatsuitItem.Boots());
+	public static final RegistryObject<Item> WATER_CANNON_SPAWN_EGG = REGISTRY.register("water_cannon_spawn_egg", () -> new ForgeSpawnEggItem(WorkspaceTestModEntities.WATER_CANNON, -65536, -16737793, new Item.Properties()));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
