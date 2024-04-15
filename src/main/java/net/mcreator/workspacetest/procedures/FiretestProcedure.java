@@ -22,6 +22,7 @@ import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.workspacetest.network.WorkspaceTestModVariables;
 import net.mcreator.workspacetest.init.WorkspaceTestModParticleTypes;
 import net.mcreator.workspacetest.init.WorkspaceTestModGameRules;
 import net.mcreator.workspacetest.init.WorkspaceTestModBlocks;
@@ -32,6 +33,19 @@ import java.util.Comparator;
 
 public class FiretestProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
+		if (true == WorkspaceTestModVariables.MapVariables.get(world).chancefire) {
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putBoolean("chancefire", false);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			WorkspaceTestModVariables.MapVariables.get(world).chancefire = false;
+			WorkspaceTestModVariables.MapVariables.get(world).syncData(world);
+		}
 		if (true == (new Object() {
 			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
