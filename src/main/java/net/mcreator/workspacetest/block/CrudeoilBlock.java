@@ -1,21 +1,7 @@
 
 package net.mcreator.workspacetest.block;
 
-import net.minecraft.world.level.material.PushReaction;
-import net.minecraft.world.level.material.MapColor;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.LiquidBlock;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.util.RandomSource;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.workspacetest.procedures.CrudeoilUpdateTickProcedure;
-import net.mcreator.workspacetest.init.WorkspaceTestModFluids;
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 
 public class CrudeoilBlock extends LiquidBlock {
 	public CrudeoilBlock() {

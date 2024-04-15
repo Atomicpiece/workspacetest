@@ -1,15 +1,8 @@
 package net.mcreator.workspacetest.procedures;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.workspacetest.init.WorkspaceTestModItems;
-import net.mcreator.workspacetest.init.WorkspaceTestModEntities;
-import net.mcreator.workspacetest.entity.WaterEntity;
+import javax.annotation.Nullable;
 
 public class WaterCannonOnEntityTickUpdateProcedure {
 	public static void execute(Entity entity) {

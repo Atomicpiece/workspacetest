@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "workspace_test:block/phosde",
+    "up": "workspace_test:block/phosde",
+    "north": "workspace_test:block/phosde",
+    "east": "workspace_test:block/phosde",
+    "south": "workspace_test:block/phosde",
+    "west": "workspace_test:block/phosde",
+    "particle": "workspace_test:block/phosde"
+  },
+  "render_type": "solid"
+}

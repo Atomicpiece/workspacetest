@@ -4,9 +4,9 @@ package net.mcreator.workspacetest.block;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 
-public class OildirtBlock extends Block {
-	public OildirtBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.SLIME_BLOCK).strength(1f, 10f));
+public class PhosdeBlock extends Block {
+	public PhosdeBlock() {
+		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(1f, 10f).requiresCorrectToolForDrops());
 	}
 
 	@Override
@@ -17,6 +17,13 @@ public class OildirtBlock extends Block {
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
 		return 15;
+	}
+
+	@Override
+	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
+		if (player.getInventory().getSelected().getItem() instanceof PickaxeItem tieredItem)
+			return tieredItem.getTier().getLevel() >= 3;
+		return false;
 	}
 
 	@Override

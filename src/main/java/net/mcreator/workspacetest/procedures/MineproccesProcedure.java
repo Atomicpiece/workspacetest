@@ -86,25 +86,77 @@ public class MineproccesProcedure {
 					});
 				}
 			}
-			WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+			if (new Object() {
+				public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+					return _retval.get();
+				}
+			}.getEnergyStored(world, BlockPos.containing(x, y, z)) <= ((new Object() {
 				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
 					if (blockEntity != null)
 						return blockEntity.getPersistentData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
-				StartmineProcedure.execute(world, x, y, z);
-			});
-		} else {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", true);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			}
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == false) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("runn", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
+					StartmineProcedure.execute(world, x, y, z);
+				});
 			}
 		}
 		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.COALDE.get() && (new Object() {
@@ -173,25 +225,77 @@ public class MineproccesProcedure {
 					});
 				}
 			}
-			WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+			if (new Object() {
+				public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+					return _retval.get();
+				}
+			}.getEnergyStored(world, BlockPos.containing(x, y, z)) <= ((new Object() {
 				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
 					if (blockEntity != null)
 						return blockEntity.getPersistentData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
-				StartmineProcedure.execute(world, x, y, z);
-			});
-		} else {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", true);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			}
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == false) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("runn", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
+					StartmineProcedure.execute(world, x, y, z);
+				});
 			}
 		}
 		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.GOLDDE.get() && (new Object() {
@@ -260,25 +364,77 @@ public class MineproccesProcedure {
 					});
 				}
 			}
-			WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+			if (new Object() {
+				public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+					return _retval.get();
+				}
+			}.getEnergyStored(world, BlockPos.containing(x, y, z)) <= ((new Object() {
 				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
 					if (blockEntity != null)
 						return blockEntity.getPersistentData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
-				StartmineProcedure.execute(world, x, y, z);
-			});
-		} else {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", true);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			}
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == false) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("runn", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
+					StartmineProcedure.execute(world, x, y, z);
+				});
 			}
 		}
 		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.COPPERDE.get() && (new Object() {
@@ -347,460 +503,77 @@ public class MineproccesProcedure {
 					});
 				}
 			}
-			WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+			if (new Object() {
+				public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+					return _retval.get();
+				}
+			}.getEnergyStored(world, BlockPos.containing(x, y, z)) <= ((new Object() {
 				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
 					if (blockEntity != null)
 						return blockEntity.getPersistentData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
-				StartmineProcedure.execute(world, x, y, z);
-			});
-		} else {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-		}
-		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.TITANDE.get() && (new Object() {
-			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getBoolean(tag);
-				return false;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == true) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("hasenergy", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", true);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				int _amount = (int) (((new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				if (_ent != null) {
-					final int _slotid = 0;
-					final ItemStack _setstack = new ItemStack(WorkspaceTestModItems.TITANCHUNK.get());
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 0) + 1));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-			WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
 				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
 					if (blockEntity != null)
 						return blockEntity.getPersistentData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
-				StartmineProcedure.execute(world, x, y, z);
-			});
-		} else {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-		}
-		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.SULFURDE.get() && (new Object() {
-			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getBoolean(tag);
-				return false;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == true) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("hasenergy", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", true);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				int _amount = (int) (((new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				if (_ent != null) {
-					final int _slotid = 0;
-					final ItemStack _setstack = new ItemStack(WorkspaceTestModItems.SULFUR.get());
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 0) + 1));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", true);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 			}
-			WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
 					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
-				StartmineProcedure.execute(world, x, y, z);
-			});
-		} else {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-		}
-		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.LEADDE.get() && (new Object() {
-			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getBoolean(tag);
-				return false;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == true) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("hasenergy", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", true);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				int _amount = (int) (((new Object() {
+			}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == false) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("runn", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
 					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 						BlockEntity blockEntity = world.getBlockEntity(pos);
 						if (blockEntity != null)
 							return blockEntity.getPersistentData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				if (_ent != null) {
-					final int _slotid = 0;
-					final ItemStack _setstack = new ItemStack(WorkspaceTestModItems.LEADCHUNK.get());
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 0) + 1));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-			WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
-				StartmineProcedure.execute(world, x, y, z);
-			});
-		} else {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-		}
-		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.ZINCDE.get() && (new Object() {
-			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getBoolean(tag);
-				return false;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == true) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("hasenergy", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", true);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				int _amount = (int) (((new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				if (_ent != null) {
-					final int _slotid = 0;
-					final ItemStack _setstack = new ItemStack(WorkspaceTestModItems.ZINCCHUNK.get());
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 0) + 1));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-			WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
-				StartmineProcedure.execute(world, x, y, z);
-			});
-		} else {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-		}
-		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.TINDE.get() && (new Object() {
-			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getBoolean(tag);
-				return false;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == true) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("hasenergy", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", true);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				int _amount = (int) (((new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				if (_ent != null) {
-					final int _slotid = 0;
-					final ItemStack _setstack = new ItemStack(WorkspaceTestModItems.TINCHUNK.get());
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 0) + 1));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-			WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
-				StartmineProcedure.execute(world, x, y, z);
-			});
-		} else {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
+					StartmineProcedure.execute(world, x, y, z);
+				});
 			}
 		}
 		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.DIAMONDDE.get() && (new Object() {
@@ -869,25 +642,355 @@ public class MineproccesProcedure {
 					});
 				}
 			}
-			WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+			if (new Object() {
+				public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+					return _retval.get();
+				}
+			}.getEnergyStored(world, BlockPos.containing(x, y, z)) <= ((new Object() {
 				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
 					if (blockEntity != null)
 						return blockEntity.getPersistentData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
-				StartmineProcedure.execute(world, x, y, z);
-			});
-		} else {
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", true);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			}
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == false) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("runn", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
+					StartmineProcedure.execute(world, x, y, z);
+				});
+			}
+		}
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.TITANDE.get() && (new Object() {
+			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+				BlockEntity blockEntity = world.getBlockEntity(pos);
+				if (blockEntity != null)
+					return blockEntity.getPersistentData().getBoolean(tag);
+				return false;
+			}
+		}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == true) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", false);
+					_blockEntity.getPersistentData().putBoolean("hasenergy", false);
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putBoolean("runn", true);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
+				int _amount = (int) (((new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2);
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
+				if (_ent != null) {
+					final int _slotid = 0;
+					final ItemStack _setstack = new ItemStack(WorkspaceTestModItems.TITANCHUNK.get());
+					_setstack.setCount((int) (new Object() {
+						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+							AtomicInteger _retval = new AtomicInteger(0);
+							BlockEntity _ent = world.getBlockEntity(pos);
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
+							return _retval.get();
+						}
+					}.getAmount(world, BlockPos.containing(x, y, z), 0) + 1));
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+						if (capability instanceof IItemHandlerModifiable)
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
+					});
+				}
+			}
+			if (new Object() {
+				public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+					return _retval.get();
+				}
+			}.getEnergyStored(world, BlockPos.containing(x, y, z)) <= ((new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", true);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			}
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == false) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("runn", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
+					StartmineProcedure.execute(world, x, y, z);
+				});
+			}
+		}
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.TINDE.get() && (new Object() {
+			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+				BlockEntity blockEntity = world.getBlockEntity(pos);
+				if (blockEntity != null)
+					return blockEntity.getPersistentData().getBoolean(tag);
+				return false;
+			}
+		}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == true) {
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putBoolean("runn", true);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
+				int _amount = (int) (((new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2);
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
+				if (_ent != null) {
+					final int _slotid = 0;
+					final ItemStack _setstack = new ItemStack(WorkspaceTestModItems.TINCHUNK.get());
+					_setstack.setCount((int) (new Object() {
+						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+							AtomicInteger _retval = new AtomicInteger(0);
+							BlockEntity _ent = world.getBlockEntity(pos);
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
+							return _retval.get();
+						}
+					}.getAmount(world, BlockPos.containing(x, y, z), 0) + 1));
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+						if (capability instanceof IItemHandlerModifiable)
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
+					});
+				}
+			}
+			if (new Object() {
+				public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+					return _retval.get();
+				}
+			}.getEnergyStored(world, BlockPos.containing(x, y, z)) <= ((new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", true);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			}
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == false) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("runn", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
+					StartmineProcedure.execute(world, x, y, z);
+				});
 			}
 		}
 		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.TUNGSTENDE.get() && (new Object() {
@@ -956,28 +1059,80 @@ public class MineproccesProcedure {
 					});
 				}
 			}
-			WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+			if (new Object() {
+				public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+					return _retval.get();
+				}
+			}.getEnergyStored(world, BlockPos.containing(x, y, z)) <= ((new Object() {
 				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
 					if (blockEntity != null)
 						return blockEntity.getPersistentData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
-				StartmineProcedure.execute(world, x, y, z);
-			});
-		} else {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", true);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			}
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == false) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("runn", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
+					StartmineProcedure.execute(world, x, y, z);
+				});
 			}
 		}
-		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.LITHDE.get() && (new Object() {
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.SULFURDE.get() && (new Object() {
 			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
 				if (blockEntity != null)
@@ -1027,7 +1182,7 @@ public class MineproccesProcedure {
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 0;
-					final ItemStack _setstack = new ItemStack(WorkspaceTestModItems.LITHCHUNK.get());
+					final ItemStack _setstack = new ItemStack(WorkspaceTestModItems.SULFUR.get());
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -1043,199 +1198,77 @@ public class MineproccesProcedure {
 					});
 				}
 			}
-			WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+			if (new Object() {
+				public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+					return _retval.get();
+				}
+			}.getEnergyStored(world, BlockPos.containing(x, y, z)) <= ((new Object() {
 				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
 					if (blockEntity != null)
 						return blockEntity.getPersistentData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
-				StartmineProcedure.execute(world, x, y, z);
-			});
-		} else {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-		}
-		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.THORDE.get() && (new Object() {
-			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getBoolean(tag);
-				return false;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == true) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("hasenergy", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", true);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				int _amount = (int) (((new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				if (_ent != null) {
-					final int _slotid = 0;
-					final ItemStack _setstack = new ItemStack(WorkspaceTestModItems.THORCHUNK.get());
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 0) + 1));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
-				}
-			}
-			WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
 				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
 					if (blockEntity != null)
 						return blockEntity.getPersistentData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
-				StartmineProcedure.execute(world, x, y, z);
-			});
-		} else {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-		}
-		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.URANDE.get() && (new Object() {
-			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getBoolean(tag);
-				return false;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == true) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("hasenergy", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", true);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				int _amount = (int) (((new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
-			}
-			{
-				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-				if (_ent != null) {
-					final int _slotid = 0;
-					final ItemStack _setstack = new ItemStack(WorkspaceTestModItems.URANCHUNK.get());
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							AtomicInteger _retval = new AtomicInteger(0);
-							BlockEntity _ent = world.getBlockEntity(pos);
-							if (_ent != null)
-								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-							return _retval.get();
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 0) + 1));
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable)
-							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-					});
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", true);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 			}
-			WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
 					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
-				StartmineProcedure.execute(world, x, y, z);
-			});
-		} else {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == false) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("runn", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
+					StartmineProcedure.execute(world, x, y, z);
+				});
 			}
 		}
 		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.NITERDE.get() && (new Object() {
@@ -1304,28 +1337,80 @@ public class MineproccesProcedure {
 					});
 				}
 			}
-			WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+			if (new Object() {
+				public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+					return _retval.get();
+				}
+			}.getEnergyStored(world, BlockPos.containing(x, y, z)) <= ((new Object() {
 				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
 					if (blockEntity != null)
 						return blockEntity.getPersistentData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
-				StartmineProcedure.execute(world, x, y, z);
-			});
-		} else {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", true);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			}
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == false) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("runn", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
+					StartmineProcedure.execute(world, x, y, z);
+				});
 			}
 		}
-		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == Blocks.EMERALD_ORE && (new Object() {
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.APATITEDE.get() && (new Object() {
 			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
 				if (blockEntity != null)
@@ -1375,7 +1460,7 @@ public class MineproccesProcedure {
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 0;
-					final ItemStack _setstack = new ItemStack(Items.EMERALD);
+					final ItemStack _setstack = new ItemStack(WorkspaceTestModItems.APATITE.get());
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -1391,25 +1476,911 @@ public class MineproccesProcedure {
 					});
 				}
 			}
-			WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+			if (new Object() {
+				public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+					return _retval.get();
+				}
+			}.getEnergyStored(world, BlockPos.containing(x, y, z)) <= ((new Object() {
 				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
 					if (blockEntity != null)
 						return blockEntity.getPersistentData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
-				StartmineProcedure.execute(world, x, y, z);
-			});
-		} else {
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", true);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			}
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == false) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("runn", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
+					StartmineProcedure.execute(world, x, y, z);
+				});
+			}
+		}
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.URANDE.get() && (new Object() {
+			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+				BlockEntity blockEntity = world.getBlockEntity(pos);
+				if (blockEntity != null)
+					return blockEntity.getPersistentData().getBoolean(tag);
+				return false;
+			}
+		}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == true) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", false);
+					_blockEntity.getPersistentData().putBoolean("hasenergy", false);
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putBoolean("runn", true);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
+				int _amount = (int) (((new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2);
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
+				if (_ent != null) {
+					final int _slotid = 0;
+					final ItemStack _setstack = new ItemStack(WorkspaceTestModItems.URANCHUNK.get());
+					_setstack.setCount((int) (new Object() {
+						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+							AtomicInteger _retval = new AtomicInteger(0);
+							BlockEntity _ent = world.getBlockEntity(pos);
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
+							return _retval.get();
+						}
+					}.getAmount(world, BlockPos.containing(x, y, z), 0) + 1));
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+						if (capability instanceof IItemHandlerModifiable)
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
+					});
+				}
+			}
+			if (new Object() {
+				public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+					return _retval.get();
+				}
+			}.getEnergyStored(world, BlockPos.containing(x, y, z)) <= ((new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", true);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			}
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == false) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("runn", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
+					StartmineProcedure.execute(world, x, y, z);
+				});
+			}
+		}
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.THORDE.get() && (new Object() {
+			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+				BlockEntity blockEntity = world.getBlockEntity(pos);
+				if (blockEntity != null)
+					return blockEntity.getPersistentData().getBoolean(tag);
+				return false;
+			}
+		}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == true) {
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putBoolean("runn", true);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
+				int _amount = (int) (((new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2);
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
+				if (_ent != null) {
+					final int _slotid = 0;
+					final ItemStack _setstack = new ItemStack(WorkspaceTestModItems.THORCHUNK.get());
+					_setstack.setCount((int) (new Object() {
+						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+							AtomicInteger _retval = new AtomicInteger(0);
+							BlockEntity _ent = world.getBlockEntity(pos);
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
+							return _retval.get();
+						}
+					}.getAmount(world, BlockPos.containing(x, y, z), 0) + 1));
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+						if (capability instanceof IItemHandlerModifiable)
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
+					});
+				}
+			}
+			if (new Object() {
+				public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+					return _retval.get();
+				}
+			}.getEnergyStored(world, BlockPos.containing(x, y, z)) <= ((new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", true);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			}
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == false) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("runn", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
+					StartmineProcedure.execute(world, x, y, z);
+				});
+			}
+		}
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.LEADDE.get() && (new Object() {
+			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+				BlockEntity blockEntity = world.getBlockEntity(pos);
+				if (blockEntity != null)
+					return blockEntity.getPersistentData().getBoolean(tag);
+				return false;
+			}
+		}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == true) {
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putBoolean("runn", true);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
+				int _amount = (int) (((new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2);
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
+				if (_ent != null) {
+					final int _slotid = 0;
+					final ItemStack _setstack = new ItemStack(WorkspaceTestModItems.LEADCHUNK.get());
+					_setstack.setCount((int) (new Object() {
+						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+							AtomicInteger _retval = new AtomicInteger(0);
+							BlockEntity _ent = world.getBlockEntity(pos);
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
+							return _retval.get();
+						}
+					}.getAmount(world, BlockPos.containing(x, y, z), 0) + 1));
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+						if (capability instanceof IItemHandlerModifiable)
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
+					});
+				}
+			}
+			if (new Object() {
+				public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+					return _retval.get();
+				}
+			}.getEnergyStored(world, BlockPos.containing(x, y, z)) <= ((new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", true);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			}
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == false) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("runn", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
+					StartmineProcedure.execute(world, x, y, z);
+				});
+			}
+		}
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.ZINCDE.get() && (new Object() {
+			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+				BlockEntity blockEntity = world.getBlockEntity(pos);
+				if (blockEntity != null)
+					return blockEntity.getPersistentData().getBoolean(tag);
+				return false;
+			}
+		}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == true) {
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putBoolean("runn", true);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
+				int _amount = (int) (((new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2);
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
+				if (_ent != null) {
+					final int _slotid = 0;
+					final ItemStack _setstack = new ItemStack(WorkspaceTestModItems.ZINCCHUNK.get());
+					_setstack.setCount((int) (new Object() {
+						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+							AtomicInteger _retval = new AtomicInteger(0);
+							BlockEntity _ent = world.getBlockEntity(pos);
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
+							return _retval.get();
+						}
+					}.getAmount(world, BlockPos.containing(x, y, z), 0) + 1));
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+						if (capability instanceof IItemHandlerModifiable)
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
+					});
+				}
+			}
+			if (new Object() {
+				public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+					return _retval.get();
+				}
+			}.getEnergyStored(world, BlockPos.containing(x, y, z)) <= ((new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", true);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			}
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == false) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("runn", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
+					StartmineProcedure.execute(world, x, y, z);
+				});
+			}
+		}
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.PHOSDE.get() && (new Object() {
+			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+				BlockEntity blockEntity = world.getBlockEntity(pos);
+				if (blockEntity != null)
+					return blockEntity.getPersistentData().getBoolean(tag);
+				return false;
+			}
+		}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == true) {
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putBoolean("runn", true);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
+				int _amount = (int) (((new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2);
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
+				if (_ent != null) {
+					final int _slotid = 0;
+					final ItemStack _setstack = new ItemStack(WorkspaceTestModItems.PHOSCHUNK.get());
+					_setstack.setCount((int) (new Object() {
+						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+							AtomicInteger _retval = new AtomicInteger(0);
+							BlockEntity _ent = world.getBlockEntity(pos);
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
+							return _retval.get();
+						}
+					}.getAmount(world, BlockPos.containing(x, y, z), 0) + 1));
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+						if (capability instanceof IItemHandlerModifiable)
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
+					});
+				}
+			}
+			if (new Object() {
+				public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+					return _retval.get();
+				}
+			}.getEnergyStored(world, BlockPos.containing(x, y, z)) <= ((new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", true);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			}
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == false) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("runn", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
+					StartmineProcedure.execute(world, x, y, z);
+				});
+			}
+		}
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == WorkspaceTestModBlocks.CRUDEOILDE.get() && (new Object() {
+			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+				BlockEntity blockEntity = world.getBlockEntity(pos);
+				if (blockEntity != null)
+					return blockEntity.getPersistentData().getBoolean(tag);
+				return false;
+			}
+		}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == true) {
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putBoolean("runn", true);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
+				int _amount = (int) (((new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2);
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
+				if (_ent != null) {
+					final int _slotid = 0;
+					final ItemStack _setstack = new ItemStack(WorkspaceTestModItems.OILDROP.get());
+					_setstack.setCount((int) (new Object() {
+						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+							AtomicInteger _retval = new AtomicInteger(0);
+							BlockEntity _ent = world.getBlockEntity(pos);
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
+							return _retval.get();
+						}
+					}.getAmount(world, BlockPos.containing(x, y, z), 0) + 1));
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+						if (capability instanceof IItemHandlerModifiable)
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
+					});
+				}
+			}
+			if (new Object() {
+				public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+					return _retval.get();
+				}
+			}.getEnergyStored(world, BlockPos.containing(x, y, z)) <= ((new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", true);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			}
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == false) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("runn", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
+					StartmineProcedure.execute(world, x, y, z);
+				});
 			}
 		}
 		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == Blocks.LAPIS_ORE && (new Object() {
@@ -1478,25 +2449,216 @@ public class MineproccesProcedure {
 					});
 				}
 			}
-			WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+			if (new Object() {
+				public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+					return _retval.get();
+				}
+			}.getEnergyStored(world, BlockPos.containing(x, y, z)) <= ((new Object() {
 				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
 					if (blockEntity != null)
 						return blockEntity.getPersistentData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
-				StartmineProcedure.execute(world, x, y, z);
-			});
-		} else {
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", true);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			}
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == false) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("runn", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
+					StartmineProcedure.execute(world, x, y, z);
+				});
+			}
+		}
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == Blocks.EMERALD_ORE && (new Object() {
+			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+				BlockEntity blockEntity = world.getBlockEntity(pos);
+				if (blockEntity != null)
+					return blockEntity.getPersistentData().getBoolean(tag);
+				return false;
+			}
+		}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == true) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("runn", false);
+					_blockEntity.getPersistentData().putBoolean("hasenergy", false);
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putBoolean("runn", true);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
+				int _amount = (int) (((new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2);
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+			}
+			{
+				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
+				if (_ent != null) {
+					final int _slotid = 0;
+					final ItemStack _setstack = new ItemStack(Items.EMERALD);
+					_setstack.setCount((int) (new Object() {
+						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+							AtomicInteger _retval = new AtomicInteger(0);
+							BlockEntity _ent = world.getBlockEntity(pos);
+							if (_ent != null)
+								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
+							return _retval.get();
+						}
+					}.getAmount(world, BlockPos.containing(x, y, z), 0) + 1));
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+						if (capability instanceof IItemHandlerModifiable)
+							((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
+					});
+				}
+			}
+			if (new Object() {
+				public int getEnergyStored(LevelAccessor level, BlockPos pos) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					BlockEntity _ent = level.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(ForgeCapabilities.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+					return _retval.get();
+				}
+			}.getEnergyStored(world, BlockPos.containing(x, y, z)) <= ((new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) / 2) * (new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "a")) * 2) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("hasenergy", true);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			}
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "hasenergy")) == false) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("runn", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				WorkspaceTestMod.queueServerWork((int) (20 / (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "a"))), () -> {
+					StartmineProcedure.execute(world, x, y, z);
+				});
 			}
 		}
 	}

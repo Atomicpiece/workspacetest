@@ -6667,8 +6667,8 @@
       "registry_name": "cutters",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/item/CuttersItem.java",
-          "src/main/resources/assets/workspace_test/models/item/cutters.json"
+          "src/main/resources/assets/workspace_test/models/item/cutters.json",
+          "src/main/java/net/mcreator/workspacetest/item/CuttersItem.java"
         ]
       },
       "path": "~/assembly machines"
@@ -7480,6 +7480,26 @@
       "path": "~/assembly machines"
     },
     {
+      "name": "WaterCannonOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 275,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_cannon_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/WaterCannonOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Defence"
+    },
+    {
       "name": "Firefighter",
       "type": "tab",
       "sortid": 273,
@@ -7509,24 +7529,98 @@
       "path": "~/Defence"
     },
     {
-      "name": "WaterCannonOnEntityTickUpdate",
-      "type": "procedure",
+      "name": "Phoschunk",
+      "type": "item",
+      "sortid": 276,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phoschunk",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/workspace_test/models/item/phoschunk.json",
+          "src/main/java/net/mcreator/workspacetest/item/PhoschunkItem.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Apatite",
+      "type": "item",
+      "sortid": 274,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "apatite",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/ApatiteItem.java",
+          "src/main/resources/assets/workspace_test/models/item/apatite.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Oildrop",
+      "type": "item",
+      "sortid": 277,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oildrop",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/item/OildropItem.java",
+          "src/main/resources/assets/workspace_test/models/item/oildrop.json"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Phosde",
+      "type": "block",
       "sortid": 275,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "water_cannon_on_entity_tick_update",
+      "registry_name": "phosde",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/workspacetest/procedures/WaterCannonOnEntityTickUpdateProcedure.java"
+          "src/main/resources/assets/workspace_test/blockstates/phosde.json",
+          "src/main/resources/assets/workspace_test/models/item/phosde.json",
+          "src/main/resources/assets/workspace_test/models/block/phosde.json",
+          "src/main/java/net/mcreator/workspacetest/block/PhosdeBlock.java"
+        ]
+      },
+      "path": "~/assembly machines"
+    },
+    {
+      "name": "Deminefire",
+      "type": "procedure",
+      "sortid": 273,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deminefire",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/workspacetest/procedures/DeminefireProcedure.java"
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
-      "path": "~/Defence"
+      "path": "~/assembly machines"
     }
   ],
   "variable_elements": [
@@ -7585,7 +7679,6 @@
       "item.workspace_test.steelingot": "Steel ingot",
       "item.workspace_test.tungstenchunk": "Tungsten chunk",
       "item.workspace_test.defender_spawn_egg": "Defender Spawn Egg",
-      "item.workspace_test.water_cannon_spawn_egg": "Water cannon Spawn Egg",
       "item.workspace_test.robotic_phantom_spawn_egg": "Robotic Phantom Spawn Egg",
       "block.workspace_test.oilrig": "Oil derrick",
       "item.workspace_test.hazmatsuit_chestplate": "Hazmat chestplate",
@@ -7667,7 +7760,6 @@
       "block.workspace_test.goldde": "Gold deposit",
       "item.workspace_test.lithium": "Lithium",
       "gui.workspace_test.coalgui.label_time_remaining": "Time remaining:",
-      "entity.workspace_test.water_cannon": "Water cannon",
       "item.workspace_test.tinybot_spawn_egg": "Tinybot Spawn Egg",
       "item.workspace_test.furnace_powered_golem_spawn_egg": "Furnace Powered Golem Spawn Egg",
       "item.workspace_test.matches": "Matche",
@@ -7721,7 +7813,6 @@
       "item.workspace_test.tank_spawn_egg": "Tank Spawn Egg",
       "biome.workspace_test.lost_lands": "Lost Lands",
       "gui.workspace_test.coalgui.label_energy": "Energy:",
-      "item_group.workspace_test.firefighter": "Firefighter",
       "entity.workspace_test.mossy_golem": "Mossy Golem",
       "block.workspace_test.niterde": "Niterde",
       "item.workspace_test.leadingot": "Lead ingot",
